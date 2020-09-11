@@ -1,163 +1,166 @@
-enum Priority {
-  platinum,
-  gold,
-  silver,
-  bronze,
-}
+import * as lp from '../models/learning-path';
 
-const next = {
-  priority: Priority.gold,
+const next: lp.LearningPath = {
+  priority: lp.Priority.gold,
   label: 'Next',
-  associations: 'react',
+  associations: ['react'],
   children: {},
 };
-const nuxt = {
-  priority: Priority.gold,
+const nuxt: lp.LearningPath = {
+  priority: lp.Priority.gold,
   label: 'Nuxt',
-  associations: 'vue',
+  associations: ['vue'],
   children: {},
 };
 
-export default {
-  priority: Priority.platinum,
+const frontend: lp.LearningPath = {
+  priority: lp.Priority.platinum,
   label: 'Front-end',
   children: {
     internet: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Internet',
       children: {
         internet101: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Internet 101',
           children: {},
         },
-        http: { priority: Priority.gold, label: 'HTTP', children: {} },
-        browsers: { priority: Priority.gold, label: 'Browsers', children: {} },
-        dns: { priority: Priority.gold, label: 'DNS', children: {} },
-        hosting: { priority: Priority.gold, label: 'hosting', children: {} },
+        http: { priority: lp.Priority.gold, label: 'HTTP', children: {} },
+        browsers: {
+          priority: lp.Priority.gold,
+          label: 'Browsers',
+          children: {},
+        },
+        dns: { priority: lp.Priority.gold, label: 'DNS', children: {} },
+        hosting: { priority: lp.Priority.gold, label: 'hosting', children: {} },
       },
     },
     html: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'HTML',
       children: {
-        basics: { priority: Priority.gold, label: 'Basics', children: {} },
+        basics: { priority: lp.Priority.gold, label: 'Basics', children: {} },
         semanticHtml: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Semantic HTML',
           children: {},
         },
         formsAndValidation: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Forms and Validation',
           children: {},
         },
         bestPractices: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Best Practices',
           children: {},
         },
-        seo: { priority: Priority.gold, label: 'SEO', children: {} },
+        seo: { priority: lp.Priority.gold, label: 'SEO', children: {} },
       },
     },
     css: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'CSS',
       children: {
-        basics: { priority: Priority.gold, label: 'Basics', children: {} },
+        basics: { priority: lp.Priority.gold, label: 'Basics', children: {} },
         buildingLayouts: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Building Layouts',
           children: {
-            floats: { priority: Priority.gold, label: 'Floats', children: {} },
+            floats: {
+              priority: lp.Priority.gold,
+              label: 'Floats',
+              children: {},
+            },
             positioning: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Positioning',
               children: {},
             },
             display: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Display',
               children: {},
             },
             boxModel: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Box Model',
               children: {},
             },
             cssGrid: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'CSS Grid',
               children: {},
             },
             flexBox: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Flex Box',
               children: {},
             },
           },
         },
         responsiveDesign: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Responsive Design',
           children: {},
         },
       },
     },
     javaScript: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'JavaScript',
       children: {
-        basics: { priority: Priority.gold, label: 'Basics', children: {} },
-        dom: { priority: Priority.gold, label: 'DOM', children: {} },
+        basics: { priority: lp.Priority.gold, label: 'Basics', children: {} },
+        dom: { priority: lp.Priority.gold, label: 'DOM', children: {} },
         dataFetching: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Data Fetching',
           children: {
-            ajax: { priority: Priority.gold, label: 'AJAX', children: {} },
+            ajax: { priority: lp.Priority.gold, label: 'AJAX', children: {} },
             fetchApi: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Fetch API',
               children: {},
             },
           },
         },
         es6: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'ES6',
           children: {
             es6Modules: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'ES6 Modules',
               children: {},
             },
             arrayMethods: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Array Methods',
               children: {},
             },
             variableDeclaration: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Variable Declaration',
               children: {},
             },
             promises: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Promises',
               children: {},
             },
             templateLiterals: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Template Literals',
               children: {},
             },
             restAndSpread: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Rest and Spread',
               children: {},
             },
             destructuring: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Destructuring',
               children: {},
             },
@@ -166,26 +169,26 @@ export default {
       },
     },
     versionControl: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Version Control',
       children: {
-        git: { priority: Priority.platinum, label: 'Git', children: {} },
+        git: { priority: lp.Priority.platinum, label: 'Git', children: {} },
         remoteRepositories: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Remote Repositories',
           children: {
             github: {
-              priority: Priority.platinum,
+              priority: lp.Priority.platinum,
               label: 'Github',
               children: {},
             },
             gitLab: {
-              priority: Priority.bronze,
+              priority: lp.Priority.bronze,
               label: 'GitLab',
               children: {},
             },
             bitbucket: {
-              priority: Priority.bronze,
+              priority: lp.Priority.bronze,
               label: 'Bitbucket',
               children: {},
             },
@@ -194,100 +197,104 @@ export default {
       },
     },
     webSecurity: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Web Security',
       children: {
-        https: { priority: Priority.gold, label: 'Https', children: {} },
-        cors: { priority: Priority.gold, label: 'CORS', children: {} },
+        https: { priority: lp.Priority.gold, label: 'Https', children: {} },
+        cors: { priority: lp.Priority.gold, label: 'CORS', children: {} },
         contentSecurityPolicy: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Content Security Policy ',
           children: {},
         },
         owaspSecurityRisks: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'OWASP Security Risks',
           children: {},
         },
       },
     },
     packageManagers: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Package Managers',
       children: {
-        npm: { priority: Priority.platinum, label: 'NPM', children: {} },
-        yarn: { priority: Priority.gold, label: 'Yarn', children: {} },
+        npm: { priority: lp.Priority.platinum, label: 'NPM', children: {} },
+        yarn: { priority: lp.Priority.gold, label: 'Yarn', children: {} },
       },
     },
     cssArchitecture: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'CSS Architecture',
       children: {
-        bem: { priority: Priority.gold, label: 'BEM', children: {} },
+        bem: { priority: lp.Priority.gold, label: 'BEM', children: {} },
       },
     },
     cssPreprocessors: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'CSS Preprocessors',
       children: {
-        sass: { priority: Priority.gold, label: 'Sass', children: {} },
-        less: { priority: Priority.bronze, label: 'Less', children: {} },
+        sass: { priority: lp.Priority.gold, label: 'Sass', children: {} },
+        less: { priority: lp.Priority.bronze, label: 'Less', children: {} },
       },
     },
     buildTools: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Build Tools',
       children: {
         linters: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Linters',
           children: {
-            eslint: { priority: Priority.gold, label: 'Eslint', children: {} },
+            eslint: {
+              priority: lp.Priority.gold,
+              label: 'Eslint',
+              children: {},
+            },
           },
         },
         formatters: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Code Formatters',
           children: {
             prettier: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Prettier',
               children: {},
             },
           },
         },
         taskRunners: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Task Runners',
           children: {
             npmScripts: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'NPM Scripts',
               children: {},
             },
             gulp: {
-              priority: Priority.bronze,
+              priority: lp.Priority.bronze,
               label: 'Gulp',
               children: {},
             },
           },
         },
         moduleBundlers: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Module Bundlers',
           children: {
             webpack: {
-              priority: Priority.gold,
+              priority: lp.Priority.gold,
               label: 'Webpack',
               children: {},
             },
             rollup: {
-              priority: Priority.silver,
+              priority: lp.Priority.silver,
               label: 'Rollup',
               children: {},
             },
             parcel: {
-              priority: Priority.silver,
+              priority: lp.Priority.silver,
               label: 'Parcel',
               children: {},
             },
@@ -296,263 +303,281 @@ export default {
       },
     },
     frameworks: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'frameworks',
       children: {
         react: {
-          priority: Priority.platinum,
+          priority: lp.Priority.platinum,
           label: 'React',
           children: {
-            redux: { priority: Priority.gold, label: 'Redux', children: {} },
-            mobX: { priority: Priority.gold, label: 'MobX', children: {} },
+            redux: { priority: lp.Priority.gold, label: 'Redux', children: {} },
+            mobX: { priority: lp.Priority.gold, label: 'MobX', children: {} },
           },
         },
         angular: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Angular',
           children: {
-            rxjs: { priority: Priority.gold, label: 'RxJS', children: {} },
-            ngrx: { priority: Priority.gold, label: 'NgRX', children: {} },
+            rxjs: { priority: lp.Priority.gold, label: 'RxJS', children: {} },
+            ngrx: { priority: lp.Priority.gold, label: 'NgRX', children: {} },
           },
         },
         vue: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Vue',
           children: {
-            vueX: { priority: Priority.gold, label: 'VueX', children: {} },
+            vueX: { priority: lp.Priority.gold, label: 'VueX', children: {} },
           },
         },
       },
     },
     cssInJs: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'CSS in JS',
       children: {
         styledComponents: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Styled Components',
           children: {},
         },
         cssModules: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'CSS Modules',
           children: {},
         },
-        emotion: { priority: Priority.gold, label: 'Emotion', children: {} },
-        jss: { priority: Priority.gold, label: 'JSS', children: {} },
+        emotion: { priority: lp.Priority.gold, label: 'Emotion', children: {} },
+        jss: { priority: lp.Priority.gold, label: 'JSS', children: {} },
       },
     },
     webComponents: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'Web Components',
       children: {
         htmlTemplates: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'HTML Templates',
           children: {},
         },
         customElements: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Custom Elements',
           children: {},
         },
       },
     },
     componentLibraries: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Component Libraries',
       children: {
         materialUi: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Material UI',
           children: {},
         },
         antDesign: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Ant Design',
           children: {},
         },
-        grommet: { priority: Priority.gold, label: 'Grommet', children: {} },
+        grommet: { priority: lp.Priority.gold, label: 'Grommet', children: {} },
         reactBootstrap: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'React Bootstrap',
           children: {},
         },
         reactstrap: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Reactstrap',
           children: {},
         },
       },
     },
     cssLibraries: {
-      bootstrap: { priority: Priority.gold, label: 'Bootstrap', children: {} },
+      priority: lp.Priority.gold,
+      label: 'CSS Libraries',
+      children: {
+        bootstrap: {
+          priority: lp.Priority.gold,
+          label: 'Bootstrap',
+          children: {},
+        },
+      },
     },
     testing: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Testing',
       children: {
-        jest: { priority: Priority.platinum, label: 'Jest', children: {} },
+        jest: { priority: lp.Priority.platinum, label: 'Jest', children: {} },
         testingLibrary: {
-          priority: Priority.platinum,
+          priority: lp.Priority.platinum,
           label: 'Testing Library',
           children: {},
         },
         cypress: {
-          priority: Priority.platinum,
+          priority: lp.Priority.platinum,
           label: 'Cypress',
           children: {},
         },
         cucumber: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Cucumber',
           children: {},
         },
         mochaAndChai: {
-          priority: Priority.bronze,
+          priority: lp.Priority.bronze,
           label: 'Mocha And Chai',
           children: {},
         },
       },
     },
     typeCheckers: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Type Checkers',
       children: {
         typeScript: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'TypeScript',
           children: {},
         },
       },
     },
     progressiveWebApps: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Progressive Web Apps',
       children: {
         serviceWorkers: {
-          priority: Priority.platinum,
+          priority: lp.Priority.platinum,
           label: 'Service Workers',
           children: {},
         },
         manifest: {
-          priority: Priority.platinum,
+          priority: lp.Priority.platinum,
           label: 'Manifest',
           children: {},
         },
         pushNotifications: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Push Notifications',
           children: {},
         },
         deviceApis: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: "Device API's",
           children: {},
         },
         prplPattern: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'PRPL Pattern',
           children: {},
         },
       },
     },
     lighthouse: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'LightHouse',
       children: {},
     },
     performanceOptimization: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Performance Optimization',
       children: {},
     },
-    websockets: { priority: Priority.gold, label: 'Websockets', children: {} },
+    websockets: {
+      priority: lp.Priority.gold,
+      label: 'Websockets',
+      children: {},
+    },
     analytics: {
-      priority: Priority.platinum,
+      priority: lp.Priority.platinum,
       label: 'Analytics',
       children: {
         googleAnalytics: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Google Analytics',
           children: {},
         },
         mixPanel: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Mix Panel',
           children: {},
         },
       },
     },
     serverSideRendering: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'Server Side Rendering',
       children: {
         next,
         angularUniversal: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'Angular Universal',
-          associations: 'angular',
+          associations: ['angular'],
           children: {},
         },
         nuxt,
       },
     },
     graphql: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'GraphQL',
       children: {
-        apollo: { priority: Priority.gold, label: 'Apollo', children: {} },
-        relay: { priority: Priority.silver, label: 'Relay', children: {} },
+        apollo: { priority: lp.Priority.gold, label: 'Apollo', children: {} },
+        relay: { priority: lp.Priority.silver, label: 'Relay', children: {} },
       },
     },
     staticSiteGenerators: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'staticSiteGenerators',
       children: {
         next,
-        gatsby: { priority: Priority.gold, label: 'Gatsby', children: {} },
+        gatsby: { priority: lp.Priority.gold, label: 'Gatsby', children: {} },
         nuxt,
-        jekyll: { priority: Priority.bronze, label: 'Jekyll', children: {} },
-        huge: { priority: Priority.bronze, label: 'Hugo', children: {} },
+        jekyll: { priority: lp.Priority.bronze, label: 'Jekyll', children: {} },
+        huge: { priority: lp.Priority.bronze, label: 'Hugo', children: {} },
       },
     },
     mobileApps: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'Mobile Apps',
       children: {
         reactNative: {
-          priority: Priority.gold,
+          priority: lp.Priority.gold,
           label: 'React Native',
           children: {},
         },
-        flutter: { priority: Priority.silver, label: 'flutter', children: {} },
-        ionic: { priority: Priority.bronze, label: 'Ionic', children: {} },
+        flutter: {
+          priority: lp.Priority.silver,
+          label: 'flutter',
+          children: {},
+        },
+        ionic: { priority: lp.Priority.bronze, label: 'Ionic', children: {} },
         nativeScript: {
-          priority: Priority.bronze,
+          priority: lp.Priority.bronze,
           label: 'NativeScript',
           children: {},
         },
       },
     },
     desktopApps: {
-      priority: Priority.silver,
+      priority: lp.Priority.silver,
       label: 'Desktop Apps',
       children: {
         electron: {
-          priority: Priority.silver,
+          priority: lp.Priority.silver,
           label: 'Electron',
           children: {},
         },
       },
     },
     webAssembly: {
-      priority: Priority.gold,
+      priority: lp.Priority.gold,
       label: 'Web Assembly',
       children: {
-        rust: { priority: Priority.gold, label: 'Rust', children: {} },
-        cpp: { priority: Priority.silver, label: 'C++', children: {} },
+        rust: { priority: lp.Priority.gold, label: 'Rust', children: {} },
+        cpp: { priority: lp.Priority.silver, label: 'C++', children: {} },
       },
     },
   },
 };
+
+export default frontend;
