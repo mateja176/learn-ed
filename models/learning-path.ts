@@ -5,6 +5,10 @@ export enum Priority {
   bronze,
 }
 
+interface WithPriority {
+  priority: Priority;
+}
+
 type Key = string;
 
 interface WithColor {
@@ -22,7 +26,6 @@ interface WithUrl {
 }
 
 interface LearningPath<Children> {
-  priority: Priority;
   label: string;
   description: string;
   associations?: Key[];
@@ -35,12 +38,14 @@ export interface RootLearningPath extends LearningPath<FirstChildLearningPath> {
 
 export interface FirstChildLearningPath
   extends LearningPath<ChildLearningPath>,
+    WithPriority,
     WithVideoUrl,
     WithUrl,
     WithColor {}
 
 export interface ChildLearningPath
   extends LearningPath<ChildLearningPath>,
+    WithPriority,
     WithVideoUrl,
     WithUrl,
     Partial<WithColor> {}

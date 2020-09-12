@@ -20,7 +20,6 @@ const nuxt: lp.ChildLearningPath = {
 };
 
 const frontend: lp.RootLearningPath = {
-  priority: lp.Priority.platinum,
   emoji: '🖥️',
   label: 'Front-end',
   description:

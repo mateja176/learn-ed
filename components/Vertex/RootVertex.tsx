@@ -8,11 +8,11 @@ import { CardHeader } from 'grommet/components/CardHeader';
 import React from 'react';
 import { RootLearningPath } from '../../models/learning-path';
 
-const ChildVertex: React.FC<{
+const RootVertex: React.FC<{
   learningPath: RootLearningPath;
 }> = ({ learningPath }) => {
   return (
-    <Card height="small" width="small" background="light-1">
+    <Card background="light-1">
       <CardHeader pad="medium">
         <Box direction={'row'} width={'100%'}>
           <span role="img" aria-label={learningPath.label}>
@@ -23,7 +23,7 @@ const ChildVertex: React.FC<{
           </Box>
         </Box>
       </CardHeader>
-      <CardBody pad="medium">Body</CardBody>
+      <CardBody pad="medium">{learningPath.description}</CardBody>
       <CardFooter pad={{ horizontal: 'small' }} background="light-2">
         <Button icon={<Icons.Dislike color="gray" />} hoverIndicator />
         <Button icon={<Icons.Like color="blue" />} hoverIndicator />
@@ -32,4 +32,4 @@ const ChildVertex: React.FC<{
   );
 };
 
-export default ChildVertex;
+export default RootVertex;

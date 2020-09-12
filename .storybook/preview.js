@@ -8,7 +8,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <Grommet theme={theme} full themeMode={'dark'}>
+    <Grommet theme={theme} themeMode={'dark'}>
       <Story />
     </Grommet>
   ),
