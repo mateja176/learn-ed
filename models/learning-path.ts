@@ -15,6 +15,9 @@ interface WithVideoUrl {
   videoUrl: string;
 }
 interface WithUrl {
+  /**
+   * link to documentation
+   */
   url: string;
 }
 
