@@ -7,10 +7,24 @@ export enum Priority {
 
 type Key = string;
 
-export interface LearningPath {
+interface WithColor {
+  color: string;
+}
+
+interface LearningPath<Children> {
   priority: Priority;
   label: string;
-  children: Record<Key, LearningPath>;
   videoUrl: string;
   associations?: string[];
+  children: Record<Key, Children>;
 }
+
+export type RootLearningPath = LearningPath<FirstChildLearningPath>;
+
+export interface FirstChildLearningPath
+  extends LearningPath<ChildLearningPath>,
+    WithColor {}
+
+export interface ChildLearningPath
+  extends LearningPath<ChildLearningPath>,
+    Partial<WithColor> {}

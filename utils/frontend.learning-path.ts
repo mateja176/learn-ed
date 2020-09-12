@@ -1,13 +1,13 @@
 import * as lp from '../models/learning-path';
 
-const next: lp.LearningPath = {
+const next: lp.ChildLearningPath = {
   priority: lp.Priority.gold,
   label: 'Next',
   videoUrl: '',
   children: {},
   associations: ['react'],
 };
-const nuxt: lp.LearningPath = {
+const nuxt: lp.ChildLearningPath = {
   priority: lp.Priority.gold,
   label: 'Nuxt',
   videoUrl: '',
@@ -15,13 +15,14 @@ const nuxt: lp.LearningPath = {
   associations: ['vue'],
 };
 
-const frontend: lp.LearningPath = {
+const frontend: lp.RootLearningPath = {
   priority: lp.Priority.platinum,
   label: 'Front-end',
   videoUrl: '',
   children: {
     internet: {
       priority: lp.Priority.platinum,
+      color: 'darkSlateGrey',
       label: 'Internet',
       videoUrl: '',
       children: {
@@ -61,6 +62,7 @@ const frontend: lp.LearningPath = {
     },
     html: {
       priority: lp.Priority.platinum,
+      color: 'orangeRed',
       label: 'HTML',
       videoUrl: '',
       children: {
@@ -99,6 +101,7 @@ const frontend: lp.LearningPath = {
     },
     css: {
       priority: lp.Priority.platinum,
+      color: 'mediumBlue',
       label: 'CSS',
       videoUrl: '',
       children: {
@@ -161,6 +164,7 @@ const frontend: lp.LearningPath = {
     },
     javaScript: {
       priority: lp.Priority.platinum,
+      color: 'yellow',
       label: 'JavaScript',
       videoUrl: '',
       children: {
@@ -249,6 +253,7 @@ const frontend: lp.LearningPath = {
     },
     versionControl: {
       priority: lp.Priority.platinum,
+      color: 'tomato',
       label: 'Version Control',
       videoUrl: '',
       children: {
@@ -287,6 +292,7 @@ const frontend: lp.LearningPath = {
     },
     webSecurity: {
       priority: lp.Priority.platinum,
+      color: 'steelBlue',
       label: 'Web Security',
       videoUrl: '',
       children: {
@@ -318,6 +324,7 @@ const frontend: lp.LearningPath = {
     },
     packageManagers: {
       priority: lp.Priority.platinum,
+      color: 'firebrick',
       label: 'Package Managers',
       videoUrl: '',
       children: {
@@ -337,6 +344,7 @@ const frontend: lp.LearningPath = {
     },
     cssArchitecture: {
       priority: lp.Priority.gold,
+      color: 'midnightBlue',
       label: 'CSS Architecture',
       videoUrl: '',
       children: {
@@ -350,6 +358,7 @@ const frontend: lp.LearningPath = {
     },
     cssPreprocessors: {
       priority: lp.Priority.gold,
+      color: 'navy',
       label: 'CSS Preprocessors',
       videoUrl: '',
       children: {
@@ -369,6 +378,7 @@ const frontend: lp.LearningPath = {
     },
     buildTools: {
       priority: lp.Priority.platinum,
+      color: 'powderBlue',
       label: 'Build Tools',
       videoUrl: '',
       children: {
@@ -446,6 +456,7 @@ const frontend: lp.LearningPath = {
     },
     frameworks: {
       priority: lp.Priority.platinum,
+      color: 'cyan',
       label: 'frameworks',
       videoUrl: '',
       children: {
@@ -504,6 +515,7 @@ const frontend: lp.LearningPath = {
     },
     cssInJs: {
       priority: lp.Priority.platinum,
+      color: 'limeGreen',
       label: 'CSS in JS',
       videoUrl: '',
       children: {
@@ -535,6 +547,7 @@ const frontend: lp.LearningPath = {
     },
     webComponents: {
       priority: lp.Priority.gold,
+      color: 'darkOrange',
       label: 'Web Components',
       videoUrl: '',
       children: {
@@ -554,6 +567,7 @@ const frontend: lp.LearningPath = {
     },
     componentLibraries: {
       priority: lp.Priority.platinum,
+      color: 'deepSykBlue',
       label: 'Component Libraries',
       videoUrl: '',
       children: {
@@ -591,6 +605,7 @@ const frontend: lp.LearningPath = {
     },
     cssLibraries: {
       priority: lp.Priority.gold,
+      color: 'rebeccaPurple',
       label: 'CSS Libraries',
       videoUrl: '',
       children: {
@@ -604,6 +619,7 @@ const frontend: lp.LearningPath = {
     },
     testing: {
       priority: lp.Priority.platinum,
+      color: 'green',
       label: 'Testing',
       videoUrl: '',
       children: {
@@ -641,6 +657,7 @@ const frontend: lp.LearningPath = {
     },
     typeCheckers: {
       priority: lp.Priority.platinum,
+      color: 'royalBlue',
       label: 'Type Checkers',
       videoUrl: '',
       children: {
@@ -654,6 +671,7 @@ const frontend: lp.LearningPath = {
     },
     progressiveWebApps: {
       priority: lp.Priority.platinum,
+      color: 'indigo',
       label: 'Progressive Web Apps',
       videoUrl: '',
       children: {
@@ -691,24 +709,28 @@ const frontend: lp.LearningPath = {
     },
     lighthouse: {
       priority: lp.Priority.platinum,
+      color: 'orange',
       label: 'LightHouse',
       videoUrl: '',
       children: {},
     },
     performanceOptimization: {
       priority: lp.Priority.platinum,
+      color: 'hotPink',
       label: 'Performance Optimization',
       videoUrl: '',
       children: {},
     },
     websockets: {
       priority: lp.Priority.gold,
+      color: 'black',
       label: 'Websockets',
       videoUrl: '',
       children: {},
     },
     analytics: {
       priority: lp.Priority.platinum,
+      color: 'orchid',
       label: 'Analytics',
       videoUrl: '',
       children: {
@@ -728,6 +750,7 @@ const frontend: lp.LearningPath = {
     },
     serverSideRendering: {
       priority: lp.Priority.gold,
+      color: 'dimGrey',
       label: 'Server Side Rendering',
       videoUrl: '',
       children: {
@@ -744,6 +767,7 @@ const frontend: lp.LearningPath = {
     },
     graphql: {
       priority: lp.Priority.gold,
+      color: 'deepPink',
       label: 'GraphQL',
       videoUrl: '',
       children: {
@@ -763,6 +787,7 @@ const frontend: lp.LearningPath = {
     },
     staticSiteGenerators: {
       priority: lp.Priority.gold,
+      color: 'purple',
       label: 'staticSiteGenerators',
       videoUrl: '',
       children: {
@@ -790,6 +815,7 @@ const frontend: lp.LearningPath = {
     },
     mobileApps: {
       priority: lp.Priority.gold,
+      color: 'turquoise',
       label: 'Mobile Apps',
       videoUrl: '',
       children: {
@@ -821,6 +847,7 @@ const frontend: lp.LearningPath = {
     },
     desktopApps: {
       priority: lp.Priority.silver,
+      color: 'cadetBlue',
       label: 'Desktop Apps',
       videoUrl: '',
       children: {
@@ -834,6 +861,7 @@ const frontend: lp.LearningPath = {
     },
     webAssembly: {
       priority: lp.Priority.gold,
+      color: 'darkSlateBlue',
       label: 'Web Assembly',
       videoUrl: '',
       children: {
