@@ -920,7 +920,16 @@ const frontend: lp.RootLearningPath = {
       url:
         'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization',
       videoUrl: 'https://www.youtube.com/watch?v=YJGCZCaIZkQ',
-      children: {},
+      children: {
+        lazyLoading: {
+          priority: lp.Priority.gold,
+          label: 'Lazy Loading',
+          description: "'Cuz users don't like to wait for websites to load.",
+          url: 'https://en.wikipedia.org/wiki/Lazy_loading',
+          videoUrl: 'https://www.youtube.com/watch?v=AActXSWxsRo',
+          children: {},
+        },
+      },
     },
     serverless: {
       priority: lp.Priority.platinum,
@@ -945,6 +954,15 @@ const frontend: lp.RootLearningPath = {
           description: "World's most popular cloud infrastructure.",
           url: 'https://aws.amazon.com/what-is-aws/?nc2=h_ql_le_int',
           videoUrl: 'https://www.youtube.com/watch?v=3hLmDS179YE',
+          children: {},
+        },
+        netlify: {
+          priority: lp.Priority.silver,
+          label: 'Netlify',
+          description:
+            'All-in-one platform for automating modern web projects.',
+          url: 'https://docs.netlify.com/',
+          videoUrl: 'https://www.youtube.com/watch?v=FMhVXOA54x8',
           children: {},
         },
       },
