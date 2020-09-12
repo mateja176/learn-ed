@@ -5,10 +5,10 @@ import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
 import { CardHeader } from 'grommet/components/CardHeader';
 import React from 'react';
-import { ChildLearningPath } from '../../models/learning-path';
+import { RootLearningPath } from '../../models/learning-path';
 
 const ChildVertex: React.FC<{
-  learningPath: ChildLearningPath;
+  learningPath: RootLearningPath;
 }> = ({ learningPath }) => {
   return (
     <Card height="small" width="small" background="light-1">
