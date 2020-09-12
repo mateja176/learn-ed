@@ -19,7 +19,7 @@ interface LearningPath<Children> {
   priority: Priority;
   label: string;
   description: string;
-  associations?: string[];
+  associations?: Key[];
   children: Record<Key, Children>;
 }
 
