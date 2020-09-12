@@ -574,6 +574,15 @@ const frontend: lp.RootLearningPath = {
           url: 'https://reactjs.org/docs/getting-started.html',
           videoUrl: 'https://www.youtube.com/watch?v=9U3IhLAnSxM',
           children: {
+            reactHooks: {
+              priority: lp.Priority.platinum,
+              label: 'React Hooks',
+              description:
+                'Use state and other React features without writing a class.',
+              url: 'https://reactjs.org/docs/hooks-intro.html',
+              videoUrl: 'https://www.youtube.com/watch?v=mxK8b99iJTg',
+              children: {},
+            },
             redux: {
               priority: lp.Priority.gold,
               label: 'Redux',
@@ -891,14 +900,33 @@ const frontend: lp.RootLearningPath = {
         },
       },
     },
-    lighthouse: {
+    debugging: {
       priority: lp.Priority.platinum,
-      color: 'orange',
-      label: 'LightHouse',
-      description: 'Does your app measure up?',
-      url: 'https://developers.google.com/web/tools/lighthouse',
-      videoUrl: 'https://www.youtube.com/watch?v=d98CAgQNeaM',
-      children: {},
+      color: 'maroon',
+      label: 'Debugging',
+      description: '',
+      url: 'https://www.w3schools.com/js/js_debugging.asp',
+      videoUrl: 'https://www.youtube.com/watch?v=gaminoBsQx0',
+      children: {
+        chromeDevTools: {
+          priority: lp.Priority.platinum,
+          label: 'Chrome DevTools',
+          description: "See what's under the hood of a website.",
+          url:
+            'https://developers.google.com/web/tools/chrome-devtools/javascript',
+          videoUrl: 'https://www.youtube.com/watch?v=x4q86IjJFag',
+          children: {
+            lighthouse: {
+              priority: lp.Priority.platinum,
+              label: 'LightHouse',
+              description: 'Does your app measure up?',
+              url: 'https://developers.google.com/web/tools/lighthouse',
+              videoUrl: 'https://www.youtube.com/watch?v=d98CAgQNeaM',
+              children: {},
+            },
+          },
+        },
+      },
     },
     performanceOptimization: {
       priority: lp.Priority.platinum,
@@ -908,6 +936,33 @@ const frontend: lp.RootLearningPath = {
       url: '',
       videoUrl: 'https://www.youtube.com/watch?v=YJGCZCaIZkQ',
       children: {},
+    },
+    serverless: {
+      priority: lp.Priority.platinum,
+      color: 'whiteSmoke',
+      label: 'Serverless',
+      description:
+        "Pay only for what you use, don't worry scalability and more.",
+      url: 'https://www.cloudflare.com/learning/serverless/what-is-serverless/',
+      videoUrl: 'https://www.youtube.com/watch?v=wWEID0d6wfo',
+      children: {
+        firebase: {
+          priority: lp.Priority.gold,
+          label: 'Firebase',
+          description: 'Authentication, database, file storage and much more.',
+          url: 'https://firebase.google.com/docs/web/setup',
+          videoUrl: 'https://www.youtube.com/watch?v=9kRgVxULbag',
+          children: {},
+        },
+        aws: {
+          priority: lp.Priority.gold,
+          label: 'Amazon Web Services',
+          description: "World's most popular cloud infrastructure.",
+          url: 'https://aws.amazon.com/what-is-aws/?nc2=h_ql_le_int',
+          videoUrl: 'https://www.youtube.com/watch?v=3hLmDS179YE',
+          children: {},
+        },
+      },
     },
     websockets: {
       priority: lp.Priority.gold,
@@ -1027,6 +1082,63 @@ const frontend: lp.RootLearningPath = {
           description: 'Promises speed, flexibility and fun.',
           url: 'https://gohugo.io/getting-started/quick-start/',
           videoUrl: 'https://www.youtube.com/watch?v=927wgzzNMEA',
+          children: {},
+        },
+      },
+    },
+    documentation: {
+      priority: lp.Priority.gold,
+      color: 'sienna',
+      label: 'Documentation',
+      description:
+        'Keep in mind that programmers spend much more time reading code than writing code.',
+      url:
+        'https://flatlogic.com/blog/writing-documentation-for-your-javascript-project/',
+      videoUrl: 'https://www.youtube.com/watch?v=a4L9GhldTHo',
+      children: {
+        jsDoc: {
+          priority: lp.Priority.gold,
+          label: 'JSDOc',
+          description:
+            'Pro tip - VSCode has special interactions with your JSDoc annotations.',
+          url: 'https://jsdoc.app/about-getting-started.html',
+          videoUrl: 'https://www.youtube.com/watch?v=YK-GurROGIg',
+          children: {},
+        },
+        typeDoc: {
+          priority: lp.Priority.gold,
+          label: 'TypeDOc',
+          description: 'Like JSDoc but specially adapted for TypeScript.',
+          url: 'https://typedoc.org/',
+          videoUrl: 'https://www.youtube.com/watch?v=A2TZg_EDSGQ',
+          children: {},
+        },
+        docusaurus: {
+          priority: lp.Priority.bronze,
+          label: 'Docosaurus',
+          description:
+            'Tool for easily maintaining documentation. Powered by markdown, built by React.',
+          url: 'https://docusaurus.io/docs/en/installation',
+          videoUrl: 'https://www.youtube.com/watch?v=Hl_4Le_0LOc',
+          associations: ['react'],
+          children: {},
+        },
+      },
+    },
+    codeEditors: {
+      priority: lp.Priority.platinum,
+      color: 'silver',
+      label: 'Code Editors',
+      description: 'Your trusted steed.',
+      url: 'https://javascript.info/code-editors',
+      videoUrl: 'https://www.youtube.com/watch?v=AJnhqf5IRC4',
+      children: {
+        vsCode: {
+          priority: lp.Priority.platinum,
+          label: 'Visual Studio Code',
+          description: 'Code editing. Redefined.',
+          url: 'https://code.visualstudio.com/',
+          videoUrl: 'https://www.youtube.com/watch?v=fnPhJHN0jTE',
           children: {},
         },
       },
