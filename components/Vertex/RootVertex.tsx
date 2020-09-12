@@ -1,4 +1,5 @@
 import * as Icons from 'grommet-icons';
+import { Box } from 'grommet/components/Box';
 import { Button } from 'grommet/components/Button';
 import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
@@ -13,10 +14,14 @@ const ChildVertex: React.FC<{
   return (
     <Card height="small" width="small" background="light-1">
       <CardHeader pad="medium">
-        <span role="img" aria-label={learningPath.label}>
-          🖥️
-        </span>{' '}
-        {learningPath.label}
+        <Box direction={'row'} width={'100%'}>
+          <span role="img" aria-label={learningPath.label}>
+            {learningPath.emoji}
+          </span>{' '}
+          <Box flex={'grow'} align={'center'}>
+            {learningPath.label}
+          </Box>
+        </Box>
       </CardHeader>
       <CardBody pad="medium">Body</CardBody>
       <CardFooter pad={{ horizontal: 'small' }} background="light-2">

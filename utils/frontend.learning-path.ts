@@ -21,6 +21,7 @@ const nuxt: lp.ChildLearningPath = {
 
 const frontend: lp.RootLearningPath = {
   priority: lp.Priority.platinum,
+  emoji: '🖥️',
   label: 'Front-end',
   description:
     'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',

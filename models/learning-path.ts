@@ -29,7 +29,9 @@ interface LearningPath<Children> {
   children: Record<Key, Children>;
 }
 
-export type RootLearningPath = LearningPath<FirstChildLearningPath>;
+export interface RootLearningPath extends LearningPath<FirstChildLearningPath> {
+  emoji: string;
+}
 
 export interface FirstChildLearningPath
   extends LearningPath<ChildLearningPath>,
