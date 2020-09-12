@@ -11,6 +11,10 @@ interface WithColor {
   color: string;
 }
 
+interface WithVideoUrl {
+  videoUrl: string;
+}
+
 interface LearningPath<Children> {
   priority: Priority;
   label: string;
@@ -23,8 +27,10 @@ export type RootLearningPath = LearningPath<FirstChildLearningPath>;
 
 export interface FirstChildLearningPath
   extends LearningPath<ChildLearningPath>,
+    WithVideoUrl,
     WithColor {}
 
 export interface ChildLearningPath
   extends LearningPath<ChildLearningPath>,
+    WithVideoUrl,
     Partial<WithColor> {}

@@ -24,7 +24,6 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'darkSlateGrey',
       label: 'Internet',
-      videoUrl: '',
       children: {
         internet101: {
           priority: lp.Priority.gold,
