@@ -711,7 +711,7 @@ const frontend: lp.RootLearningPath = {
           description: 'Create your personal HTML tag.',
           url:
             'https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements',
-          videoUrl: '',
+          videoUrl: 'https://www.youtube.com/watch?v=iVJA-lGkEFw',
           children: {},
         },
       },
@@ -721,8 +721,9 @@ const frontend: lp.RootLearningPath = {
       color: 'deepSykBlue',
       label: 'Component Libraries',
       description: 'Leverage the power of design systems.',
-      url: '',
-      videoUrl: '',
+      url:
+        'https://medium.com/@dan.shapiro1210/understanding-component-based-architecture-3ff48ec0c238',
+      videoUrl: 'https://www.youtube.com/watch?v=9pT-q0SSYow',
       children: {
         materialUi: {
           priority: lp.Priority.gold,
@@ -738,14 +739,6 @@ const frontend: lp.RootLearningPath = {
           description: 'Enterprise grade.',
           url: 'https://ant.design/docs/react/getting-started',
           videoUrl: 'https://www.youtube.com/watch?v=m96DTtTpGpA',
-          children: {},
-        },
-        grommet: {
-          priority: lp.Priority.gold,
-          label: 'Grommet',
-          description: 'Mobile first.',
-          url: 'https://v2.grommet.io/components',
-          videoUrl: '',
           children: {},
         },
         reactBootstrap: {
@@ -764,8 +757,8 @@ const frontend: lp.RootLearningPath = {
       color: 'rebeccaPurple',
       label: 'CSS Libraries',
       description: "Don't start from scratch.",
-      url: '',
-      videoUrl: '',
+      url: 'https://github.com/troxler/awesome-css-frameworks',
+      videoUrl: 'https://www.youtube.com/watch?v=vmXIGdP8KN8',
       children: {
         bootstrap: {
           priority: lp.Priority.gold,
@@ -783,24 +776,23 @@ const frontend: lp.RootLearningPath = {
       color: 'green',
       label: 'Testing',
       description: 'The proof of your code.',
-      url: '',
-      videoUrl: '',
+      url: 'https://testingjavascript.com/',
+      videoUrl: 'https://www.youtube.com/watch?v=r9HdJ8P6GQI',
       children: {
         jest: {
           priority: lp.Priority.platinum,
           label: 'Jest',
           description: 'Powerful and simple - get started with zero config.',
-          url: '',
-          videoUrl: '',
+          url: 'https://jestjs.io/docs/en/getting-started.html',
+          videoUrl: 'https://www.youtube.com/watch?v=7r4xVDI2vho',
           children: {},
         },
         testingLibrary: {
           priority: lp.Priority.platinum,
           label: 'Testing Library',
           description: 'Develop confidence in your app.',
-          url:
-            'https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing',
-          videoUrl: '',
+          url: 'https://testing-library.com/docs/dom-testing-library/intro',
+          videoUrl: 'https://www.youtube.com/watch?v=is83bEK3n5A',
           children: {},
         },
         cypress: {
@@ -834,8 +826,8 @@ const frontend: lp.RootLearningPath = {
       color: 'royalBlue',
       label: 'Type Checkers',
       description: 'Streamline your development and make refactoring a breeze.',
-      url: '',
-      videoUrl: '',
+      url: 'https://advancedweb.dev/static-type-checkers',
+      videoUrl: 'https://www.youtube.com/watch?v=YHvqbeh_n9U',
       children: {
         typeScript: {
           priority: lp.Priority.gold,
@@ -886,16 +878,8 @@ const frontend: lp.RootLearningPath = {
           priority: lp.Priority.gold,
           label: "Device API's",
           description: 'Access to camera, bluetooth and more.',
-          url: '',
-          videoUrl: '',
-          children: {},
-        },
-        prplPattern: {
-          priority: lp.Priority.gold,
-          label: 'PRPL Pattern',
-          description: 'Push, render, pre-cache, lazy-load.',
-          url: 'https://web.dev/apply-instant-loading-with-prpl/',
-          videoUrl: '',
+          url: 'https://developer.mozilla.org/en-US/docs/Web/API',
+          videoUrl: 'https://www.youtube.com/watch?v=06MV79PPMEo',
           children: {},
         },
       },
@@ -904,7 +888,7 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'maroon',
       label: 'Debugging',
-      description: '',
+      description: 'Complexity has nowhere to hide.',
       url: 'https://www.w3schools.com/js/js_debugging.asp',
       videoUrl: 'https://www.youtube.com/watch?v=gaminoBsQx0',
       children: {
@@ -933,7 +917,8 @@ const frontend: lp.RootLearningPath = {
       color: 'hotPink',
       label: 'Performance Optimization',
       description: 'Performance can make or break a site.',
-      url: '',
+      url:
+        'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization',
       videoUrl: 'https://www.youtube.com/watch?v=YJGCZCaIZkQ',
       children: {},
     },
@@ -994,7 +979,7 @@ const frontend: lp.RootLearningPath = {
           label: 'Mix Panel',
           description: 'The new-gen of analytics.',
           url: 'https://mixpanel.com/',
-          videoUrl: 'https://www.youtube.com/watch?v=46SPsRshtXw',
+          videoUrl: 'https://www.youtube.com/watch?v=i9GooWBbeyc',
           children: {},
         },
       },
@@ -1044,6 +1029,7 @@ const frontend: lp.RootLearningPath = {
           description: 'GraphQL client for React',
           url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
           videoUrl: 'https://www.youtube.com/watch?v=xnvzz7Z658I',
+          associations: ['react'],
           children: {},
         },
       },
@@ -1055,7 +1041,7 @@ const frontend: lp.RootLearningPath = {
       description: 'Perfect for blogs, documentation, landing pages and more.',
       url:
         'https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/',
-      videoUrl: 'https://www.youtube.com/watch?v=o-0Q4o9NyLs',
+      videoUrl: 'https://www.youtube.com/watch?v=_wFJj94kSTU',
       children: {
         next,
         gatsby: {
@@ -1180,23 +1166,14 @@ const frontend: lp.RootLearningPath = {
         },
       },
     },
-    desktopApps: {
+    electron: {
       priority: lp.Priority.silver,
       color: 'cadetBlue',
-      label: 'Desktop Apps',
-      description: 'Building desktop apps with web technologies.',
-      url: '',
-      videoUrl: '',
-      children: {
-        electron: {
-          priority: lp.Priority.silver,
-          label: 'Electron',
-          description: 'Cross-platform desktop apps with JS, HTML and CSS.',
-          url: 'https://www.electronjs.org/docs',
-          videoUrl: 'https://www.youtube.com/watch?v=2RxHQoiDctI',
-          children: {},
-        },
-      },
+      label: 'Electron',
+      description: 'Cross-platform desktop apps with JS, HTML and CSS.',
+      url: 'https://www.electronjs.org/docs',
+      videoUrl: 'https://www.youtube.com/watch?v=2RxHQoiDctI',
+      children: {},
     },
     webAssembly: {
       priority: lp.Priority.gold,
