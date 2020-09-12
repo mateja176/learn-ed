@@ -984,7 +984,7 @@ const frontend: lp.RootLearningPath = {
         },
       },
     },
-    serverSideRendering: {
+    ssr: {
       priority: lp.Priority.gold,
       color: 'dimGrey',
       label: 'Server Side Rendering',
