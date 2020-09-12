@@ -18,7 +18,7 @@ interface WithVideoUrl {
 interface LearningPath<Children> {
   priority: Priority;
   label: string;
-  videoUrl: string;
+  description: string;
   associations?: string[];
   children: Record<Key, Children>;
 }

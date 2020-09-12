@@ -3,6 +3,7 @@ import * as lp from '../models/learning-path';
 const next: lp.ChildLearningPath = {
   priority: lp.Priority.gold,
   label: 'Next',
+  description: 'Hybrid static & server rendering for React.',
   videoUrl: '',
   children: {},
   associations: ['react'],
@@ -10,6 +11,7 @@ const next: lp.ChildLearningPath = {
 const nuxt: lp.ChildLearningPath = {
   priority: lp.Priority.gold,
   label: 'Nuxt',
+  description: 'Hybrid static & server rendering for Vue.',
   videoUrl: '',
   children: {},
   associations: ['vue'],
@@ -18,21 +20,21 @@ const nuxt: lp.ChildLearningPath = {
 const frontend: lp.RootLearningPath = {
   priority: lp.Priority.platinum,
   label: 'Front-end',
-  videoUrl: '',
+  description:
+    'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',
   children: {
     internet: {
       priority: lp.Priority.platinum,
       color: 'darkSlateGrey',
       label: 'Internet',
+      description:
+        'First we had steam power, then we had electricity, now we also have The Internet.',
+      videoUrl: '',
       children: {
-        internet101: {
-          priority: lp.Priority.gold,
-          label: 'Internet 101',
-          videoUrl: '',
-          children: {},
-        },
         http: {
           priority: lp.Priority.gold,
+          description:
+            'A client-server protocol which is the foundation of any data exchange on the Web.',
           label: 'HTTP',
           videoUrl: '',
           children: {},
@@ -40,12 +42,16 @@ const frontend: lp.RootLearningPath = {
 
         browsers: {
           priority: lp.Priority.gold,
+          description:
+            'Your main window for accessing information on the World Wide Web.',
           label: 'Browsers',
           videoUrl: '',
           children: {},
         },
         dns: {
           priority: lp.Priority.gold,
+          description:
+            'Without it you\'d be typing in "172.217.18.78" instead of google.com',
           label: 'DNS',
           videoUrl: '',
           children: {},
@@ -53,6 +59,7 @@ const frontend: lp.RootLearningPath = {
 
         hosting: {
           priority: lp.Priority.gold,
+          description: 'Make your website accessible to the world.',
           label: 'hosting',
           videoUrl: '',
           children: {},
@@ -61,12 +68,16 @@ const frontend: lp.RootLearningPath = {
     },
     html: {
       priority: lp.Priority.platinum,
+      description:
+        'In 1989 Tim Berners-Lee created the first website using the Hyper Text Markup Language.',
       color: 'orangeRed',
       label: 'HTML',
       videoUrl: '',
       children: {
         basics: {
           priority: lp.Priority.gold,
+          description:
+            "I still remember the joy I felt after seeing some text that I've written live on a web page.",
           label: 'Basics',
           videoUrl: '',
           children: {},
@@ -74,24 +85,29 @@ const frontend: lp.RootLearningPath = {
 
         semanticHtml: {
           priority: lp.Priority.gold,
+          description: 'Meaningful HTML.',
           label: 'Semantic HTML',
           videoUrl: '',
           children: {},
         },
         formsAndValidation: {
           priority: lp.Priority.gold,
+          description:
+            'Servers constantly send information to clients, but clients can also send information to servers.',
           label: 'Forms and Validation',
           videoUrl: '',
           children: {},
         },
         bestPractices: {
           priority: lp.Priority.gold,
+          description: 'Practice makes perfect.',
           label: 'Best Practices',
           videoUrl: '',
           children: {},
         },
         seo: {
           priority: lp.Priority.gold,
+          description: 'Want to get your site on the first page of Google?',
           label: 'SEO',
           videoUrl: '',
           children: {},
@@ -102,52 +118,63 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'mediumBlue',
       label: 'CSS',
+      description: 'We all need some style in our lives.',
       videoUrl: '',
       children: {
         basics: {
           priority: lp.Priority.gold,
           label: 'Basics',
+          description: 'The possibilities are endless.',
           videoUrl: '',
           children: {},
         },
         buildingLayouts: {
           priority: lp.Priority.gold,
           label: 'Building Layouts',
+          description:
+            'This can be frustrating, but after some time it becomes second nature.',
           videoUrl: '',
           children: {
             floats: {
               priority: lp.Priority.gold,
               label: 'Floats',
+              description: 'Left or right?',
               videoUrl: '',
               children: {},
             },
             positioning: {
               priority: lp.Priority.gold,
               label: 'Positioning',
+              description: 'Not everything is static in this world.',
               videoUrl: '',
               children: {},
             },
             display: {
               priority: lp.Priority.gold,
               label: 'Display',
+              description: 'To display or not to display?',
               videoUrl: '',
               children: {},
             },
             boxModel: {
               priority: lp.Priority.gold,
               label: 'Box Model',
+              description: 'Elements can be deceiving.',
               videoUrl: '',
               children: {},
             },
             cssGrid: {
               priority: lp.Priority.gold,
               label: 'CSS Grid',
+              description: 'What can one do with rows and columns?',
               videoUrl: '',
               children: {},
             },
             flexBox: {
               priority: lp.Priority.gold,
               label: 'Flex Box',
+              description:
+                'Nowadays, it may be the most common and easiest way to build great layouts.',
               videoUrl: '',
               children: {},
             },
@@ -156,6 +183,8 @@ const frontend: lp.RootLearningPath = {
         responsiveDesign: {
           priority: lp.Priority.gold,
           label: 'Responsive Design',
+          description:
+            'The majority of people access the internet through a mobile device.',
           videoUrl: '',
           children: {},
         },
@@ -165,17 +194,21 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'yellow',
       label: 'JavaScript',
+      description: 'The first language of the web.',
       videoUrl: '',
       children: {
         basics: {
           priority: lp.Priority.gold,
           label: 'Basics',
+          description:
+            'Wanna turn your cursor into a unicorn? Probably not, but JS can do that to.',
           videoUrl: '',
           children: {},
         },
         dom: {
           priority: lp.Priority.gold,
           label: 'DOM',
+          description: 'The virtual representation of your web page.',
           videoUrl: '',
           children: {},
         },
@@ -183,17 +216,21 @@ const frontend: lp.RootLearningPath = {
         dataFetching: {
           priority: lp.Priority.gold,
           label: 'Data Fetching',
+          description: "Can't get enough of data.",
           videoUrl: '',
           children: {
             ajax: {
               priority: lp.Priority.gold,
               label: 'AJAX',
+              description:
+                "To get data from the server, you don't have to fetch a whole new page.",
               videoUrl: '',
               children: {},
             },
             fetchApi: {
               priority: lp.Priority.gold,
               label: 'Fetch API',
+              description: 'This will teach you how to fetch, I promise.',
               videoUrl: '',
               children: {},
             },
@@ -202,47 +239,56 @@ const frontend: lp.RootLearningPath = {
         es6: {
           priority: lp.Priority.gold,
           label: 'ES6',
+          description: 'The modern JavaScript.',
           videoUrl: '',
           children: {
             es6Modules: {
               priority: lp.Priority.gold,
               label: 'ES6 Modules',
+              description: "Don't pollute the global scope.",
               videoUrl: '',
               children: {},
             },
             arrayMethods: {
               priority: lp.Priority.gold,
               label: 'Array Methods',
+              description: 'Lisp started a trend.',
               videoUrl: '',
               children: {},
             },
             variableDeclaration: {
               priority: lp.Priority.gold,
               label: 'Variable Declaration',
+              description: 'Know your scope.',
               videoUrl: '',
               children: {},
             },
             promises: {
               priority: lp.Priority.gold,
               label: 'Promises',
+              description: 'One of the most beloved JS features.',
               videoUrl: '',
               children: {},
             },
             templateLiterals: {
               priority: lp.Priority.gold,
               label: 'Template Literals',
+              description:
+                'Before template string people used the "+" operator.',
               videoUrl: '',
               children: {},
             },
             restAndSpread: {
               priority: lp.Priority.gold,
               label: 'Rest and Spread',
+              description: 'Mix and match.',
               videoUrl: '',
               children: {},
             },
             destructuring: {
               priority: lp.Priority.gold,
               label: 'Destructuring',
+              description: 'You better add this word to your dictionary.',
               videoUrl: '',
               children: {},
             },
@@ -254,34 +300,40 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'tomato',
       label: 'Version Control',
+      description: 'A game changer.',
       videoUrl: '',
       children: {
         git: {
           priority: lp.Priority.platinum,
           label: 'Git',
+          description: 'The history of your code in the palm of your hand.',
           videoUrl: '',
           children: {},
         },
         remoteRepositories: {
           priority: lp.Priority.gold,
           label: 'Remote Repositories',
+          description: 'Partying alone is not much fun.',
           videoUrl: '',
           children: {
             github: {
               priority: lp.Priority.platinum,
               label: 'Github',
+              description: 'The home of Open Source and many more goodies.',
               videoUrl: '',
               children: {},
             },
             gitLab: {
               priority: lp.Priority.bronze,
               label: 'GitLab',
+              description: 'Github is not alone either.',
               videoUrl: '',
               children: {},
             },
             bitbucket: {
               priority: lp.Priority.bronze,
               label: 'Bitbucket',
+              description: "Jira's cousin.",
               videoUrl: '',
               children: {},
             },
@@ -293,49 +345,65 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'steelBlue',
       label: 'Web Security',
+      description: "Without security there wouldn't be the Web",
       videoUrl: '',
       children: {
         https: {
           priority: lp.Priority.gold,
           label: 'Https',
+          description: "Don't let other listen in to your conversations.",
           videoUrl: '',
           children: {},
         },
         cors: {
           priority: lp.Priority.gold,
           label: 'CORS',
+          description: 'Request resources from other origins.',
           videoUrl: '',
           children: {},
         },
         contentSecurityPolicy: {
           priority: lp.Priority.gold,
           label: 'Content Security Policy ',
+          description: 'XSS no more.',
           videoUrl: '',
           children: {},
         },
         owaspSecurityRisks: {
           priority: lp.Priority.gold,
           label: 'OWASP Security Risks',
+          description: 'Treat it as a checklist for security.',
           videoUrl: '',
           children: {},
         },
       },
     },
+    rest: {
+      priority: lp.Priority.platinum,
+      color: 'real',
+      label: 'REST',
+      description: "Knock, knock - Who's there?",
+      videoUrl: '',
+      children: {},
+    },
     packageManagers: {
       priority: lp.Priority.platinum,
       color: 'firebrick',
       label: 'Package Managers',
+      description: 'Sharing is caring.',
       videoUrl: '',
       children: {
         npm: {
           priority: lp.Priority.platinum,
           label: 'NPM',
+          description: "Node's de facto package manager.",
           videoUrl: '',
           children: {},
         },
         yarn: {
           priority: lp.Priority.gold,
           label: 'Yarn',
+          description: 'A fresh perspective on package managers.',
           videoUrl: '',
           children: {},
         },
@@ -345,11 +413,13 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'midnightBlue',
       label: 'CSS Architecture',
+      description: 'Avoid maintainability headaches.',
       videoUrl: '',
       children: {
         bem: {
           priority: lp.Priority.gold,
           label: 'BEM',
+          description: 'Block-Element-Modifier',
           videoUrl: '',
           children: {},
         },
@@ -359,17 +429,20 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'navy',
       label: 'CSS Preprocessors',
+      description: 'Ever wanted to get more out of CSS?',
       videoUrl: '',
       children: {
         sass: {
           priority: lp.Priority.gold,
           label: 'Sass',
+          description: 'Nesting, modules, debugging and more.',
           videoUrl: '',
           children: {},
         },
         less: {
           priority: lp.Priority.bronze,
           label: 'Less',
+          description: 'Leaner Style Sheets',
           videoUrl: '',
           children: {},
         },
@@ -379,16 +452,19 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'powderBlue',
       label: 'Build Tools',
+      description: 'Be in control of your workflow.',
       videoUrl: '',
       children: {
         linters: {
           priority: lp.Priority.gold,
           label: 'Linters',
+          description: 'Avoid shooting yourself in the foot.',
           videoUrl: '',
           children: {
             eslint: {
               priority: lp.Priority.gold,
               label: 'Eslint',
+              description: 'Powerful, fast and flexible.',
               videoUrl: '',
               children: {},
             },
@@ -397,11 +473,13 @@ const frontend: lp.RootLearningPath = {
         formatters: {
           priority: lp.Priority.gold,
           label: 'Code Formatters',
+          description: 'Never format your code by hand.',
           videoUrl: '',
           children: {
             prettier: {
               priority: lp.Priority.gold,
               label: 'Prettier',
+              description: 'Configurable formatter, but with good defaults.',
               videoUrl: '',
               children: {},
             },
@@ -410,17 +488,20 @@ const frontend: lp.RootLearningPath = {
         taskRunners: {
           priority: lp.Priority.gold,
           label: 'Task Runners',
+          description: "Don't repeat yourself - write a script.",
           videoUrl: '',
           children: {
             npmScripts: {
               priority: lp.Priority.gold,
               label: 'NPM Scripts',
+              description: 'Easy and simple.',
               videoUrl: '',
               children: {},
             },
             gulp: {
               priority: lp.Priority.bronze,
               label: 'Gulp',
+              description: 'All-encompassing plugin based solution.',
               videoUrl: '',
               children: {},
             },
@@ -429,10 +510,12 @@ const frontend: lp.RootLearningPath = {
         moduleBundlers: {
           priority: lp.Priority.gold,
           label: 'Module Bundlers',
+          description: 'Having a great many modules is no longer a problem.',
           videoUrl: '',
           children: {
             webpack: {
               priority: lp.Priority.gold,
+              description: 'The most popular, widespread bundler out there.',
               label: 'Webpack',
               videoUrl: '',
               children: {},
@@ -440,12 +523,14 @@ const frontend: lp.RootLearningPath = {
             rollup: {
               priority: lp.Priority.silver,
               label: 'Rollup',
+              description: 'The bundler that popularized tree-shaking',
               videoUrl: '',
               children: {},
             },
             parcel: {
               priority: lp.Priority.silver,
               label: 'Parcel',
+              description: 'Blazing fast with zero configuration.',
               videoUrl: '',
               children: {},
             },
@@ -457,21 +542,26 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'cyan',
       label: 'frameworks',
+      description: 'Say goodbye to JQuery.',
       videoUrl: '',
       children: {
         react: {
           priority: lp.Priority.platinum,
           label: 'React',
+          description: 'Widely popular, functional and declarative.',
           videoUrl: '',
           children: {
             redux: {
               priority: lp.Priority.gold,
               label: 'Redux',
+              description: 'Manage global state, the easy way',
               videoUrl: '',
               children: {},
             },
             mobX: {
               priority: lp.Priority.gold,
+              description:
+                'State management with functional reactive programming.',
               label: 'MobX',
               videoUrl: '',
               children: {},
@@ -481,17 +571,21 @@ const frontend: lp.RootLearningPath = {
         angular: {
           priority: lp.Priority.gold,
           label: 'Angular',
+          description: 'A framework in the real sense of the word.',
           videoUrl: '',
           children: {
             rxjs: {
               priority: lp.Priority.gold,
               label: 'RxJS',
+              description: 'Reactive extensions for JS',
               videoUrl: '',
               children: {},
             },
             ngrx: {
               priority: lp.Priority.gold,
               label: 'NgRX',
+              description:
+                'Manage state and collections easily, while isolating side effects.',
               videoUrl: '',
               children: {},
             },
@@ -500,11 +594,13 @@ const frontend: lp.RootLearningPath = {
         vue: {
           priority: lp.Priority.gold,
           label: 'Vue',
-          videoUrl: '',
+          description: 'The best of both worlds.',
+          videoUrl: 'The best of both worlds.',
           children: {
             vueX: {
               priority: lp.Priority.gold,
               label: 'VueX',
+              description: 'The power of Redux for Vue.',
               videoUrl: '',
               children: {},
             },
@@ -516,29 +612,34 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'limeGreen',
       label: 'CSS in JS',
+      description: 'CSS and JS unite!',
       videoUrl: '',
       children: {
         styledComponents: {
           priority: lp.Priority.gold,
           label: 'Styled Components',
+          description: 'Styling for the component age.',
           videoUrl: '',
           children: {},
         },
         cssModules: {
           priority: lp.Priority.gold,
           label: 'CSS Modules',
+          description: 'Explicit is better than implicit.',
           videoUrl: '',
           children: {},
         },
         emotion: {
           priority: lp.Priority.gold,
           label: 'Emotion',
+          description: 'The new kid around the block.',
           videoUrl: '',
           children: {},
         },
         jss: {
           priority: lp.Priority.gold,
           label: 'JSS',
+          description: 'Declarative, conflict-free and reusable styles.',
           videoUrl: '',
           children: {},
         },
@@ -548,17 +649,20 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'darkOrange',
       label: 'Web Components',
+      description: 'Custom components for everybody.',
       videoUrl: '',
       children: {
         htmlTemplates: {
           priority: lp.Priority.gold,
           label: 'HTML Templates',
+          description: 'Reusable HTML.',
           videoUrl: '',
           children: {},
         },
         customElements: {
           priority: lp.Priority.gold,
           label: 'Custom Elements',
+          description: 'Create your personal HTML tag.',
           videoUrl: '',
           children: {},
         },
@@ -568,36 +672,35 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'deepSykBlue',
       label: 'Component Libraries',
+      description: 'Leverage the power of design systems.',
       videoUrl: '',
       children: {
         materialUi: {
           priority: lp.Priority.gold,
           label: 'Material UI',
+          description: 'Material design for your website.',
           videoUrl: '',
           children: {},
         },
         antDesign: {
           priority: lp.Priority.gold,
           label: 'Ant Design',
+          description: 'Enterprise grade.',
           videoUrl: '',
           children: {},
         },
         grommet: {
           priority: lp.Priority.gold,
           label: 'Grommet',
+          description: 'Mobile first.',
           videoUrl: '',
           children: {},
         },
         reactBootstrap: {
           priority: lp.Priority.gold,
           label: 'React Bootstrap',
-          videoUrl: '',
-          children: {},
-        },
-        reactstrap: {
-          priority: lp.Priority.gold,
-          label: 'Reactstrap',
-          videoUrl: '',
+          description: '',
+          videoUrl: 'Bootstrap rebuilt for React.',
           children: {},
         },
       },
@@ -606,11 +709,13 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'rebeccaPurple',
       label: 'CSS Libraries',
+      description: "Don't start from scratch.",
       videoUrl: '',
       children: {
         bootstrap: {
           priority: lp.Priority.gold,
           label: 'Bootstrap',
+          description: 'A hugely popular front-end toolkit',
           videoUrl: '',
           children: {},
         },
@@ -620,35 +725,41 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'green',
       label: 'Testing',
+      description: 'The proof of your code.',
       videoUrl: '',
       children: {
         jest: {
           priority: lp.Priority.platinum,
           label: 'Jest',
+          description: 'Powerful and simple - get started with zero config.',
           videoUrl: '',
           children: {},
         },
         testingLibrary: {
           priority: lp.Priority.platinum,
           label: 'Testing Library',
+          description: 'Develop confidence in your app.',
           videoUrl: '',
           children: {},
         },
         cypress: {
           priority: lp.Priority.platinum,
           label: 'Cypress',
+          description: 'The web has evolved, finally testing has too.',
           videoUrl: '',
           children: {},
         },
         cucumber: {
           priority: lp.Priority.gold,
           label: 'Cucumber',
+          description: 'BDD - Example mapping and TDD.',
           videoUrl: '',
           children: {},
         },
         mochaAndChai: {
           priority: lp.Priority.bronze,
           label: 'Mocha And Chai',
+          description: 'The famous test runner and assertion lib duo.',
           videoUrl: '',
           children: {},
         },
@@ -658,11 +769,13 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'royalBlue',
       label: 'Type Checkers',
+      description: 'Streamline your development and make refactoring a breeze.',
       videoUrl: '',
       children: {
         typeScript: {
           priority: lp.Priority.gold,
           label: 'TypeScript',
+          description: 'Typed JavScript at scale.',
           videoUrl: '',
           children: {},
         },
@@ -672,35 +785,41 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'indigo',
       label: 'Progressive Web Apps',
+      description: 'Websites that took all the right vitamins.',
       videoUrl: '',
       children: {
         serviceWorkers: {
           priority: lp.Priority.platinum,
           label: 'Service Workers',
+          description: 'Offline support for your apps and more.',
           videoUrl: '',
           children: {},
         },
         manifest: {
           priority: lp.Priority.platinum,
           label: 'Manifest',
+          description: 'Have users install your web app like a native app.',
           videoUrl: '',
           children: {},
         },
         pushNotifications: {
           priority: lp.Priority.gold,
           label: 'Push Notifications',
+          description: 'Keep your users engaged.',
           videoUrl: '',
           children: {},
         },
         deviceApis: {
           priority: lp.Priority.gold,
           label: "Device API's",
+          description: 'Access to camera, bluetooth and more.',
           videoUrl: '',
           children: {},
         },
         prplPattern: {
           priority: lp.Priority.gold,
           label: 'PRPL Pattern',
+          description: 'Push, render, pre-cache, lazy-load.',
           videoUrl: '',
           children: {},
         },
@@ -710,6 +829,7 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'orange',
       label: 'LightHouse',
+      description: 'Does your app measure up?',
       videoUrl: '',
       children: {},
     },
@@ -717,6 +837,7 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'hotPink',
       label: 'Performance Optimization',
+      description: 'Performance can make or break a site.',
       videoUrl: '',
       children: {},
     },
@@ -724,6 +845,7 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'black',
       label: 'Websockets',
+      description: 'Real time updates on all of your users devices.',
       videoUrl: '',
       children: {},
     },
@@ -731,17 +853,20 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.platinum,
       color: 'orchid',
       label: 'Analytics',
+      description: 'Measure what matters.',
       videoUrl: '',
       children: {
         googleAnalytics: {
           priority: lp.Priority.gold,
           label: 'Google Analytics',
+          description: 'The OG Analytics toolkit.',
           videoUrl: '',
           children: {},
         },
         mixPanel: {
           priority: lp.Priority.gold,
           label: 'Mix Panel',
+          description: 'The new-gen of analytics.',
           videoUrl: '',
           children: {},
         },
@@ -751,12 +876,14 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'dimGrey',
       label: 'Server Side Rendering',
+      description: 'Achieve great loading speeds, SEO and more.',
       videoUrl: '',
       children: {
         next,
         angularUniversal: {
           priority: lp.Priority.gold,
           label: 'Angular Universal',
+          description: 'Hybrid static & server rendering for Angular.',
           videoUrl: '',
           children: {},
           associations: ['angular'],
@@ -768,17 +895,20 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'deepPink',
       label: 'GraphQL',
+      description: "Type safe and developer friendly API's.",
       videoUrl: '',
       children: {
         apollo: {
           priority: lp.Priority.gold,
           label: 'Apollo',
+          description: 'GraphQL tooling.',
           videoUrl: '',
           children: {},
         },
         relay: {
           priority: lp.Priority.silver,
           label: 'Relay',
+          description: 'GraphQL client for React',
           videoUrl: '',
           children: {},
         },
@@ -788,12 +918,14 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'purple',
       label: 'staticSiteGenerators',
+      description: 'Perfect for blogs, documentation, landing pages and more.',
       videoUrl: '',
       children: {
         next,
         gatsby: {
           priority: lp.Priority.gold,
           label: 'Gatsby',
+          description: 'Powerful and configurable with over 2000 plugins.',
           videoUrl: '',
           children: {},
         },
@@ -801,12 +933,15 @@ const frontend: lp.RootLearningPath = {
         jekyll: {
           priority: lp.Priority.bronze,
           label: 'Jekyll',
+          description:
+            'Transform your text or markdown into static websites or blogs.',
           videoUrl: '',
           children: {},
         },
         huge: {
           priority: lp.Priority.bronze,
           label: 'Hugo',
+          description: 'Promises speed, flexibility and fun.',
           videoUrl: '',
           children: {},
         },
@@ -816,29 +951,29 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'turquoise',
       label: 'Mobile Apps',
+      description: 'Building native mobile apps with web technologies.',
       videoUrl: '',
       children: {
         reactNative: {
           priority: lp.Priority.gold,
           label: 'React Native',
+          description:
+            'Leverage the power or React to build IOS and Android apps',
           videoUrl: '',
           children: {},
         },
         flutter: {
           priority: lp.Priority.silver,
-          label: 'flutter',
+          label: 'Flutter',
+          description:
+            'Beautiful, natively compiled applications for mobile and more.',
           videoUrl: '',
           children: {},
         },
         ionic: {
           priority: lp.Priority.bronze,
           label: 'Ionic',
-          videoUrl: '',
-          children: {},
-        },
-        nativeScript: {
-          priority: lp.Priority.bronze,
-          label: 'NativeScript',
+          description: 'Mobile UI toolkit for multiple frameworks.',
           videoUrl: '',
           children: {},
         },
@@ -848,11 +983,13 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.silver,
       color: 'cadetBlue',
       label: 'Desktop Apps',
+      description: 'Building desktop apps with web technologies.',
       videoUrl: '',
       children: {
         electron: {
           priority: lp.Priority.silver,
           label: 'Electron',
+          description: 'Cross-platform desktop apps with JS, HTML and CSS.',
           videoUrl: '',
           children: {},
         },
@@ -862,17 +999,23 @@ const frontend: lp.RootLearningPath = {
       priority: lp.Priority.gold,
       color: 'darkSlateBlue',
       label: 'Web Assembly',
+      description:
+        'Portable compilation target for programming languages, enabling deployment on the web.',
       videoUrl: '',
       children: {
         rust: {
           priority: lp.Priority.gold,
           label: 'Rust',
+          description:
+            'Rust is syntactically similar to C++ and provides memory safety without using garbage collection.',
           videoUrl: '',
           children: {},
         },
         cpp: {
           priority: lp.Priority.silver,
           label: 'C++',
+          description:
+            'Year after year, one of the 5 programming languages - known for exceptional performance and reliability.',
           videoUrl: '',
           children: {},
         },
