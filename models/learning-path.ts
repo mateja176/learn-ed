@@ -15,7 +15,7 @@ interface WithColor {
   color: string;
 }
 
-interface WithVideoUrl {
+export interface WithVideoUrl {
   videoUrl: string;
 }
 interface WithUrl {

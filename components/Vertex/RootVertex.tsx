@@ -6,6 +6,7 @@ import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
 import { CardHeader } from 'grommet/components/CardHeader';
 import React from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 import { RootLearningPath } from '../../models/learning-path';
 import ChildVertex from './ChildVertex';
 import Edge from './Edge';
