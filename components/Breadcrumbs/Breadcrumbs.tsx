@@ -17,7 +17,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
           const isLast = i === segments.length - 1;
           const formattedSegment = capitalize(segment);
           return (
-            <>
+            <span key={segment.concat(i.toString())}>
               &nbsp;
               {isLast ? (
                 formattedSegment
@@ -27,7 +27,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
                 </Link>
               )}
               &nbsp;{!isLast && '/'}
-            </>
+            </span>
           );
         })}
       </Text>
