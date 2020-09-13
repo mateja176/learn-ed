@@ -2,5 +2,6 @@
   "cSpell.words": [
     "Docosaurus",
     "Jira's"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
