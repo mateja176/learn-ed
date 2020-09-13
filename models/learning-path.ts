@@ -1,8 +1,8 @@
 export enum Priority {
-  platinum,
-  gold,
-  silver,
-  bronze,
+  platinum = 'platinum',
+  gold = 'gold',
+  silver = 'silver',
+  bronze = 'bronze',
 }
 
 interface WithPriority {

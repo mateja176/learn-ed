@@ -5,7 +5,7 @@ import RootVertex from '../../components/Vertex/RootVertex';
 import frontend from '../../utils/frontend.learning-path';
 
 export default {
-  title: 'Vertex',
+  title: 'Vertex/Root',
   component: RootVertex,
 } as Meta;
 

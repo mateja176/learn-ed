@@ -1,6 +1,6 @@
 import * as lp from '../models/learning-path';
 
-const next: lp.ChildLearningPath = {
+const next = {
   priority: lp.Priority.gold,
   label: 'Next',
   description: 'Hybrid static & server rendering for React.',
@@ -9,7 +9,7 @@ const next: lp.ChildLearningPath = {
   children: {},
   associations: ['react'],
 };
-const nuxt: lp.ChildLearningPath = {
+const nuxt = {
   priority: lp.Priority.gold,
   label: 'Nuxt',
   description: 'Hybrid static & server rendering for Vue.',
@@ -19,7 +19,7 @@ const nuxt: lp.ChildLearningPath = {
   associations: ['vue'],
 };
 
-const frontend: lp.RootLearningPath = {
+const frontend = {
   emoji: '🖥️',
   label: 'Front-end',
   description:
@@ -562,7 +562,7 @@ const frontend: lp.RootLearningPath = {
     frameworks: {
       priority: lp.Priority.platinum,
       color: 'cyan',
-      label: 'frameworks',
+      label: 'Frameworks',
       description: 'Say goodbye to JQuery.',
       url: 'https://en.wikipedia.org/wiki/JavaScript_framework',
       videoUrl: 'https://www.youtube.com/watch?v=_P2fGeg9I5o',
