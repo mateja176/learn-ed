@@ -21,6 +21,7 @@
     "react-dom": "^16.12.0",
     "react-toastify": "^6.0.8",
     "styled-components": "^5.2.0",
+    "url-join": "^4.0.1",
     "uuid": "^8.3.0"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@types/url-join": "^4.0.0",
     "@types/uuid": "^8.3.0",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",

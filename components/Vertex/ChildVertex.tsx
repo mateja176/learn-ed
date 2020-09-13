@@ -7,7 +7,9 @@ import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
 import { CardHeader } from 'grommet/components/CardHeader';
 import capitalize from 'lodash/capitalize';
+import Link from 'next/link';
 import React from 'react';
+import urljoin from 'url-join';
 import { ChildLearningPath } from '../../models/learning-path';
 import {
   getPriorityColor,
@@ -20,9 +22,11 @@ import VideoLayer from '../Video/VideoLayer';
 const priorityIndicatorSize = 20;
 
 const ChildVertex: React.FC<{
+  parentPathname: string;
+  pathname: string;
   parentColor?: React.CSSProperties['color'];
   learningPath: ChildLearningPath;
-}> = ({ parentColor, learningPath }) => {
+}> = ({ parentPathname, pathname, parentColor, learningPath }) => {
   const [videoLayerOpen, setVideoLayerOpen] = useBoolean();
 
   const priorityIndicatorStyle: React.CSSProperties = React.useMemo(
@@ -90,12 +94,14 @@ const ChildVertex: React.FC<{
             onClick={setVideoLayerOpen.setTrue}
             hoverIndicator
           />
-          <Button
-            disabled={!hasChildren}
-            title={`${hasChildren ? 'Explore' : 'No subsections'}`}
-            icon={<Icons.Next />}
-            hoverIndicator
-          />
+          <Link href={urljoin(parentPathname, pathname)}>
+            <Button
+              disabled={!hasChildren}
+              title={`${hasChildren ? 'Explore' : 'No subsections'}`}
+              icon={<Icons.Next />}
+              hoverIndicator
+            />
+          </Link>
         </CardFooter>
       </Card>
 

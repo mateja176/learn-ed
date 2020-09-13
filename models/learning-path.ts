@@ -33,6 +33,7 @@ interface LearningPath<Children> {
 }
 
 export interface RootLearningPath extends LearningPath<FirstChildLearningPath> {
+  pathname: string;
   emoji: string;
 }
 

@@ -52,7 +52,11 @@ const RootVertex: React.FC<{
       {Object.entries(learningPath.children).map(([key, path]) => (
         <Box key={key}>
           <Edge />
-          <ChildVertex learningPath={path} />
+          <ChildVertex
+            parentPathname={learningPath.pathname}
+            pathname={key}
+            learningPath={path}
+          />
         </Box>
       ))}
     </Box>
