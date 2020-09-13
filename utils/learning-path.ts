@@ -1,4 +1,5 @@
 import color from 'color';
+import { fromPairs } from 'lodash';
 import React from 'react';
 import { Priority } from '../models/learning-path';
 
@@ -28,3 +29,12 @@ export const getPriorityColor = (
       return 'grey';
   }
 };
+
+const maxSize = 500;
+export const getPrioritySize = (priority: Priority): number =>
+  fromPairs(
+    Object.values(Priority).map((currentPriority, i) => [
+      currentPriority,
+      maxSize - i * 50,
+    ]),
+  )[priority];

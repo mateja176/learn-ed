@@ -9,7 +9,12 @@ import { CardHeader } from 'grommet/components/CardHeader';
 import capitalize from 'lodash/capitalize';
 import React from 'react';
 import { ChildLearningPath } from '../../models/learning-path';
-import { getPriorityColor, getTextColor } from '../../utils/color';
+import {
+  getPriorityColor,
+  getPrioritySize,
+  getTextColor,
+} from '../../utils/learning-path';
+import { cardStyle } from '../../utils/styles/card';
 import VideoLayer from '../Video/VideoLayer';
 
 const priorityIndicatorSize = 20;
@@ -30,8 +35,10 @@ const ChildVertex: React.FC<{
     }),
     [learningPath],
   );
-  const cardStyle: React.CSSProperties = React.useMemo(
+  const childCardStyle: React.CSSProperties = React.useMemo(
     () => ({
+      ...cardStyle,
+      maxWidth: getPrioritySize(learningPath.priority),
       color: learningPath.color
         ? getTextColor(learningPath.color)
         : parentColor,
@@ -42,8 +49,8 @@ const ChildVertex: React.FC<{
   const hasChildren = Object.values(learningPath.children).length;
 
   return (
-    <>
-      <Card background={learningPath.color} style={cardStyle}>
+    <Box align={'center'}>
+      <Card background={learningPath.color} style={childCardStyle}>
         <CardHeader pad="medium">
           <Box direction={'row'} width={'100%'}>
             <Box
@@ -97,7 +104,7 @@ const ChildVertex: React.FC<{
         open={videoLayerOpen}
         onClose={setVideoLayerOpen.setFalse}
       />
-    </>
+    </Box>
   );
 };
 
