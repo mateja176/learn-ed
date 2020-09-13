@@ -7,14 +7,14 @@ import { Video } from './Video';
 
 const VideoLayer: React.FC<
   React.ComponentProps<typeof Video> & { open: boolean; onClose: () => void }
-> = ({ open, onClose, videoUrl }) => {
-  return open ? (
+> = (props) => {
+  return props.open ? (
     <Layer full>
       <Box background="light-2" justify="end" align="center" direction="row">
-        <Button icon={<Icons.FormClose />} onClick={onClose} />
+        <Button icon={<Icons.FormClose />} onClick={props.onClose} />
       </Box>
       <Box fill background="light-2" justify={'center'}>
-        <Video videoUrl={videoUrl} />
+        <Video videoUrl={props.videoUrl} />
       </Box>
     </Layer>
   ) : null;
