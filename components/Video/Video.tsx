@@ -7,9 +7,11 @@ export const Video: React.FC<WithVideoUrl> = (props) => {
 
   React.useEffect(() => {
     return () => {
-      console.log('title', player?.target.playerInfo.videoData.title);
-      console.log('currentTime', player?.target.playerInfo.currentTime);
-      console.log('duration', player?.target.playerInfo.duration);
+      if (player) {
+        console.log('title', player.target.playerInfo.videoData.title);
+        console.log('currentTime', player.target.playerInfo.currentTime);
+        console.log('duration', player.target.playerInfo.duration);
+      }
     };
   }, [player]);
 
