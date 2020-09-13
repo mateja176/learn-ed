@@ -15,53 +15,60 @@ const priorityIndicatorSize = 20;
 const ChildVertex: React.FC<{
   parentColor?: React.CSSProperties['color'];
   learningPath: ChildLearningPath;
-}> = ({ parentColor, learningPath: childLearningPath }) => {
+}> = ({ parentColor, learningPath }) => {
   const priorityIndicatorStyle: React.CSSProperties = React.useMemo(
     () => ({
-      background: getPriorityColor(childLearningPath.priority),
+      background: getPriorityColor(learningPath.priority),
       borderRadius: 5,
       width: priorityIndicatorSize,
       height: priorityIndicatorSize,
       boxShadow: '0 0 5px rgba(0, 0, 0, 0.4)',
     }),
-    [childLearningPath],
+    [learningPath],
   );
   const cardStyle: React.CSSProperties = React.useMemo(
     () => ({
-      color: childLearningPath.color
-        ? getTextColor(childLearningPath.color)
+      color: learningPath.color
+        ? getTextColor(learningPath.color)
         : parentColor,
     }),
-    [childLearningPath],
+    [learningPath],
   );
 
-  const hasChildren = Object.values(childLearningPath.children).length;
+  const hasChildren = Object.values(learningPath.children).length;
 
   return (
-    <Card background={childLearningPath.color} style={cardStyle}>
+    <Card background={learningPath.color} style={cardStyle}>
       <CardHeader pad="medium">
         <Box direction={'row'} width={'100%'}>
           <Box
             round
             style={priorityIndicatorStyle}
-            title={`${capitalize(childLearningPath.priority)} priority`}
+            title={`${capitalize(learningPath.priority)} priority`}
           />
           &nbsp;
           <Box flex={'grow'} align={'center'}>
-            {childLearningPath.label}
+            {learningPath.label}
           </Box>
         </Box>
       </CardHeader>
       <CardBody pad="medium">
-        <Box>{childLearningPath.description}</Box>
+        <Box>{learningPath.description}</Box>
         <Box direction={'row'} margin={{ top: '10px' }}>
-          {childLearningPath.associations?.map((association) => (
+          {learningPath.associations?.map((association) => (
             <Button hoverIndicator secondary label={capitalize(association)} />
           ))}
         </Box>
       </CardBody>
       <CardFooter pad={{ horizontal: 'small' }} background="light-2">
-        <Button icon={<Icons.Book />} hoverIndicator />
+        <a
+          href={learningPath.url}
+          target="__blank"
+          rel="noopener noreferrer"
+          title={`${learningPath.label} documentation`}
+        >
+          <Button icon={<Icons.Book />} hoverIndicator />
+        </a>
         <Button icon={<Icons.Video color={'blue'} />} hoverIndicator />
         <Button
           disabled={!hasChildren}
