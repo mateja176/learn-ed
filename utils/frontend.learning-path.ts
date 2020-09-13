@@ -403,7 +403,7 @@ const frontend = {
     },
     rest: {
       priority: lp.Priority.platinum,
-      color: 'real',
+      color: 'teal',
       label: 'REST',
       description: "Knock, knock - Who's there?",
       url: 'https://restfulapi.net/',
@@ -718,7 +718,7 @@ const frontend = {
     },
     componentLibraries: {
       priority: lp.Priority.platinum,
-      color: 'deepSykBlue',
+      color: 'deepSkyBlue',
       label: 'Component Libraries',
       description: 'Leverage the power of design systems.',
       url:

@@ -14,27 +14,27 @@ const Template: Story<React.ComponentProps<typeof ChildVertex>> = (props) => (
 );
 
 export const Web = (): React.ReactElement => (
-  <Template childLearningPath={frontend.children.web} />
+  <Template learningPath={frontend.children.web} />
 );
 
 export const Frameworks = (): React.ReactElement => (
-  <Template childLearningPath={frontend.children.frameworks} />
+  <Template learningPath={frontend.children.frameworks} />
 );
 
 export const CodeEditors = (): React.ReactElement => (
-  <Template childLearningPath={frontend.children.codeEditors} />
+  <Template learningPath={frontend.children.codeEditors} />
 );
 
 export const SSR = (): React.ReactElement => (
-  <Template childLearningPath={frontend.children.ssr.children.next} />
+  <Template learningPath={frontend.children.ssr.children.next} />
 );
 
 export const Electron = (): React.ReactElement => (
-  <Template childLearningPath={frontend.children.electron} />
+  <Template learningPath={frontend.children.electron} />
 );
 
 export const Docosaurus = (): React.ReactElement => (
   <Template
-    childLearningPath={frontend.children.documentation.children.docusaurus}
+    learningPath={frontend.children.documentation.children.docusaurus}
   />
 );

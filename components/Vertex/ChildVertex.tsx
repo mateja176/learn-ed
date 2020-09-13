@@ -14,8 +14,8 @@ const priorityIndicatorSize = 20;
 
 const ChildVertex: React.FC<{
   parentColor?: React.CSSProperties['color'];
-  childLearningPath: ChildLearningPath;
-}> = ({ parentColor, childLearningPath }) => {
+  learningPath: ChildLearningPath;
+}> = ({ parentColor, learningPath: childLearningPath }) => {
   const priorityIndicatorStyle: React.CSSProperties = React.useMemo(
     () => ({
       background: getPriorityColor(childLearningPath.priority),
@@ -34,6 +34,9 @@ const ChildVertex: React.FC<{
     }),
     [childLearningPath],
   );
+
+  const hasChildren = Object.values(childLearningPath.children).length;
+
   return (
     <Card background={childLearningPath.color} style={cardStyle}>
       <CardHeader pad="medium">
@@ -60,6 +63,12 @@ const ChildVertex: React.FC<{
       <CardFooter pad={{ horizontal: 'small' }} background="light-2">
         <Button icon={<Icons.Book />} hoverIndicator />
         <Button icon={<Icons.Video color={'blue'} />} hoverIndicator />
+        <Button
+          disabled={!hasChildren}
+          title={`${hasChildren ? 'Explore' : 'No subsections'}`}
+          icon={<Icons.Next />}
+          hoverIndicator
+        />
       </CardFooter>
     </Card>
   );
