@@ -19,11 +19,11 @@ export const getPriorityColor = (
     case Priority.platinum:
       return 'linear-gradient(90deg, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 35%, rgba(207,206,206,1) 100%)';
     case Priority.gold:
-      return 'yellow';
+      return 'gold';
     case Priority.silver:
       return 'silver';
     case Priority.bronze:
-      return 'goldenRod';
+      return 'chocolate';
     default:
       return 'grey';
   }
