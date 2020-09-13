@@ -4,7 +4,9 @@ import React from 'react';
 const pointerColor = '#999';
 const pointerSize = 4;
 
-const Edge = (): React.ReactElement => {
+export interface EdgeProps {}
+
+const Edge: React.FC<EdgeProps> = () => {
   const wrapperStyle: React.CSSProperties = React.useMemo(
     () => ({
       position: 'relative',
@@ -16,7 +18,6 @@ const Edge = (): React.ReactElement => {
     () => ({
       border: `solid ${pointerColor}`,
       borderWidth: `0 ${pointerSize}px ${pointerSize}px 0`,
-      display: 'inline-block',
       padding: pointerSize,
       transform: 'rotate(45deg)',
       position: 'absolute',

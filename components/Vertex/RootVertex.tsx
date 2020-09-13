@@ -29,8 +29,16 @@ const RootVertex: React.FC<{
         </CardHeader>
         <CardBody pad="medium">{learningPath.description}</CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">
-          <Button icon={<Icons.Dislike color="gray" />} hoverIndicator />
-          <Button icon={<Icons.Like color="blue" />} hoverIndicator />
+          <Button
+            style={{ visibility: 'hidden' }}
+            icon={<Icons.Dislike color="gray" />}
+            hoverIndicator
+          />
+          <Button
+            style={{ visibility: 'hidden' }}
+            icon={<Icons.Like color="blue" />}
+            hoverIndicator
+          />
         </CardFooter>
       </Card>
       {Object.entries(learningPath.children).map(([key, path]) => (
