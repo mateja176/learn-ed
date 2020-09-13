@@ -16,7 +16,7 @@ const RootVertex: React.FC<{
 }> = ({ learningPath }) => {
   return (
     <Box>
-      <Card background="light-1">
+      <Card background="white">
         <CardHeader pad="medium">
           <Box direction={'row'} width={'100%'}>
             <span role="img" aria-label={learningPath.label}>
