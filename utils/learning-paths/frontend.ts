@@ -1,4 +1,4 @@
-import * as lp from '../models/learning-path';
+import * as lp from '../../models/learning-path';
 
 const next = {
   priority: lp.Priority.gold,
@@ -20,9 +20,9 @@ const nuxt = {
 };
 
 const frontend = {
-  emoji: '🖥️',
-  pathname: 'frontend',
-  label: 'Front-end',
+  priority: lp.Priority.platinum,
+  color: 'white',
+  label: '🖥️ Front-end',
   description:
     'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',
   children: {
@@ -1224,6 +1224,6 @@ const frontend = {
       },
     },
   },
-};
+} as const;
 
 export default frontend;

@@ -1,51 +1,34 @@
 import { useBoolean } from 'ahooks';
+import color from 'color';
 import * as Icons from 'grommet-icons';
 import { Box } from 'grommet/components/Box';
 import { Button } from 'grommet/components/Button';
 import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
-import { CardHeader } from 'grommet/components/CardHeader';
 import capitalize from 'lodash/capitalize';
 import Link from 'next/link';
 import React from 'react';
-import urljoin from 'url-join';
 import { ChildLearningPath } from '../../models/learning-path';
-import {
-  getPriorityColor,
-  getPrioritySize,
-  getTextColor,
-} from '../../utils/learning-path';
+import { getPrioritySize, getTextColor } from '../../utils/learning-path';
 import { cardStyle } from '../../utils/styles/card';
 import VideoLayer from '../Video/VideoLayer';
-
-const priorityIndicatorSize = 20;
+import Header from './Header';
 
 const ChildVertex: React.FC<{
-  parentPathname: string;
   pathname: string;
   parentColor?: React.CSSProperties['color'];
   learningPath: ChildLearningPath;
-}> = ({ parentPathname, pathname, parentColor, learningPath }) => {
+}> = ({ pathname, parentColor, learningPath }) => {
   const [videoLayerOpen, setVideoLayerOpen] = useBoolean();
 
-  const priorityIndicatorStyle: React.CSSProperties = React.useMemo(
-    () => ({
-      background: getPriorityColor(learningPath.priority),
-      borderRadius: 5,
-      width: priorityIndicatorSize,
-      height: priorityIndicatorSize,
-      boxShadow: '0 0 5px rgba(0, 0, 0, 0.4)',
-    }),
-    [learningPath],
-  );
+  const cardBackground = color(parentColor).fade(0.5);
+
   const childCardStyle: React.CSSProperties = React.useMemo(
     () => ({
       ...cardStyle,
       maxWidth: getPrioritySize(learningPath.priority),
-      color: learningPath.color
-        ? getTextColor(learningPath.color)
-        : parentColor,
+      color: learningPath.color ? getTextColor(learningPath.color) : 'black',
     }),
     [learningPath],
   );
@@ -54,20 +37,11 @@ const ChildVertex: React.FC<{
 
   return (
     <Box align={'center'}>
-      <Card background={learningPath.color} style={childCardStyle}>
-        <CardHeader pad="medium">
-          <Box direction={'row'} width={'100%'}>
-            <Box
-              round
-              style={priorityIndicatorStyle}
-              title={`${capitalize(learningPath.priority)} priority`}
-            />
-            &nbsp;
-            <Box flex={'grow'} align={'center'}>
-              {learningPath.label}
-            </Box>
-          </Box>
-        </CardHeader>
+      <Card
+        background={learningPath.color || cardBackground.toString()}
+        style={childCardStyle}
+      >
+        <Header label={learningPath.label} priority={learningPath.priority} />
         <CardBody pad="medium">
           <Box>{learningPath.description}</Box>
           <Box direction={'row'} margin={{ top: '10px' }}>
@@ -94,7 +68,7 @@ const ChildVertex: React.FC<{
             onClick={setVideoLayerOpen.setTrue}
             hoverIndicator
           />
-          <Link href={urljoin(parentPathname, pathname)}>
+          <Link href={pathname}>
             <Button
               disabled={!hasChildren}
               title={`${hasChildren ? 'Explore' : 'No subsections'}`}

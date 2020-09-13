@@ -25,16 +25,15 @@ interface WithUrl {
   url: string;
 }
 
-interface LearningPath<Children> {
+interface LearningPath<Children> extends WithPriority {
   label: string;
   description: string;
-  associations?: Key[];
+  associations?: ReadonlyArray<Key>;
   children: Record<Key, Children>;
 }
 
 export interface RootLearningPath extends LearningPath<FirstChildLearningPath> {
-  pathname: string;
-  emoji: string;
+  color: 'white';
 }
 
 export interface FirstChildLearningPath
