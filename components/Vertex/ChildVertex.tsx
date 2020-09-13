@@ -79,7 +79,7 @@ const ChildVertex: React.FC<{
             <Button icon={<Icons.Book />} hoverIndicator />
           </a>
           <Button
-            icon={<Icons.Video color={'blue'} />}
+            icon={<Icons.Video color={'brand'} />}
             onClick={setVideoLayerOpen.setTrue}
             hoverIndicator
           />
