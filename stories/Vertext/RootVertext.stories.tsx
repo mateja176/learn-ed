@@ -21,5 +21,5 @@ const Template: Story<React.ComponentProps<typeof RootVertex>> = (props) => (
 );
 
 export const Frontend = (): React.ReactElement => (
-  <Template color={'cyan'} learningPath={frontend} />
+  <Template pathname={'/'} parentColor={'cyan'} learningPath={frontend} />
 );

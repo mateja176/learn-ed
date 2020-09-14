@@ -49,7 +49,11 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         style={{ flex: 1 }}
         pad={{ top: '30px', bottom: '150px' }}
       >
-        <Tree pathname={asPath} learningPath={learningPath} color={color} />
+        <Tree
+          pathname={asPath}
+          learningPath={learningPath}
+          parentColor={color}
+        />
       </Box>
     </Box>
   );

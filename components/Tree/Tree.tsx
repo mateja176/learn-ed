@@ -5,21 +5,21 @@ import ChildVertex from '../Vertex/ChildVertex';
 import Edge from '../Vertex/Edge';
 import RootVertex, { RootVertexProps } from '../Vertex/Root/RootVertex';
 
-export interface TreeProps
-  extends Pick<RootVertexProps, 'learningPath'>,
-    Pick<React.CSSProperties, 'color'> {
-  pathname: string;
-}
+export interface TreeProps extends RootVertexProps {}
 
 const Tree: React.FC<TreeProps> = (props) => {
   return (
     <div>
-      <RootVertex color={props.color} learningPath={props.learningPath} />
+      <RootVertex
+        pathname={props.pathname}
+        parentColor={props.parentColor}
+        learningPath={props.learningPath}
+      />
       {Object.entries(props.learningPath.children).map(([key, path]) => (
         <Box key={key}>
           <Edge />
           <ChildVertex
-            parentColor={props.learningPath.color || props.color}
+            parentColor={props.learningPath.color || props.parentColor}
             pathname={urljoin(props.pathname, key)}
             learningPath={path}
           />

@@ -40,6 +40,6 @@ export const GrandChild = (): React.ReactElement => (
   <Template
     pathname={urljoin(frameworksPathname, 'react')}
     learningPath={react}
-    color={'cyan'}
+    parentColor={'cyan'}
   />
 );

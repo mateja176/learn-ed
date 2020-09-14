@@ -4,19 +4,26 @@ import { Button } from 'grommet/components/Button';
 import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
+import Link from 'next/link';
 import React from 'react';
 import { ILearningPath } from '../../../models/learning-path';
 import { getTextColor } from '../../../utils/learning-path';
 import { cardStyle } from '../../../utils/styles/card';
 import Header from '../Header';
 
-export type RootVertexProps = Pick<React.CSSProperties, 'color'> & {
+export interface RootVertexProps {
+  pathname: string;
+  parentColor?: React.CSSProperties['color'];
   learningPath: ILearningPath;
-};
+}
 
-const RootVertex: React.FC<RootVertexProps> = ({ color, learningPath }) => {
+const RootVertex: React.FC<RootVertexProps> = ({
+  pathname,
+  parentColor,
+  learningPath,
+}) => {
   const cardBackground = React.useMemo(
-    () => learningPath.color ?? color ?? 'black',
+    () => learningPath.color ?? parentColor ?? 'black',
     [learningPath.color],
   );
 
@@ -35,6 +42,9 @@ const RootVertex: React.FC<RootVertexProps> = ({ color, learningPath }) => {
         <Header label={learningPath.label} priority={learningPath.priority} />
         <CardBody pad="medium">{learningPath.description}</CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">
+          <Link href={pathname.split('/').slice(0, -1).join('/')}>
+            <Button icon={<Icons.FormPrevious />} />
+          </Link>
           <Button
             style={{ visibility: 'hidden' }}
             icon={<Icons.Dislike color="gray" />}
