@@ -1,9 +1,9 @@
 import { Box } from 'grommet/components/Box';
 import React from 'react';
 import urljoin from 'url-join';
-import ChildVertex from './Vertex/ChildVertex';
-import Edge from './Vertex/Edge';
-import RootVertex, { RootVertexProps } from './Vertex/Root/RootVertex';
+import ChildVertex from '../Vertex/ChildVertex';
+import Edge from '../Vertex/Edge';
+import RootVertex, { RootVertexProps } from '../Vertex/Root/RootVertex';
 
 export interface TreeProps
   extends Pick<RootVertexProps, 'learningPath'>,

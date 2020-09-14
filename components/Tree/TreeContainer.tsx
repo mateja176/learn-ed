@@ -1,15 +1,14 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import RootVertex from './RootVertex';
+import Tree, { TreeProps } from './Tree';
 
-export interface RootVertexContainerProps
-  extends React.ComponentProps<typeof RootVertex> {}
+export interface TreeContainerProps extends Omit<TreeProps, 'color'> {}
 
-const RootVertexContainer: React.FC<RootVertexContainerProps> = (props) => {
+const TreeContainer: React.FC<TreeContainerProps> = (props) => {
   const router = useRouter();
 
   return (
-    <RootVertex
+    <Tree
       {...props}
       color={
         Array.isArray(router.query.color)
@@ -20,4 +19,4 @@ const RootVertexContainer: React.FC<RootVertexContainerProps> = (props) => {
   );
 };
 
-export default RootVertexContainer;
+export default TreeContainer;

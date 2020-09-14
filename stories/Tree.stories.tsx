@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import urljoin from 'url-join';
-import Tree, { TreeProps } from '../components/Tree';
+import Tree, { TreeProps } from '../components/Tree/Tree';
 import frontend from '../utils/learning-paths/frontend';
 
 export default {
