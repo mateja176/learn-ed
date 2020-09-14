@@ -1,4 +1,3 @@
-import { useBoolean } from 'ahooks';
 import color from 'color';
 import * as Icons from 'grommet-icons';
 import { Box } from 'grommet/components/Box';
@@ -8,7 +7,9 @@ import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
 import capitalize from 'lodash/capitalize';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
+import urljoin from 'url-join';
 import { ChildLearningPath } from '../../models/learning-path';
 import { getPrioritySize, getTextColor } from '../../utils/learning-path';
 import { cardStyle } from '../../utils/styles/card';
@@ -16,11 +17,20 @@ import VideoLayer from '../Video/VideoLayer';
 import Header from './Header';
 
 const ChildVertex: React.FC<{
+  parentPathname: string;
   pathname: string;
   parentColor?: React.CSSProperties['color'];
   learningPath: ChildLearningPath;
-}> = ({ pathname, parentColor, learningPath }) => {
-  const [videoLayerOpen, setVideoLayerOpen] = useBoolean();
+}> = ({ parentPathname, pathname, parentColor, learningPath }) => {
+  const router = useRouter();
+
+  const videoLayer = router.query.video === pathname;
+  const toggleVideoLayer = React.useCallback(() => {
+    router.push({
+      pathname: parentPathname,
+      query: videoLayer ? {} : { video: pathname },
+    });
+  }, [router, videoLayer, parentPathname, pathname]);
 
   const cardBackground =
     learningPath.color ??
@@ -64,10 +74,10 @@ const ChildVertex: React.FC<{
           </a>
           <Button
             icon={<Icons.Video color={'brand'} />}
-            onClick={setVideoLayerOpen.setTrue}
+            onClick={toggleVideoLayer}
             hoverIndicator
           />
-          <Link href={pathname}>
+          <Link href={urljoin(parentPathname, pathname)}>
             <Button
               disabled={!hasChildren}
               title={`${hasChildren ? 'Explore' : 'No subsections'}`}
@@ -80,8 +90,8 @@ const ChildVertex: React.FC<{
 
       <VideoLayer
         videoUrl={learningPath.videoUrl}
-        open={videoLayerOpen}
-        onClose={setVideoLayerOpen.setFalse}
+        open={videoLayer}
+        onClose={toggleVideoLayer}
       />
     </Box>
   );

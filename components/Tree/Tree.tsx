@@ -1,7 +1,6 @@
 import { Box } from 'grommet/components/Box';
 import { kebabCase } from 'lodash';
 import React from 'react';
-import urljoin from 'url-join';
 import ChildVertex from '../Vertex/ChildVertex';
 import Edge from '../Vertex/Edge';
 import RootVertex, { RootVertexProps } from '../Vertex/Root/RootVertex';
@@ -21,7 +20,8 @@ const Tree: React.FC<TreeProps> = (props) => {
           <Edge />
           <ChildVertex
             parentColor={props.learningPath.color || props.parentColor}
-            pathname={urljoin(props.pathname, kebabCase(key))}
+            parentPathname={props.pathname}
+            pathname={kebabCase(key)}
             learningPath={path}
           />
         </Box>

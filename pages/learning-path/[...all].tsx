@@ -15,7 +15,7 @@ export interface LearningPathProps {
 
 const LearningPath: NextPage<LearningPathProps> = (props) => {
   const router = useRouter();
-  const asPath = process.browser ? router.asPath : props.asPath;
+  const asPath = (process.browser ? router.asPath : props.asPath).split('?')[0];
   const segments = React.useMemo(() => asPath.split('/').slice(2), [asPath]);
   const learningPath: ILearningPath = React.useMemo(
     () =>

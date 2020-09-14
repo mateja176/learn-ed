@@ -17,42 +17,48 @@ const Template: Story<React.ComponentProps<typeof ChildVertex>> = (props) => (
 const [[webKey, webPath]] = Object.entries(frontend.children);
 export const Web = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', webKey)}
+    parentPathname={urljoin('frontend')}
+    pathname={webKey}
     learningPath={webPath}
   />
 );
 
 export const Frameworks = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', 'frameworks')}
+    parentPathname={urljoin('frontend')}
+    pathname={'frameworks'}
     learningPath={frontend.children.frameworks}
   />
 );
 
 export const CodeEditors = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', 'codeEditors')}
+    parentPathname={urljoin('frontend')}
+    pathname={'codeEditors'}
     learningPath={frontend.children.codeEditors}
   />
 );
 
 export const Next = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', 'ssr', 'next')}
+    parentPathname={urljoin('frontend', 'ssr')}
+    pathname={'next'}
     learningPath={frontend.children.ssr.children.next}
   />
 );
 
 export const Electron = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', 'electron')}
+    parentPathname={urljoin('frontend')}
+    pathname={'electron'}
     learningPath={frontend.children.electron}
   />
 );
 
 export const Docosaurus = (): React.ReactElement => (
   <Template
-    pathname={urljoin('frontend', 'documentation', 'docosaurus')}
+    parentPathname={urljoin('frontend', 'documentation')}
+    pathname={'docosaurus'}
     learningPath={frontend.children.documentation.children.docusaurus}
   />
 );
