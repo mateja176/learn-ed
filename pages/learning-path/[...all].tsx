@@ -1,8 +1,9 @@
 import { Box } from 'grommet/components/Box';
+import { camelCase } from 'lodash';
 import { NextPage, NextPageContext } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import BreadcrumbsContainer from '../../components/Breadcrumbs/BreakdCrumbsContainer';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../../components/Tree/Tree';
 import { ILearningPath } from '../../models/learning-path';
 import { getLearningPathColor } from '../../utils/learning-path';
@@ -19,8 +20,9 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
   const learningPath: ILearningPath = React.useMemo(
     () =>
       segments.reduce((paths, path) => {
-        if (path in paths.children) {
-          return paths.children[path];
+        const key = camelCase(path);
+        if (key in paths.children) {
+          return paths.children[key];
         } else {
           return paths;
         }
@@ -41,7 +43,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         elevation={'medium'}
         style={{ zIndex: 1 }}
       >
-        <BreadcrumbsContainer />
+        <Breadcrumbs pathname={asPath} />
       </Box>
       <Box
         background={'light-3'}

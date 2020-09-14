@@ -192,7 +192,7 @@ const frontend = {
         },
       },
     },
-    javaScript: {
+    javascript: {
       priority: lp.Priority.platinum,
       color: 'yellow',
       label: 'JavaScript',
@@ -833,7 +833,7 @@ const frontend = {
       url: 'https://advancedweb.dev/static-type-checkers',
       videoUrl: 'https://www.youtube.com/watch?v=YHvqbeh_n9U',
       children: {
-        typeScript: {
+        typescript: {
           priority: lp.Priority.gold,
           label: 'TypeScript',
           description: 'Typed JavScript at scale.',
