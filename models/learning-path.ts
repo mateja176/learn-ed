@@ -49,3 +49,8 @@ export interface ChildLearningPath
     WithVideoUrl,
     WithUrl,
     Partial<WithColor> {}
+
+export type ILearningPath =
+  | RootLearningPath
+  | FirstChildLearningPath
+  | ChildLearningPath;

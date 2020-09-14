@@ -5,28 +5,29 @@ import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
 import React from 'react';
-import 'react-toastify/dist/ReactToastify.css';
-import {
-  ChildLearningPath,
-  FirstChildLearningPath,
-  RootLearningPath,
-} from '../../../models/learning-path';
+import { ILearningPath } from '../../../models/learning-path';
+import { getTextColor } from '../../../utils/learning-path';
 import { cardStyle } from '../../../utils/styles/card';
 import Header from '../Header';
 
 export type RootVertexProps = Pick<React.CSSProperties, 'color'> & {
-  learningPath: RootLearningPath | FirstChildLearningPath | ChildLearningPath;
-};
-
-const rootCardStyle: React.CSSProperties = {
-  ...cardStyle,
-  maxWidth: 550,
+  learningPath: ILearningPath;
 };
 
 const RootVertex: React.FC<RootVertexProps> = ({ color, learningPath }) => {
-  const cardBackground = React.useMemo(() => learningPath.color ?? color, [
-    learningPath.color,
-  ]);
+  const cardBackground = React.useMemo(
+    () => learningPath.color ?? color ?? 'black',
+    [learningPath.color],
+  );
+
+  const rootCardStyle: React.CSSProperties = React.useMemo(
+    () => ({
+      ...cardStyle,
+      maxWidth: 550,
+      color: getTextColor(cardBackground),
+    }),
+    [cardBackground],
+  );
 
   return (
     <Box align={'center'}>

@@ -13,7 +13,7 @@ export interface TreeProps
 
 const Tree: React.FC<TreeProps> = (props) => {
   return (
-    <Box>
+    <div>
       <RootVertex color={props.color} learningPath={props.learningPath} />
       {Object.entries(props.learningPath.children).map(([key, path]) => (
         <Box key={key}>
@@ -25,7 +25,7 @@ const Tree: React.FC<TreeProps> = (props) => {
           />
         </Box>
       ))}
-    </Box>
+    </div>
   );
 };
 

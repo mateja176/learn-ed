@@ -1,7 +1,8 @@
 import color from 'color';
 import { fromPairs } from 'lodash';
+import { reduce } from 'ramda';
 import React from 'react';
-import { Priority } from '../models/learning-path';
+import { ILearningPath, Priority } from '../models/learning-path';
 
 export const getTextColor = (
   background: NonNullable<React.CSSProperties['color']>,
@@ -38,3 +39,32 @@ export const getPrioritySize = (priority: Priority): number =>
       maxSize - i * 50,
     ]),
   )[priority];
+
+export const getLearningPathColor = ({
+  rootLearningPath,
+  segments,
+}: {
+  rootLearningPath: ILearningPath;
+  segments: string[];
+}): React.CSSProperties['color'] => {
+  return reduce(
+    ({ currentLearningPath, currentColor }, segment) => {
+      const childLearningPath = currentLearningPath.children[segment];
+      if (childLearningPath) {
+        return {
+          currentLearningPath: childLearningPath,
+          currentColor:
+            childLearningPath.color ??
+            color(currentColor.toLowerCase()).fade(0.2).toString(),
+        };
+      } else {
+        return {
+          currentLearningPath,
+          currentColor,
+        };
+      }
+    },
+    { currentLearningPath: rootLearningPath, currentColor: 'black' },
+    segments,
+  ).currentColor;
+};

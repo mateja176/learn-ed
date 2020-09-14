@@ -22,13 +22,15 @@ const ChildVertex: React.FC<{
 }> = ({ pathname, parentColor, learningPath }) => {
   const [videoLayerOpen, setVideoLayerOpen] = useBoolean();
 
-  const cardBackground = color(parentColor).fade(0.5);
+  const cardBackground =
+    learningPath.color ??
+    color(parentColor?.toLowerCase()).fade(0.2).toString();
 
   const childCardStyle: React.CSSProperties = React.useMemo(
     () => ({
       ...cardStyle,
       maxWidth: getPrioritySize(learningPath.priority),
-      color: learningPath.color ? getTextColor(learningPath.color) : 'black',
+      color: getTextColor(cardBackground),
     }),
     [learningPath],
   );
@@ -37,10 +39,7 @@ const ChildVertex: React.FC<{
 
   return (
     <Box align={'center'}>
-      <Card
-        background={learningPath.color || cardBackground.toString()}
-        style={childCardStyle}
-      >
+      <Card background={cardBackground} style={childCardStyle}>
         <Header label={learningPath.label} priority={learningPath.priority} />
         <CardBody pad="medium">
           <Box>{learningPath.description}</Box>

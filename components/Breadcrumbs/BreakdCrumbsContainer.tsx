@@ -7,7 +7,7 @@ export interface BreadcrumbsContainerProps {}
 const BreadcrumbsContainer: React.FC<BreadcrumbsContainerProps> = () => {
   const router = useRouter();
 
-  return <Breadcrumbs pathname={router.pathname} />;
+  return <Breadcrumbs pathname={router.asPath} />;
 };
 
 export default BreadcrumbsContainer;

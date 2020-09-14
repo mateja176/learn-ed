@@ -21,10 +21,13 @@ const nuxt = {
 
 const frontend = {
   priority: lp.Priority.platinum,
-  color: 'white',
+  color: 'royalblue',
   label: '🖥️ Front-end',
   description:
     'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',
+  url:
+    'https://frontendmasters.com/books/front-end-handbook/2018/what-is-a-FD.html',
+  videoUrl: 'https://www.youtube.com/watch?v=QA0XpGhiz5w',
   children: {
     web: {
       priority: lp.Priority.platinum,
