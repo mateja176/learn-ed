@@ -602,7 +602,16 @@ const frontend = {
               label: 'MobX',
               url: 'https://mobx.js.org/README.html#getting-started',
               videoUrl: 'https://www.youtube.com/watch?v=oQiMXRsO4o4',
-              children: {},
+              children: {
+                test: {
+                  priority: lp.Priority.bronze,
+                  label: 'Test',
+                  description: 'A',
+                  url: '',
+                  videoUrl: '',
+                  children: {},
+                },
+              },
             },
           },
         },

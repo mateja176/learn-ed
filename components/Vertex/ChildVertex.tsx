@@ -11,7 +11,12 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import urljoin from 'url-join';
 import { ChildLearningPath } from '../../models/learning-path';
-import { getPrioritySize, getTextColor } from '../../utils/learning-path';
+import {
+  getFullPathname,
+  getPrioritySize,
+  getTextColor,
+} from '../../utils/learning-path';
+import rootLearningPath from '../../utils/learning-paths';
 import { cardStyle } from '../../utils/styles/card';
 import VideoLayer from '../Video/VideoLayer';
 import Header from './Header';
@@ -47,6 +52,9 @@ const ChildVertex: React.FC<{
 
   const hasChildren = Object.values(learningPath.children).length;
 
+  const [, , rootKey] = parentPathname.split('/');
+  const root = rootLearningPath.children[rootKey];
+
   return (
     <Box align={'center'}>
       <Card background={cardBackground} style={childCardStyle}>
@@ -55,11 +63,20 @@ const ChildVertex: React.FC<{
           <Box>{learningPath.description}</Box>
           <Box direction={'row'} margin={{ top: '10px' }}>
             {learningPath.associations?.map((association) => (
-              <Button
-                hoverIndicator
-                secondary
-                label={capitalize(association)}
-              />
+              <Link
+                key={association}
+                href={getFullPathname({
+                  key: association,
+                  root,
+                  pathnames: ['learning-path', rootKey],
+                })}
+              >
+                <Button
+                  hoverIndicator
+                  secondary
+                  label={capitalize(association)}
+                />
+              </Link>
             ))}
           </Box>
         </CardBody>

@@ -1,7 +1,10 @@
+/* eslint-disable indent */
+
 import color from 'color';
-import { fromPairs } from 'lodash';
-import { reduce } from 'ramda';
+import { fromPairs, isEmpty } from 'lodash';
+import { last, reduce } from 'ramda';
 import React from 'react';
+import urljoin from 'url-join';
 import { ILearningPath, Priority } from '../models/learning-path';
 
 export const getTextColor = (
@@ -67,4 +70,40 @@ export const getLearningPathColor = ({
     { currentLearningPath: rootLearningPath, currentColor: 'black' },
     segments,
   ).currentColor;
+};
+
+type GetPathnameParams = {
+  key: string;
+  root: ILearningPath;
+  pathnames: string[];
+};
+export const getFullPathname = (params: GetPathnameParams): string => {
+  const rootPathnames = params.pathnames;
+  const getFullPathnames = ({
+    key,
+    root,
+    pathnames,
+  }: GetPathnameParams): string[] =>
+    Object.entries(root.children).reduce(
+      (fullPathnames, [childKey, child], i, a) => {
+        const lastKey = last(fullPathnames);
+        const newPathnames =
+          lastKey === key
+            ? fullPathnames
+            : key === childKey
+            ? fullPathnames.concat(childKey)
+            : isEmpty(child.children)
+            ? i === a.length - 1
+              ? rootPathnames
+              : fullPathnames
+            : getFullPathnames({
+                key,
+                root: child,
+                pathnames: pathnames.concat(childKey),
+              });
+        return newPathnames;
+      },
+      pathnames,
+    );
+  return urljoin('/', ...getFullPathnames(params));
 };
