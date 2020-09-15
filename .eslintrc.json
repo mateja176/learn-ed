@@ -7,6 +7,9 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.dev.json"
+  },
   "rules": {
     "implicit-arrow-linebreak": "off",
     "operator-linebreak": "off",
