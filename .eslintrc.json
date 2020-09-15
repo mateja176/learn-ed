@@ -11,6 +11,8 @@
     "implicit-arrow-linebreak": "off",
     "operator-linebreak": "off",
     "no-else-return": "off",
+    "no-confusing-arrow": "off",
+    "object-curly-newline": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "spaced-comment": "off",
     "import/extensions": "off",

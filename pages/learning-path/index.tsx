@@ -1,8 +1,5 @@
-import React from 'react';
-import LearningPath, { LearningPathProps } from './[...all]';
+import LearningPath from './[...all]';
 
-export type RootLearningPathProps = LearningPathProps;
-
-const RootLearningPath: React.FC<RootLearningPathProps> = LearningPath;
+const RootLearningPath = LearningPath;
 
 export default RootLearningPath;

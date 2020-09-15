@@ -1,11 +1,15 @@
-import { GlobalWithMaybeYT, GlobalWithYT, Player } from '../interfaces/youtube';
+import {
+  GlobalWithMaybeYT,
+  GlobalWithYT,
+  Options,
+  Player,
+} from '../interfaces/youtube';
 
 const youtubeIframeApi = 'https://www.youtube.com/iframe_api';
 
 const scriptId = 'youtube-iframe-script';
 
-export type RenderPlayerParams = Pick<Player, 'playerId'> &
-  Omit<Player['options'], 'events'>;
+export type RenderPlayerParams = { playerId: string } & Omit<Options, 'events'>;
 export const renderPlayerService = ({
   playerId,
   ...options

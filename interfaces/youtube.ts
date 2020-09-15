@@ -6,7 +6,7 @@ export interface QueryParams {
   v: string;
 }
 
-interface Options extends Pick<CSSProperties, 'width' | 'height'> {
+export interface Options extends Pick<CSSProperties, 'width' | 'height'> {
   videoId: string;
   events: { onReady: () => void };
 }
