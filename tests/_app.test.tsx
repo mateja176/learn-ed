@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { createRouter } from 'next/router';
 import { identity } from 'ramda';
 import React from 'react';
-import App from './_app';
+import App from '../pages/_app';
 
 const router = createRouter('', {}, '', {
   isFallback: false,
