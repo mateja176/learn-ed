@@ -1,3 +1,3 @@
 export const cardStyle: React.CSSProperties = {
-  width: '100%',
+  width: '95%',
 };

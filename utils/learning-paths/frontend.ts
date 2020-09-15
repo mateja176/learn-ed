@@ -1068,7 +1068,7 @@ const frontend = {
     staticSiteGenerators: {
       priority: lp.Priority.gold,
       color: 'purple',
-      label: 'staticSiteGenerators',
+      label: 'Static Site Generators',
       description: 'Perfect for blogs, documentation, landing pages and more.',
       url:
         'https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/',

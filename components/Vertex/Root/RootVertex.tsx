@@ -36,15 +36,21 @@ const RootVertex: React.FC<RootVertexProps> = ({
     [cardBackground],
   );
 
+  const backLink = pathname.split('/').slice(0, -1).join('/');
+
   return (
     <Box align={'center'}>
       <Card background={cardBackground} style={rootCardStyle}>
         <Header label={learningPath.label} priority={learningPath.priority} />
         <CardBody pad="medium">{learningPath.description}</CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">
-          <Link href={pathname.split('/').slice(0, -1).join('/')}>
-            <Button icon={<Icons.FormPrevious />} />
-          </Link>
+          {backLink ? (
+            <Link href={backLink}>
+              <Button icon={<Icons.Previous />} hoverIndicator />
+            </Link>
+          ) : (
+            <Button icon={<Icons.Previous />} disabled />
+          )}
           <Button
             style={{ visibility: 'hidden' }}
             icon={<Icons.Dislike color="gray" />}
