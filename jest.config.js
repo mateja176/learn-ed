@@ -5,4 +5,9 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
+  globals: {
+    'ts-jest': {
+      tsConfig: './tsconfig.dev.json',
+    },
+  },
 };
