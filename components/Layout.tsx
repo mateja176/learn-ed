@@ -15,17 +15,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-type Props = {
-  title?: string;
-};
-
-const Layout: React.FC<Props> = ({
-  children,
-  title = 'This is the default title',
-}) => (
+const Layout: React.FC = ({ children }) => (
   <Box direction={'column'} height={'100%'}>
     <Head>
-      <title>{title}</title>
+      <title>Learn-ed</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
