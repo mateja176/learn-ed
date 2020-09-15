@@ -5,15 +5,16 @@ import { WithVideoUrl } from '../../models/learning-path';
 export const Video: React.FC<WithVideoUrl> = (props) => {
   const { playerRef, player } = usePlayer(props);
 
-  React.useEffect(() => {
-    return () => {
+  React.useEffect(
+    () => () => {
       if (player) {
-        console.log('title', player.target.playerInfo.videoData.title);
-        console.log('currentTime', player.target.playerInfo.currentTime);
-        console.log('duration', player.target.playerInfo.duration);
+        console.log('title', player.target.playerInfo.videoData.title); // eslint-disable-line no-console
+        console.log('currentTime', player.target.playerInfo.currentTime); // eslint-disable-line no-console
+        console.log('duration', player.target.playerInfo.duration); // eslint-disable-line no-console
       }
-    };
-  }, [player]);
+    },
+    [player],
+  );
 
   return <div ref={playerRef} />;
 };

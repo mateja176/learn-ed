@@ -1,7 +1,7 @@
 import React from 'react';
 import LearningPath, { LearningPathProps } from './[...all]';
 
-export interface RootLearningPathProps extends LearningPathProps {}
+export type RootLearningPathProps = LearningPathProps;
 
 const RootLearningPath: React.FC<RootLearningPathProps> = LearningPath;
 

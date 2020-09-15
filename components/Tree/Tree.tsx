@@ -5,29 +5,27 @@ import ChildVertex from '../Vertex/ChildVertex';
 import Edge from '../Vertex/Edge';
 import RootVertex, { RootVertexProps } from '../Vertex/Root/RootVertex';
 
-export interface TreeProps extends RootVertexProps {}
+export type TreeProps = RootVertexProps;
 
-const Tree: React.FC<TreeProps> = (props) => {
-  return (
-    <div>
-      <RootVertex
-        pathname={props.pathname}
-        parentColor={props.parentColor}
-        learningPath={props.learningPath}
-      />
-      {Object.entries(props.learningPath.children).map(([key, path]) => (
-        <Box key={key}>
-          <Edge />
-          <ChildVertex
-            parentColor={props.learningPath.color || props.parentColor}
-            parentPathname={props.pathname}
-            pathname={kebabCase(key)}
-            learningPath={path}
-          />
-        </Box>
-      ))}
-    </div>
-  );
-};
+const Tree: React.FC<TreeProps> = (props) => (
+  <div>
+    <RootVertex
+      pathname={props.pathname}
+      parentColor={props.parentColor}
+      learningPath={props.learningPath}
+    />
+    {Object.entries(props.learningPath.children).map(([key, path]) => (
+      <Box key={key}>
+        <Edge />
+        <ChildVertex
+          parentColor={props.learningPath.color || props.parentColor}
+          parentPathname={props.pathname}
+          pathname={kebabCase(key)}
+          learningPath={path}
+        />
+      </Box>
+    ))}
+  </div>
+);
 
 export default Tree;

@@ -23,9 +23,8 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         const key = camelCase(path);
         if (key in paths.children) {
           return paths.children[key];
-        } else {
-          return paths;
         }
+        return paths;
       }, rootLearningPath as ILearningPath),
     [segments],
   );

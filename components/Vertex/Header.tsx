@@ -5,8 +5,7 @@ import React from 'react';
 import { ChildLearningPath } from '../../models/learning-path';
 import { getPriorityColor } from '../../utils/learning-path';
 
-export interface HeaderProps
-  extends Pick<ChildLearningPath, 'label' | 'priority'> {}
+export type HeaderProps = Pick<ChildLearningPath, 'label' | 'priority'>;
 
 const priorityIndicatorSize = 20;
 

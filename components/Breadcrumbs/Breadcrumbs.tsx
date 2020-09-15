@@ -27,7 +27,8 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
                   {formattedSegment}
                 </Link>
               )}
-              &nbsp;{!isLast && '/'}
+              &nbsp;
+              {!isLast && '/'}
             </span>
           );
         })}

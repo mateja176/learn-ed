@@ -7,8 +7,8 @@ import { Video } from './Video';
 
 const VideoLayer: React.FC<
   React.ComponentProps<typeof Video> & { open: boolean; onClose: () => void }
-> = (props) => {
-  return props.open ? (
+> = (props) =>
+  props.open ? (
     <Layer full>
       <Box background="light-2" justify="end" align="center" direction="row">
         <Button icon={<Icons.FormClose />} onClick={props.onClose} />
@@ -18,6 +18,5 @@ const VideoLayer: React.FC<
       </Box>
     </Layer>
   ) : null;
-};
 
 export default VideoLayer;

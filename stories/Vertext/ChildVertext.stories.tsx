@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import urljoin from 'url-join';
 import ChildVertex from '../../components/Vertex/ChildVertex';

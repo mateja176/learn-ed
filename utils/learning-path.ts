@@ -49,8 +49,8 @@ export const getLearningPathColor = ({
 }: {
   rootLearningPath: ILearningPath;
   segments: string[];
-}): React.CSSProperties['color'] => {
-  return reduce(
+}): React.CSSProperties['color'] =>
+  reduce(
     ({ currentLearningPath, currentColor }, segment) => {
       const childLearningPath = currentLearningPath.children[segment];
       if (childLearningPath) {
@@ -60,17 +60,15 @@ export const getLearningPathColor = ({
             childLearningPath.color ??
             color(currentColor.toLowerCase()).fade(0.2).toString(),
         };
-      } else {
-        return {
-          currentLearningPath,
-          currentColor,
-        };
       }
+      return {
+        currentLearningPath,
+        currentColor,
+      };
     },
     { currentLearningPath: rootLearningPath, currentColor: 'black' },
     segments,
   ).currentColor;
-};
 
 type GetPathnameParams = {
   key: string;
@@ -87,21 +85,23 @@ export const getFullPathname = (params: GetPathnameParams): string => {
     Object.entries(root.children).reduce(
       (fullPathnames, [childKey, child], i, a) => {
         const lastKey = last(fullPathnames);
-        const newPathnames =
-          lastKey === key
-            ? fullPathnames
-            : key === childKey
-            ? fullPathnames.concat(childKey)
-            : isEmpty(child.children)
-            ? i === a.length - 1
-              ? rootPathnames
-              : fullPathnames
-            : getFullPathnames({
-                key,
-                root: child,
-                pathnames: pathnames.concat(childKey),
-              });
-        return newPathnames;
+        if (lastKey === key) {
+          return fullPathnames;
+        } else if (key === childKey) {
+          return fullPathnames.concat(childKey);
+        } else if (isEmpty(child.children)) {
+          if (i === a.length - 1) {
+            return rootPathnames;
+          } else {
+            return fullPathnames;
+          }
+        } else {
+          return getFullPathnames({
+            key,
+            root: child,
+            pathnames: pathnames.concat(childKey),
+          });
+        }
       },
       pathnames,
     );
