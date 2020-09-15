@@ -1,4 +1,4 @@
-import * as lp from '../../models/learning-path';
+import * as lp from '../../../models/learning-path';
 
 const next = {
   priority: lp.Priority.gold,
