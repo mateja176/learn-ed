@@ -4,14 +4,19 @@
     "indexes": "firestore.indexes.json"
   },
   "functions": {
-    "predeploy": "npm --prefix \"$RESOURCE_DIR\" run build"
+    "source": ".",
+    "predeploy": "yarn build:functions",
+    "runtime": "nodejs10"
   },
   "hosting": {
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": {
-      "**": "renderApp"
-    }
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "renderApp"
+      }
+    ]
   },
   "storage": {
     "rules": "storage.rules"
