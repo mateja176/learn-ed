@@ -3,13 +3,21 @@ import { Grommet } from 'grommet/components/Grommet';
 import Head from 'next/head';
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
+import { createGlobalStyle } from 'styled-components';
 import { theme } from '../utils/theme';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+`;
 
 type Props = {
   title?: string;
 };
-
-const grommetStyle: React.CSSProperties = { height: '100%' };
 
 const Layout: React.FC<Props> = ({
   children,
@@ -26,7 +34,8 @@ const Layout: React.FC<Props> = ({
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       />
     </Head>
-    <Grommet theme={theme} themeMode={'dark'} style={grommetStyle}>
+    <GlobalStyle />
+    <Grommet theme={theme} themeMode={'dark'} full>
       {children}
     </Grommet>
     <ToastContainer />
