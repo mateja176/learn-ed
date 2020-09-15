@@ -13,8 +13,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build:functions": "tsc --project functions",
-    "serve:functions": "yarn build && firebase emulators:start --only functions",
-    "shell:functions": "yarn build && firebase functions:shell",
+    "serve:functions": "yarn build:functions && firebase emulators:start --only functions",
+    "shell:functions": "yarn build:functions && firebase functions:shell",
     "start:functions": "yarn shell",
     "deploy:functions": "firebase deploy --only functions",
     "logs:functions": "firebase functions:log"
