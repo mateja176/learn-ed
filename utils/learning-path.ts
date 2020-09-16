@@ -1,11 +1,40 @@
 /* eslint-disable indent */
 
 import color from 'color';
-import { fromPairs, isEmpty } from 'lodash';
+import { camelCase, fromPairs, isEmpty } from 'lodash';
 import { last, reduce } from 'ramda';
 import React from 'react';
 import urljoin from 'url-join';
-import { ILearningPath, Priority } from '../models/learning-path';
+import {
+  ILearningPath,
+  Priority,
+  RootLearningPath,
+} from '../models/learning-path';
+
+export const getLearningPath = ({
+  rootLearningPath,
+  segments,
+}: {
+  rootLearningPath: RootLearningPath;
+  segments: string[];
+}): ILearningPath => {
+  return segments.reduce((paths, path) => {
+    const key = camelCase(path);
+    if (key in paths.children) {
+      return paths.children[key];
+    }
+    return paths;
+  }, rootLearningPath as ILearningPath);
+};
+
+export function hasChildren<A>(
+  maybePath: ILearningPath | A,
+): maybePath is ILearningPath {
+  return 'children' in maybePath;
+}
+
+export const getPathnameSegments = (pathname: string): string[] =>
+  pathname.replace('/learning-path/', '').split('/');
 
 export const getTextColor = (
   background: NonNullable<React.CSSProperties['color']>,
