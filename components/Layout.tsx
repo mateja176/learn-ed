@@ -3,7 +3,7 @@ import { Grommet } from 'grommet/components/Grommet';
 import Head from 'next/head';
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
-import { FirebaseAppProvider } from 'reactfire/firebaseApp';
+import { FirebaseAppProvider } from 'reactfire';
 import { createGlobalStyle } from 'styled-components';
 import { theme } from '../utils/theme';
 
