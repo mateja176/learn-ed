@@ -4,7 +4,7 @@ import frontend from './frontend';
 const rootLearningPath: RootLearningPath = {
   priority: Priority.platinum,
   color: 'white',
-  label: 'Root',
+  label: '🏁 Root',
   description: 'Your journey starts here',
   children: { frontend },
 };
