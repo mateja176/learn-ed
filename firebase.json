@@ -6,7 +6,7 @@
   "functions": {
     "source": ".",
     "predeploy": "yarn build & yarn build:functions",
-    "runtime": "nodejs10"
+    "runtime": "nodejs12"
   },
   "hosting": {
     "public": "public",
