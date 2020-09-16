@@ -17,5 +17,6 @@ module.exports = {
     firebaseMessagingSenderId: '555673042379',
     firebaseAppId: '1:555673042379:web:2ea7ff082d549feaa5ca4e',
     firebaseMeasurementId: 'G-6B32XEYKB',
+    logRocketId: 'learn-ed/learn-ed',
   },
 };
