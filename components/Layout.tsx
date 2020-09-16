@@ -5,6 +5,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { FirebaseAppProvider } from 'reactfire';
 import { createGlobalStyle } from 'styled-components';
+import { firebaseApp } from '../services/firebase';
 import { theme } from '../utils/theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -15,17 +16,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 `;
-
-const firebaseConfig = {
-  firebaseApiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  firebaseAuthDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  firebaseDatabaseUrl: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  firebaseProjectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  firebaseStorageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  firebaseMessagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  firebaseAppId: process.env.REACT_APP_FIREBASE_APP_ID,
-  firebaseMeasurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-};
 
 const Layout: React.FC = ({ children }) => (
   <Box direction={'column'} height={'100%'}>
@@ -40,7 +30,7 @@ const Layout: React.FC = ({ children }) => (
       />
     </Head>
     <GlobalStyle />
-    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <FirebaseAppProvider firebaseApp={firebaseApp}>
       <Grommet theme={theme} themeMode={'dark'} full>
         {children}
       </Grommet>
