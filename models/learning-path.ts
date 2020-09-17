@@ -54,3 +54,7 @@ export type ILearningPath =
   | RootLearningPath
   | FirstChildLearningPath
   | ChildLearningPath;
+
+export type Vertex = Omit<FirstChildLearningPath, 'children'> & {
+  children: Record<string, Vertex>;
+};

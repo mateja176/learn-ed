@@ -1,4 +1,5 @@
 import * as lp from '../../../models/learning-path';
+import react from './react';
 
 const next = {
   priority: lp.Priority.gold,
@@ -571,41 +572,7 @@ const frontend = {
       url: 'https://en.wikipedia.org/wiki/JavaScript_framework',
       videoUrl: 'https://www.youtube.com/watch?v=_P2fGeg9I5o',
       children: {
-        react: {
-          priority: lp.Priority.platinum,
-          label: 'React',
-          description: 'Widely popular, functional and declarative.',
-          url: 'https://reactjs.org/docs/getting-started.html',
-          videoUrl: 'https://www.youtube.com/watch?v=9U3IhLAnSxM',
-          children: {
-            reactHooks: {
-              priority: lp.Priority.platinum,
-              label: 'React Hooks',
-              description:
-                'Use state and other React features without writing a class.',
-              url: 'https://reactjs.org/docs/hooks-intro.html',
-              videoUrl: 'https://www.youtube.com/watch?v=mxK8b99iJTg',
-              children: {},
-            },
-            redux: {
-              priority: lp.Priority.gold,
-              label: 'Redux',
-              description: 'Manage global state, the easy way',
-              url: 'https://redux.js.org/introduction/getting-started',
-              videoUrl: 'https://www.youtube.com/watch?v=poQXNp9ItL4',
-              children: {},
-            },
-            mobX: {
-              priority: lp.Priority.gold,
-              description:
-                'State management with functional reactive programming.',
-              label: 'MobX',
-              url: 'https://mobx.js.org/README.html#getting-started',
-              videoUrl: 'https://www.youtube.com/watch?v=oQiMXRsO4o4',
-              children: {},
-            },
-          },
-        },
+        react,
         angular: {
           priority: lp.Priority.gold,
           label: 'Angular',
