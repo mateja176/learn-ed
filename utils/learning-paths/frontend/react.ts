@@ -156,8 +156,17 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=T3Px88x_PsA',
       children: {},
     },
+    designSystem: {
+      priority: lp.Priority.gold,
+      color: 'coral',
+      label: 'Design Systems',
+      description: 'The discipline pays back more than double.',
+      url: 'https://github.com/jbranchaud/awesome-react-design-systems',
+      videoUrl: 'https://www.youtube.com/watch?v=W81dlS5G8Gs',
+      children: {},
+    },
     componentLibraries: {
-      priority: lp.Priority.platinum,
+      priority: lp.Priority.gold,
       color: 'lightBlue',
       label: 'React Component Libraries',
       description: 'Sometimes all the puzzle pieces fall into place.',
@@ -166,7 +175,7 @@ const react = {
       children: {},
     },
     serverRendering: {
-      priority: lp.Priority.platinum,
+      priority: lp.Priority.gold,
       color: 'lightSeaGreen',
       label: 'Server Rendering',
       description: 'Rendering React apps on the server is easy.',
@@ -175,7 +184,7 @@ const react = {
       children: {},
     },
     reactNative: {
-      priority: lp.Priority.platinum,
+      priority: lp.Priority.silver,
       color: 'darkBlue',
       label: 'React Native',
       description: 'The power of React applied to native apps.',
