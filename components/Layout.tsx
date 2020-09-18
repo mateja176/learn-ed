@@ -35,10 +35,18 @@ const Layout: React.FC = ({ children }) => {
         <title>Learn-ed</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="A collection of learning paths for frontend development, React and more."
+        />
         <link
-          id="test"
+          rel="preload"
+          href="https://fonts.googleapis.com/css?family=Roboto:300:400:500&display=swap"
+          as="style"
+        />
+        <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+          href="https://fonts.googleapis.com/css?family=Roboto:300:400:500&display=swap"
         />
       </Head>
       <GlobalStyle />

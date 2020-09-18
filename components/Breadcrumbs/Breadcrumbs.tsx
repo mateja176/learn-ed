@@ -1,4 +1,3 @@
-import { Box } from 'grommet/components/Box';
 import { Text } from 'grommet/components/Text';
 import { startCase } from 'lodash';
 import Link from 'next/link';
@@ -12,7 +11,7 @@ export interface BreadcrumbsProps {
 const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
   const segments = props.pathname.split('/').slice(1);
   return (
-    <Box>
+    <header>
       <Text color="gray">
         {segments.map((segment, i) => {
           const isLast = i === segments.length - 1;
@@ -33,7 +32,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
           );
         })}
       </Text>
-    </Box>
+    </header>
   );
 };
 
