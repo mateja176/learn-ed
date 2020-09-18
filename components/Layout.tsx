@@ -49,13 +49,15 @@ const Layout: React.FC = ({ children }) => {
           href="https://fonts.googleapis.com/css?family=Roboto:300:400:500&display=swap"
         />
       </Head>
-      <GlobalStyle />
-      <FirebaseAppProvider firebaseApp={firebaseApp}>
-        <Grommet theme={theme} themeMode={'dark'} full>
-          {children}
-        </Grommet>
-        <ToastContainer />
-      </FirebaseAppProvider>
+      <main>
+        <GlobalStyle />
+        <FirebaseAppProvider firebaseApp={firebaseApp}>
+          <Grommet theme={theme} themeMode={'dark'} full>
+            {children}
+          </Grommet>
+          <ToastContainer />
+        </FirebaseAppProvider>
+      </main>
     </Box>
   );
 };

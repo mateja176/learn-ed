@@ -11,7 +11,7 @@ export interface BreadcrumbsProps {
 const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
   const segments = props.pathname.split('/').slice(1);
   return (
-    <header>
+    <nav>
       <Text color="gray">
         {segments.map((segment, i) => {
           const isLast = i === segments.length - 1;
@@ -32,7 +32,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
           );
         })}
       </Text>
-    </header>
+    </nav>
   );
 };
 
