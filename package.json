@@ -17,7 +17,10 @@
     "shell:functions": "yarn build:functions && firebase functions:shell",
     "start:functions": "yarn shell",
     "deploy:functions": "firebase deploy --only functions",
-    "logs:functions": "firebase functions:log"
+    "logs:functions": "firebase functions:log",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "main": "./functions/lib/index.js",
   "dependencies": {
