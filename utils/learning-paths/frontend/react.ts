@@ -1,5 +1,6 @@
 import * as lp from '../../../models/learning-path';
 import componentLibraries from './componentLibraries';
+import fetch from './fetch';
 import gatsby from './gatsby';
 import next from './next';
 import reactNative from './reactNative';
@@ -7,7 +8,7 @@ import reactNative from './reactNative';
 const react = {
   priority: lp.Priority.platinum,
   color: '#61DAFB',
-  label: 'React',
+  label: '⚛️ React',
   description: 'Widely popular, functional and declarative.',
   url: 'https://reactjs.org/docs/getting-started.html',
   videoUrl: 'https://www.youtube.com/watch?v=9U3IhLAnSxM',
@@ -452,15 +453,7 @@ const react = {
       url: 'https://reactjs.org/docs/faq-ajax.html',
       videoUrl: 'https://www.youtube.com/watch?v=T3Px88x_PsA',
       children: {
-        fetch: {
-          priority: lp.Priority.platinum,
-          color: 'fireBrick',
-          label: 'Fetch API',
-          description: 'Like XMLHttpRequest, but more powerful and flexible.',
-          url: 'https://developer.mozilla.org/en/docs/Web/API/Fetch_API',
-          videoUrl: 'https://www.youtube.com/watch?v=T3Px88x_PsA',
-          children: {},
-        },
+        fetch,
         axios: {
           priority: lp.Priority.silver,
           color: 'indianRed',
