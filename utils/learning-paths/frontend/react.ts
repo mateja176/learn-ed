@@ -1,4 +1,8 @@
 import * as lp from '../../../models/learning-path';
+import componentLibraries from './componentLibraries';
+import gatsby from './gatsby';
+import next from './next';
+import reactNative from './reactNative';
 
 const react = {
   priority: lp.Priority.platinum,
@@ -536,15 +540,7 @@ const react = {
         },
       },
     },
-    componentLibraries: {
-      priority: lp.Priority.gold,
-      color: '#1976D2',
-      label: 'React Component Libraries',
-      description: 'Sometimes all the puzzle pieces fall into place.',
-      url: 'https://github.com/brillout/awesome-react-components',
-      videoUrl: 'https://www.youtube.com/watch?v=N8d-CLmg3hw',
-      children: {},
-    },
+    componentLibraries,
     serverRendering: {
       priority: lp.Priority.gold,
       color: 'lightSeaGreen',
@@ -552,17 +548,12 @@ const react = {
       description: 'Rendering React apps on the server is easy.',
       url: 'https://reactjs.org/docs/react-dom-server.html',
       videoUrl: 'https://www.youtube.com/watch?v=tsEHfL-Ul1Y',
-      children: {},
+      children: {
+        next,
+        gatsby,
+      },
     },
-    reactNative: {
-      priority: lp.Priority.silver,
-      color: 'darkBlue',
-      label: 'React Native',
-      description: 'The power of React applied to native apps.',
-      url: 'https://reactnative.dev/docs/getting-started',
-      videoUrl: 'https://www.youtube.com/watch?v=0-S5a0eXPoc',
-      children: {},
-    },
+    reactNative,
   },
 } as lp.Vertex;
 

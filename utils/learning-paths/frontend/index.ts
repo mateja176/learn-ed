@@ -1,15 +1,10 @@
 import * as lp from '../../../models/learning-path';
+import componentLibraries from './componentLibraries';
+import gatsby from './gatsby';
+import next from './next';
 import react from './react';
+import reactNative from './reactNative';
 
-const next = {
-  priority: lp.Priority.gold,
-  label: 'Next',
-  description: 'Hybrid static & server rendering for React.',
-  url: 'https://nextjs.org/',
-  videoUrl: 'https://www.youtube.com/watch?v=IkOVe40Sy0U',
-  children: {},
-  associations: ['react'],
-};
 const nuxt = {
   priority: lp.Priority.gold,
   label: 'Nuxt',
@@ -687,42 +682,7 @@ const frontend = {
         },
       },
     },
-    componentLibraries: {
-      priority: lp.Priority.platinum,
-      color: 'deepSkyBlue',
-      label: 'Component Libraries',
-      description: 'Leverage the power of design systems.',
-      url:
-        'https://medium.com/@dan.shapiro1210/understanding-component-based-architecture-3ff48ec0c238',
-      videoUrl: 'https://www.youtube.com/watch?v=9pT-q0SSYow',
-      children: {
-        materialUi: {
-          priority: lp.Priority.gold,
-          label: 'Material UI',
-          description: 'Material design for your website.',
-          url: 'https://material-ui.com/getting-started/installation/',
-          videoUrl: 'https://www.youtube.com/watch?v=PWadEeOuv5o',
-          children: {},
-        },
-        antDesign: {
-          priority: lp.Priority.gold,
-          label: 'Ant Design',
-          description: 'Enterprise grade.',
-          url: 'https://ant.design/docs/react/getting-started',
-          videoUrl: 'https://www.youtube.com/watch?v=m96DTtTpGpA',
-          children: {},
-        },
-        reactBootstrap: {
-          priority: lp.Priority.gold,
-          label: 'React Bootstrap',
-          description: 'Bootstrap rebuilt for React.',
-          url:
-            'https://react-bootstrap.github.io/getting-started/introduction/',
-          videoUrl: 'https://www.youtube.com/watch?v=8pKjULHzs0s',
-          children: {},
-        },
-      },
-    },
+    componentLibraries,
     cssLibraries: {
       priority: lp.Priority.gold,
       color: 'rebeccaPurple',
@@ -1033,14 +993,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=_wFJj94kSTU',
       children: {
         next,
-        gatsby: {
-          priority: lp.Priority.gold,
-          label: 'Gatsby',
-          description: 'Powerful and configurable with over 2000 plugins.',
-          url: 'https://www.gatsbyjs.com/docs/',
-          videoUrl: 'https://www.youtube.com/watch?v=8t0vNu2fCCM',
-          children: {},
-        },
+        gatsby,
         nuxt,
         jekyll: {
           priority: lp.Priority.bronze,
@@ -1127,15 +1080,7 @@ const frontend = {
         'https://www.thedroidsonroids.com/blog/what-is-a-mobile-app-app-development-basics-for-businesses',
       videoUrl: 'https://www.youtube.com/watch?v=ZikVtdopsfY',
       children: {
-        reactNative: {
-          priority: lp.Priority.gold,
-          label: 'React Native',
-          description:
-            'Leverage the power or React to build IOS and Android apps',
-          url: 'https://reactnative.dev/docs/getting-started',
-          videoUrl: 'https://www.youtube.com/watch?v=0-S5a0eXPoc',
-          children: {},
-        },
+        reactNative,
         flutter: {
           priority: lp.Priority.silver,
           label: 'Flutter',
