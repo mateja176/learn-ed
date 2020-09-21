@@ -1,4 +1,4 @@
-import { Priority, Vertex } from '../../../models/learning-path';
+import { IVertex, Priority } from '../../../models/learning-path';
 
 export default {
   priority: Priority.gold,
@@ -9,4 +9,4 @@ export default {
   videoUrl: 'https://www.youtube.com/watch?v=IkOVe40Sy0U',
   children: {},
   associations: ['react'],
-} as Vertex;
+} as IVertex;

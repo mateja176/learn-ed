@@ -32,29 +32,9 @@ interface LearningPath<Children> extends WithPriority {
   children: Record<Key, Children>;
 }
 
-export interface RootLearningPath extends LearningPath<FirstChildLearningPath> {
-  color: 'white';
-}
-
-export interface FirstChildLearningPath
-  extends LearningPath<ChildLearningPath>,
+export interface IVertex
+  extends LearningPath<IVertex>,
     WithPriority,
     WithVideoUrl,
     WithUrl,
     WithColor {}
-
-export interface ChildLearningPath
-  extends LearningPath<ChildLearningPath>,
-    WithPriority,
-    WithVideoUrl,
-    WithUrl,
-    Partial<WithColor> {}
-
-export type ILearningPath =
-  | RootLearningPath
-  | FirstChildLearningPath
-  | ChildLearningPath;
-
-export type Vertex = Omit<FirstChildLearningPath, 'children'> & {
-  children: Record<string, Vertex>;
-};

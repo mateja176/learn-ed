@@ -1,4 +1,4 @@
-import { Priority, Vertex } from '../../../models/learning-path';
+import { IVertex, Priority } from '../../../models/learning-path';
 
 export default {
   priority: Priority.platinum,
@@ -37,4 +37,4 @@ export default {
       children: {},
     },
   },
-} as Vertex;
+} as IVertex;

@@ -1,31 +1,34 @@
+/* eslint-disable indent */
+
 import { Box } from 'grommet/components/Box';
 import { kebabCase } from 'lodash';
 import React from 'react';
+import urljoin from 'url-join';
 import ChildVertex from '../Vertex/ChildVertex';
 import Edge from '../Vertex/Edge';
-import RootVertex, { RootVertexProps } from '../Vertex/Root/RootVertex';
+import RootVertex from '../Vertex/Root/RootVertex';
 
-export type TreeProps = RootVertexProps;
-
-const Tree: React.FC<TreeProps> = (props) => (
-  <div>
-    <RootVertex
-      pathname={props.pathname}
-      parentColor={props.parentColor}
-      learningPath={props.learningPath}
-    />
-    {Object.entries(props.learningPath.children).map(([key, path]) => (
-      <Box key={key}>
-        <Edge />
-        <ChildVertex
-          parentColor={props.learningPath.color || props.parentColor}
-          parentPathname={props.pathname}
-          pathname={kebabCase(key)}
-          learningPath={path}
-        />
-      </Box>
-    ))}
-  </div>
-);
+const Tree: React.FC<React.ComponentProps<typeof RootVertex>> = (props) => {
+  const fullPathname = urljoin(props.parentPathname, props.pathname);
+  return (
+    <div>
+      <RootVertex {...props} />
+      {Object.entries(props.learningPath.children).map(
+        ([key, learningPath]) => {
+          return (
+            <Box key={key}>
+              <Edge />
+              <ChildVertex
+                parentPathname={fullPathname}
+                pathname={kebabCase(key)}
+                learningPath={learningPath}
+              />
+            </Box>
+          );
+        },
+      )}
+    </div>
+  );
+};
 
 export default Tree;

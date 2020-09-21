@@ -2,10 +2,10 @@ import { Box } from 'grommet/components/Box';
 import { CardHeader } from 'grommet/components/CardHeader';
 import capitalize from 'lodash/capitalize';
 import React from 'react';
-import { ChildLearningPath } from '../../models/learning-path';
+import { IVertex } from '../../models/learning-path';
 import { getPriorityColor } from '../../utils/learning-path';
 
-export type HeaderProps = Pick<ChildLearningPath, 'label' | 'priority'>;
+export type HeaderProps = Pick<IVertex, 'label' | 'priority'>;
 
 const priorityIndicatorSize = 20;
 

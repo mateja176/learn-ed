@@ -1,4 +1,4 @@
-import { Priority, Vertex } from '../../../models/learning-path';
+import { IVertex, Priority } from '../../../models/learning-path';
 import fetch from './fetch';
 
 export default {
@@ -120,4 +120,4 @@ export default {
       },
     },
   },
-} as Vertex;
+} as IVertex;

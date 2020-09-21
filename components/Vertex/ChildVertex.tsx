@@ -1,86 +1,23 @@
-import color from 'color';
 import * as Icons from 'grommet-icons';
-import { Box } from 'grommet/components/Box';
 import { Button } from 'grommet/components/Button';
-import { Card } from 'grommet/components/Card';
-import { CardBody } from 'grommet/components/CardBody';
-import { CardFooter } from 'grommet/components/CardFooter';
-import capitalize from 'lodash/capitalize';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
 import urljoin from 'url-join';
-import { ChildLearningPath } from '../../models/learning-path';
-import {
-  getFullPathname,
-  getPrioritySize,
-  getTextColor,
-} from '../../utils/learning-path';
-import rootLearningPath from '../../utils/learning-paths';
-import { cardStyle } from '../../utils/styles/card';
-import VideoLayer from '../Video/VideoLayer';
-import Header from './Header';
+import Vertex from './Vertex';
 
-const ChildVertex: React.FC<{
-  parentPathname: string;
-  pathname: string;
-  parentColor?: React.CSSProperties['color'];
-  learningPath: ChildLearningPath;
-}> = ({ parentPathname, pathname, parentColor, learningPath }) => {
-  const router = useRouter();
-
-  const videoLayer = router.query.video === pathname;
-  const toggleVideoLayer = React.useCallback(() => {
-    router.push({
-      pathname: parentPathname,
-      query: videoLayer ? {} : { video: pathname },
-    });
-  }, [router, videoLayer, parentPathname, pathname]);
-
-  const cardBackground =
-    learningPath.color ??
-    color(parentColor?.toLowerCase()).fade(0.2).toString();
-
-  const childCardStyle: React.CSSProperties = React.useMemo(
-    () => ({
-      ...cardStyle,
-      maxWidth: getPrioritySize(learningPath.priority),
-      color: getTextColor(cardBackground),
-    }),
-    [learningPath],
-  );
-
+const ChildVertex: React.FC<Omit<
+  React.ComponentProps<typeof Vertex>,
+  'Footer'
+>> = ({ parentPathname, pathname, learningPath }) => {
   const hasChildren = Object.values(learningPath.children).length;
 
-  const [, , rootKey] = parentPathname.split('/');
-  const root = rootLearningPath.children[rootKey];
-
   return (
-    <Box align={'center'}>
-      <Card background={cardBackground} style={childCardStyle}>
-        <Header label={learningPath.label} priority={learningPath.priority} />
-        <CardBody pad="medium">
-          <Box>{learningPath.description}</Box>
-          <Box direction={'row'} margin={{ top: '10px' }}>
-            {learningPath.associations?.map((association) => (
-              <Link
-                key={association}
-                href={getFullPathname({
-                  key: association,
-                  root,
-                  pathnames: ['learning-path', rootKey],
-                })}
-              >
-                <Button
-                  hoverIndicator
-                  secondary
-                  label={capitalize(association)}
-                />
-              </Link>
-            ))}
-          </Box>
-        </CardBody>
-        <CardFooter pad={{ horizontal: 'small' }} background="light-2">
+    <Vertex
+      parentPathname={parentPathname}
+      pathname={pathname}
+      learningPath={learningPath}
+      Footer={({ openVideo }) => (
+        <>
           <a
             href={learningPath.url}
             target="__blank"
@@ -91,7 +28,7 @@ const ChildVertex: React.FC<{
           </a>
           <Button
             icon={<Icons.Video color={'brand'} />}
-            onClick={toggleVideoLayer}
+            onClick={openVideo}
             hoverIndicator
           />
           <Link href={urljoin(parentPathname, pathname)}>
@@ -102,15 +39,9 @@ const ChildVertex: React.FC<{
               hoverIndicator
             />
           </Link>
-        </CardFooter>
-      </Card>
-
-      <VideoLayer
-        videoUrl={learningPath.videoUrl}
-        open={videoLayer}
-        onClose={toggleVideoLayer}
-      />
-    </Box>
+        </>
+      )}
+    />
   );
 };
 

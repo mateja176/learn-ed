@@ -1,9 +1,15 @@
 import * as lp from '../../../models/learning-path';
 import componentLibraries from './componentLibraries';
+import cssModules from './cssModules';
+import emotion from './emotion';
 import fetch from './fetch';
 import gatsby from './gatsby';
+import jest from './jest';
+import jss from './jss';
 import next from './next';
 import reactNative from './reactNative';
+import styledComponents from './styledComponents';
+import testingLibrary from './testingLibrary';
 
 const react = {
   priority: lp.Priority.platinum,
@@ -341,33 +347,10 @@ const react = {
       url: 'https://reactjs.org/docs/faq-styling.html',
       videoUrl: 'https://www.youtube.com/watch?v=NMiEREulVLc',
       children: {
-        styledComponents: {
-          priority: lp.Priority.platinum,
-          color: 'salmon',
-          label: 'Styled Components',
-          description: 'Visual primitives for the component age.',
-          url: 'https://styled-components.com/docs/basics',
-          videoUrl: 'https://www.youtube.com/watch?v=syqw5UJrfoc',
-          children: {},
-        },
-        emotion: {
-          priority: lp.Priority.gold,
-          color: 'paleVioletRed',
-          label: 'Emotion',
-          description: 'Powerful and predictable styling.',
-          url: 'https://emotion.sh/docs/introduction',
-          videoUrl: 'https://youtu.be/fhkAvKUOqDs?t=826',
-          children: {},
-        },
-        jss: {
-          priority: lp.Priority.gold,
-          color: '#f7df1e',
-          label: 'JSS',
-          description: 'Styles - the conflict free, reusable way.',
-          url: 'https://cssinjs.org/',
-          videoUrl: 'https://www.youtube.com/watch?v=IeLqT75N8V0',
-          children: {},
-        },
+        styledComponents,
+        emotion,
+        jss,
+        cssModules,
       },
     },
     forms: {
@@ -415,25 +398,8 @@ const react = {
       url: 'https://reactjs.org/docs/testing.html',
       videoUrl: 'https://www.youtube.com/watch?v=D9DdY2WmM-s',
       children: {
-        jest: {
-          priority: lp.Priority.platinum,
-          color: '#c21325',
-          label: 'Jest',
-          description: 'Delightful testing with a focus on simplicity.',
-          url: 'https://jestjs.io/docs/en/getting-started.html',
-          videoUrl: 'https://www.youtube.com/watch?v=D9DdY2WmM-s',
-          children: {},
-        },
-        reactTestingLibrary: {
-          priority: lp.Priority.platinum,
-          color: '#FE4646',
-          label: 'React Testing Library',
-          description:
-            'Simple and complete testing utilities that encourage good testing practices.',
-          url: 'https://testing-library.com/docs/intro',
-          videoUrl: 'https://www.youtube.com/watch?v=3e1GHCA3GP0&t=5s',
-          children: {},
-        },
+        jest,
+        testingLibrary,
         enzyme: {
           priority: lp.Priority.silver,
           color: 'orangeRed',
@@ -548,6 +514,6 @@ const react = {
     },
     reactNative,
   },
-} as lp.Vertex;
+} as lp.IVertex;
 
 export default react;

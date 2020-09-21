@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import urljoin from 'url-join';
-import Tree, { TreeProps } from '../components/Tree/Tree';
+import Tree from '../components/Tree/Tree';
 import frontend from '../utils/learning-paths/frontend';
 
 export default {
@@ -15,31 +15,41 @@ export default {
       name: 'color',
     },
   },
-} as Meta<TreeProps>;
+} as Meta<React.ComponentProps<typeof Tree>>;
 
 const Template: Story<React.ComponentProps<typeof Tree>> = (props) => (
   <Tree {...props} />
 );
 
+const rootPath = '/learning-path';
 export const Root = (): React.ReactElement => (
-  <Template pathname={'frontend'} learningPath={frontend} />
+  <Template
+    parentPathname={rootPath}
+    pathname={'frontend'}
+    learningPath={frontend}
+  />
 );
 
-const frameworksPathname = urljoin('frontend', 'frameworks');
+const frontendPathname = urljoin(rootPath, 'frontend');
 const {
   children: { frameworks },
 } = frontend;
 export const FirstChild = (): React.ReactElement => (
-  <Template pathname={frameworksPathname} learningPath={frameworks} />
+  <Template
+    parentPathname={frontendPathname}
+    pathname={'frameworks'}
+    learningPath={frameworks}
+  />
 );
 
+const frameworksPathname = urljoin(frontendPathname, 'react');
 const {
   children: { react },
 } = frameworks;
 export const GrandChild = (): React.ReactElement => (
   <Template
-    pathname={urljoin(frameworksPathname, 'react')}
+    parentPathname={frameworksPathname}
+    pathname={'react'}
     learningPath={react}
-    parentColor={'cyan'}
   />
 );

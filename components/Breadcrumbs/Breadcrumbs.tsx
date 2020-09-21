@@ -9,7 +9,7 @@ export interface BreadcrumbsProps {
 }
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
-  const segments = props.pathname.split('/').slice(1);
+  const segments = props.pathname.slice(1).split('/');
   return (
     <nav>
       <Text color="gray">

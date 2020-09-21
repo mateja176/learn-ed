@@ -2,22 +2,40 @@ import { Box } from 'grommet/components/Box';
 import { camelCase } from 'lodash';
 import { NextPage, NextPageContext } from 'next';
 import { useRouter } from 'next/router';
+import { head, init, last } from 'ramda';
 import React from 'react';
+import urljoin from 'url-join';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../../components/Tree/Tree';
-import { ILearningPath } from '../../models/learning-path';
-import { getLearningPathColor } from '../../utils/learning-path';
+import { IVertex } from '../../models/learning-path';
 import rootLearningPath from '../../utils/learning-paths';
 
 export interface LearningPathProps {
   asPath: string;
 }
 
+const getPathname = (serverPath: string) => (
+  routerPath: string,
+): never | string => {
+  const path = process.browser ? routerPath : serverPath;
+
+  const pathname = head(path.split('?'));
+
+  if (pathname) {
+    return pathname;
+  } else {
+    throw new Error(
+      `Could not extract pathname from path: ${path} and browser is ${process.browser}`,
+    );
+  }
+};
+
 const LearningPath: NextPage<LearningPathProps> = (props) => {
   const router = useRouter();
-  const asPath = (process.browser ? router.asPath : props.asPath).split('?')[0];
-  const segments = React.useMemo(() => asPath.split('/').slice(2), [asPath]);
-  const learningPath: ILearningPath = React.useMemo(
+  const asPath = getPathname(props.asPath)(router.asPath);
+  const pathnames = React.useMemo(() => asPath.split('/'), [asPath]);
+  const segments = React.useMemo(() => pathnames.slice(2), [asPath]);
+  const learningPath: IVertex = React.useMemo(
     () =>
       segments.reduce((paths, path) => {
         const key = camelCase(path);
@@ -25,14 +43,11 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
           return paths.children[key];
         }
         return paths;
-      }, rootLearningPath as ILearningPath),
+      }, rootLearningPath),
     [segments],
   );
 
-  const color: React.CSSProperties['color'] = React.useMemo(
-    () => getLearningPathColor({ rootLearningPath, segments }),
-    [learningPath, segments],
-  );
+  const parentPathname = urljoin('/', ...init(pathnames));
 
   return (
     <Box height={'100%'} direction={'column'}>
@@ -51,9 +66,9 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         pad={{ top: '30px', bottom: '150px' }}
       >
         <Tree
-          pathname={asPath}
+          parentPathname={parentPathname}
+          pathname={last(pathnames) as string}
           learningPath={learningPath}
-          parentColor={color}
         />
       </Box>
     </Box>

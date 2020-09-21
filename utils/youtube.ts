@@ -1,11 +1,29 @@
 import qs from 'qs';
+import { last } from 'ramda';
 import { QueryParams } from '../interfaces/youtube';
 import { WithVideoUrl } from '../models/learning-path';
 
-export const getVideoId = (videoUrl: WithVideoUrl['videoUrl']): string => {
-  const queryParams = (qs.parse(
-    videoUrl.split('?')[1],
-  ) as unknown) as QueryParams;
+function hasVideoParam(params: unknown): params is QueryParams {
+  return typeof params === 'object' && params !== null && 'v' in params;
+}
 
-  return queryParams.v;
+export const getVideoId = (
+  videoUrl: WithVideoUrl['videoUrl'],
+): string | never => {
+  const query = last(videoUrl.split('?'));
+  if (!query) {
+    throw new Error(
+      `Cannot get video id because no query params where provided in video URL: ${videoUrl}`,
+    );
+  } else {
+    const queryParams = qs.parse(query);
+
+    if (hasVideoParam(queryParams)) {
+      return queryParams.v;
+    } else {
+      throw new Error(
+        `Cannot get video id because the parameter was not provided in video URL: ${videoUrl}`,
+      );
+    }
+  }
 };

@@ -1,13 +1,20 @@
 import * as lp from '../../../models/learning-path';
 import componentLibraries from './componentLibraries';
+import cssModules from './cssModules';
+import emotion from './emotion';
 import gatsby from './gatsby';
 import javascript from './javascript';
+import jest from './jest';
+import jss from './jss';
 import next from './next';
 import react from './react';
 import reactNative from './reactNative';
+import styledComponents from './styledComponents';
+import testingLibrary from './testingLibrary';
 
 const nuxt = {
   priority: lp.Priority.gold,
+  color: '#00C58E',
   label: 'Nuxt',
   description: 'Hybrid static & server rendering for Vue.',
   url: 'https://nuxtjs.org/',
@@ -37,6 +44,7 @@ const frontend = {
       children: {
         http: {
           priority: lp.Priority.gold,
+          color: '#005896',
           description:
             'A client-server protocol which is the foundation of any data exchange on the Web.',
           label: 'HTTP',
@@ -47,6 +55,7 @@ const frontend = {
 
         browsers: {
           priority: lp.Priority.gold,
+          color: 'springGreen',
           description:
             'Your main window for accessing information on the World Wide Web.',
           label: 'Browsers',
@@ -56,6 +65,7 @@ const frontend = {
         },
         dns: {
           priority: lp.Priority.gold,
+          color: '#005896',
           description:
             'Without it you\'d be typing in "172.217.18.78" instead of google.com',
           label: 'DNS',
@@ -66,6 +76,7 @@ const frontend = {
 
         hosting: {
           priority: lp.Priority.gold,
+          color: 'paleGreen',
           description: 'Make your website accessible to the world.',
           label: 'hosting',
           url:
@@ -77,15 +88,16 @@ const frontend = {
     },
     html: {
       priority: lp.Priority.platinum,
+      color: 'orangeRed',
       description:
         'In 1989 Tim Berners-Lee created the first website using the Hyper Text Markup Language.',
-      color: 'orangeRed',
       label: 'HTML',
       url: 'https://www.w3schools.com/html/html_intro.asp',
       videoUrl: 'https://www.youtube.com/watch?v=UB1O30fR-EE',
       children: {
         semanticHtml: {
           priority: lp.Priority.gold,
+          color: 'orange',
           description: 'Meaningful HTML.',
           label: 'Semantic HTML',
           url: 'https://www.w3schools.com/html/html5_semantic_elements.asp',
@@ -94,6 +106,7 @@ const frontend = {
         },
         formsAndValidation: {
           priority: lp.Priority.gold,
+          color: 'darkMagenta',
           description:
             'Servers constantly send information to clients, but clients can also send information to servers.',
           label: 'Forms and Validation',
@@ -103,6 +116,7 @@ const frontend = {
         },
         seo: {
           priority: lp.Priority.gold,
+          color: 'khaki',
           description: 'Want to get your site on the first page of Google?',
           label: 'SEO',
           url: 'https://moz.com/beginners-guide-to-seo',
@@ -121,6 +135,7 @@ const frontend = {
       children: {
         buildingLayouts: {
           priority: lp.Priority.gold,
+          color: 'mediumAquaMarine',
           label: 'Building Layouts',
           description:
             'This can be frustrating, but after some time it becomes second nature.',
@@ -129,6 +144,7 @@ const frontend = {
           children: {
             floats: {
               priority: lp.Priority.gold,
+              color: 'aqua',
               label: 'Floats',
               description: 'Left or right?',
               url: 'https://www.w3schools.com/cssref/pr_class_float.asp',
@@ -137,6 +153,7 @@ const frontend = {
             },
             positioning: {
               priority: lp.Priority.gold,
+              color: 'aquaMarine',
               label: 'Positioning',
               description: 'Not everything is static in this world.',
               url: 'https://www.w3schools.com/css/css_positioning.asp',
@@ -145,6 +162,7 @@ const frontend = {
             },
             display: {
               priority: lp.Priority.gold,
+              color: 'lightCyan',
               label: 'Display',
               description: 'To display or not to display?',
               url: 'https://www.w3schools.com/css/css_display_visibility.asp',
@@ -153,6 +171,7 @@ const frontend = {
             },
             boxModel: {
               priority: lp.Priority.gold,
+              color: 'darkCyan',
               label: 'Box Model',
               description: 'Elements can be deceiving.',
               url: 'https://www.w3schools.com/css/css_boxmodel.asp',
@@ -161,6 +180,7 @@ const frontend = {
             },
             cssGrid: {
               priority: lp.Priority.gold,
+              color: 'blue',
               label: 'CSS Grid',
               description: 'What can one do with rows and columns?',
               url: 'https://www.w3schools.com/css/css_grid.asp',
@@ -169,6 +189,7 @@ const frontend = {
             },
             flexBox: {
               priority: lp.Priority.gold,
+              color: 'cornflowerBlue',
               label: 'Flex Box',
               description:
                 'Nowadays, it may be the most common and easiest way to build great layouts.',
@@ -180,6 +201,7 @@ const frontend = {
         },
         responsiveDesign: {
           priority: lp.Priority.gold,
+          color: 'dodgerBlue',
           label: 'Responsive Design',
           description:
             'The majority of people access the internet through a mobile device.',
@@ -201,6 +223,7 @@ const frontend = {
       children: {
         git: {
           priority: lp.Priority.platinum,
+          color: '#F44D27',
           label: 'Git',
           description: 'The history of your code in the palm of your hand.',
           url: 'https://git-scm.com/about',
@@ -209,6 +232,7 @@ const frontend = {
         },
         remoteRepositories: {
           priority: lp.Priority.gold,
+          color: '#404448',
           label: 'Remote Repositories',
           description: 'Partying alone is not much fun.',
           url: 'https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes',
@@ -216,6 +240,7 @@ const frontend = {
           children: {
             github: {
               priority: lp.Priority.platinum,
+              color: '#24292e',
               label: 'Github',
               description: 'The home of Open Source and many more goodies.',
               url: 'https://guides.github.com/activities/hello-world/',
@@ -224,6 +249,7 @@ const frontend = {
             },
             gitLab: {
               priority: lp.Priority.bronze,
+              color: '#fa7035',
               label: 'GitLab',
               description: 'Github is not alone either.',
               url: 'https://docs.gitlab.com/ee/gitlab-basics/',
@@ -232,6 +258,7 @@ const frontend = {
             },
             bitbucket: {
               priority: lp.Priority.bronze,
+              color: '#0052CC',
               label: 'Bitbucket',
               description: "Jira's cousin.",
               url:
@@ -253,6 +280,7 @@ const frontend = {
       children: {
         https: {
           priority: lp.Priority.gold,
+          color: '#DB5912',
           label: 'Https',
           description: "Don't let other listen in to your conversations.",
           url: 'https://en.wikipedia.org/wiki/HTTPS',
@@ -261,6 +289,7 @@ const frontend = {
         },
         cors: {
           priority: lp.Priority.gold,
+          color: '#F2B104',
           label: 'CORS',
           description: 'Request resources from other origins.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
@@ -269,6 +298,7 @@ const frontend = {
         },
         contentSecurityPolicy: {
           priority: lp.Priority.gold,
+          color: 'lightSkyBlue',
           label: 'Content Security Policy ',
           description: 'XSS no more.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
@@ -277,6 +307,7 @@ const frontend = {
         },
         owaspSecurityRisks: {
           priority: lp.Priority.gold,
+          color: 'goldenRod',
           label: 'OWASP Security Risks',
           description: 'Treat it as a checklist for security.',
           url: 'https://owasp.org/www-project-top-ten/',
@@ -305,6 +336,7 @@ const frontend = {
       children: {
         npm: {
           priority: lp.Priority.platinum,
+          color: '#C42329',
           label: 'NPM',
           description: "Node's de facto package manager.",
           url: 'https://www.w3schools.com/nodejs/nodejs_npm.asp',
@@ -313,6 +345,7 @@ const frontend = {
         },
         yarn: {
           priority: lp.Priority.gold,
+          color: '#2188B6',
           label: 'Yarn',
           description: 'A fresh perspective on package managers.',
           url: 'https://yarnpkg.com/getting-started',
@@ -331,6 +364,7 @@ const frontend = {
       children: {
         bem: {
           priority: lp.Priority.gold,
+          color: '#8A8A9A',
           label: 'BEM',
           description: 'Block-Element-Modifier',
           url: 'http://getbem.com/introduction/',
@@ -349,6 +383,7 @@ const frontend = {
       children: {
         sass: {
           priority: lp.Priority.gold,
+          color: '#CF649A',
           label: 'Sass',
           description: 'Nesting, modules, debugging and more.',
           url: 'https://sass-lang.com/guide',
@@ -357,6 +392,7 @@ const frontend = {
         },
         less: {
           priority: lp.Priority.bronze,
+          color: '#1d365d',
           label: 'Less',
           description: 'Leaner Style Sheets',
           url: 'http://lesscss.org/',
@@ -375,6 +411,7 @@ const frontend = {
       children: {
         linters: {
           priority: lp.Priority.gold,
+          color: 'lavander',
           label: 'Linters',
           description: 'Avoid shooting yourself in the foot.',
           url: 'https://www.codereadability.com/what-are-javascript-linters/',
@@ -382,6 +419,7 @@ const frontend = {
           children: {
             eslint: {
               priority: lp.Priority.gold,
+              color: '#4B32C3',
               label: 'Eslint',
               description: 'Powerful, fast and flexible.',
               url: 'https://eslint.org/docs/user-guide/getting-started',
@@ -392,6 +430,7 @@ const frontend = {
         },
         prettier: {
           priority: lp.Priority.gold,
+          color: '#f8bc45',
           label: 'Prettier',
           description: 'Configurable formatter, but with good defaults.',
           url: 'https://prettier.io/docs/en/index.html',
@@ -400,6 +439,7 @@ const frontend = {
         },
         npmScripts: {
           priority: lp.Priority.gold,
+          color: 'indianRed',
           label: 'NPM Scripts',
           description: 'Easy and simple.',
           url:
@@ -409,6 +449,7 @@ const frontend = {
         },
         moduleBundlers: {
           priority: lp.Priority.gold,
+          color: '',
           label: 'Module Bundlers',
           description: 'Having a great many modules is no longer a problem.',
           url:
@@ -417,6 +458,7 @@ const frontend = {
           children: {
             webpack: {
               priority: lp.Priority.gold,
+              color: '#75AFCC',
               description: 'The most popular, widespread bundler out there.',
               label: 'Webpack',
               url: 'https://webpack.js.org/guides/getting-started/',
@@ -425,6 +467,7 @@ const frontend = {
             },
             rollup: {
               priority: lp.Priority.silver,
+              color: '#FF3333',
               label: 'Rollup',
               description: 'The bundler that popularized tree-shaking',
               url: 'https://rollupjs.org/guide/en/',
@@ -433,6 +476,7 @@ const frontend = {
             },
             parcel: {
               priority: lp.Priority.silver,
+              color: '#F3BC83',
               label: 'Parcel',
               description: 'Blazing fast with zero configuration.',
               url: 'https://parceljs.org/getting_started.html',
@@ -454,6 +498,7 @@ const frontend = {
         react,
         angular: {
           priority: lp.Priority.gold,
+          color: '#DD0031',
           label: 'Angular',
           description: 'A framework in the real sense of the word.',
           url: 'https://angular.io/docs',
@@ -461,6 +506,7 @@ const frontend = {
           children: {
             rxjs: {
               priority: lp.Priority.gold,
+              color: '#DF0090',
               label: 'RxJS',
               description: 'Reactive extensions for JS',
               url: 'https://www.learnrxjs.io/',
@@ -469,6 +515,7 @@ const frontend = {
             },
             ngrx: {
               priority: lp.Priority.gold,
+              color: '#a829c3',
               label: 'NgRX',
               description:
                 'Manage state and collections easily, while isolating side effects.',
@@ -480,6 +527,7 @@ const frontend = {
         },
         vue: {
           priority: lp.Priority.gold,
+          color: '#4fc08d',
           label: 'Vue',
           description: 'The best of both worlds.',
           url: 'https://vuejs.org/v2/guide/',
@@ -487,6 +535,7 @@ const frontend = {
           children: {
             vueX: {
               priority: lp.Priority.gold,
+              color: '#62C19E',
               label: 'VueX',
               description: 'The power of Redux for Vue.',
               url: 'https://vuex.vuejs.org/',
@@ -505,38 +554,10 @@ const frontend = {
       url: 'https://medium.com/dailyjs/what-is-actually-css-in-js-f2f529a2757',
       videoUrl: 'youtube.com/watch?v=NMiEREulVLc',
       children: {
-        styledComponents: {
-          priority: lp.Priority.gold,
-          label: 'Styled Components',
-          description: 'Styling for the component age.',
-          url: 'https://styled-components.com/docs/basics',
-          videoUrl: 'https://www.youtube.com/watch?v=3SpAg5tr7Ws',
-          children: {},
-        },
-        cssModules: {
-          priority: lp.Priority.gold,
-          label: 'CSS Modules',
-          description: 'Explicit is better than implicit.',
-          url: 'https://github.com/css-modules/css-modules',
-          videoUrl: 'https://www.youtube.com/watch?v=pKMWU9OrA2s',
-          children: {},
-        },
-        emotion: {
-          priority: lp.Priority.gold,
-          label: 'Emotion',
-          description: 'The new kid around the block.',
-          url: 'https://emotion.sh/docs/introduction',
-          videoUrl: 'https://www.youtube.com/watch?v=rKz6cLXhpwA',
-          children: {},
-        },
-        jss: {
-          priority: lp.Priority.gold,
-          label: 'JSS',
-          description: 'Declarative, conflict-free and reusable styles.',
-          url: 'https://cssinjs.org/?v=v10.4.0',
-          videoUrl: 'https://www.youtube.com/watch?v=pCTXxufGW0k',
-          children: {},
-        },
+        styledComponents,
+        emotion,
+        jss,
+        cssModules,
       },
     },
     webComponents: {
@@ -549,6 +570,7 @@ const frontend = {
       children: {
         htmlTemplates: {
           priority: lp.Priority.gold,
+          color: 'coral',
           label: 'HTML Templates',
           description: 'Reusable HTML.',
           url: 'https://www.w3schools.com/tags/tag_template.asp',
@@ -557,6 +579,7 @@ const frontend = {
         },
         customElements: {
           priority: lp.Priority.gold,
+          color: 'lightCoral',
           label: 'Custom Elements',
           description: 'Create your personal HTML tag.',
           url:
@@ -577,6 +600,7 @@ const frontend = {
       children: {
         bootstrap: {
           priority: lp.Priority.gold,
+          color: '#7952b3',
           label: 'Bootstrap',
           description: 'A hugely popular front-end toolkit',
           url:
@@ -594,24 +618,11 @@ const frontend = {
       url: 'https://testingjavascript.com/',
       videoUrl: 'https://www.youtube.com/watch?v=r9HdJ8P6GQI',
       children: {
-        jest: {
-          priority: lp.Priority.platinum,
-          label: 'Jest',
-          description: 'Powerful and simple - get started with zero config.',
-          url: 'https://jestjs.io/docs/en/getting-started.html',
-          videoUrl: 'https://www.youtube.com/watch?v=7r4xVDI2vho',
-          children: {},
-        },
-        testingLibrary: {
-          priority: lp.Priority.platinum,
-          label: 'Testing Library',
-          description: 'Develop confidence in your app.',
-          url: 'https://testing-library.com/docs/dom-testing-library/intro',
-          videoUrl: 'https://www.youtube.com/watch?v=is83bEK3n5A',
-          children: {},
-        },
+        jest,
+        testingLibrary,
         cypress: {
           priority: lp.Priority.platinum,
+          color: '#192635',
           label: 'Cypress',
           description: 'The web has evolved, finally testing has too.',
           url: 'https://www.cypress.io/how-it-works',
@@ -620,6 +631,7 @@ const frontend = {
         },
         cucumber: {
           priority: lp.Priority.gold,
+          color: '#00a818',
           label: 'Cucumber',
           description: 'BDD - Example mapping and TDD.',
           url: 'https://cucumber.io/docs/installation/javascript/',
@@ -628,6 +640,7 @@ const frontend = {
         },
         mochaAndChai: {
           priority: lp.Priority.bronze,
+          color: '#8d6748',
           label: 'Mocha And Chai',
           description: 'The famous test runner and assertion lib duo.',
           url: 'https://mochajs.org/#getting-started',
@@ -646,6 +659,7 @@ const frontend = {
       children: {
         typescript: {
           priority: lp.Priority.gold,
+          color: '#3178c6',
           label: 'TypeScript',
           description: 'Typed JavScript at scale.',
           url:
@@ -665,6 +679,7 @@ const frontend = {
       children: {
         serviceWorkers: {
           priority: lp.Priority.platinum,
+          color: 'mediumPurple',
           label: 'Service Workers',
           description: 'Offline support for your apps and more.',
           url:
@@ -674,6 +689,7 @@ const frontend = {
         },
         manifest: {
           priority: lp.Priority.platinum,
+          color: 'rosyBrown',
           label: 'Manifest',
           description: 'Have users install your web app like a native app.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/Manifest',
@@ -682,6 +698,7 @@ const frontend = {
         },
         pushNotifications: {
           priority: lp.Priority.gold,
+          color: 'paleVioletRed',
           label: 'Push Notifications',
           description: 'Keep your users engaged.',
           url:
@@ -691,6 +708,7 @@ const frontend = {
         },
         deviceApis: {
           priority: lp.Priority.gold,
+          color: 'blueViolet',
           label: "Device API's",
           description: 'Access to camera, bluetooth and more.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/API',
@@ -709,6 +727,7 @@ const frontend = {
       children: {
         chromeDevTools: {
           priority: lp.Priority.platinum,
+          color: 'sandyBrown',
           label: 'Chrome DevTools',
           description: "See what's under the hood of a website.",
           url:
@@ -717,6 +736,7 @@ const frontend = {
           children: {
             lighthouse: {
               priority: lp.Priority.platinum,
+              color: 'salmon',
               label: 'LightHouse',
               description: 'Does your app measure up?',
               url: 'https://developers.google.com/web/tools/lighthouse',
@@ -738,6 +758,7 @@ const frontend = {
       children: {
         lazyLoading: {
           priority: lp.Priority.gold,
+          color: 'Moccasin',
           label: 'Lazy Loading',
           description: "'Cuz users don't like to wait for websites to load.",
           url: 'https://en.wikipedia.org/wiki/Lazy_loading',
@@ -757,6 +778,7 @@ const frontend = {
       children: {
         firebase: {
           priority: lp.Priority.gold,
+          color: '#FFCA2A',
           label: 'Firebase',
           description: 'Authentication, database, file storage and much more.',
           url: 'https://firebase.google.com/docs/web/setup',
@@ -765,6 +787,7 @@ const frontend = {
         },
         aws: {
           priority: lp.Priority.gold,
+          color: '#EC912D',
           label: 'Amazon Web Services',
           description: "World's most popular cloud infrastructure.",
           url: 'https://aws.amazon.com/what-is-aws/?nc2=h_ql_le_int',
@@ -773,6 +796,7 @@ const frontend = {
         },
         netlify: {
           priority: lp.Priority.silver,
+          color: '#00a396',
           label: 'Netlify',
           description:
             'All-in-one platform for automating modern web projects.',
@@ -789,7 +813,18 @@ const frontend = {
       description: 'Real time updates on all of your users devices.',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
       videoUrl: 'https://www.youtube.com/watch?v=8ARodQ4Wlf4',
-      children: {},
+      children: {
+        socketIO: {
+          priority: lp.Priority.gold,
+          color: '#555',
+          label: 'Socket IO',
+          description:
+            'Featuring the fastest and most reliable real time engine.',
+          url: 'https://socket.io/get-started/chat/',
+          videoUrl: 'https://www.youtube.com/watch?v=9HFwJ9hrmls',
+          children: {},
+        },
+      },
     },
     analytics: {
       priority: lp.Priority.platinum,
@@ -801,6 +836,7 @@ const frontend = {
       children: {
         googleAnalytics: {
           priority: lp.Priority.gold,
+          color: '#F9AB00',
           label: 'Google Analytics',
           description: 'The OG Analytics toolkit.',
           url: 'https://support.google.com/analytics/answer/1008015?hl=en',
@@ -809,6 +845,7 @@ const frontend = {
         },
         mixPanel: {
           priority: lp.Priority.gold,
+          color: '#4284fb',
           label: 'Mix Panel',
           description: 'The new-gen of analytics.',
           url: 'https://mixpanel.com/',
@@ -829,6 +866,7 @@ const frontend = {
         next,
         angularUniversal: {
           priority: lp.Priority.gold,
+          color: '#C3002F',
           label: 'Angular Universal',
           description: 'Hybrid static & server rendering for Angular.',
           url: 'https://angular.io/guide/universal',
@@ -849,6 +887,7 @@ const frontend = {
       children: {
         apollo: {
           priority: lp.Priority.gold,
+          color: '#7156d9',
           label: 'Apollo',
           description: 'GraphQL tooling.',
           url:
@@ -858,6 +897,7 @@ const frontend = {
         },
         relay: {
           priority: lp.Priority.silver,
+          color: '#f26b00',
           label: 'Relay',
           description: 'GraphQL client for React',
           url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
@@ -881,6 +921,7 @@ const frontend = {
         nuxt,
         jekyll: {
           priority: lp.Priority.bronze,
+          color: '#D91111',
           label: 'Jekyll',
           description:
             'Transform your text or markdown into static websites or blogs.',
@@ -890,6 +931,7 @@ const frontend = {
         },
         hugo: {
           priority: lp.Priority.bronze,
+          color: '#FF4088',
           label: 'Hugo',
           description: 'Promises speed, flexibility and fun.',
           url: 'https://gohugo.io/getting-started/quick-start/',
@@ -910,6 +952,7 @@ const frontend = {
       children: {
         jsDoc: {
           priority: lp.Priority.gold,
+          color: '#006FBB',
           label: 'JSDOc',
           description:
             'Pro tip - VSCode has special interactions with your JSDoc annotations.',
@@ -919,6 +962,7 @@ const frontend = {
         },
         typeDoc: {
           priority: lp.Priority.gold,
+          color: '#9600FF',
           label: 'TypeDOc',
           description: 'Like JSDoc but specially adapted for TypeScript.',
           url: 'https://typedoc.org/',
@@ -927,6 +971,7 @@ const frontend = {
         },
         docusaurus: {
           priority: lp.Priority.bronze,
+          color: '#2e8555',
           label: 'Docosaurus',
           description:
             'Tool for easily maintaining documentation. Powered by markdown, built by React.',
@@ -947,6 +992,7 @@ const frontend = {
       children: {
         vsCode: {
           priority: lp.Priority.platinum,
+          color: '#0066B8',
           label: 'Visual Studio Code',
           description: 'Code editing. Redefined.',
           url: 'https://code.visualstudio.com/',
@@ -967,6 +1013,7 @@ const frontend = {
         reactNative,
         flutter: {
           priority: lp.Priority.silver,
+          color: '#075b9a',
           label: 'Flutter',
           description:
             'Beautiful, natively compiled applications for mobile and more.',
@@ -976,6 +1023,7 @@ const frontend = {
         },
         ionic: {
           priority: lp.Priority.bronze,
+          color: '#3880ff',
           label: 'Ionic',
           description: 'Mobile UI toolkit for multiple frameworks.',
           url: 'https://ionicframework.com/getting-started',
@@ -1004,6 +1052,7 @@ const frontend = {
       children: {
         rust: {
           priority: lp.Priority.gold,
+          color: 'sienna',
           label: 'Rust',
           description:
             'Rust is syntactically similar to C++ and provides memory safety without using garbage collection.',
@@ -1013,6 +1062,7 @@ const frontend = {
         },
         cpp: {
           priority: lp.Priority.silver,
+          color: '#6295CB',
           label: 'C++',
           description:
             'Year after year, one of the 5 programming languages - known for exceptional performance and reliability.',
@@ -1023,6 +1073,6 @@ const frontend = {
       },
     },
   },
-} as const;
+} as lp.IVertex;
 
 export default frontend;

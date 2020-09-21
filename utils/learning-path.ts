@@ -5,31 +5,34 @@ import { camelCase, fromPairs, isEmpty } from 'lodash';
 import { last, reduce } from 'ramda';
 import React from 'react';
 import urljoin from 'url-join';
-import {
-  ILearningPath,
-  Priority,
-  RootLearningPath,
-} from '../models/learning-path';
+import { IVertex, Priority } from '../models/learning-path';
+
+export const getRootKey = (pathname: string): never | string => {
+  const match = pathname.match(/\/learning-path\/(?<rootKey>[^/]+)/);
+  if (match?.groups?.rootKey) {
+    return match.groups.rootKey;
+  } else {
+    throw new Error(`Could not extract root key from pathname ${pathname}`);
+  }
+};
 
 export const getLearningPath = ({
   rootLearningPath,
   segments,
 }: {
-  rootLearningPath: RootLearningPath;
+  rootLearningPath: IVertex;
   segments: string[];
-}): ILearningPath => {
+}): IVertex => {
   return segments.reduce((paths, path) => {
     const key = camelCase(path);
     if (key in paths.children) {
       return paths.children[key];
     }
     return paths;
-  }, rootLearningPath as ILearningPath);
+  }, rootLearningPath);
 };
 
-export function hasChildren<A>(
-  maybePath: ILearningPath | A,
-): maybePath is ILearningPath {
+export function hasChildren<A>(maybePath: IVertex | A): maybePath is IVertex {
   return 'children' in maybePath;
 }
 
@@ -76,7 +79,7 @@ export const getLearningPathColor = ({
   rootLearningPath,
   segments,
 }: {
-  rootLearningPath: ILearningPath;
+  rootLearningPath: IVertex;
   segments: string[];
 }): React.CSSProperties['color'] =>
   reduce(
@@ -101,7 +104,7 @@ export const getLearningPathColor = ({
 
 type GetPathnameParams = {
   key: string;
-  root: ILearningPath;
+  root: IVertex;
   pathnames: string[];
 };
 export const getFullPathname = (params: GetPathnameParams): string => {

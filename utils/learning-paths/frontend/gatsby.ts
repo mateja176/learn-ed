@@ -1,4 +1,4 @@
-import { Priority, Vertex } from '../../../models/learning-path';
+import { IVertex, Priority } from '../../../models/learning-path';
 
 export default {
   priority: Priority.gold,
@@ -8,4 +8,4 @@ export default {
   url: 'https://www.gatsbyjs.com/docs/',
   videoUrl: 'https://www.youtube.com/watch?v=8t0vNu2fCCM',
   children: {},
-} as Vertex;
+} as IVertex;

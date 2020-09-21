@@ -1,9 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import RootVertex, {
-  RootVertexProps,
-} from '../../components/Vertex/Root/RootVertex';
+import RootVertex from '../../components/Vertex/Root/RootVertex';
 import frontend from '../../utils/learning-paths/frontend';
 
 export default {
@@ -14,12 +12,16 @@ export default {
       name: 'color',
     },
   },
-} as Meta<RootVertexProps>;
+} as Meta<React.ComponentProps<typeof RootVertex>>;
 
 const Template: Story<React.ComponentProps<typeof RootVertex>> = (props) => (
   <RootVertex {...props} />
 );
 
 export const Frontend = (): React.ReactElement => (
-  <Template pathname={'/'} parentColor={'cyan'} learningPath={frontend} />
+  <Template
+    parentPathname={'learning-path'}
+    pathname={'frontend'}
+    learningPath={frontend}
+  />
 );
