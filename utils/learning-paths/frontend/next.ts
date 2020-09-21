@@ -8,5 +8,5 @@ export default {
   url: 'https://nextjs.org/',
   videoUrl: 'https://www.youtube.com/watch?v=IkOVe40Sy0U',
   children: {},
-  associations: ['react'],
+  associations: ['frontend/frameworks/react'],
 } as IVertex;

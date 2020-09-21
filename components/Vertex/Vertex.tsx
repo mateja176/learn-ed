@@ -3,18 +3,15 @@ import { Button } from 'grommet/components/Button';
 import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
-import capitalize from 'lodash/capitalize';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { IVertex } from '../../models/learning-path';
 import {
-  getFullPathname,
+  getAssociationLabel,
   getPrioritySize,
-  getRootKey,
   getTextColor,
 } from '../../utils/learning-path';
-import rootLearningPath from '../../utils/learning-paths';
 import { cardStyle } from '../../utils/styles/card';
 import VideoLayer from '../Video/VideoLayer';
 import Header from './Header';
@@ -44,9 +41,6 @@ const Vertex: React.FC<{
     [learningPath],
   );
 
-  const rootKey = getRootKey(parentPathname);
-  const root = rootLearningPath.children[rootKey];
-
   return (
     <Box align={'center'}>
       <Card background={learningPath.color} style={childCardStyle}>
@@ -55,18 +49,11 @@ const Vertex: React.FC<{
           <Box>{learningPath.description}</Box>
           <Box direction={'row'} margin={{ top: '10px' }}>
             {learningPath.associations?.map((association) => (
-              <Link
-                key={association}
-                href={getFullPathname({
-                  key: association,
-                  root,
-                  pathnames: ['learning-path', rootKey],
-                })}
-              >
+              <Link key={association} href={association}>
                 <Button
                   hoverIndicator
                   secondary
-                  label={capitalize(association)}
+                  label={getAssociationLabel(association)}
                 />
               </Link>
             ))}

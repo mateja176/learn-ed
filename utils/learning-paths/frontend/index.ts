@@ -20,7 +20,7 @@ const nuxt = {
   url: 'https://nuxtjs.org/',
   videoUrl: 'https://www.youtube.com/watch?v=ltzlhAxJr74',
   children: {},
-  associations: ['vue'],
+  associations: ['frontend/frameworks/vue'],
 };
 
 const frontend = {
@@ -872,7 +872,7 @@ const frontend = {
           url: 'https://angular.io/guide/universal',
           videoUrl: 'https://www.youtube.com/watch?v=wij2-gyG12E',
           children: {},
-          associations: ['angular'],
+          associations: ['frontend/frameworks/angular'],
         },
         nuxt,
       },
@@ -902,7 +902,7 @@ const frontend = {
           description: 'GraphQL client for React',
           url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
           videoUrl: 'https://www.youtube.com/watch?v=xnvzz7Z658I',
-          associations: ['react'],
+          associations: ['frontend/frameworks/react'],
           children: {},
         },
       },
@@ -977,7 +977,7 @@ const frontend = {
             'Tool for easily maintaining documentation. Powered by markdown, built by React.',
           url: 'https://docusaurus.io/docs/en/installation',
           videoUrl: 'https://www.youtube.com/watch?v=Hl_4Le_0LOc',
-          associations: ['react'],
+          associations: ['frontend-frameworks/react'],
           children: {},
         },
       },

@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 
 import color from 'color';
-import { camelCase, fromPairs, isEmpty } from 'lodash';
+import { camelCase, capitalize, fromPairs, isEmpty } from 'lodash';
 import { last, reduce } from 'ramda';
 import React from 'react';
 import urljoin from 'url-join';
@@ -138,4 +138,16 @@ export const getFullPathname = (params: GetPathnameParams): string => {
       pathnames,
     );
   return urljoin('/', ...getFullPathnames(params));
+};
+
+export const getAssociationLabel = (association: string): never | string => {
+  const lastSegment = last(association.split('/'));
+
+  if (lastSegment) {
+    return capitalize(lastSegment);
+  } else {
+    throw new Error(
+      `The association must at least have one segment and the provided path ${association} has none.`,
+    );
+  }
 };
