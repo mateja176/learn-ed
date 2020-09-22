@@ -216,7 +216,7 @@ export default {
       videoUrl: 'https://www.youtube.com/watch?v=rhzKDrUiJVk',
       children: {},
     },
-    beyondES6: {
+    beyondEs6: {
       priority: Priority.gold,
       color: 'navy',
       label: 'Beyond ES6',
@@ -247,7 +247,7 @@ export default {
         },
         objectEntries: {
           priority: Priority.gold,
-          color: 'lavander',
+          color: 'lavender',
           label: 'Object entries',
           description:
             'Also a  common use case is to assemble an object from key value pairs.',
