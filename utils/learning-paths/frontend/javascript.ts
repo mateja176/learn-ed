@@ -10,16 +10,26 @@ export default {
   videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
   children: {
     dom: {
-      priority: Priority.gold,
+      priority: Priority.platinum,
       color: '#4CAF50',
       label: 'DOM',
       description: 'The virtual representation of your web page.',
       url: 'https://www.w3schools.com/js/js_htmldom.asp',
       videoUrl: 'https://www.youtube.com/watch?v=0ik6X4DJKCc',
-      children: {},
+      children: {
+        history: {
+          priority: Priority.platinum,
+          color: 'limeGreen',
+          label: 'History',
+          description: 'Basis for of single page routing.',
+          url: 'https://developer.mozilla.org/en-US/docs/Web/API/History_API',
+          videoUrl: 'https://www.youtube.com/watch?v=C9vsQkMu5gk',
+          children: {},
+        },
+      },
     },
     dataFetching: {
-      priority: Priority.gold,
+      priority: Priority.platinum,
       color: 'tomato',
       label: 'Data Fetching',
       description: "Can't get enough of data.",
@@ -41,7 +51,7 @@ export default {
       },
     },
     es6: {
-      priority: Priority.gold,
+      priority: Priority.platinum,
       color: 'royalBlue',
       label: 'ES6',
       description: 'The modern JavaScript.',
@@ -118,6 +128,176 @@ export default {
           children: {},
         },
       },
+    },
+    utilityLibraries: {
+      priority: Priority.gold,
+      color: 'darkGoldenRod',
+      label: 'Utility Libraries',
+      description: 'The swiss army knife of JavaScript.',
+      url:
+        'https://blog.bitsrc.io/11-javascript-utility-libraries-you-should-know-in-2018-3646fb31ade',
+      videoUrl: 'https://www.youtube.com/watch?v=dM-Zj6J0fBY',
+      children: {
+        lodash: {
+          priority: Priority.gold,
+          color: '#3492ff',
+          label: 'Lodash',
+          description:
+            'A modern JavaScript utility library delivering modularity, performance & extras.',
+          url: 'https://lodash.com/',
+          videoUrl: 'https://www.youtube.com/watch?v=cqw2i0HIj74',
+          children: {},
+        },
+        underscore: {
+          priority: Priority.gold,
+          color: '#0071B5',
+          label: 'Underscore',
+          description: 'Useful functional programming helpers',
+          url: 'https://underscorejs.org/',
+          videoUrl: 'https://www.youtube.com/watch?v=ywa8BseljUM',
+          children: {},
+        },
+        ramda: {
+          priority: Priority.gold,
+          color: '#884499',
+          label: 'Ramda',
+          description:
+            'A practical functional library for JavaScript programmers.',
+          url: 'https://ramdajs.com/',
+          videoUrl: 'https://www.youtube.com/watch?v=AINnOyUVEyI',
+          children: {},
+        },
+        moment: {
+          priority: Priority.gold,
+          color: '#6782DA',
+          label: 'Moment',
+          description: 'Take a moment to look at how it is to work with dates.',
+          url: 'https://momentjs.com/',
+          videoUrl: 'https://www.youtube.com/watch?v=n80RRNS1k64',
+          children: {},
+        },
+        faker: {
+          priority: Priority.gold,
+          color: '#D90000',
+          label: 'Faker',
+          description: 'Generate as much testing data as you need.',
+          url: 'https://github.com/Marak/faker.js',
+          videoUrl: 'https://www.youtube.com/watch?v=16p3LC1bFZc',
+          children: {},
+        },
+        chart: {
+          priority: Priority.gold,
+          color: '#FE767A',
+          label: 'Chart JS',
+          description: 'Simple yet flexible JavaScript charting.',
+          url: 'https://github.com/chartjs/Chart.js',
+          videoUrl: 'https://www.youtube.com/watch?v=sE08f4iuOhA',
+          children: {},
+        },
+        immutable: {
+          priority: Priority.gold,
+          color: '#2C3E50',
+          label: 'Immutable JS',
+          description:
+            'Data which cannot be changed once created leads to much simpler application development.',
+          url: 'https://immutable-js.github.io/immutable-js/',
+          videoUrl: 'https://www.youtube.com/watch?v=9M-r8p9ey8U',
+          children: {},
+        },
+      },
+    },
+    regularExpression: {
+      priority: Priority.gold,
+      color: 'dodgerBlue',
+      label: 'Regular Expression',
+      description: 'Patterns used to match character combinations in strings.',
+      url:
+        'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions',
+      videoUrl: 'https://www.youtube.com/watch?v=rhzKDrUiJVk',
+      children: {},
+    },
+    beyondES6: {
+      priority: Priority.gold,
+      color: 'navy',
+      label: 'Beyond ES6',
+      description: 'The present and future of JavaScript.',
+      url: 'https://github.com/tc39/proposals',
+      videoUrl: 'https://www.youtube.com/watch?v=hCenHYqE7R4',
+      children: {
+        asyncAwait: {
+          priority: Priority.gold,
+          color: 'crimson',
+          label: 'Async Await',
+          description: 'A long awaited feature.',
+          url:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function',
+          videoUrl: 'https://www.youtube.com/watch?v=vn3tm0quoqE',
+          children: {},
+        },
+        optionalChaining: {
+          priority: Priority.gold,
+          color: 'yellow',
+          label: 'Optional Chaining',
+          description:
+            "I didn't know how much I missed this feature until I started using it.",
+          url:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining',
+          videoUrl: 'https://www.youtube.com/watch?v=FKRVqtP8o48',
+          children: {},
+        },
+        objectEntries: {
+          priority: Priority.gold,
+          color: 'lavander',
+          label: 'Object entries',
+          description:
+            'Also a  common use case is to assemble an object from key value pairs.',
+          url:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries',
+          videoUrl:
+            'https://www.youtube.com/watch?v=VmicKaGcs5https://www.youtube.com/watch?v=cNiYENUlY28g',
+          children: {},
+        },
+      },
+    },
+    dataStructures: {
+      priority: Priority.gold,
+      color: 'cornflowerBlue',
+      label: 'Data Structures',
+      description: 'This application is a tree.',
+      url:
+        'https://blog.bitsrc.io/data-structures-you-should-know-as-a-javascript-developer-9a35eb3b319c',
+      videoUrl: 'https://www.youtube.com/watch?v=41GSinwoMYA',
+      children: {},
+    },
+    algorithms: {
+      priority: Priority.gold,
+      color: 'fireBrick',
+      label: 'Algorithms',
+      description:
+        "The majority of which you don't have to know by heart, but it's helpful to know that they exist.",
+      url:
+        'https://blog.bitsrc.io/data-structures-you-should-know-as-a-javascript-developer-9a35eb3b319c',
+      videoUrl: 'https://www.youtube.com/watch?v=41GSinwoMYA',
+      children: {},
+    },
+    eventLoop: {
+      priority: Priority.gold,
+      color: '#0099FF',
+      label: 'Event Loop',
+      description: 'If it where easy, everyone would do it.',
+      url: 'https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop',
+      videoUrl: 'https://www.youtube.com/watch?v=8aGhZQkoFbQ',
+      children: {},
+    },
+    theWeirdParts: {
+      priority: Priority.gold,
+      color: 'gray',
+      label: 'The weird parts',
+      description: 'If it where easy, everyone would do it.',
+      url:
+        'https://github.com/jasonbaciulis/javascript-understanding-the-weird-parts',
+      videoUrl: 'https://www.youtube.com/watch?v=Bv_5Zv5c-Ts',
+      children: {},
     },
   },
 } as IVertex;
