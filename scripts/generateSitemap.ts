@@ -3,8 +3,6 @@ import urljoin from 'url-join';
 import { IVertex } from '../models/learning-path';
 import rootLeaningPath from '../utils/learning-paths';
 
-const [origin] = process.argv.slice(2);
-
 const generateSitemap = (sitemap: string) => (prefix: string) => (
   vertex: IVertex,
 ): string =>
@@ -15,7 +13,13 @@ const generateSitemap = (sitemap: string) => (prefix: string) => (
     );
   }, sitemap);
 
+if (!process.env.ORIGIN) {
+  throw new Error('No origin env variable.');
+}
+
 // eslint-disable-next-line no-console
 console.log(
-  generateSitemap('')(urljoin(origin, 'learning-path'))(rootLeaningPath),
+  generateSitemap('')(urljoin(process.env.ORIGIN, 'learning-path'))(
+    rootLeaningPath,
+  ),
 );
