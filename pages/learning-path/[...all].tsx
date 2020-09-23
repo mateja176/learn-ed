@@ -1,6 +1,7 @@
 import { Box } from 'grommet/components/Box';
 import { camelCase } from 'lodash';
 import { NextPage, NextPageContext } from 'next';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { head, init, last } from 'ramda';
 import React from 'react';
@@ -51,6 +52,10 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
 
   return (
     <Box height={'100%'} direction={'column'}>
+      <Head>
+        <title>{learningPath.label}</title>
+        <meta name="description" content={learningPath.description} />
+      </Head>
       <Box
         background={'light-2'}
         pad={'20px'}
