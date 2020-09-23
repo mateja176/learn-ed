@@ -20,7 +20,8 @@
     "logs:functions": "firebase functions:log",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "generate-sitemap": "ts-node --project tsconfig.dev.json scripts/generateSitemap"
   },
   "main": "./functions/lib/index.js",
   "dependencies": {
@@ -74,6 +75,7 @@
     "jest": "^26.4.2",
     "react-is": "^16.13.1",
     "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   },
   "license": "MIT"
