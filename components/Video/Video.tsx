@@ -1,8 +1,8 @@
 import React from 'react';
 import { usePlayer } from '../../hooks/youtube';
-import { WithVideoUrl } from '../../models/learning-path';
+import { IVertex } from '../../models/learning-path';
 
-export const Video: React.FC<WithVideoUrl> = (props) => {
+export const Video: React.FC<Pick<IVertex, 'videoUrl'>> = (props) => {
   const { playerRef, player } = usePlayer(props);
 
   React.useEffect(

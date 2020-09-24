@@ -1,15 +1,13 @@
 import qs from 'qs';
 import { last } from 'ramda';
 import { QueryParams } from '../interfaces/youtube';
-import { WithVideoUrl } from '../models/learning-path';
+import { IVertex } from '../models/learning-path';
 
 function hasVideoParam(params: unknown): params is QueryParams {
   return typeof params === 'object' && params !== null && 'v' in params;
 }
 
-export const getVideoId = (
-  videoUrl: WithVideoUrl['videoUrl'],
-): string | never => {
+export const getVideoId = (videoUrl: IVertex['videoUrl']): string | never => {
   const query = last(videoUrl.split('?'));
   if (!query) {
     throw new Error(

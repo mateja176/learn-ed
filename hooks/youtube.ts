@@ -3,7 +3,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import { v4 } from 'uuid';
 import { Player } from '../interfaces/youtube';
-import { WithVideoUrl } from '../models/learning-path';
+import { IVertex } from '../models/learning-path';
 import {
   createPlayerWrapper,
   loadScriptService,
@@ -17,7 +17,7 @@ export type PlayerRef = HTMLDivElement | null;
 export const usePlayer = ({
   videoUrl,
   options,
-}: WithVideoUrl & {
+}: Pick<IVertex, 'videoUrl'> & {
   options?: Omit<RenderPlayerParams, 'videoId' | 'playerId'>;
 }): {
   loading: boolean;
