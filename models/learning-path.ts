@@ -5,36 +5,19 @@ export enum Priority {
   bronze = 'bronze',
 }
 
-interface WithPriority {
+/**
+ * @property url - Documentation link
+ * @property videoUrl - Link to a YouTube tutorial
+ * @property children - A Record whose key is used to construct the path to a resource
+ * @property associations - Optional list of full to related vertices
+ */
+export type IVertex = {
   priority: Priority;
-}
-
-type Key = string;
-
-interface WithColor {
   color: string;
-}
-
-export interface WithVideoUrl {
-  videoUrl: string;
-}
-interface WithUrl {
-  /**
-   * link to documentation
-   */
-  url: string;
-}
-
-interface LearningPath<Children> extends WithPriority {
   label: string;
   description: string;
-  associations?: ReadonlyArray<Key>;
-  children: Record<Key, Children>;
-}
-
-export interface IVertex
-  extends LearningPath<IVertex>,
-    WithPriority,
-    WithVideoUrl,
-    WithUrl,
-    WithColor {}
+  url: string;
+  videoUrl: string;
+  children: Record<string, IVertex>;
+  associations?: ReadonlyArray<string>;
+};
