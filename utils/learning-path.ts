@@ -3,7 +3,6 @@
 import color from 'color';
 import { camelCase, capitalize, fromPairs, isEmpty } from 'lodash';
 import { last, reduce } from 'ramda';
-import React from 'react';
 import urljoin from 'url-join';
 import { IVertex, Priority } from '../models/learning-path';
 
@@ -40,8 +39,8 @@ export const getPathnameSegments = (pathname: string): string[] =>
   pathname.replace('/learning-path/', '').split('/');
 
 export const getTextColor = (
-  background: NonNullable<React.CSSProperties['color']>,
-): React.CSSProperties['color'] => {
+  background: IVertex['color'],
+): IVertex['color'] => {
   const backgroundColor = color(background.toLowerCase());
   const red = backgroundColor.red();
   const green = backgroundColor.green();
@@ -49,9 +48,7 @@ export const getTextColor = (
   return red * 0.299 + green * 0.587 + blue * 0.114 > 178 ? 'black' : 'white';
 };
 
-export const getPriorityColor = (
-  priority: Priority,
-): React.CSSProperties['color'] => {
+export const getPriorityColor = (priority: Priority): IVertex['color'] => {
   switch (priority) {
     case Priority.platinum:
       return 'linear-gradient(90deg, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 35%, rgba(207,206,206,1) 100%)';
@@ -81,7 +78,7 @@ export const getLearningPathColor = ({
 }: {
   rootLearningPath: IVertex;
   segments: string[];
-}): React.CSSProperties['color'] =>
+}): IVertex['color'] =>
   reduce(
     ({ currentLearningPath, currentColor }, segment) => {
       const childLearningPath = currentLearningPath.children[segment];
