@@ -1,7 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 import fetch from './fetch';
 
-export default {
+const javascript: IVertex = {
   priority: Priority.platinum,
   color: '#EFD81D',
   label: '{ } JavaScript',
@@ -300,4 +300,6 @@ export default {
       children: {},
     },
   },
-} as IVertex;
+};
+
+export default javascript;

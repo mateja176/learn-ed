@@ -1,6 +1,7 @@
-import { IVertex, Priority } from '../../../models/learning-path';
+import { IVertex } from '../../../create-learning-path/example/learning-path';
+import { Priority } from '../../../models/learning-path';
 
-export default {
+const gatsby: IVertex = {
   priority: Priority.gold,
   color: '#663399',
   label: 'Gatsby',
@@ -8,4 +9,6 @@ export default {
   url: 'https://www.gatsbyjs.com/docs/',
   videoUrl: 'https://www.youtube.com/watch?v=8t0vNu2fCCM',
   children: {},
-} as IVertex;
+};
+
+export default gatsby;

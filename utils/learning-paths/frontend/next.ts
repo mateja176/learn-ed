@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const next: IVertex = {
   priority: Priority.gold,
   color: 'black',
   label: 'Next',
@@ -9,4 +9,6 @@ export default {
   videoUrl: 'https://www.youtube.com/watch?v=IkOVe40Sy0U',
   children: {},
   associations: ['frontend/frameworks/react'],
-} as IVertex;
+};
+
+export default next;

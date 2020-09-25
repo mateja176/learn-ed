@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const emotion: IVertex = {
   priority: Priority.gold,
   color: 'paleVioletRed',
   label: 'Emotion',
@@ -8,4 +8,6 @@ export default {
   url: 'https://emotion.sh/docs/introduction',
   videoUrl: 'https://youtu.be/fhkAvKUOqDs?t=826',
   children: {},
-} as IVertex;
+};
+
+export default emotion;

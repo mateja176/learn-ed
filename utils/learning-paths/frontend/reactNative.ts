@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const reactNative: IVertex = {
   priority: Priority.gold,
   color: '#61dafb',
   label: 'React Native',
@@ -8,4 +8,6 @@ export default {
   url: 'https://reactnative.dev/docs/getting-started',
   videoUrl: 'https://www.youtube.com/watch?v=0-S5a0eXPoc',
   children: {},
-} as IVertex;
+};
+
+export default reactNative;

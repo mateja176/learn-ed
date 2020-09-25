@@ -1,6 +1,6 @@
 import { IVertex, Priority } from './learning-path';
 
-export default {
+const example: IVertex = {
   label: 'Example',
   description: 'This is for demonstrative purposes only.',
   url: 'https://example.com', // Documentation link
@@ -9,4 +9,6 @@ export default {
   priority: Priority.platinum, // How important is the topic for the current learning path
   children: {}, // A Record whose key is used to construct the path to a resource
   // associations: [] // Optional list of full paths to related vertices
-} as IVertex;
+};
+
+export default example;

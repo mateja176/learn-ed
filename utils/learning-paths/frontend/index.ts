@@ -411,7 +411,7 @@ const frontend = {
       children: {
         linters: {
           priority: lp.Priority.gold,
-          color: 'lavander',
+          color: 'lavender',
           label: 'Linters',
           description: 'Avoid shooting yourself in the foot.',
           url: 'https://www.codereadability.com/what-are-javascript-linters/',
@@ -449,7 +449,7 @@ const frontend = {
         },
         moduleBundlers: {
           priority: lp.Priority.gold,
-          color: '',
+          color: 'azure',
           label: 'Module Bundlers',
           description: 'Having a great many modules is no longer a problem.',
           url:

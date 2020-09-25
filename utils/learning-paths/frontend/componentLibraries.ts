@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const componentLibraries: IVertex = {
   priority: Priority.platinum,
   color: 'deepSkyBlue',
   label: 'Component Libraries',
@@ -37,4 +37,6 @@ export default {
       children: {},
     },
   },
-} as IVertex;
+};
+
+export default componentLibraries;

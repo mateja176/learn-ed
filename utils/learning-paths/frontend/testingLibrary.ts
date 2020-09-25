@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const testingLibrary: IVertex = {
   priority: Priority.platinum,
   color: '#FE4646',
   label: 'Testing Library',
@@ -9,4 +9,6 @@ export default {
   url: 'https://testing-library.com/docs/intro',
   videoUrl: 'https://www.youtube.com/watch?v=3e1GHCA3GP0&t=5s',
   children: {},
-} as IVertex;
+};
+
+export default testingLibrary;

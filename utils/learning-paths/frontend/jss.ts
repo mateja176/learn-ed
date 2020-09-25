@@ -1,6 +1,6 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
-export default {
+const jss: IVertex = {
   priority: Priority.gold,
   color: '#f7df1e',
   label: 'JSS',
@@ -8,4 +8,6 @@ export default {
   url: 'https://cssinjs.org/',
   videoUrl: 'https://www.youtube.com/watch?v=IeLqT75N8V0',
   children: {},
-} as IVertex;
+};
+
+export default jss;
