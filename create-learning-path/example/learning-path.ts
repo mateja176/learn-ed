@@ -7,7 +7,7 @@ export enum Priority {
 
 export type IVertex = {
   priority: Priority;
-  color: string;
+  color: NonNullable<React.CSSProperties['color']>;
   label: string;
   description: string;
   url: string;
