@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const useOrigin = () => {
+export const useOrigin = (): string => {
   const [origin, setOrigin] = React.useState('');
 
   React.useEffect(() => {

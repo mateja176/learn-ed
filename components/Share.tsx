@@ -15,9 +15,11 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from 'react-share';
+import { useAnalytics } from '../hooks/analytics';
 import { IVertex } from '../models/learning-path';
 
 export interface ShareProps extends Pick<IVertex, 'label'> {
+  pathname: string;
   url: string;
 }
 
@@ -57,15 +59,23 @@ const shareConfig = {
 };
 
 const Share: React.FC<ShareProps> = (props) => {
+  const analytics = useAnalytics();
+
   return (
     <Menu
       icon={<Icons.Share color="status-critical" />}
-      items={Object.values(shareConfig).map((config) => ({
+      items={Object.entries(shareConfig).map(([provider, config]) => ({
         label: (
           <config.Button
             url={props.url}
             title={config.label}
             style={{ height: iconSize }}
+            onShareWindowClose={() => {
+              analytics.event({
+                type: 'share',
+                payload: { provider, learningPath: props.pathname },
+              });
+            }}
           >
             <config.Icon size={iconSize} round />
           </config.Button>

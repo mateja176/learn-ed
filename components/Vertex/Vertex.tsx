@@ -6,6 +6,7 @@ import { CardFooter } from 'grommet/components/CardFooter';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useAnalytics } from '../../hooks/analytics';
 import { IVertex } from '../../models/learning-path';
 import {
   getAssociationLabel,
@@ -22,6 +23,8 @@ const Vertex: React.FC<{
   learningPath: IVertex;
   Footer: React.FC<{ openVideo: () => void }>;
 }> = ({ parentPathname, pathname, learningPath, Footer }) => {
+  const analytics = useAnalytics();
+
   const router = useRouter();
 
   const videoLayer = router.query.video === pathname;
@@ -31,6 +34,12 @@ const Vertex: React.FC<{
       query: videoLayer ? {} : { video: pathname },
     });
   }, [router, videoLayer, parentPathname, pathname]);
+
+  const openVideo = React.useCallback(() => {
+    analytics.event({ type: 'openVideo', payload: { learningPath: pathname } });
+
+    toggleVideoLayer();
+  }, [toggleVideoLayer, analytics, pathname]);
 
   const childCardStyle: React.CSSProperties = React.useMemo(
     () => ({
@@ -60,7 +69,7 @@ const Vertex: React.FC<{
           </Box>
         </CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">
-          <Footer openVideo={toggleVideoLayer} />
+          <Footer openVideo={openVideo} />
         </CardFooter>
       </Card>
 

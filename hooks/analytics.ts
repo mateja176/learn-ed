@@ -1,12 +1,21 @@
 import mixpanel from 'mixpanel-browser';
 
+export type WithLearningPath = { learningPath: string };
+
+export type Event =
+  | { type: 'openVideo'; payload: WithLearningPath }
+  | { type: 'share'; payload: WithLearningPath & { provider: string } }
+  | { type: 'explore'; payload: WithLearningPath };
+
 export interface Analytics {
-  event: <P extends Record<string, unknown>>(name: string, params: P) => void;
+  event: (event: Event) => void;
 }
 
 export const useAnalytics = (): Analytics => {
-  const event: Analytics['event'] = (name, params): void => {
-    mixpanel.track(name, params);
+  const event: Analytics['event'] = (e): void => {
+    if (process.env.NODE_ENV === 'production') {
+      mixpanel.track(e.type, e.payload);
+    }
   };
 
   return { event };

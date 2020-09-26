@@ -30,6 +30,7 @@ const RootVertex: React.FC<
             hoverIndicator
           />
           <Share
+            pathname={pathname}
             url={urljoin(origin, parentPathname, pathname)}
             label={learningPath.label}
           />

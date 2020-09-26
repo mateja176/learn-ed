@@ -3,6 +3,7 @@ import { Button } from 'grommet/components/Button';
 import Link from 'next/link';
 import React from 'react';
 import urljoin from 'url-join';
+import { useAnalytics } from '../../hooks/analytics';
 import { WithOrigin } from '../../models/models';
 import Share from '../Share';
 import Vertex from './Vertex';
@@ -10,6 +11,8 @@ import Vertex from './Vertex';
 const ChildVertex: React.FC<
   Omit<React.ComponentProps<typeof Vertex>, 'Footer'> & WithOrigin
 > = ({ origin, parentPathname, pathname, learningPath }) => {
+  const analytics = useAnalytics();
+
   const hasChildren = React.useMemo(
     () => Object.values(learningPath.children).length,
     [learningPath.children],
@@ -24,6 +27,10 @@ const ChildVertex: React.FC<
     origin,
     fullPathname,
   ]);
+
+  const handleExplore = React.useCallback(() => {
+    analytics.event({ type: 'explore', payload: { learningPath: pathname } });
+  }, [analytics, pathname]);
 
   return (
     <Vertex
@@ -45,13 +52,14 @@ const ChildVertex: React.FC<
             onClick={openVideo}
             hoverIndicator
           />
-          <Share url={url} label={learningPath.label} />
+          <Share pathname={pathname} url={url} label={learningPath.label} />
           <Link href={fullPathname}>
             <Button
               disabled={!hasChildren}
               title={`${hasChildren ? 'Explore' : 'No subsections'}`}
               icon={<Icons.Next />}
               hoverIndicator
+              onClick={handleExplore}
             />
           </Link>
         </>
