@@ -32,6 +32,7 @@ const frontend = {
   url:
     'https://frontendmasters.com/books/front-end-handbook/2018/what-is-a-FD.html',
   videoUrl: 'https://www.youtube.com/watch?v=QA0XpGhiz5w',
+  imageUrl: '/frontend.svg',
   children: {
     web: {
       priority: lp.Priority.platinum,

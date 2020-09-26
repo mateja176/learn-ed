@@ -12,6 +12,7 @@ export type IVertex = {
   description: string;
   url: string;
   videoUrl: string;
+  imageUrl?: string;
   children: Record<string, IVertex>;
   associations?: ReadonlyArray<string>;
 };

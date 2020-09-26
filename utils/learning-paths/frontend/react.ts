@@ -18,6 +18,7 @@ const react = {
   description: 'Widely popular, functional and declarative.',
   url: 'https://reactjs.org/docs/getting-started.html',
   videoUrl: 'https://www.youtube.com/watch?v=9U3IhLAnSxM',
+  imageUrl: '/react.svg',
   children: {
     basics: {
       priority: lp.Priority.platinum,

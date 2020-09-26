@@ -51,13 +51,13 @@ export const getTextColor = (
 export const getPriorityColor = (priority: Priority): IVertex['color'] => {
   switch (priority) {
     case Priority.platinum:
-      return 'linear-gradient(90deg, rgba(215,215,215,1) 0%, rgba(255,255,255,1) 35%, rgba(207,206,206,1) 100%)';
+      return 'linear-gradient(90deg, rgba(220, 220, 220, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(220, 220, 220, 1) 100%)';
     case Priority.gold:
-      return 'gold';
+      return 'linear-gradient(90deg, rgba(255, 215, 0, 1) 0%, rgba(255, 255, 220, 1) 30%, rgba(255, 215, 0, 1) 100%)';
     case Priority.silver:
-      return 'silver';
+      return 'linear-gradient(90deg, rgba(192, 192, 192, 1) 0%, rgb(230, 230, 230, 1) 30%, rgba(192, 192, 192, 1) 100%)';
     case Priority.bronze:
-      return 'chocolate';
+      return 'linear-gradient(90deg, rgba(210, 105, 30, 1) 0%, rgb(255, 210, 130, 1) 30%, rgba(210, 105, 30, 1) 100%)';
     default:
       return 'grey';
   }

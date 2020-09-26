@@ -3,6 +3,7 @@ import { Button } from 'grommet/components/Button';
 import { Card } from 'grommet/components/Card';
 import { CardBody } from 'grommet/components/CardBody';
 import { CardFooter } from 'grommet/components/CardFooter';
+import { Text } from 'grommet/components/Text';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -10,12 +11,19 @@ import { useAnalytics } from '../../hooks/analytics';
 import { IVertex } from '../../models/learning-path';
 import {
   getAssociationLabel,
+  getPriorityColor,
   getPrioritySize,
-  getTextColor,
 } from '../../utils/learning-path';
 import { cardStyle } from '../../utils/styles/card';
 import VideoLayer from '../Video/VideoLayer';
-import Header from './Header';
+
+const imageWrapperStyle: React.CSSProperties = {
+  height: 100,
+  minWidth: 100,
+  marginRight: 12,
+  borderRadius: 5,
+  overflow: 'hidden',
+};
 
 const Vertex: React.FC<{
   parentPathname: string;
@@ -45,27 +53,40 @@ const Vertex: React.FC<{
     () => ({
       ...cardStyle,
       maxWidth: getPrioritySize(learningPath.priority),
-      color: getTextColor(learningPath.color),
+      background: getPriorityColor(learningPath.priority),
     }),
     [learningPath],
   );
 
   return (
     <Box align={'center'}>
-      <Card background={learningPath.color} style={childCardStyle}>
-        <Header label={learningPath.label} priority={learningPath.priority} />
-        <CardBody pad="medium">
-          <Box>{learningPath.description}</Box>
-          <Box direction={'row'} margin={{ top: '10px' }}>
-            {learningPath.associations?.map((association) => (
-              <Link key={association} href={association}>
-                <Button
-                  hoverIndicator
-                  secondary
-                  label={getAssociationLabel(association)}
-                />
-              </Link>
-            ))}
+      <Card style={childCardStyle}>
+        <CardBody pad="medium" direction="row" align="center">
+          <Box style={imageWrapperStyle}>
+            <img
+              src={learningPath.imageUrl}
+              height={'100%'}
+              alt={learningPath.label}
+            />
+          </Box>
+          <Box style={{ flex: 1 }}>
+            <Box pad={{ bottom: '24px' }}>
+              <Text textAlign={'center'} size="large" weight="bold">
+                {learningPath.label}
+              </Text>
+            </Box>
+            <Text textAlign="center">{learningPath.description}</Text>
+            <Box direction={'row'} margin={{ top: '10px' }}>
+              {learningPath.associations?.map((association) => (
+                <Link key={association} href={association}>
+                  <Button
+                    hoverIndicator
+                    secondary
+                    label={getAssociationLabel(association)}
+                  />
+                </Link>
+              ))}
+            </Box>
           </Box>
         </CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">

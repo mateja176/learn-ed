@@ -8,6 +8,7 @@ const javascript: IVertex = {
   description: 'The first language of the web.',
   url: 'https://www.w3schools.com/js/',
   videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
+  imageUrl: '/javascript.svg',
   children: {
     dom: {
       priority: Priority.platinum,
