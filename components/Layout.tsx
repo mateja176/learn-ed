@@ -8,6 +8,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { FirebaseAppProvider } from 'reactfire';
 import { createGlobalStyle } from 'styled-components';
+import env from '../services/env';
 import { firebaseApp } from '../services/firebase';
 import { theme } from '../utils/theme';
 
@@ -22,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout: React.FC = ({ children }) => {
   React.useEffect(() => {
-    const logRocketId = process.env.logRocketId; // eslint-disable-line prefer-destructuring
+    const logRocketId = env.logRocketId; // eslint-disable-line prefer-destructuring
     if (process.env.NODE_ENV === 'production') {
       if (logRocketId) {
         LogRocket.init(logRocketId);
@@ -32,8 +33,8 @@ const Layout: React.FC = ({ children }) => {
 
       setupLogRocketReact(LogRocket);
 
-      if (process.env.mixpanelToken) {
-        mixpanel.init(process.env.mixpanelToken, { batch_requests: true });
+      if (env.mixpanelToken) {
+        mixpanel.init(env.mixpanelToken, { batch_requests: true });
       } else {
         console.error('No mixpanel token supplied.');
       }

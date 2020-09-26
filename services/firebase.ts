@@ -1,14 +1,15 @@
 import firebase from 'firebase/app';
+import env from './env';
 
 const firebaseConfig = {
-  apiKey: process.env.firebaseApiKey,
-  authDomain: process.env.firebaseAuthDomain,
-  databaseUrl: process.env.firebaseDatabaseUrl,
-  projectId: process.env.firebaseProjectId,
-  storageBucket: process.env.firebaseStorageBucket,
-  messagingSenderId: process.env.firebaseMessagingSenderId,
-  appId: process.env.firebaseAppId,
-  measurementId: process.env.firebaseMeasurementId,
+  apiKey: env.firebaseApiKey,
+  authDomain: env.firebaseAuthDomain,
+  databaseUrl: env.firebaseDatabaseUrl,
+  projectId: env.firebaseProjectId,
+  storageBucket: env.firebaseStorageBucket,
+  messagingSenderId: env.firebaseMessagingSenderId,
+  appId: env.firebaseAppId,
+  measurementId: env.firebaseMeasurementId,
 };
 
 export const firebaseApp = firebase.apps.length
