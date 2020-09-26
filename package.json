@@ -21,8 +21,8 @@
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "pregenerate-sitemap": "ts-node --project tsconfig.dev.json scripts/pingGoogle",
-    "generate-sitemap": "ts-node --project tsconfig.dev.json scripts/generateSitemap"
+    "generate-sitemap": "ts-node --project tsconfig.dev.json scripts/generateSitemap",
+    "ping-google": "ts-node --project tsconfig.dev.json scripts/pingGoogle"
   },
   "main": "./functions/lib/index.js",
   "dependencies": {

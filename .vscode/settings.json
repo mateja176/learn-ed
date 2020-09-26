@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
     "Docosaurus",
-    "Jira's"
+    "Jira's",
+    "postdeploy",
+    "postgenerate"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

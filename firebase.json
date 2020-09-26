@@ -6,6 +6,7 @@
   "functions": {
     "source": ".",
     "predeploy": "yarn build & yarn build:functions",
+    "postdeploy": "yarn ping-google",
     "runtime": "nodejs12"
   },
   "hosting": {

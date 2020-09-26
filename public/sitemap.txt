@@ -1,3 +1,4 @@
+https://learn-ed.web.app/learning-path
 https://learn-ed.web.app/learning-path/frontend
 https://learn-ed.web.app/learning-path/frontend/web
 https://learn-ed.web.app/learning-path/frontend/web/http

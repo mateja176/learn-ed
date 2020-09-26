@@ -17,8 +17,10 @@ if (!process.env.ORIGIN) {
   throw new Error('No origin env variable.');
 }
 
+const prefix = 'learning-path';
+
 process.stdout.write(
-  generateSitemap('')(urljoin(process.env.ORIGIN, 'learning-path'))(
-    rootLeaningPath,
-  ),
+  generateSitemap(urljoin(process.env.ORIGIN, prefix).concat('\n'))(
+    urljoin(process.env.ORIGIN, prefix),
+  )(rootLeaningPath),
 );
