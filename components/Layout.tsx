@@ -2,6 +2,7 @@ import { Box } from 'grommet/components/Box';
 import { Grommet } from 'grommet/components/Grommet';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
+import mixpanel from 'mixpanel-browser';
 import Head from 'next/head';
 import React from 'react';
 import { ToastContainer } from 'react-toastify';
@@ -22,10 +23,20 @@ const GlobalStyle = createGlobalStyle`
 const Layout: React.FC = ({ children }) => {
   React.useEffect(() => {
     const logRocketId = process.env.logRocketId; // eslint-disable-line prefer-destructuring
-    if (process.env.NODE_ENV === 'production' && logRocketId) {
-      LogRocket.init(logRocketId);
+    if (process.env.NODE_ENV === 'production') {
+      if (logRocketId) {
+        LogRocket.init(logRocketId);
+      } else {
+        console.error('No logrocket id supplied.');
+      }
 
       setupLogRocketReact(LogRocket);
+
+      if (process.env.mixpanelToken) {
+        mixpanel.init(process.env.mixpanelToken, { batch_requests: true });
+      } else {
+        console.error('No mixpanel token supplied.');
+      }
     }
   }, []);
 

@@ -18,5 +18,6 @@ module.exports = {
     firebaseAppId: '1:555673042379:web:2ea7ff082d549feaa5ca4e',
     firebaseMeasurementId: 'G-6B32XEYKB',
     logRocketId: 'learn-ed/learn-ed',
+    mixpanelToken: '59148aca96d44b8788b32c6475378df5',
   },
 };
