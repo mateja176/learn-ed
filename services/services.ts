@@ -1,9 +1,10 @@
 export function assertDefined<Value extends unknown>(
+  key: string,
   value: Value,
 ): asserts value {
   if (!value) {
     throw new Error(
-      `Value is expected to be truthy but "${value}" was provided`,
+      `${key} is expected to be defined but "${value}" was provided`,
     );
   }
 }
@@ -11,5 +12,5 @@ export function assertDefined<Value extends unknown>(
 export function assertTruthyValues<O extends Record<string, unknown>>(
   object: O,
 ): asserts object is Required<O> {
-  Object.values(object).forEach(assertDefined);
+  Object.entries(object).forEach(([key, value]) => assertDefined(key, value));
 }
