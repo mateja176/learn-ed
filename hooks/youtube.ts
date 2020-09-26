@@ -59,7 +59,7 @@ export const usePlayer = ({
     } else {
       console.error('Youtube player could not be mounted because ref is null');
     }
-  }, [playerId, options]);
+  }, [playerId, options, setLoading, videoUrl]);
 
   return {
     loading,

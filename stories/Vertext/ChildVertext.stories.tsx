@@ -15,8 +15,12 @@ const Template: Story<React.ComponentProps<typeof ChildVertex>> = (props) => (
 );
 
 const [[webKey, webPath]] = Object.entries(frontend.children);
+
+const origin = 'https://learn-ed.web.app';
+
 export const Web = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend')}
     pathname={webKey}
     learningPath={webPath}
@@ -25,6 +29,7 @@ export const Web = (): React.ReactElement => (
 
 export const Frameworks = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend')}
     pathname={'frameworks'}
     learningPath={frontend.children.frameworks}
@@ -33,6 +38,7 @@ export const Frameworks = (): React.ReactElement => (
 
 export const CodeEditors = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend')}
     pathname={'codeEditors'}
     learningPath={frontend.children.codeEditors}
@@ -41,6 +47,7 @@ export const CodeEditors = (): React.ReactElement => (
 
 export const Next = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend', 'ssr')}
     pathname={'next'}
     learningPath={frontend.children.ssr.children.next}
@@ -49,6 +56,7 @@ export const Next = (): React.ReactElement => (
 
 export const Electron = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend')}
     pathname={'electron'}
     learningPath={frontend.children.electron}
@@ -57,6 +65,7 @@ export const Electron = (): React.ReactElement => (
 
 export const Docosaurus = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={urljoin('frontend', 'documentation')}
     pathname={'docosaurus'}
     learningPath={{

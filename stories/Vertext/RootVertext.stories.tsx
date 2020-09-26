@@ -20,6 +20,7 @@ const Template: Story<React.ComponentProps<typeof RootVertex>> = (props) => (
 
 export const Frontend = (): React.ReactElement => (
   <Template
+    origin={'https://learn-ed.web.app'}
     parentPathname={'learning-path'}
     pathname={'frontend'}
     learningPath={frontend}

@@ -19,6 +19,7 @@ const Tree: React.FC<React.ComponentProps<typeof RootVertex>> = (props) => {
             <Box key={key}>
               <Edge />
               <ChildVertex
+                origin={props.origin}
                 parentPathname={fullPathname}
                 pathname={kebabCase(key)}
                 learningPath={learningPath}

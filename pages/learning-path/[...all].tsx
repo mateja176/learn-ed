@@ -8,6 +8,7 @@ import React from 'react';
 import urljoin from 'url-join';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../../components/Tree/Tree';
+import { useOrigin } from '../../hooks/hooks';
 import { IVertex } from '../../models/learning-path';
 import rootLearningPath from '../../utils/learning-paths';
 
@@ -35,7 +36,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
   const router = useRouter();
   const asPath = getPathname(props.asPath)(router.asPath);
   const pathnames = React.useMemo(() => asPath.split('/'), [asPath]);
-  const segments = React.useMemo(() => pathnames.slice(2), [asPath]);
+  const segments = React.useMemo(() => pathnames.slice(2), [pathnames]);
   const learningPath: IVertex = React.useMemo(
     () =>
       segments.reduce((paths, path) => {
@@ -48,7 +49,11 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
     [segments],
   );
 
-  const parentPathname = urljoin('/', ...init(pathnames));
+  const parentPathname = React.useMemo(() => urljoin('/', ...init(pathnames)), [
+    pathnames,
+  ]);
+
+  const origin = useOrigin();
 
   return (
     <Box height={'100%'} direction={'column'}>
@@ -71,6 +76,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         pad={{ top: '30px', bottom: '150px' }}
       >
         <Tree
+          origin={origin}
           parentPathname={parentPathname}
           pathname={last(pathnames) as string}
           learningPath={learningPath}
@@ -86,7 +92,7 @@ LearningPath.getInitialProps = async ({
   asPath,
 }: NextPageContext): Promise<LearningPathProps> => {
   if (!asPath) {
-    console.error('No "asPath"');
+    throw new Error('No "asPath"');
   }
-  return { asPath: asPath || '' };
+  return { asPath };
 };

@@ -3,13 +3,27 @@ import { Button } from 'grommet/components/Button';
 import Link from 'next/link';
 import React from 'react';
 import urljoin from 'url-join';
+import { WithOrigin } from '../../models/models';
+import Share from '../Share';
 import Vertex from './Vertex';
 
-const ChildVertex: React.FC<Omit<
-  React.ComponentProps<typeof Vertex>,
-  'Footer'
->> = ({ parentPathname, pathname, learningPath }) => {
-  const hasChildren = Object.values(learningPath.children).length;
+const ChildVertex: React.FC<
+  Omit<React.ComponentProps<typeof Vertex>, 'Footer'> & WithOrigin
+> = ({ origin, parentPathname, pathname, learningPath }) => {
+  const hasChildren = React.useMemo(
+    () => Object.values(learningPath.children).length,
+    [learningPath.children],
+  );
+
+  const fullPathname = React.useMemo(() => urljoin(parentPathname, pathname), [
+    parentPathname,
+    pathname,
+  ]);
+
+  const url = React.useMemo(() => urljoin(origin, fullPathname), [
+    origin,
+    fullPathname,
+  ]);
 
   return (
     <Vertex
@@ -31,7 +45,8 @@ const ChildVertex: React.FC<Omit<
             onClick={openVideo}
             hoverIndicator
           />
-          <Link href={urljoin(parentPathname, pathname)}>
+          <Share url={url} label={learningPath.label} />
+          <Link href={fullPathname}>
             <Button
               disabled={!hasChildren}
               title={`${hasChildren ? 'Explore' : 'No subsections'}`}

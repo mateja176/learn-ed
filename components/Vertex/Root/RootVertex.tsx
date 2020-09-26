@@ -2,12 +2,14 @@ import * as Icons from 'grommet-icons';
 import { Button } from 'grommet/components/Button';
 import Link from 'next/link';
 import React from 'react';
+import urljoin from 'url-join';
+import { WithOrigin } from '../../../models/models';
+import Share from '../../Share';
 import Vertex from '../Vertex';
 
-const RootVertex: React.FC<Omit<
-  React.ComponentProps<typeof Vertex>,
-  'Footer'
->> = ({ parentPathname, pathname, learningPath }) => {
+const RootVertex: React.FC<
+  Omit<React.ComponentProps<typeof Vertex>, 'Footer'> & WithOrigin
+> = ({ origin, parentPathname, pathname, learningPath }) => {
   return (
     <Vertex
       parentPathname={parentPathname}
@@ -26,6 +28,10 @@ const RootVertex: React.FC<Omit<
             icon={<Icons.Video color={'brand'} />}
             onClick={openVideo}
             hoverIndicator
+          />
+          <Share
+            url={urljoin(origin, parentPathname, pathname)}
+            label={learningPath.label}
           />
           <a
             href={learningPath.url}

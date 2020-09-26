@@ -22,8 +22,12 @@ const Template: Story<React.ComponentProps<typeof Tree>> = (props) => (
 );
 
 const rootPath = '/learning-path';
+
+const origin = 'https://learn-ed.web.app';
+
 export const Root = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={rootPath}
     pathname={'frontend'}
     learningPath={frontend}
@@ -36,6 +40,7 @@ const {
 } = frontend;
 export const FirstChild = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={frontendPathname}
     pathname={'frameworks'}
     learningPath={frameworks}
@@ -48,6 +53,7 @@ const {
 } = frameworks;
 export const GrandChild = (): React.ReactElement => (
   <Template
+    origin={origin}
     parentPathname={frameworksPathname}
     pathname={'react'}
     learningPath={react}
