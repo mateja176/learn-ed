@@ -20,4 +20,15 @@ module.exports = {
     logRocketId: 'learn-ed/learn-ed',
     mixpanelToken: '59148aca96d44b8788b32c6475378df5',
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: {
+        test: /\.(js|ts)x?$/,
+      },
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
+  },
 };

@@ -3,7 +3,8 @@
     "Docosaurus",
     "Jira's",
     "postdeploy",
-    "postgenerate"
+    "postgenerate",
+    "svgr"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
