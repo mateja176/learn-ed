@@ -42,6 +42,7 @@ const frontend = {
         'First we had steam power, then we had electricity, now we also have The Internet.',
       url: 'https://www.w3.org/',
       videoUrl: 'https://www.youtube.com/watch?v=J8hzJxb0rpc',
+      imageUrl: '/web.svg',
       children: {
         http: {
           priority: lp.Priority.gold,
@@ -79,7 +80,7 @@ const frontend = {
           priority: lp.Priority.gold,
           color: 'paleGreen',
           description: 'Make your website accessible to the world.',
-          label: 'hosting',
+          label: 'Hosting',
           url:
             'https://www.website.com/beginnerguide/webhosting/6/1/what-is-web-hosting',
           videoUrl: 'https://www.youtube.com/watch?v=0hGK7qiQ6WA',
@@ -95,6 +96,7 @@ const frontend = {
       label: 'HTML',
       url: 'https://www.w3schools.com/html/html_intro.asp',
       videoUrl: 'https://www.youtube.com/watch?v=UB1O30fR-EE',
+      imageUrl: '/html.svg',
       children: {
         semanticHtml: {
           priority: lp.Priority.gold,
@@ -133,6 +135,7 @@ const frontend = {
       description: 'We all need some style in our lives.',
       url: 'https://www.w3schools.com/css/css_intro.asp',
       videoUrl: 'https://www.youtube.com/watch?v=yfoY53QXEnI',
+      imageUrl: '/css.svg',
       children: {
         buildingLayouts: {
           priority: lp.Priority.gold,
@@ -815,7 +818,7 @@ const frontend = {
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
       videoUrl: 'https://www.youtube.com/watch?v=8ARodQ4Wlf4',
       children: {
-        socketIO: {
+        socketIo: {
           priority: lp.Priority.gold,
           color: '#555',
           label: 'Socket IO',

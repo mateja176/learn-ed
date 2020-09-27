@@ -184,6 +184,7 @@ const javascript: IVertex = {
           description: 'Generate as much testing data as you need.',
           url: 'https://github.com/Marak/faker.js',
           videoUrl: 'https://www.youtube.com/watch?v=16p3LC1bFZc',
+          imageUrl: '/faker.svg',
           children: {},
         },
         chart: {
@@ -207,7 +208,7 @@ const javascript: IVertex = {
         },
       },
     },
-    regularExpression: {
+    regex: {
       priority: Priority.gold,
       color: 'dodgerBlue',
       label: 'Regular Expression',

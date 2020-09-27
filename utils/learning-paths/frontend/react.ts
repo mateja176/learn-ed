@@ -461,7 +461,7 @@ const react = {
         },
       },
     },
-    designSystem: {
+    designSystems: {
       priority: lp.Priority.gold,
       color: 'coral',
       label: 'Design Systems',
@@ -488,10 +488,10 @@ const react = {
           videoUrl: 'https://www.youtube.com/watch?v=Iiugb9cV-CM',
           children: {},
         },
-        braided: {
+        braid: {
           priority: lp.Priority.gold,
           color: '#0D3880',
-          label: 'Braided Style System',
+          label: 'Braid Style System',
           description:
             'Primitive building blocks for component-based design systems.',
           url: 'https://github.com/seek-oss/braid-design-system',
