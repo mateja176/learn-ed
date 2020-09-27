@@ -1,9 +1,12 @@
-import { FC, SVGProps } from 'react';
-
 /// <reference types="next" />
 /// <reference types="next/types/global" />
 
 declare module '*.svg' {
-  const SVGComponent: FC<SVGProps<SVGSVGElement>>;
-  export default SVGComponent;
+  import * as React from 'react';
+
+  export const ReactComponent: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
+
+  export default ReactComponent;
 }
