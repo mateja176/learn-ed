@@ -12,7 +12,7 @@ export type IVertex = {
   description: string;
   url: string;
   videoUrl: string;
-  imageUrl: string;
+  Logo: React.FC<React.SVGProps<SVGSVGElement>>;
   children: Record<string, IVertex>;
   associations?: ReadonlyArray<string>;
 };

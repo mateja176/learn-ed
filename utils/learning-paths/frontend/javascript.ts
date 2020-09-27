@@ -1,8 +1,38 @@
+import Ajax from '../../../assets/ajax.svg';
+import Algorithms from '../../../assets/algorithms.svg';
+import ArrayMethods from '../../../assets/arrayMethods.svg';
+import AsyncAwait from '../../../assets/asyncAwait.svg';
+import BeyondEs6 from '../../../assets/beyondEs6.svg';
+import Chart from '../../../assets/chart.svg';
+import DataFetching from '../../../assets/dataFetching.svg';
+import DataStructures from '../../../assets/dataStructures.svg';
+import Destructuring from '../../../assets/destructuring.svg';
+import Dom from '../../../assets/dom.svg';
+import Es6 from '../../../assets/es6.svg';
+import Es6Modules from '../../../assets/es6Modules.svg';
+import EventLoop from '../../../assets/eventLoop.svg';
+import Faker from '../../../assets/faker.svg';
+import History from '../../../assets/history.svg';
+import Immutable from '../../../assets/immutable.svg';
+import Javascript from '../../../assets/javascript.svg';
+import Lodash from '../../../assets/lodash.svg';
+import Moment from '../../../assets/moment.svg';
+import ObjectEntries from '../../../assets/objectEntries.svg';
+import OptionalChaining from '../../../assets/optionalChaining.svg';
+import Promises from '../../../assets/promises.svg';
+import Ramda from '../../../assets/ramda.svg';
+import Regex from '../../../assets/regex.svg';
+import RestAndSpread from '../../../assets/restAndSpread.svg';
+import TemplateLiterals from '../../../assets/templateLiterals.svg';
+import TheWeirdParts from '../../../assets/theWeirdParts.svg';
+import Underscore from '../../../assets/underscore.svg';
+import UtilityLibraries from '../../../assets/utilityLibraries.svg';
+import VariableDeclaration from '../../../assets/variableDeclaration.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 import fetch from './fetch';
 
 const javascript: IVertex = {
-  imageUrl: '/javascript.svg',
+  Logo: Javascript,
   priority: Priority.platinum,
   color: '#EFD81D',
   label: '{ } JavaScript',
@@ -11,7 +41,7 @@ const javascript: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
   children: {
     dom: {
-      imageUrl: '/dom.svg',
+      Logo: Dom,
       priority: Priority.platinum,
       color: '#4CAF50',
       label: 'DOM',
@@ -20,7 +50,7 @@ const javascript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=0ik6X4DJKCc',
       children: {
         history: {
-          imageUrl: '/history.svg',
+          Logo: History,
           priority: Priority.platinum,
           color: 'limeGreen',
           label: 'History',
@@ -32,7 +62,7 @@ const javascript: IVertex = {
       },
     },
     dataFetching: {
-      imageUrl: '/dataFetching.svg',
+      Logo: DataFetching,
       priority: Priority.platinum,
       color: 'tomato',
       label: 'Data Fetching',
@@ -42,7 +72,7 @@ const javascript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=PoRJizFvM7s',
       children: {
         ajax: {
-          imageUrl: '/ajax.svg',
+          Logo: Ajax,
           priority: Priority.gold,
           color: 'orange',
           label: 'AJAX',
@@ -56,7 +86,7 @@ const javascript: IVertex = {
       },
     },
     es6: {
-      imageUrl: '/es6.svg',
+      Logo: Es6,
       priority: Priority.platinum,
       color: 'royalBlue',
       label: 'ES6',
@@ -65,7 +95,7 @@ const javascript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=IEf1KAcK6A8',
       children: {
         es6Modules: {
-          imageUrl: '/es6Modules.svg',
+          Logo: Es6Modules,
           priority: Priority.gold,
           color: 'steelBlue',
           label: 'ES6 Modules',
@@ -76,7 +106,7 @@ const javascript: IVertex = {
           children: {},
         },
         arrayMethods: {
-          imageUrl: '/arrayMethods.svg',
+          Logo: ArrayMethods,
           priority: Priority.gold,
           color: 'mediumOrchid',
           label: 'Array methods',
@@ -86,7 +116,7 @@ const javascript: IVertex = {
           children: {},
         },
         variableDeclaration: {
-          imageUrl: '/variableDeclaration.svg',
+          Logo: VariableDeclaration,
           priority: Priority.gold,
           color: 'teal',
           label: 'Variable Declaration',
@@ -97,7 +127,7 @@ const javascript: IVertex = {
           children: {},
         },
         promises: {
-          imageUrl: '/promises.svg',
+          Logo: Promises,
           priority: Priority.gold,
           color: 'plum',
           label: 'Promises',
@@ -108,7 +138,7 @@ const javascript: IVertex = {
           children: {},
         },
         templateLiterals: {
-          imageUrl: '/templateLiterals.svg',
+          Logo: TemplateLiterals,
           priority: Priority.gold,
           color: 'paleTurquoise',
           label: 'Template Literals',
@@ -119,7 +149,7 @@ const javascript: IVertex = {
           children: {},
         },
         restAndSpread: {
-          imageUrl: '/restAndSpread.svg',
+          Logo: RestAndSpread,
           priority: Priority.gold,
           color: 'midnightBlue',
           label: 'Rest and Spread',
@@ -130,7 +160,7 @@ const javascript: IVertex = {
           children: {},
         },
         destructuring: {
-          imageUrl: '/destructuring.svg',
+          Logo: Destructuring,
           priority: Priority.gold,
           color: 'slateBlue',
           label: 'Destructuring',
@@ -143,7 +173,7 @@ const javascript: IVertex = {
       },
     },
     utilityLibraries: {
-      imageUrl: '/utilityLibraries.svg',
+      Logo: UtilityLibraries,
       priority: Priority.gold,
       color: 'darkGoldenRod',
       label: 'Utility Libraries',
@@ -153,7 +183,7 @@ const javascript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=dM-Zj6J0fBY',
       children: {
         lodash: {
-          imageUrl: '/lodash.svg',
+          Logo: Lodash,
           priority: Priority.gold,
           color: '#3492ff',
           label: 'Lodash',
@@ -164,7 +194,7 @@ const javascript: IVertex = {
           children: {},
         },
         underscore: {
-          imageUrl: '/underscore.svg',
+          Logo: Underscore,
           priority: Priority.gold,
           color: '#0071B5',
           label: 'Underscore',
@@ -174,7 +204,7 @@ const javascript: IVertex = {
           children: {},
         },
         ramda: {
-          imageUrl: '/ramda.svg',
+          Logo: Ramda,
           priority: Priority.gold,
           color: '#884499',
           label: 'Ramda',
@@ -185,7 +215,7 @@ const javascript: IVertex = {
           children: {},
         },
         moment: {
-          imageUrl: '/moment.svg',
+          Logo: Moment,
           priority: Priority.gold,
           color: '#6782DA',
           label: 'Moment',
@@ -195,7 +225,7 @@ const javascript: IVertex = {
           children: {},
         },
         faker: {
-          imageUrl: '/faker.png',
+          Logo: Faker,
           priority: Priority.gold,
           color: '#D90000',
           label: 'Faker',
@@ -205,7 +235,7 @@ const javascript: IVertex = {
           children: {},
         },
         chart: {
-          imageUrl: '/chart.svg',
+          Logo: Chart,
           priority: Priority.gold,
           color: '#FE767A',
           label: 'Chart JS',
@@ -215,7 +245,7 @@ const javascript: IVertex = {
           children: {},
         },
         immutable: {
-          imageUrl: '/immutable.svg',
+          Logo: Immutable,
           priority: Priority.gold,
           color: '#2C3E50',
           label: 'Immutable JS',
@@ -228,7 +258,7 @@ const javascript: IVertex = {
       },
     },
     regex: {
-      imageUrl: '/regex.svg',
+      Logo: Regex,
       priority: Priority.gold,
       color: 'dodgerBlue',
       label: 'Regular Expression',
@@ -239,7 +269,7 @@ const javascript: IVertex = {
       children: {},
     },
     beyondEs6: {
-      imageUrl: '/beyondEs6.svg',
+      Logo: BeyondEs6,
       priority: Priority.gold,
       color: 'navy',
       label: 'Beyond ES6',
@@ -248,7 +278,7 @@ const javascript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=hCenHYqE7R4',
       children: {
         asyncAwait: {
-          imageUrl: '/asyncAwait.svg',
+          Logo: AsyncAwait,
           priority: Priority.gold,
           color: 'crimson',
           label: 'Async Await',
@@ -259,7 +289,7 @@ const javascript: IVertex = {
           children: {},
         },
         optionalChaining: {
-          imageUrl: '/optionalChaining.svg',
+          Logo: OptionalChaining,
           priority: Priority.gold,
           color: 'yellow',
           label: 'Optional Chaining',
@@ -271,7 +301,7 @@ const javascript: IVertex = {
           children: {},
         },
         objectEntries: {
-          imageUrl: '/objectEntries.svg',
+          Logo: ObjectEntries,
           priority: Priority.gold,
           color: 'lavender',
           label: 'Object entries',
@@ -286,7 +316,7 @@ const javascript: IVertex = {
       },
     },
     dataStructures: {
-      imageUrl: '/dataStructures.svg',
+      Logo: DataStructures,
       priority: Priority.gold,
       color: 'cornflowerBlue',
       label: 'Data Structures',
@@ -297,7 +327,7 @@ const javascript: IVertex = {
       children: {},
     },
     algorithms: {
-      imageUrl: '/algorithms.svg',
+      Logo: Algorithms,
       priority: Priority.gold,
       color: 'fireBrick',
       label: 'Algorithms',
@@ -309,7 +339,7 @@ const javascript: IVertex = {
       children: {},
     },
     eventLoop: {
-      imageUrl: '/eventLoop.svg',
+      Logo: EventLoop,
       priority: Priority.gold,
       color: '#0099FF',
       label: 'Event Loop',
@@ -319,7 +349,7 @@ const javascript: IVertex = {
       children: {},
     },
     theWeirdParts: {
-      imageUrl: '/theWeirdParts.svg',
+      Logo: TheWeirdParts,
       priority: Priority.gold,
       color: 'gray',
       label: 'The weird parts',

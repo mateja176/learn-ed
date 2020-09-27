@@ -1,10 +1,11 @@
+import Programming from '../../assets/programming.svg';
 import { IVertex, Priority } from '../../models/learning-path';
 import frontend from './frontend';
 import javascript from './frontend/javascript';
 import react from './frontend/react';
 
 const rootLearningPath: IVertex = {
-  imageUrl: '/programming.svg',
+  Logo: Programming,
   priority: Priority.platinum,
   color: 'white',
   label: '💻 Programing',

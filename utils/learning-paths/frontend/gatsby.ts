@@ -1,7 +1,8 @@
+import Gatsby from '../../../assets/gatsby.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const gatsby: IVertex = {
-  imageUrl: '/gatsby.svg',
+  Logo: Gatsby,
   priority: Priority.gold,
   color: '#663399',
   label: 'Gatsby',

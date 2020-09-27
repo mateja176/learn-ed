@@ -1,7 +1,11 @@
+import Ant from '../../../assets/ant.svg';
+import ComponentLibraries from '../../../assets/componentLibraries.svg';
+import MaterialUi from '../../../assets/materialUi.svg';
+import ReactBootstrap from '../../../assets/reactBootstrap.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const componentLibraries: IVertex = {
-  imageUrl: '/componentLibraries.svg',
+  Logo: ComponentLibraries,
   priority: Priority.platinum,
   color: 'deepSkyBlue',
   label: 'Component Libraries',
@@ -11,7 +15,7 @@ const componentLibraries: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=9pT-q0SSYow',
   children: {
     materialUi: {
-      imageUrl: '/materialUi.svg',
+      Logo: MaterialUi,
       priority: Priority.gold,
       color: '#1976d2',
       label: 'Material UI',
@@ -20,8 +24,8 @@ const componentLibraries: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=PWadEeOuv5o',
       children: {},
     },
-    antDesign: {
-      imageUrl: '/antDesign.svg',
+    ant: {
+      Logo: Ant,
       priority: Priority.gold,
       color: '#F63344',
       label: 'Ant Design',
@@ -31,7 +35,7 @@ const componentLibraries: IVertex = {
       children: {},
     },
     reactBootstrap: {
-      imageUrl: '/reactBootstrap.svg',
+      Logo: ReactBootstrap,
       priority: Priority.gold,
       color: '#2C2C2C',
       label: 'React Bootstrap',

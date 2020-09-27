@@ -1,7 +1,8 @@
+import ReactNative from '../../../assets/reactNative.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const reactNative: IVertex = {
-  imageUrl: '/reactNative.svg',
+  Logo: ReactNative,
   priority: Priority.gold,
   color: '#61dafb',
   label: 'React Native',

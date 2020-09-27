@@ -7,6 +7,7 @@ import { Text } from 'grommet/components/Text';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import Emotion from '../../assets/emotion.svg';
 import { useAnalytics } from '../../hooks/analytics';
 import { IVertex } from '../../models/learning-path';
 import {
@@ -20,6 +21,7 @@ import VideoLayer from '../Video/VideoLayer';
 const imageWrapperStyle: React.CSSProperties = {
   height: 100,
   minWidth: 100,
+  maxWidth: 100,
   marginRight: 12,
   borderRadius: 5,
   overflow: 'hidden',
@@ -63,11 +65,7 @@ const Vertex: React.FC<{
       <Card style={childCardStyle}>
         <CardBody pad="medium" direction="row" align="center">
           <Box style={imageWrapperStyle}>
-            <img
-              src={learningPath.imageUrl}
-              height={'100%'}
-              alt={learningPath.label}
-            />
+            <learningPath.Logo width={'100%'} height={'100%'} />
           </Box>
           <Box style={{ flex: 1 }}>
             <Box pad={{ bottom: '24px' }}>

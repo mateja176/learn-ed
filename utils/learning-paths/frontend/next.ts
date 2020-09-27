@@ -1,7 +1,8 @@
+import Next from '../../../assets/next.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const next: IVertex = {
-  imageUrl: '/next.svg',
+  Logo: Next,
   priority: Priority.gold,
   color: 'black',
   label: 'Next',

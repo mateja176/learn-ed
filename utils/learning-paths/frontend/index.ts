@@ -1,3 +1,110 @@
+import Analytics from '../../../assets/analytics.svg';
+import Angular from '../../../assets/angular.svg';
+import AngularUniversal from '../../../assets/angularUniversal.svg';
+import Apollo from '../../../assets/apollo.svg';
+import Aws from '../../../assets/aws.svg';
+import Bem from '../../../assets/bem.svg';
+import Bitbucket from '../../../assets/bitbucket.svg';
+import Bootstrap from '../../../assets/bootstrap.svg';
+import BoxModel from '../../../assets/boxModel.svg';
+import Browsers from '../../../assets/browsers.svg';
+import BuildingLayouts from '../../../assets/buildingLayouts.svg';
+import BuildTools from '../../../assets/buildTools.svg';
+import ChromeDevTools from '../../../assets/chromeDevTools.svg';
+import CodeEditors from '../../../assets/codeEditors.svg';
+import ContentSecurityPolicy from '../../../assets/contentSecurityPolicy.svg';
+import Cors from '../../../assets/cors.svg';
+import Cpp from '../../../assets/cpp.svg';
+import Css from '../../../assets/css.svg';
+import CssArchitecture from '../../../assets/cssArchitecture.svg';
+import CssGrid from '../../../assets/cssGrid.svg';
+import CssInJs from '../../../assets/cssInJs.svg';
+import CssLibraries from '../../../assets/cssLibraries.svg';
+import CssPreprocessors from '../../../assets/cssPreprocessors.svg';
+import Cucumber from '../../../assets/cucumber.svg';
+import CustomElements from '../../../assets/customElements.svg';
+import Cypress from '../../../assets/cypress.svg';
+import Debugging from '../../../assets/debugging.svg';
+import DeviceApis from '../../../assets/deviceApis.svg';
+import Display from '../../../assets/display.svg';
+import Dns from '../../../assets/dns.svg';
+import Documentation from '../../../assets/documentation.svg';
+import Docusaurus from '../../../assets/docusaurus.svg';
+import Electron from '../../../assets/electron.svg';
+import Eslint from '../../../assets/eslint.svg';
+import Firebase from '../../../assets/firebase.svg';
+import FlexBox from '../../../assets/flexBox.svg';
+import Floats from '../../../assets/floats.svg';
+import Flutter from '../../../assets/flutter.svg';
+import FormsAndValidation from '../../../assets/forms.svg';
+import Frameworks from '../../../assets/frameworks.svg';
+import Frontend from '../../../assets/frontend.svg';
+import Git from '../../../assets/git.svg';
+import Github from '../../../assets/github.svg';
+import GitLab from '../../../assets/gitLab.svg';
+import GoogleAnalytics from '../../../assets/googleAnalytics.svg';
+import Graphql from '../../../assets/graphql.svg';
+import Hosting from '../../../assets/hosting.svg';
+import Html from '../../../assets/html.svg';
+import HtmlTemplates from '../../../assets/htmlTemplates.svg';
+import Http from '../../../assets/http.svg';
+import Https from '../../../assets/https.svg';
+import Hugo from '../../../assets/hugo.svg';
+import Ionic from '../../../assets/ionic.svg';
+import Jekyll from '../../../assets/jekyll.svg';
+import JsDoc from '../../../assets/jsDoc.svg';
+import LazyLoading from '../../../assets/lazyLoading.svg';
+import Less from '../../../assets/less.svg';
+import Lighthouse from '../../../assets/lighthouse.svg';
+import Linters from '../../../assets/linters.svg';
+import Manifest from '../../../assets/manifest.svg';
+import Mixpanel from '../../../assets/mixpanel.svg';
+import MobileApps from '../../../assets/mobileApps.svg';
+import MochaAndChai from '../../../assets/mochaAndChai.svg';
+import ModuleBundlers from '../../../assets/moduleBundlers.svg';
+import Netlify from '../../../assets/netlify.svg';
+import Ngrx from '../../../assets/ngrx.svg';
+import Npm from '../../../assets/npm.svg';
+import NpmScripts from '../../../assets/npmScripts.svg';
+import Nuxt from '../../../assets/nuxt.svg';
+import OwaspSecurityRisks from '../../../assets/owaspSecurityRisks.svg';
+import PackageManagers from '../../../assets/packageManagers.svg';
+import Parcel from '../../../assets/parcel.svg';
+import PerformanceOptimization from '../../../assets/performanceOptimization.svg';
+import Positioning from '../../../assets/positioning.svg';
+import Prettier from '../../../assets/prettier.svg';
+import ProgressiveWebApps from '../../../assets/progressiveWebApps.svg';
+import PushNotifications from '../../../assets/pushNotifications.svg';
+import Relay from '../../../assets/relay.svg';
+import RemoteRepositories from '../../../assets/remoteRepositories.svg';
+import ResponsiveDesign from '../../../assets/responsiveDesign.svg';
+import Rest from '../../../assets/rest.svg';
+import Rollup from '../../../assets/rollup.svg';
+import Rust from '../../../assets/rust.svg';
+import Rxjs from '../../../assets/rxjs.svg';
+import Sass from '../../../assets/sass.svg';
+import SemanticHtml from '../../../assets/semanticHtml.svg';
+import Seo from '../../../assets/seo.svg';
+import Serverless from '../../../assets/serverless.svg';
+import ServiceWorkers from '../../../assets/serviceWorkers.svg';
+import SocketIo from '../../../assets/socketIo.svg';
+import Ssr from '../../../assets/ssr.svg';
+import StaticSiteGenerators from '../../../assets/staticSiteGenerators.svg';
+import Testing from '../../../assets/testing.svg';
+import TypeCheckers from '../../../assets/typeCheckers.svg';
+import TypeDoc from '../../../assets/typeDoc.svg';
+import Typescript from '../../../assets/typescript.svg';
+import VersionControl from '../../../assets/versionControl.svg';
+import VsCode from '../../../assets/vsCode.svg';
+import Vue from '../../../assets/vue.svg';
+import VueX from '../../../assets/vueX.svg';
+import Web from '../../../assets/web.svg';
+import WebAssembly from '../../../assets/webAssembly.svg';
+import WebComponents from '../../../assets/webComponents.svg';
+import Webpack from '../../../assets/webpack.svg';
+import WebSecurity from '../../../assets/webSecurity.svg';
+import Websockets from '../../../assets/websockets.svg';
+import Yarn from '../../../assets/yarn.svg';
 import * as lp from '../../../models/learning-path';
 import componentLibraries from './componentLibraries';
 import cssModules from './cssModules';
@@ -13,7 +120,7 @@ import styledComponents from './styledComponents';
 import testingLibrary from './testingLibrary';
 
 const nuxt = {
-  imageUrl: '/nuxt.svg',
+  Logo: Nuxt,
   priority: lp.Priority.gold,
   color: '#00C58E',
   label: 'Nuxt',
@@ -25,7 +132,7 @@ const nuxt = {
 };
 
 const frontend = {
-  imageUrl: '/frontend.svg',
+  Logo: Frontend,
   priority: lp.Priority.platinum,
   color: 'royalblue',
   label: '🖥️ Front-end',
@@ -36,7 +143,7 @@ const frontend = {
   videoUrl: 'https://www.youtube.com/watch?v=QA0XpGhiz5w',
   children: {
     web: {
-      imageUrl: '/web.svg',
+      Logo: Web,
       priority: lp.Priority.platinum,
       color: 'darkSlateGrey',
       label: 'The Web',
@@ -46,7 +153,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=J8hzJxb0rpc',
       children: {
         http: {
-          imageUrl: '/http.png',
+          Logo: Http,
           priority: lp.Priority.gold,
           color: '#005896',
           description:
@@ -58,7 +165,7 @@ const frontend = {
         },
 
         browsers: {
-          imageUrl: '/browsers.svg',
+          Logo: Browsers,
           priority: lp.Priority.gold,
           color: 'springGreen',
           description:
@@ -69,7 +176,7 @@ const frontend = {
           children: {},
         },
         dns: {
-          imageUrl: '/dns.svg',
+          Logo: Dns,
           priority: lp.Priority.gold,
           color: '#005896',
           description:
@@ -81,7 +188,7 @@ const frontend = {
         },
 
         hosting: {
-          imageUrl: '/hosting.svg',
+          Logo: Hosting,
           priority: lp.Priority.gold,
           color: 'paleGreen',
           description: 'Make your website accessible to the world.',
@@ -94,7 +201,7 @@ const frontend = {
       },
     },
     html: {
-      imageUrl: '/html.svg',
+      Logo: Html,
       priority: lp.Priority.platinum,
       color: 'orangeRed',
       description:
@@ -104,7 +211,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=UB1O30fR-EE',
       children: {
         semanticHtml: {
-          imageUrl: '/semanticHtml.svg',
+          Logo: SemanticHtml,
           priority: lp.Priority.gold,
           color: 'orange',
           description: 'Meaningful HTML.',
@@ -114,7 +221,7 @@ const frontend = {
           children: {},
         },
         formsAndValidation: {
-          imageUrl: '/formsAndValidation.svg',
+          Logo: FormsAndValidation,
           priority: lp.Priority.gold,
           color: 'darkMagenta',
           description:
@@ -125,7 +232,7 @@ const frontend = {
           children: {},
         },
         seo: {
-          imageUrl: '/seo.svg',
+          Logo: Seo,
           priority: lp.Priority.gold,
           color: 'khaki',
           description: 'Want to get your site on the first page of Google?',
@@ -137,7 +244,7 @@ const frontend = {
       },
     },
     css: {
-      imageUrl: '/css.svg',
+      Logo: Css,
       priority: lp.Priority.platinum,
       color: 'mediumBlue',
       label: 'CSS',
@@ -146,7 +253,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=yfoY53QXEnI',
       children: {
         buildingLayouts: {
-          imageUrl: '/buildingLayouts.svg',
+          Logo: BuildingLayouts,
           priority: lp.Priority.gold,
           color: 'mediumAquaMarine',
           label: 'Building Layouts',
@@ -156,7 +263,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=R7gqJkdc5dM',
           children: {
             floats: {
-              imageUrl: '/floats.svg',
+              Logo: Floats,
               priority: lp.Priority.gold,
               color: 'aqua',
               label: 'Floats',
@@ -166,7 +273,7 @@ const frontend = {
               children: {},
             },
             positioning: {
-              imageUrl: '/positioning.svg',
+              Logo: Positioning,
               priority: lp.Priority.gold,
               color: 'aquaMarine',
               label: 'Positioning',
@@ -176,7 +283,7 @@ const frontend = {
               children: {},
             },
             display: {
-              imageUrl: '/display.svg',
+              Logo: Display,
               priority: lp.Priority.gold,
               color: 'lightCyan',
               label: 'Display',
@@ -186,7 +293,7 @@ const frontend = {
               children: {},
             },
             boxModel: {
-              imageUrl: '/boxModel.svg',
+              Logo: BoxModel,
               priority: lp.Priority.gold,
               color: 'darkCyan',
               label: 'Box Model',
@@ -196,7 +303,7 @@ const frontend = {
               children: {},
             },
             cssGrid: {
-              imageUrl: '/cssGrid.svg',
+              Logo: CssGrid,
               priority: lp.Priority.gold,
               color: 'blue',
               label: 'CSS Grid',
@@ -206,7 +313,7 @@ const frontend = {
               children: {},
             },
             flexBox: {
-              imageUrl: '/flexBox.svg',
+              Logo: FlexBox,
               priority: lp.Priority.gold,
               color: 'cornflowerBlue',
               label: 'Flex Box',
@@ -219,7 +326,7 @@ const frontend = {
           },
         },
         responsiveDesign: {
-          imageUrl: '/responsiveDesign.svg',
+          Logo: ResponsiveDesign,
           priority: lp.Priority.gold,
           color: 'dodgerBlue',
           label: 'Responsive Design',
@@ -233,7 +340,7 @@ const frontend = {
     },
     javascript,
     versionControl: {
-      imageUrl: '/versionControl.svg',
+      Logo: VersionControl,
       priority: lp.Priority.platinum,
       color: 'tomato',
       label: 'Version Control',
@@ -243,7 +350,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=zbKdDsNNOhg',
       children: {
         git: {
-          imageUrl: '/git.svg',
+          Logo: Git,
           priority: lp.Priority.platinum,
           color: '#F44D27',
           label: 'Git',
@@ -253,7 +360,7 @@ const frontend = {
           children: {},
         },
         remoteRepositories: {
-          imageUrl: '/remoteRepositories.svg',
+          Logo: RemoteRepositories,
           priority: lp.Priority.gold,
           color: '#404448',
           label: 'Remote Repositories',
@@ -262,7 +369,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=Gg4bLk8cGNo',
           children: {
             github: {
-              imageUrl: '/github.svg',
+              Logo: Github,
               priority: lp.Priority.platinum,
               color: '#24292e',
               label: 'Github',
@@ -272,7 +379,7 @@ const frontend = {
               children: {},
             },
             gitLab: {
-              imageUrl: '/gitLab.svg',
+              Logo: GitLab,
               priority: lp.Priority.bronze,
               color: '#fa7035',
               label: 'GitLab',
@@ -282,7 +389,7 @@ const frontend = {
               children: {},
             },
             bitbucket: {
-              imageUrl: '/bitbucket.svg',
+              Logo: Bitbucket,
               priority: lp.Priority.bronze,
               color: '#0052CC',
               label: 'Bitbucket',
@@ -297,7 +404,7 @@ const frontend = {
       },
     },
     webSecurity: {
-      imageUrl: '/webSecurity.svg',
+      Logo: WebSecurity,
       priority: lp.Priority.platinum,
       color: 'steelBlue',
       label: 'Web Security',
@@ -306,7 +413,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=wIRVn2dZkaA',
       children: {
         https: {
-          imageUrl: '/https.svg',
+          Logo: Https,
           priority: lp.Priority.gold,
           color: '#DB5912',
           label: 'Https',
@@ -316,7 +423,7 @@ const frontend = {
           children: {},
         },
         cors: {
-          imageUrl: '/cors.svg',
+          Logo: Cors,
           priority: lp.Priority.gold,
           color: '#F2B104',
           label: 'CORS',
@@ -326,7 +433,7 @@ const frontend = {
           children: {},
         },
         contentSecurityPolicy: {
-          imageUrl: '/contentSecurityPolicy.svg',
+          Logo: ContentSecurityPolicy,
           priority: lp.Priority.gold,
           color: 'lightSkyBlue',
           label: 'Content Security Policy ',
@@ -336,7 +443,7 @@ const frontend = {
           children: {},
         },
         owaspSecurityRisks: {
-          imageUrl: '/owaspSecurityRisks.svg',
+          Logo: OwaspSecurityRisks,
           priority: lp.Priority.gold,
           color: 'goldenRod',
           label: 'OWASP Security Risks',
@@ -348,7 +455,7 @@ const frontend = {
       },
     },
     rest: {
-      imageUrl: '/rest.svg',
+      Logo: Rest,
       priority: lp.Priority.platinum,
       color: 'teal',
       label: 'REST',
@@ -358,7 +465,7 @@ const frontend = {
       children: {},
     },
     packageManagers: {
-      imageUrl: '/packageManagers.svg',
+      Logo: PackageManagers,
       priority: lp.Priority.platinum,
       color: 'firebrick',
       label: 'Package Managers',
@@ -368,7 +475,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=-SaZiADGLHs',
       children: {
         npm: {
-          imageUrl: '/npm.svg',
+          Logo: Npm,
           priority: lp.Priority.platinum,
           color: '#C42329',
           label: 'NPM',
@@ -378,7 +485,7 @@ const frontend = {
           children: {},
         },
         yarn: {
-          imageUrl: '/yarn.svg',
+          Logo: Yarn,
           priority: lp.Priority.gold,
           color: '#2188B6',
           label: 'Yarn',
@@ -390,7 +497,7 @@ const frontend = {
       },
     },
     cssArchitecture: {
-      imageUrl: '/cssArchitecture.svg',
+      Logo: CssArchitecture,
       priority: lp.Priority.gold,
       color: 'midnightBlue',
       label: 'CSS Architecture',
@@ -399,7 +506,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=Nxnp-JLgo5I',
       children: {
         bem: {
-          imageUrl: '/bem.svg',
+          Logo: Bem,
           priority: lp.Priority.gold,
           color: '#8A8A9A',
           label: 'BEM',
@@ -411,7 +518,7 @@ const frontend = {
       },
     },
     cssPreprocessors: {
-      imageUrl: '/cssPreprocessors.svg',
+      Logo: CssPreprocessors,
       priority: lp.Priority.gold,
       color: 'navy',
       label: 'CSS Preprocessors',
@@ -420,7 +527,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=mAHUT1aXUfQ',
       children: {
         sass: {
-          imageUrl: '/sass.svg',
+          Logo: Sass,
           priority: lp.Priority.gold,
           color: '#CF649A',
           label: 'Sass',
@@ -430,7 +537,7 @@ const frontend = {
           children: {},
         },
         less: {
-          imageUrl: '/less.svg',
+          Logo: Less,
           priority: lp.Priority.bronze,
           color: '#1d365d',
           label: 'Less',
@@ -442,7 +549,7 @@ const frontend = {
       },
     },
     buildTools: {
-      imageUrl: '/buildTools.svg',
+      Logo: BuildTools,
       priority: lp.Priority.platinum,
       color: 'powderBlue',
       label: 'Build Tools',
@@ -451,7 +558,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=rSTR4uET2EA',
       children: {
         linters: {
-          imageUrl: '/linters.svg',
+          Logo: Linters,
           priority: lp.Priority.gold,
           color: 'lavender',
           label: 'Linters',
@@ -460,7 +567,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=bkrapYrmRLc',
           children: {
             eslint: {
-              imageUrl: '/eslint.svg',
+              Logo: Eslint,
               priority: lp.Priority.gold,
               color: '#4B32C3',
               label: 'Eslint',
@@ -472,7 +579,7 @@ const frontend = {
           },
         },
         prettier: {
-          imageUrl: '/prettier.svg',
+          Logo: Prettier,
           priority: lp.Priority.gold,
           color: '#f8bc45',
           label: 'Prettier',
@@ -482,7 +589,7 @@ const frontend = {
           children: {},
         },
         npmScripts: {
-          imageUrl: '/npmScripts.svg',
+          Logo: NpmScripts,
           priority: lp.Priority.gold,
           color: 'indianRed',
           label: 'NPM Scripts',
@@ -493,7 +600,7 @@ const frontend = {
           children: {},
         },
         moduleBundlers: {
-          imageUrl: '/moduleBundlers.svg',
+          Logo: ModuleBundlers,
           priority: lp.Priority.gold,
           color: 'azure',
           label: 'Module Bundlers',
@@ -503,7 +610,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=OhPUaEuEaXk',
           children: {
             webpack: {
-              imageUrl: '/webpack.svg',
+              Logo: Webpack,
               priority: lp.Priority.gold,
               color: '#75AFCC',
               description: 'The most popular, widespread bundler out there.',
@@ -513,7 +620,7 @@ const frontend = {
               children: {},
             },
             rollup: {
-              imageUrl: '/rollup.svg',
+              Logo: Rollup,
               priority: lp.Priority.silver,
               color: '#FF3333',
               label: 'Rollup',
@@ -523,7 +630,7 @@ const frontend = {
               children: {},
             },
             parcel: {
-              imageUrl: '/parcel.svg',
+              Logo: Parcel,
               priority: lp.Priority.silver,
               color: '#F3BC83',
               label: 'Parcel',
@@ -537,7 +644,7 @@ const frontend = {
       },
     },
     frameworks: {
-      imageUrl: '/frameworks.svg',
+      Logo: Frameworks,
       priority: lp.Priority.platinum,
       color: 'cyan',
       label: 'Frameworks',
@@ -547,7 +654,7 @@ const frontend = {
       children: {
         react,
         angular: {
-          imageUrl: '/angular.svg',
+          Logo: Angular,
           priority: lp.Priority.gold,
           color: '#DD0031',
           label: 'Angular',
@@ -556,7 +663,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=Fdf5aTYRW0E',
           children: {
             rxjs: {
-              imageUrl: '/rxjs.svg',
+              Logo: Rxjs,
               priority: lp.Priority.gold,
               color: '#DF0090',
               label: 'RxJS',
@@ -566,7 +673,7 @@ const frontend = {
               children: {},
             },
             ngrx: {
-              imageUrl: '/ngrx.svg',
+              Logo: Ngrx,
               priority: lp.Priority.gold,
               color: '#a829c3',
               label: 'NgRX',
@@ -579,7 +686,7 @@ const frontend = {
           },
         },
         vue: {
-          imageUrl: '/vue.svg',
+          Logo: Vue,
           priority: lp.Priority.gold,
           color: '#4fc08d',
           label: 'Vue',
@@ -588,7 +695,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=Wy9q22isx3U',
           children: {
             vueX: {
-              imageUrl: '/vueX.png',
+              Logo: VueX,
               priority: lp.Priority.gold,
               color: '#62C19E',
               label: 'VueX',
@@ -602,7 +709,7 @@ const frontend = {
       },
     },
     cssInJs: {
-      imageUrl: '/cssInJs.svg',
+      Logo: CssInJs,
       priority: lp.Priority.platinum,
       color: 'limeGreen',
       label: 'CSS in JS',
@@ -617,7 +724,7 @@ const frontend = {
       },
     },
     webComponents: {
-      imageUrl: '/webComponents.svg',
+      Logo: WebComponents,
       priority: lp.Priority.gold,
       color: 'darkOrange',
       label: 'Web Components',
@@ -626,7 +733,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=PCWaFLy3VUo',
       children: {
         htmlTemplates: {
-          imageUrl: '/htmlTemplates.svg',
+          Logo: HtmlTemplates,
           priority: lp.Priority.gold,
           color: 'coral',
           label: 'HTML Templates',
@@ -636,7 +743,7 @@ const frontend = {
           children: {},
         },
         customElements: {
-          imageUrl: '/customElements.svg',
+          Logo: CustomElements,
           priority: lp.Priority.gold,
           color: 'lightCoral',
           label: 'Custom Elements',
@@ -650,7 +757,7 @@ const frontend = {
     },
     componentLibraries,
     cssLibraries: {
-      imageUrl: '/cssLibraries.svg',
+      Logo: CssLibraries,
       priority: lp.Priority.gold,
       color: 'rebeccaPurple',
       label: 'CSS Libraries',
@@ -659,7 +766,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=vmXIGdP8KN8',
       children: {
         bootstrap: {
-          imageUrl: '/bootstrap.svg',
+          Logo: Bootstrap,
           priority: lp.Priority.gold,
           color: '#7952b3',
           label: 'Bootstrap',
@@ -672,7 +779,7 @@ const frontend = {
       },
     },
     testing: {
-      imageUrl: '/testing.svg',
+      Logo: Testing,
       priority: lp.Priority.platinum,
       color: 'green',
       label: 'Testing',
@@ -683,7 +790,7 @@ const frontend = {
         jest,
         testingLibrary,
         cypress: {
-          imageUrl: '/cypress.svg',
+          Logo: Cypress,
           priority: lp.Priority.platinum,
           color: '#192635',
           label: 'Cypress',
@@ -693,7 +800,7 @@ const frontend = {
           children: {},
         },
         cucumber: {
-          imageUrl: '/cucumber.svg',
+          Logo: Cucumber,
           priority: lp.Priority.gold,
           color: '#00a818',
           label: 'Cucumber',
@@ -703,7 +810,7 @@ const frontend = {
           children: {},
         },
         mochaAndChai: {
-          imageUrl: '/mochaAndChai.svg',
+          Logo: MochaAndChai,
           priority: lp.Priority.bronze,
           color: '#8d6748',
           label: 'Mocha And Chai',
@@ -715,7 +822,7 @@ const frontend = {
       },
     },
     typeCheckers: {
-      imageUrl: '/typeCheckers.svg',
+      Logo: TypeCheckers,
       priority: lp.Priority.platinum,
       color: 'royalBlue',
       label: 'Type Checkers',
@@ -724,7 +831,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=YHvqbeh_n9U',
       children: {
         typescript: {
-          imageUrl: '/typescript.svg',
+          Logo: Typescript,
           priority: lp.Priority.gold,
           color: '#3178c6',
           label: 'TypeScript',
@@ -737,7 +844,7 @@ const frontend = {
       },
     },
     progressiveWebApps: {
-      imageUrl: '/progressiveWebApps.svg',
+      Logo: ProgressiveWebApps,
       priority: lp.Priority.platinum,
       color: 'indigo',
       label: 'Progressive Web Apps',
@@ -746,7 +853,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=VmKePMB0C8Q',
       children: {
         serviceWorkers: {
-          imageUrl: '/serviceWorkers.svg',
+          Logo: ServiceWorkers,
           priority: lp.Priority.platinum,
           color: 'mediumPurple',
           label: 'Service Workers',
@@ -757,7 +864,7 @@ const frontend = {
           children: {},
         },
         manifest: {
-          imageUrl: '/manifest.svg',
+          Logo: Manifest,
           priority: lp.Priority.platinum,
           color: 'rosyBrown',
           label: 'Manifest',
@@ -767,7 +874,7 @@ const frontend = {
           children: {},
         },
         pushNotifications: {
-          imageUrl: '/pushNotifications.svg',
+          Logo: PushNotifications,
           priority: lp.Priority.gold,
           color: 'paleVioletRed',
           label: 'Push Notifications',
@@ -778,7 +885,7 @@ const frontend = {
           children: {},
         },
         deviceApis: {
-          imageUrl: '/deviceApis.svg',
+          Logo: DeviceApis,
           priority: lp.Priority.gold,
           color: 'blueViolet',
           label: "Device API's",
@@ -790,7 +897,7 @@ const frontend = {
       },
     },
     debugging: {
-      imageUrl: '/debugging.svg',
+      Logo: Debugging,
       priority: lp.Priority.platinum,
       color: 'maroon',
       label: 'Debugging',
@@ -799,7 +906,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=gaminoBsQx0',
       children: {
         chromeDevTools: {
-          imageUrl: '/chromeDevTools.svg',
+          Logo: ChromeDevTools,
           priority: lp.Priority.platinum,
           color: 'sandyBrown',
           label: 'Chrome DevTools',
@@ -809,7 +916,7 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=x4q86IjJFag',
           children: {
             lighthouse: {
-              imageUrl: '/lighthouse.svg',
+              Logo: Lighthouse,
               priority: lp.Priority.platinum,
               color: 'salmon',
               label: 'LightHouse',
@@ -823,7 +930,7 @@ const frontend = {
       },
     },
     performanceOptimization: {
-      imageUrl: '/performanceOptimization.svg',
+      Logo: PerformanceOptimization,
       priority: lp.Priority.platinum,
       color: 'hotPink',
       label: 'Performance Optimization',
@@ -833,7 +940,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=YJGCZCaIZkQ',
       children: {
         lazyLoading: {
-          imageUrl: '/lazyLoading.svg',
+          Logo: LazyLoading,
           priority: lp.Priority.gold,
           color: 'Moccasin',
           label: 'Lazy Loading',
@@ -845,7 +952,7 @@ const frontend = {
       },
     },
     serverless: {
-      imageUrl: '/serverless.svg',
+      Logo: Serverless,
       priority: lp.Priority.platinum,
       color: 'whiteSmoke',
       label: 'Serverless',
@@ -855,7 +962,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=wWEID0d6wfo',
       children: {
         firebase: {
-          imageUrl: '/firebase.svg',
+          Logo: Firebase,
           priority: lp.Priority.gold,
           color: '#FFCA2A',
           label: 'Firebase',
@@ -865,7 +972,7 @@ const frontend = {
           children: {},
         },
         aws: {
-          imageUrl: '/aws.svg',
+          Logo: Aws,
           priority: lp.Priority.gold,
           color: '#EC912D',
           label: 'Amazon Web Services',
@@ -875,7 +982,7 @@ const frontend = {
           children: {},
         },
         netlify: {
-          imageUrl: '/netlify.svg',
+          Logo: Netlify,
           priority: lp.Priority.silver,
           color: '#00a396',
           label: 'Netlify',
@@ -888,7 +995,7 @@ const frontend = {
       },
     },
     websockets: {
-      imageUrl: '/websockets.svg',
+      Logo: Websockets,
       priority: lp.Priority.gold,
       color: 'black',
       label: 'Websockets',
@@ -897,7 +1004,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=8ARodQ4Wlf4',
       children: {
         socketIo: {
-          imageUrl: '/socketIo.svg',
+          Logo: SocketIo,
           priority: lp.Priority.gold,
           color: '#555',
           label: 'Socket IO',
@@ -910,7 +1017,7 @@ const frontend = {
       },
     },
     analytics: {
-      imageUrl: '/analytics.svg',
+      Logo: Analytics,
       priority: lp.Priority.platinum,
       color: 'orchid',
       label: 'Analytics',
@@ -919,7 +1026,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=PnVZ7_OA7Qo',
       children: {
         googleAnalytics: {
-          imageUrl: '/googleAnalytics.svg',
+          Logo: GoogleAnalytics,
           priority: lp.Priority.gold,
           color: '#F9AB00',
           label: 'Google Analytics',
@@ -928,8 +1035,8 @@ const frontend = {
           videoUrl: 'https://www.youtube.com/watch?v=gBeMELnxdIg',
           children: {},
         },
-        mixPanel: {
-          imageUrl: '/mixPanel.svg',
+        mixpanel: {
+          Logo: Mixpanel,
           priority: lp.Priority.gold,
           color: '#4284fb',
           label: 'Mix Panel',
@@ -941,7 +1048,7 @@ const frontend = {
       },
     },
     ssr: {
-      imageUrl: '/ssr.svg',
+      Logo: Ssr,
       priority: lp.Priority.gold,
       color: 'dimGrey',
       label: 'Server Side Rendering',
@@ -952,7 +1059,7 @@ const frontend = {
       children: {
         next,
         angularUniversal: {
-          imageUrl: '/angularUniversal.png',
+          Logo: AngularUniversal,
           priority: lp.Priority.gold,
           color: '#C3002F',
           label: 'Angular Universal',
@@ -966,7 +1073,7 @@ const frontend = {
       },
     },
     graphql: {
-      imageUrl: '/graphql.svg',
+      Logo: Graphql,
       priority: lp.Priority.gold,
       color: 'deepPink',
       label: 'GraphQL',
@@ -975,7 +1082,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=ed8SzALpx1Q',
       children: {
         apollo: {
-          imageUrl: '/apollo.svg',
+          Logo: Apollo,
           priority: lp.Priority.gold,
           color: '#7156d9',
           label: 'Apollo',
@@ -986,7 +1093,7 @@ const frontend = {
           children: {},
         },
         relay: {
-          imageUrl: '/relay.svg',
+          Logo: Relay,
           priority: lp.Priority.silver,
           color: '#f26b00',
           label: 'Relay',
@@ -999,7 +1106,7 @@ const frontend = {
       },
     },
     staticSiteGenerators: {
-      imageUrl: '/staticSiteGenerators.svg',
+      Logo: StaticSiteGenerators,
       priority: lp.Priority.gold,
       color: 'purple',
       label: 'Static Site Generators',
@@ -1012,7 +1119,7 @@ const frontend = {
         gatsby,
         nuxt,
         jekyll: {
-          imageUrl: '/jekyll.svg',
+          Logo: Jekyll,
           priority: lp.Priority.bronze,
           color: '#D91111',
           label: 'Jekyll',
@@ -1023,7 +1130,7 @@ const frontend = {
           children: {},
         },
         hugo: {
-          imageUrl: '/hugo.svg',
+          Logo: Hugo,
           priority: lp.Priority.bronze,
           color: '#FF4088',
           label: 'Hugo',
@@ -1035,7 +1142,7 @@ const frontend = {
       },
     },
     documentation: {
-      imageUrl: '/documentation.svg',
+      Logo: Documentation,
       priority: lp.Priority.gold,
       color: 'sienna',
       label: 'Documentation',
@@ -1046,7 +1153,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=a4L9GhldTHo',
       children: {
         jsDoc: {
-          imageUrl: '/jsDoc.svg',
+          Logo: JsDoc,
           priority: lp.Priority.gold,
           color: '#006FBB',
           label: 'JSDOc',
@@ -1057,7 +1164,7 @@ const frontend = {
           children: {},
         },
         typeDoc: {
-          imageUrl: '/typeDoc.png',
+          Logo: TypeDoc,
           priority: lp.Priority.gold,
           color: '#9600FF',
           label: 'TypeDOc',
@@ -1067,7 +1174,7 @@ const frontend = {
           children: {},
         },
         docusaurus: {
-          imageUrl: '/docusaurus.svg',
+          Logo: Docusaurus,
           priority: lp.Priority.bronze,
           color: '#2e8555',
           label: 'Docosaurus',
@@ -1081,7 +1188,7 @@ const frontend = {
       },
     },
     codeEditors: {
-      imageUrl: '/codeEditors.svg',
+      Logo: CodeEditors,
       priority: lp.Priority.platinum,
       color: 'silver',
       label: 'Code Editors',
@@ -1090,7 +1197,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=AJnhqf5IRC4',
       children: {
         vsCode: {
-          imageUrl: '/vsCode.svg',
+          Logo: VsCode,
           priority: lp.Priority.platinum,
           color: '#0066B8',
           label: 'Visual Studio Code',
@@ -1102,7 +1209,7 @@ const frontend = {
       },
     },
     mobileApps: {
-      imageUrl: '/mobileApps.svg',
+      Logo: MobileApps,
       priority: lp.Priority.gold,
       color: 'turquoise',
       label: 'Mobile Apps',
@@ -1113,7 +1220,7 @@ const frontend = {
       children: {
         reactNative,
         flutter: {
-          imageUrl: '/flutter.svg',
+          Logo: Flutter,
           priority: lp.Priority.silver,
           color: '#075b9a',
           label: 'Flutter',
@@ -1124,7 +1231,7 @@ const frontend = {
           children: {},
         },
         ionic: {
-          imageUrl: '/ionic.svg',
+          Logo: Ionic,
           priority: lp.Priority.bronze,
           color: '#3880ff',
           label: 'Ionic',
@@ -1136,7 +1243,7 @@ const frontend = {
       },
     },
     electron: {
-      imageUrl: '/electron.png',
+      Logo: Electron,
       priority: lp.Priority.silver,
       color: 'cadetBlue',
       label: 'Electron',
@@ -1146,7 +1253,7 @@ const frontend = {
       children: {},
     },
     webAssembly: {
-      imageUrl: '/webAssembly.svg',
+      Logo: WebAssembly,
       priority: lp.Priority.gold,
       color: 'darkSlateBlue',
       label: 'Web Assembly',
@@ -1156,7 +1263,7 @@ const frontend = {
       videoUrl: 'https://www.youtube.com/watch?v=jGKjKx2vous',
       children: {
         rust: {
-          imageUrl: '/rust.svg',
+          Logo: Rust,
           priority: lp.Priority.gold,
           color: 'sienna',
           label: 'Rust',
@@ -1167,7 +1274,7 @@ const frontend = {
           children: {},
         },
         cpp: {
-          imageUrl: '/cpp.svg',
+          Logo: Cpp,
           priority: lp.Priority.silver,
           color: '#6295CB',
           label: 'C++',
