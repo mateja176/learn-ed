@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const jss: IVertex = {
+  imageUrl: '/jss.svg',
   priority: Priority.gold,
   color: '#f7df1e',
   label: 'JSS',

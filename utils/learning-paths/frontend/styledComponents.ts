@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const styledComponents: IVertex = {
+  imageUrl: '/styledComponents.svg',
   priority: Priority.platinum,
   color: 'salmon',
   label: 'Styled Components',

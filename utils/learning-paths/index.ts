@@ -4,6 +4,7 @@ import javascript from './frontend/javascript';
 import react from './frontend/react';
 
 const rootLearningPath: IVertex = {
+  imageUrl: '/programming.svg',
   priority: Priority.platinum,
   color: 'white',
   label: '💻 Programing',

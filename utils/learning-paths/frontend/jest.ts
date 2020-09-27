@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const jest: IVertex = {
+  imageUrl: '/jest.svg',
   priority: Priority.platinum,
   color: '#c21325',
   label: 'Jest',

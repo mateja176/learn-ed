@@ -12,6 +12,7 @@ import styledComponents from './styledComponents';
 import testingLibrary from './testingLibrary';
 
 const react = {
+  imageUrl: '/react.svg',
   priority: lp.Priority.platinum,
   color: '#61DAFB',
   label: '⚛️ React',
@@ -20,6 +21,7 @@ const react = {
   videoUrl: 'https://www.youtube.com/watch?v=9U3IhLAnSxM',
   children: {
     basics: {
+      imageUrl: '/basics.svg',
       priority: lp.Priority.platinum,
       color: 'slateGray',
       label: 'Basics',
@@ -28,6 +30,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=hQAHSlTtcmY',
       children: {
         philosophy: {
+          imageUrl: '/philosophy.svg',
           priority: lp.Priority.platinum,
           color: 'snow',
           label: 'React Philosophy',
@@ -37,6 +40,7 @@ const react = {
           children: {},
         },
         jsx: {
+          imageUrl: '/jsx.svg',
           priority: lp.Priority.platinum,
           color: 'darkMagenta',
           label: 'JSX',
@@ -46,6 +50,7 @@ const react = {
           children: {},
         },
         components: {
+          imageUrl: '/components.svg',
           priority: lp.Priority.platinum,
           color: '#353B45',
           label: 'Components',
@@ -55,6 +60,7 @@ const react = {
           children: {},
         },
         props: {
+          imageUrl: '/props.svg',
           priority: lp.Priority.platinum,
           color: 'antiqueWhite',
           label: 'Props',
@@ -64,6 +70,7 @@ const react = {
           children: {},
         },
         state: {
+          imageUrl: '/state.svg',
           priority: lp.Priority.platinum,
           color: 'fuchsia',
           label: 'State',
@@ -73,6 +80,7 @@ const react = {
           children: {},
         },
         conditionalRendering: {
+          imageUrl: '/conditionalRendering.svg',
           priority: lp.Priority.platinum,
           color: 'lightgray',
           label: 'Conditional rendering',
@@ -82,6 +90,7 @@ const react = {
           children: {},
         },
         listsAndKeys: {
+          imageUrl: '/listsAndKeys.svg',
           priority: lp.Priority.platinum,
           color: 'seaGreen',
           label: 'Lists and Keys',
@@ -91,6 +100,7 @@ const react = {
           children: {},
         },
         reactHooks: {
+          imageUrl: '/reactHooks.svg',
           priority: lp.Priority.platinum,
           color: '#20232A',
           label: 'React Hooks',
@@ -101,6 +111,7 @@ const react = {
           children: {},
         },
         cra: {
+          imageUrl: '/cra.svg',
           priority: lp.Priority.gold,
           color: 'darkGoldenRod',
           label: 'Create React App',
@@ -112,6 +123,7 @@ const react = {
       },
     },
     advancedTopics: {
+      imageUrl: '/advancedTopics.svg',
       priority: lp.Priority.platinum,
       color: 'royalBlue',
       label: 'Advanced Topics',
@@ -120,6 +132,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=lG6Z0FQj_SI',
       children: {
         context: {
+          imageUrl: '/context.svg',
           priority: lp.Priority.platinum,
           color: 'crimson',
           label: 'Context API',
@@ -129,6 +142,7 @@ const react = {
           children: {},
         },
         renderProps: {
+          imageUrl: '/renderProps.svg',
           priority: lp.Priority.gold,
           color: 'mediumTurquoise',
           label: 'Render Props',
@@ -138,6 +152,7 @@ const react = {
           children: {},
         },
         higherOrderComponents: {
+          imageUrl: '/higherOrderComponents.svg',
           priority: lp.Priority.gold,
           color: 'mistyRose',
           label: 'Higher order components.',
@@ -147,6 +162,7 @@ const react = {
           children: {},
         },
         refs: {
+          imageUrl: '/refs.svg',
           priority: lp.Priority.platinum,
           color: 'rebeccaPurple',
           label: 'Refs',
@@ -157,6 +173,7 @@ const react = {
           children: {},
         },
         refForwarding: {
+          imageUrl: '/refForwarding.svg',
           priority: lp.Priority.platinum,
           color: 'rosyBrown',
           label: 'Ref forwarding',
@@ -166,6 +183,7 @@ const react = {
           children: {},
         },
         errorBoundaries: {
+          imageUrl: '/errorBoundaries.svg',
           priority: lp.Priority.gold,
           color: 'mediumVioletRed',
           label: 'Error Boundaries',
@@ -175,6 +193,7 @@ const react = {
           children: {},
         },
         portals: {
+          imageUrl: '/portals.svg',
           priority: lp.Priority.silver,
           color: 'thistle',
           label: 'Portals',
@@ -184,6 +203,7 @@ const react = {
           children: {},
         },
         codeSplitting: {
+          imageUrl: '/codeSplitting.svg',
           priority: lp.Priority.gold,
           color: 'peru',
           label: 'Bundle Splitting',
@@ -193,6 +213,7 @@ const react = {
           children: {},
         },
         fiber: {
+          imageUrl: '/fiber.svg',
           priority: lp.Priority.gold,
           color: 'mintCream',
           label: 'Fiber Architecture',
@@ -204,6 +225,7 @@ const react = {
       },
     },
     functionalProgramming: {
+      imageUrl: '/functionalProgramming.svg',
       priority: lp.Priority.platinum,
       color: 'silver',
       label: 'Functional Programming',
@@ -213,6 +235,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=e-5obm1G_FY',
       children: {
         higherOrderFunctions: {
+          imageUrl: '/higherOrderFunctions.svg',
           priority: lp.Priority.platinum,
           color: 'darkGray',
           label: 'Higher order functions',
@@ -223,6 +246,7 @@ const react = {
           children: {},
         },
         immutability: {
+          imageUrl: '/immutability.svg',
           priority: lp.Priority.platinum,
           color: 'lightSteelBlue',
           label: 'Immutability',
@@ -233,6 +257,7 @@ const react = {
           children: {},
         },
         declarativity: {
+          imageUrl: '/declarativity.svg',
           priority: lp.Priority.platinum,
           color: 'gainsboro',
           label: 'Declarativity',
@@ -243,6 +268,7 @@ const react = {
           children: {},
         },
         monads: {
+          imageUrl: '/monads.svg',
           priority: lp.Priority.gold,
           color: 'ghostWhite',
           label: 'Monads',
@@ -255,6 +281,7 @@ const react = {
       },
     },
     stateManagement: {
+      imageUrl: '/stateManagement.svg',
       priority: lp.Priority.platinum,
       color: '#C6332B',
       label: 'State Management',
@@ -263,6 +290,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=4ORZ1GmjaMc',
       children: {
         useState: {
+          imageUrl: '/useState.svg',
           priority: lp.Priority.platinum,
           color: 'maroon',
           label: 'useState Hook',
@@ -272,6 +300,7 @@ const react = {
           children: {},
         },
         useReducer: {
+          imageUrl: '/useReducer.svg',
           priority: lp.Priority.platinum,
           color: 'purple',
           label: 'useReducer',
@@ -281,6 +310,7 @@ const react = {
           children: {},
         },
         useContext: {
+          imageUrl: '/useContext.svg',
           priority: lp.Priority.platinum,
           color: 'yellow',
           label: 'useContext',
@@ -290,6 +320,7 @@ const react = {
           children: {},
         },
         redux: {
+          imageUrl: '/redux.svg',
           priority: lp.Priority.gold,
           color: '#1C1E21',
           label: 'Redux',
@@ -299,6 +330,7 @@ const react = {
           children: {},
         },
         mobX: {
+          imageUrl: '/mobX.svg',
           priority: lp.Priority.gold,
           color: '#E15F12',
           description: 'State management with functional reactive programming.',
@@ -310,6 +342,7 @@ const react = {
       },
     },
     routing: {
+      imageUrl: '/routing.svg',
       priority: lp.Priority.platinum,
       color: 'tomato',
       label: 'React Routing',
@@ -320,6 +353,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=sLobT_UKKdw',
       children: {
         reactRouter: {
+          imageUrl: '/reactRouter.svg',
           priority: lp.Priority.platinum,
           color: '#CA4245',
           label: 'React Router',
@@ -329,6 +363,7 @@ const react = {
           children: {},
         },
         reachRouter: {
+          imageUrl: '/reachRouter.svg',
           priority: lp.Priority.silver,
           color: '#CA4245',
           label: 'React Router',
@@ -340,6 +375,7 @@ const react = {
       },
     },
     styling: {
+      imageUrl: '/styling.svg',
       priority: lp.Priority.platinum,
       color: 'lightPink',
       label: 'Styling',
@@ -354,6 +390,7 @@ const react = {
       },
     },
     forms: {
+      imageUrl: '/forms.svg',
       priority: lp.Priority.platinum,
       color: 'lightBlue',
       label: 'Forms',
@@ -362,6 +399,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=qH4pJISKeoI',
       children: {
         formik: {
+          imageUrl: '/formik.svg',
           priority: lp.Priority.platinum,
           color: '#161e2e',
           label: 'Formik',
@@ -371,6 +409,7 @@ const react = {
           children: {},
         },
         reactHookForm: {
+          imageUrl: '/reactHookForm.svg',
           priority: lp.Priority.gold,
           color: '#EC5990',
           label: 'React Hook Form',
@@ -380,6 +419,7 @@ const react = {
           children: {},
         },
         reactFinalForm: {
+          imageUrl: '/reactFinalForm.png',
           priority: lp.Priority.silver,
           color: '#333842',
           label: 'React Final Form',
@@ -391,6 +431,7 @@ const react = {
       },
     },
     testing: {
+      imageUrl: '/testing.svg',
       priority: lp.Priority.platinum,
       color: 'gold',
       label: 'Testing in React',
@@ -401,6 +442,7 @@ const react = {
         jest,
         testingLibrary,
         enzyme: {
+          imageUrl: '/enzyme.svg',
           priority: lp.Priority.silver,
           color: 'orangeRed',
           label: 'Enzyme',
@@ -412,6 +454,7 @@ const react = {
       },
     },
     apiCalls: {
+      imageUrl: '/apiCalls.svg',
       priority: lp.Priority.platinum,
       color: 'orangeRed',
       label: 'API Calls in React',
@@ -421,6 +464,7 @@ const react = {
       children: {
         fetch,
         axios: {
+          imageUrl: '/axios.png',
           priority: lp.Priority.silver,
           color: 'indianRed',
           label: 'Axios',
@@ -430,6 +474,7 @@ const react = {
           children: {},
         },
         swr: {
+          imageUrl: '/swr.svg',
           priority: lp.Priority.gold,
           color: 'black',
           label: 'SWR',
@@ -439,6 +484,7 @@ const react = {
           children: {},
         },
         reactQuery: {
+          imageUrl: '/reactQuery.svg',
           priority: lp.Priority.gold,
           color: '#FF4154',
           label: 'React Query',
@@ -449,6 +495,7 @@ const react = {
           children: {},
         },
         rxjs: {
+          imageUrl: '/rxjs.svg',
           priority: lp.Priority.gold,
           color: '#d81b60',
           label: 'RxJS',
@@ -461,6 +508,7 @@ const react = {
       },
     },
     designSystems: {
+      imageUrl: '/designSystems.svg',
       priority: lp.Priority.gold,
       color: 'coral',
       label: 'Design Systems',
@@ -469,6 +517,7 @@ const react = {
       videoUrl: 'https://www.youtube.com/watch?v=W81dlS5G8Gs',
       children: {
         styledSystem: {
+          imageUrl: '/styledSystem.png',
           priority: lp.Priority.gold,
           color: '#A3A3A3',
           label: 'Styled System',
@@ -479,6 +528,7 @@ const react = {
           children: {},
         },
         rebass: {
+          imageUrl: '/rebass.png',
           priority: lp.Priority.gold,
           color: '#a0c',
           label: 'Rebass',
@@ -488,6 +538,7 @@ const react = {
           children: {},
         },
         braid: {
+          imageUrl: '/braid.png',
           priority: lp.Priority.gold,
           color: '#0D3880',
           label: 'Braid Style System',
@@ -500,7 +551,8 @@ const react = {
       },
     },
     componentLibraries,
-    serverRendering: {
+    ssr: {
+      imageUrl: '/ssr.svg',
       priority: lp.Priority.gold,
       color: 'lightSeaGreen',
       label: 'Server Rendering',

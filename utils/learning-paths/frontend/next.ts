@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const next: IVertex = {
+  imageUrl: '/next.svg',
   priority: Priority.gold,
   color: 'black',
   label: 'Next',

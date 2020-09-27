@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const componentLibraries: IVertex = {
+  imageUrl: '/componentLibraries.svg',
   priority: Priority.platinum,
   color: 'deepSkyBlue',
   label: 'Component Libraries',
@@ -10,6 +11,7 @@ const componentLibraries: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=9pT-q0SSYow',
   children: {
     materialUi: {
+      imageUrl: '/materialUi.svg',
       priority: Priority.gold,
       color: '#1976d2',
       label: 'Material UI',
@@ -19,6 +21,7 @@ const componentLibraries: IVertex = {
       children: {},
     },
     antDesign: {
+      imageUrl: '/antDesign.svg',
       priority: Priority.gold,
       color: '#F63344',
       label: 'Ant Design',
@@ -28,6 +31,7 @@ const componentLibraries: IVertex = {
       children: {},
     },
     reactBootstrap: {
+      imageUrl: '/reactBootstrap.svg',
       priority: Priority.gold,
       color: '#2C2C2C',
       label: 'React Bootstrap',

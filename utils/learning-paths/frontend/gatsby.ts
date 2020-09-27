@@ -1,7 +1,7 @@
-import { IVertex } from '../../../create-learning-path/example/learning-path';
-import { Priority } from '../../../models/learning-path';
+import { IVertex, Priority } from '../../../models/learning-path';
 
 const gatsby: IVertex = {
+  imageUrl: '/gatsby.svg',
   priority: Priority.gold,
   color: '#663399',
   label: 'Gatsby',

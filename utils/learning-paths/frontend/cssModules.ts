@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const cssModules: IVertex = {
+  imageUrl: '/cssModules.png',
   priority: Priority.gold,
   color: 'aliceBlue',
   label: 'CSS Modules',

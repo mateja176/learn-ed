@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const testingLibrary: IVertex = {
+  imageUrl: '/testingLibrary.png',
   priority: Priority.platinum,
   color: '#FE4646',
   label: 'Testing Library',

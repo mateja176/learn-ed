@@ -1,6 +1,7 @@
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const fetch: IVertex = {
+  imageUrl: '/fetch.svg',
   priority: Priority.platinum,
   color: 'fireBrick',
   label: 'Fetch API',
