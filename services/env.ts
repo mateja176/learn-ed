@@ -9,8 +9,8 @@ export type Env = {
   firebaseMessagingSenderId: string;
   firebaseAppId: string;
   firebaseMeasurementId: string;
-  logRocketId: string;
-  mixpanelToken: string;
+  logRocketId?: string;
+  mixpanelToken?: string;
 };
 
 const rawEnv: Partial<Env> = {
@@ -22,12 +22,14 @@ const rawEnv: Partial<Env> = {
   firebaseMessagingSenderId: process.env.firebaseMessagingSenderId,
   firebaseAppId: process.env.firebaseAppId,
   firebaseMeasurementId: process.env.firebaseMeasurementId,
-  logRocketId: process.env.logRocketId,
-  mixpanelToken: process.env.mixpanelToken,
 };
 
 assertTruthyValues(rawEnv);
 
-const env = rawEnv;
+const env: Env = {
+  ...rawEnv,
+  logRocketId: process.env.logRocketId,
+  mixpanelToken: process.env.mixpanelToken,
+};
 
 export default env;
