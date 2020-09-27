@@ -32,7 +32,6 @@ const frontend = {
   url:
     'https://frontendmasters.com/books/front-end-handbook/2018/what-is-a-FD.html',
   videoUrl: 'https://www.youtube.com/watch?v=QA0XpGhiz5w',
-  imageUrl: '/frontend.svg',
   children: {
     web: {
       priority: lp.Priority.platinum,
@@ -42,7 +41,6 @@ const frontend = {
         'First we had steam power, then we had electricity, now we also have The Internet.',
       url: 'https://www.w3.org/',
       videoUrl: 'https://www.youtube.com/watch?v=J8hzJxb0rpc',
-      imageUrl: '/web.svg',
       children: {
         http: {
           priority: lp.Priority.gold,
@@ -96,7 +94,6 @@ const frontend = {
       label: 'HTML',
       url: 'https://www.w3schools.com/html/html_intro.asp',
       videoUrl: 'https://www.youtube.com/watch?v=UB1O30fR-EE',
-      imageUrl: '/html.svg',
       children: {
         semanticHtml: {
           priority: lp.Priority.gold,
@@ -135,7 +132,6 @@ const frontend = {
       description: 'We all need some style in our lives.',
       url: 'https://www.w3schools.com/css/css_intro.asp',
       videoUrl: 'https://www.youtube.com/watch?v=yfoY53QXEnI',
-      imageUrl: '/css.svg',
       children: {
         buildingLayouts: {
           priority: lp.Priority.gold,

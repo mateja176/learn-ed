@@ -11,7 +11,6 @@ const rootLearningPath: IVertex = {
   url:
     'https://www.freecodecamp.org/news/a-gentler-introduction-to-programming-1f57383a1b2c/',
   videoUrl: 'https://www.youtube.com/watch?v=zOjov-2OZ0E',
-  imageUrl: '/programming.svg',
   children: { frontend, javascript, react },
 };
 export default rootLearningPath;

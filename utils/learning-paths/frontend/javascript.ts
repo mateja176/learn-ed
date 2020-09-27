@@ -8,7 +8,6 @@ const javascript: IVertex = {
   description: 'The first language of the web.',
   url: 'https://www.w3schools.com/js/',
   videoUrl: 'https://www.youtube.com/watch?v=PkZNo7MFNFg',
-  imageUrl: '/javascript.svg',
   children: {
     dom: {
       priority: Priority.platinum,
@@ -184,7 +183,6 @@ const javascript: IVertex = {
           description: 'Generate as much testing data as you need.',
           url: 'https://github.com/Marak/faker.js',
           videoUrl: 'https://www.youtube.com/watch?v=16p3LC1bFZc',
-          imageUrl: '/faker.png',
           children: {},
         },
         chart: {
