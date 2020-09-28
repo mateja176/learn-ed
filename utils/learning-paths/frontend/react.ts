@@ -28,7 +28,6 @@ import Portals from '../../../assets/portals.svg';
 import Props from '../../../assets/props.svg';
 import ReachRouter from '../../../assets/reachRouter.svg';
 import React from '../../../assets/react.svg';
-import ReactFinalForm from '../../../assets/reactFinalForm.svg';
 import ReactHookForm from '../../../assets/reactHookForm.svg';
 import ReactHooks from '../../../assets/reactHooks.svg';
 import ReactQuery from '../../../assets/reactQuery.svg';
@@ -468,16 +467,6 @@ const react = {
           description: 'Simple form validation with React Hook Form.',
           url: 'https://react-hook-form.com/get-started/',
           videoUrl: 'https://www.youtube.com/watch?v=bU_eq8qyjic',
-          children: {},
-        },
-        reactFinalForm: {
-          Logo: ReactFinalForm,
-          priority: lp.Priority.silver,
-          color: '#333842',
-          label: 'React Final Form',
-          description: 'Subscriptions-based form state management',
-          url: 'https://final-form.org/docs/react-final-form/getting-started',
-          videoUrl: 'https://www.youtube.com/watch?v=WoSzy-4mviQ',
           children: {},
         },
       },
