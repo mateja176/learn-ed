@@ -832,7 +832,7 @@ const frontend = {
       children: {
         typescript: {
           Logo: Typescript,
-          priority: lp.Priority.gold,
+          priority: lp.Priority.platinum,
           color: '#3178c6',
           label: 'TypeScript',
           description: 'Typed JavScript at scale.',
