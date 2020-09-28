@@ -1,7 +1,8 @@
+import Emotion from '../../../assets/emotion.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const emotion: IVertex = {
-  imageUrl: '/emotion.png',
+  Logo: Emotion,
   priority: Priority.gold,
   color: 'paleVioletRed',
   label: 'Emotion',

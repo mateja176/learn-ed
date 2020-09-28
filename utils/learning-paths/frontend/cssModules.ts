@@ -1,7 +1,8 @@
+import CssModules from '../../../assets/cssModules.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const cssModules: IVertex = {
-  imageUrl: '/cssModules.png',
+  Logo: CssModules,
   priority: Priority.gold,
   color: 'aliceBlue',
   label: 'CSS Modules',

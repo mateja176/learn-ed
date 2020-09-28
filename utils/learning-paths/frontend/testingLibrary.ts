@@ -1,7 +1,8 @@
+import TestingLibrary from '../../../assets/testingLibrary.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const testingLibrary: IVertex = {
-  imageUrl: '/testingLibrary.png',
+  Logo: TestingLibrary,
   priority: Priority.platinum,
   color: '#FE4646',
   label: 'Testing Library',
