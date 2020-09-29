@@ -14,7 +14,17 @@
       "firebase.json",
       "**/node_modules/**",
       "**/public/**",
-      "**/assets/**"
+      "**/assets/**",
+      ".storybook",
+      ".vscode",
+      "create-learning-path",
+      "functions/src",
+      "**/.gitignore/**",
+      "**/tsconfig.json/**",
+      "out",
+      "scripts",
+      "stories",
+      "tests"
     ]
   },
   "hosting": {
