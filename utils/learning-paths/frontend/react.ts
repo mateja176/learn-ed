@@ -3,7 +3,7 @@ import ApiCalls from '../../../assets/apiCalls.svg';
 import Axios from '../../../assets/axios.svg';
 import Basics from '../../../assets/basics.svg';
 import Braid from '../../../assets/braid.svg';
-import CodeSplitting from '../../../assets/codeSplitting.svg';
+import BundleSplitting from '../../../assets/bundleSplitting.svg';
 import Components from '../../../assets/components.svg';
 import ConditionalRendering from '../../../assets/conditionalRendering.svg';
 import Context from '../../../assets/context.svg';
@@ -253,8 +253,8 @@ const react = {
           videoUrl: 'https://www.youtube.com/watch?v=LyLa7dU5tp8',
           children: {},
         },
-        codeSplitting: {
-          Logo: CodeSplitting,
+        bundleSplitting: {
+          Logo: BundleSplitting,
           priority: lp.Priority.gold,
           color: 'peru',
           label: 'Bundle Splitting',
