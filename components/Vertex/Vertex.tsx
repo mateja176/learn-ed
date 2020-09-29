@@ -7,7 +7,6 @@ import { Text } from 'grommet/components/Text';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Emotion from '../../assets/emotion.svg';
 import { useAnalytics } from '../../hooks/analytics';
 import { IVertex } from '../../models/learning-path';
 import {
