@@ -5,8 +5,6 @@
   },
   "functions": {
     "source": ".",
-    "predeploy": "yarn build & yarn build:functions",
-    "postdeploy": "yarn ping-google",
     "runtime": "nodejs12",
     "ignore": [
       ".firebase/**",
@@ -21,10 +19,24 @@
       "functions/src",
       "**/.gitignore/**",
       "**/tsconfig.json/**",
+      "interfaces",
+      "models",
       "out",
       "scripts",
       "stories",
-      "tests"
+      "tests",
+      ".eslintignore.json",
+      ".eslintrc.json",
+      ".prettierrc.json",
+      "firebase.indexes.json",
+      "firestore.rules",
+      "jest.config.js",
+      "jest.setup.ts",
+      "next-env.d.ts",
+      "README.md",
+      "storage.rules",
+      "tsconfig.dev.json",
+      "yarn.lock"
     ]
   },
   "hosting": {
