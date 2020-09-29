@@ -12,16 +12,17 @@ describe('learning-path', () => {
       test(rootLearningPath);
     });
   });
-  describe('imageUrl', () => {
-    test('each vertex has an imageUrl where the image name corresponds its key and has a valid extension', () => {
-      const test = ([key, learningPath]: [string, IVertex]) => {
-        expect(
-          learningPath.imageUrl.match(/\/(?<name>\w+)\.(svg|png)/)?.groups
-            ?.name,
-        ).toBe(key);
-        Object.entries(learningPath.children).forEach(test);
-      };
-      test(['programming', rootLearningPath]);
-    });
-  });
+  // describe('imageUrl', () => {
+  // eslint-disable-next-line max-len
+  //   test('each vertex has an imageUrl where the image name corresponds its key and has a valid extension', () => {
+  //     const test = ([key, learningPath]: [string, IVertex]) => {
+  //       expect(
+  //         learningPath.imageUrl.match(/\/(?<name>\w+)\.(svg|png)/)?.groups
+  //           ?.name,
+  //       ).toBe(key);
+  //       Object.entries(learningPath.children).forEach(test);
+  //     };
+  //     test(['programming', rootLearningPath]);
+  //   });
+  // });
 });
