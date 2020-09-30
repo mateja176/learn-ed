@@ -4,7 +4,6 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const fetch: IVertex = {
   Logo: Fetch,
   priority: Priority.platinum,
-  color: 'fireBrick',
   label: 'Fetch API',
   description: 'Like XMLHttpRequest, but more powerful and flexible.',
   url: 'https://developer.mozilla.org/en/docs/Web/API/Fetch_API',

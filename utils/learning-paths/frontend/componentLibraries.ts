@@ -7,7 +7,6 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const componentLibraries: IVertex = {
   Logo: ComponentLibraries,
   priority: Priority.platinum,
-  color: 'deepSkyBlue',
   label: 'Component Libraries',
   description: 'Leverage the power of design systems.',
   url:
@@ -17,7 +16,6 @@ const componentLibraries: IVertex = {
     materialUi: {
       Logo: MaterialUi,
       priority: Priority.gold,
-      color: '#1976d2',
       label: 'Material UI',
       description: 'Material design for your website.',
       url: 'https://material-ui.com/getting-started/installation/',
@@ -27,7 +25,6 @@ const componentLibraries: IVertex = {
     ant: {
       Logo: Ant,
       priority: Priority.gold,
-      color: '#F63344',
       label: 'Ant Design',
       description: 'Enterprise grade.',
       url: 'https://ant.design/docs/react/getting-started',
@@ -37,7 +34,6 @@ const componentLibraries: IVertex = {
     reactBootstrap: {
       Logo: ReactBootstrap,
       priority: Priority.gold,
-      color: '#2C2C2C',
       label: 'React Bootstrap',
       description: 'Bootstrap rebuilt for React.',
       url: 'https://react-bootstrap.github.io/getting-started/introduction/',

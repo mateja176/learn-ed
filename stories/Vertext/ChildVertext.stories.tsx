@@ -68,9 +68,6 @@ export const Docosaurus = (): React.ReactElement => (
     origin={origin}
     parentPathname={urljoin('frontend', 'documentation')}
     pathname={'docosaurus'}
-    learningPath={{
-      ...frontend.children.documentation.children.docusaurus,
-      color: frontend.children.documentation.color,
-    }}
+    learningPath={frontend.children.documentation.children.docusaurus}
   />
 );

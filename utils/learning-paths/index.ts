@@ -7,7 +7,6 @@ import react from './frontend/react';
 const rootLearningPath: IVertex = {
   Logo: Programming,
   priority: Priority.platinum,
-  color: 'white',
   label: '💻 Programing',
   description: "It's not all ones and zeros.",
   url:

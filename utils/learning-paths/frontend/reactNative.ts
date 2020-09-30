@@ -4,7 +4,6 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const reactNative: IVertex = {
   Logo: ReactNative,
   priority: Priority.gold,
-  color: '#61dafb',
   label: 'React Native',
   description: 'Leverage the power or React to build IOS and Android apps',
   url: 'https://reactnative.dev/docs/getting-started',

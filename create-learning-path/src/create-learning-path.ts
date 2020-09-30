@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 /* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-empty-function */
 
 import program from 'commander';
 import fs from 'fs';
@@ -13,25 +14,45 @@ program
 
     fs.mkdirSync(join(process.cwd(), name));
 
-    fs.copyFileSync(
-      join(__dirname, '..', 'example', 'learning-path.ts'),
-      join(process.cwd(), name, 'learning-path.ts'),
+    const sourceDir = join(__dirname, '..', 'example');
+    const distDir = join(process.cwd(), name);
+
+    fs.copyFile(
+      join(sourceDir, 'learning-path.ts'),
+      join(distDir, 'learning-path.ts'),
+      () => {},
     );
 
-    const exampleLearningPath = fs.readFileSync(
-      join(__dirname, '..', 'example', 'example.learning-path.ts'),
+    fs.copyFile(
+      join(sourceDir, 'logo.svg'),
+      join(distDir, 'logo.svg'),
+      () => {},
+    );
+
+    fs.copyFile(
+      join(sourceDir, 'global.d.ts'),
+      join(distDir, 'global.d.ts'),
+      () => {},
+    );
+
+    fs.readFile(
+      join(sourceDir, 'example.learning-path.ts'),
       { encoding: 'utf8' },
-    );
-
-    fs.writeFileSync(
-      join(process.cwd(), name, `${learningPathName}.learning-path.ts`),
-      exampleLearningPath.replace(
-        '<Example>',
-        learningPathName
-          .charAt(0)
-          .toUpperCase()
-          .concat(learningPathName.slice(1)),
-      ),
+      (err, exampleLearningPath) => {
+        if (!err) {
+          fs.writeFile(
+            join(distDir, `${learningPathName}.learning-path.ts`),
+            exampleLearningPath.replace(
+              '<Example>',
+              learningPathName
+                .charAt(0)
+                .toUpperCase()
+                .concat(learningPathName.slice(1)),
+            ),
+            () => {},
+          );
+        }
+      },
     );
   });
 

@@ -2,9 +2,10 @@
 
 import color from 'color';
 import { camelCase, capitalize, fromPairs, isEmpty } from 'lodash';
-import { last, reduce } from 'ramda';
+import { last } from 'ramda';
 import urljoin from 'url-join';
 import { IVertex, Priority } from '../models/learning-path';
+import { Color } from '../models/models';
 
 export const getRootKey = (pathname: string): never | string => {
   const match = pathname.match(/\/learning-path\/(?<rootKey>[^/]+)/);
@@ -38,9 +39,7 @@ export function hasChildren<A>(maybePath: IVertex | A): maybePath is IVertex {
 export const getPathnameSegments = (pathname: string): string[] =>
   pathname.replace('/learning-path/', '').split('/');
 
-export const getTextColor = (
-  background: IVertex['color'],
-): IVertex['color'] => {
+export const getTextColor = (background: Color): Color => {
   const backgroundColor = color(background.toLowerCase());
   const red = backgroundColor.red();
   const green = backgroundColor.green();
@@ -48,7 +47,7 @@ export const getTextColor = (
   return red * 0.299 + green * 0.587 + blue * 0.114 > 178 ? 'black' : 'white';
 };
 
-export const getPriorityColor = (priority: Priority): IVertex['color'] => {
+export const getPriorityColor = (priority: Priority): Color => {
   switch (priority) {
     case Priority.platinum:
       return 'linear-gradient(90deg, rgba(220, 220, 220, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(220, 220, 220, 1) 100%)';
@@ -71,33 +70,6 @@ export const getPrioritySize = (priority: Priority): number =>
       maxSize - i * 50,
     ]),
   )[priority];
-
-export const getLearningPathColor = ({
-  rootLearningPath,
-  segments,
-}: {
-  rootLearningPath: IVertex;
-  segments: string[];
-}): IVertex['color'] =>
-  reduce(
-    ({ currentLearningPath, currentColor }, segment) => {
-      const childLearningPath = currentLearningPath.children[segment];
-      if (childLearningPath) {
-        return {
-          currentLearningPath: childLearningPath,
-          currentColor:
-            childLearningPath.color ??
-            color(currentColor.toLowerCase()).fade(0.2).toString(),
-        };
-      }
-      return {
-        currentLearningPath,
-        currentColor,
-      };
-    },
-    { currentLearningPath: rootLearningPath, currentColor: 'black' },
-    segments,
-  ).currentColor;
 
 type GetPathnameParams = {
   key: string;

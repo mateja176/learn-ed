@@ -122,7 +122,6 @@ import testingLibrary from './testingLibrary';
 const nuxt = {
   Logo: Nuxt,
   priority: lp.Priority.gold,
-  color: '#00C58E',
   label: 'Nuxt',
   description: 'Hybrid static & server rendering for Vue.',
   url: 'https://nuxtjs.org/',
@@ -134,7 +133,6 @@ const nuxt = {
 const frontend = {
   Logo: Frontend,
   priority: lp.Priority.platinum,
-  color: 'royalblue',
   label: '🖥️ Front-end',
   description:
     'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',
@@ -145,7 +143,6 @@ const frontend = {
     web: {
       Logo: Web,
       priority: lp.Priority.platinum,
-      color: 'darkSlateGrey',
       label: 'The Web',
       description:
         'First we had steam power, then we had electricity, now we also have The Internet.',
@@ -155,7 +152,6 @@ const frontend = {
         http: {
           Logo: Http,
           priority: lp.Priority.gold,
-          color: '#005896',
           description:
             'A client-server protocol which is the foundation of any data exchange on the Web.',
           label: 'HTTP',
@@ -167,7 +163,6 @@ const frontend = {
         browsers: {
           Logo: Browsers,
           priority: lp.Priority.gold,
-          color: 'springGreen',
           description:
             'Your main window for accessing information on the World Wide Web.',
           label: 'Browsers',
@@ -178,7 +173,6 @@ const frontend = {
         dns: {
           Logo: Dns,
           priority: lp.Priority.gold,
-          color: '#005896',
           description:
             'Without it you\'d be typing in "172.217.18.78" instead of google.com',
           label: 'DNS',
@@ -190,7 +184,6 @@ const frontend = {
         hosting: {
           Logo: Hosting,
           priority: lp.Priority.gold,
-          color: 'paleGreen',
           description: 'Make your website accessible to the world.',
           label: 'Hosting',
           url:
@@ -203,7 +196,6 @@ const frontend = {
     html: {
       Logo: Html,
       priority: lp.Priority.platinum,
-      color: 'orangeRed',
       description:
         'In 1989 Tim Berners-Lee created the first website using the Hyper Text Markup Language.',
       label: 'HTML',
@@ -213,7 +205,6 @@ const frontend = {
         semanticHtml: {
           Logo: SemanticHtml,
           priority: lp.Priority.gold,
-          color: 'orange',
           description: 'Meaningful HTML.',
           label: 'Semantic HTML',
           url: 'https://www.w3schools.com/html/html5_semantic_elements.asp',
@@ -223,7 +214,6 @@ const frontend = {
         formsAndValidation: {
           Logo: FormsAndValidation,
           priority: lp.Priority.gold,
-          color: 'darkMagenta',
           description:
             'Servers constantly send information to clients, but clients can also send information to servers.',
           label: 'Forms and Validation',
@@ -234,7 +224,6 @@ const frontend = {
         seo: {
           Logo: Seo,
           priority: lp.Priority.gold,
-          color: 'khaki',
           description: 'Want to get your site on the first page of Google?',
           label: 'SEO',
           url: 'https://moz.com/beginners-guide-to-seo',
@@ -246,7 +235,6 @@ const frontend = {
     css: {
       Logo: Css,
       priority: lp.Priority.platinum,
-      color: 'mediumBlue',
       label: 'CSS',
       description: 'We all need some style in our lives.',
       url: 'https://www.w3schools.com/css/css_intro.asp',
@@ -255,7 +243,6 @@ const frontend = {
         buildingLayouts: {
           Logo: BuildingLayouts,
           priority: lp.Priority.gold,
-          color: 'mediumAquaMarine',
           label: 'Building Layouts',
           description:
             'This can be frustrating, but after some time it becomes second nature.',
@@ -265,7 +252,6 @@ const frontend = {
             floats: {
               Logo: Floats,
               priority: lp.Priority.gold,
-              color: 'aqua',
               label: 'Floats',
               description: 'Left or right?',
               url: 'https://www.w3schools.com/cssref/pr_class_float.asp',
@@ -275,7 +261,6 @@ const frontend = {
             positioning: {
               Logo: Positioning,
               priority: lp.Priority.gold,
-              color: 'aquaMarine',
               label: 'Positioning',
               description: 'Not everything is static in this world.',
               url: 'https://www.w3schools.com/css/css_positioning.asp',
@@ -285,7 +270,6 @@ const frontend = {
             display: {
               Logo: Display,
               priority: lp.Priority.gold,
-              color: 'lightCyan',
               label: 'Display',
               description: 'To display or not to display?',
               url: 'https://www.w3schools.com/css/css_display_visibility.asp',
@@ -295,7 +279,6 @@ const frontend = {
             boxModel: {
               Logo: BoxModel,
               priority: lp.Priority.gold,
-              color: 'darkCyan',
               label: 'Box Model',
               description: 'Elements can be deceiving.',
               url: 'https://www.w3schools.com/css/css_boxmodel.asp',
@@ -305,7 +288,6 @@ const frontend = {
             cssGrid: {
               Logo: CssGrid,
               priority: lp.Priority.gold,
-              color: 'blue',
               label: 'CSS Grid',
               description: 'What can one do with rows and columns?',
               url: 'https://www.w3schools.com/css/css_grid.asp',
@@ -315,7 +297,6 @@ const frontend = {
             flexBox: {
               Logo: FlexBox,
               priority: lp.Priority.gold,
-              color: 'cornflowerBlue',
               label: 'Flex Box',
               description:
                 'Nowadays, it may be the most common and easiest way to build great layouts.',
@@ -328,7 +309,6 @@ const frontend = {
         responsiveDesign: {
           Logo: ResponsiveDesign,
           priority: lp.Priority.gold,
-          color: 'dodgerBlue',
           label: 'Responsive Design',
           description:
             'The majority of people access the internet through a mobile device.',
@@ -342,7 +322,6 @@ const frontend = {
     versionControl: {
       Logo: VersionControl,
       priority: lp.Priority.platinum,
-      color: 'tomato',
       label: 'Version Control',
       description: 'A game changer.',
       url:
@@ -352,7 +331,6 @@ const frontend = {
         git: {
           Logo: Git,
           priority: lp.Priority.platinum,
-          color: '#F44D27',
           label: 'Git',
           description: 'The history of your code in the palm of your hand.',
           url: 'https://git-scm.com/about',
@@ -362,7 +340,6 @@ const frontend = {
         remoteRepositories: {
           Logo: RemoteRepositories,
           priority: lp.Priority.gold,
-          color: '#404448',
           label: 'Remote Repositories',
           description: 'Partying alone is not much fun.',
           url: 'https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes',
@@ -371,7 +348,6 @@ const frontend = {
             github: {
               Logo: Github,
               priority: lp.Priority.platinum,
-              color: '#24292e',
               label: 'Github',
               description: 'The home of Open Source and many more goodies.',
               url: 'https://guides.github.com/activities/hello-world/',
@@ -381,7 +357,6 @@ const frontend = {
             gitLab: {
               Logo: GitLab,
               priority: lp.Priority.bronze,
-              color: '#fa7035',
               label: 'GitLab',
               description: 'Github is not alone either.',
               url: 'https://docs.gitlab.com/ee/gitlab-basics/',
@@ -391,7 +366,6 @@ const frontend = {
             bitbucket: {
               Logo: Bitbucket,
               priority: lp.Priority.bronze,
-              color: '#0052CC',
               label: 'Bitbucket',
               description: "Jira's cousin.",
               url:
@@ -406,7 +380,6 @@ const frontend = {
     webSecurity: {
       Logo: WebSecurity,
       priority: lp.Priority.platinum,
-      color: 'steelBlue',
       label: 'Web Security',
       description: "Without security there wouldn't be the Web",
       url: 'https://developer.mozilla.org/en-US/docs/Web/Security',
@@ -415,7 +388,6 @@ const frontend = {
         https: {
           Logo: Https,
           priority: lp.Priority.gold,
-          color: '#DB5912',
           label: 'Https',
           description: "Don't let other listen in to your conversations.",
           url: 'https://en.wikipedia.org/wiki/HTTPS',
@@ -425,7 +397,6 @@ const frontend = {
         cors: {
           Logo: Cors,
           priority: lp.Priority.gold,
-          color: '#F2B104',
           label: 'CORS',
           description: 'Request resources from other origins.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS',
@@ -435,7 +406,6 @@ const frontend = {
         contentSecurityPolicy: {
           Logo: ContentSecurityPolicy,
           priority: lp.Priority.gold,
-          color: 'lightSkyBlue',
           label: 'Content Security Policy ',
           description: 'XSS no more.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP',
@@ -445,7 +415,6 @@ const frontend = {
         owaspSecurityRisks: {
           Logo: OwaspSecurityRisks,
           priority: lp.Priority.gold,
-          color: 'goldenRod',
           label: 'OWASP Security Risks',
           description: 'Treat it as a checklist for security.',
           url: 'https://owasp.org/www-project-top-ten/',
@@ -457,7 +426,6 @@ const frontend = {
     rest: {
       Logo: Rest,
       priority: lp.Priority.platinum,
-      color: 'teal',
       label: 'REST',
       description: "Knock, knock - Who's there?",
       url: 'https://restfulapi.net/',
@@ -467,7 +435,6 @@ const frontend = {
     packageManagers: {
       Logo: PackageManagers,
       priority: lp.Priority.platinum,
-      color: 'firebrick',
       label: 'Package Managers',
       description: 'Sharing is caring.',
       url:
@@ -477,7 +444,6 @@ const frontend = {
         npm: {
           Logo: Npm,
           priority: lp.Priority.platinum,
-          color: '#C42329',
           label: 'NPM',
           description: "Node's de facto package manager.",
           url: 'https://www.w3schools.com/nodejs/nodejs_npm.asp',
@@ -487,7 +453,6 @@ const frontend = {
         yarn: {
           Logo: Yarn,
           priority: lp.Priority.gold,
-          color: '#2188B6',
           label: 'Yarn',
           description: 'A fresh perspective on package managers.',
           url: 'https://yarnpkg.com/getting-started',
@@ -499,7 +464,6 @@ const frontend = {
     cssArchitecture: {
       Logo: CssArchitecture,
       priority: lp.Priority.gold,
-      color: 'midnightBlue',
       label: 'CSS Architecture',
       description: 'Avoid maintainability headaches.',
       url: 'https://philipwalton.com/articles/css-architecture/',
@@ -508,7 +472,6 @@ const frontend = {
         bem: {
           Logo: Bem,
           priority: lp.Priority.gold,
-          color: '#8A8A9A',
           label: 'BEM',
           description: 'Block-Element-Modifier',
           url: 'http://getbem.com/introduction/',
@@ -520,7 +483,6 @@ const frontend = {
     cssPreprocessors: {
       Logo: CssPreprocessors,
       priority: lp.Priority.gold,
-      color: 'navy',
       label: 'CSS Preprocessors',
       description: 'Ever wanted to get more out of CSS?',
       url: 'https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor',
@@ -529,7 +491,6 @@ const frontend = {
         sass: {
           Logo: Sass,
           priority: lp.Priority.gold,
-          color: '#CF649A',
           label: 'Sass',
           description: 'Nesting, modules, debugging and more.',
           url: 'https://sass-lang.com/guide',
@@ -539,7 +500,6 @@ const frontend = {
         less: {
           Logo: Less,
           priority: lp.Priority.bronze,
-          color: '#1d365d',
           label: 'Less',
           description: 'Leaner Style Sheets',
           url: 'http://lesscss.org/',
@@ -551,7 +511,6 @@ const frontend = {
     buildTools: {
       Logo: BuildTools,
       priority: lp.Priority.platinum,
-      color: 'powderBlue',
       label: 'Build Tools',
       description: 'Be in control of your workflow.',
       url: 'https://survivejs.com/webpack/appendices/comparison/',
@@ -560,7 +519,6 @@ const frontend = {
         linters: {
           Logo: Linters,
           priority: lp.Priority.gold,
-          color: 'lavender',
           label: 'Linters',
           description: 'Avoid shooting yourself in the foot.',
           url: 'https://www.codereadability.com/what-are-javascript-linters/',
@@ -569,7 +527,6 @@ const frontend = {
             eslint: {
               Logo: Eslint,
               priority: lp.Priority.gold,
-              color: '#4B32C3',
               label: 'Eslint',
               description: 'Powerful, fast and flexible.',
               url: 'https://eslint.org/docs/user-guide/getting-started',
@@ -581,7 +538,6 @@ const frontend = {
         prettier: {
           Logo: Prettier,
           priority: lp.Priority.gold,
-          color: '#f8bc45',
           label: 'Prettier',
           description: 'Configurable formatter, but with good defaults.',
           url: 'https://prettier.io/docs/en/index.html',
@@ -591,7 +547,6 @@ const frontend = {
         npmScripts: {
           Logo: NpmScripts,
           priority: lp.Priority.gold,
-          color: 'indianRed',
           label: 'NPM Scripts',
           description: 'Easy and simple.',
           url:
@@ -602,7 +557,6 @@ const frontend = {
         moduleBundlers: {
           Logo: ModuleBundlers,
           priority: lp.Priority.gold,
-          color: 'azure',
           label: 'Module Bundlers',
           description: 'Having a great many modules is no longer a problem.',
           url:
@@ -612,7 +566,6 @@ const frontend = {
             webpack: {
               Logo: Webpack,
               priority: lp.Priority.gold,
-              color: '#75AFCC',
               description: 'The most popular, widespread bundler out there.',
               label: 'Webpack',
               url: 'https://webpack.js.org/guides/getting-started/',
@@ -622,7 +575,6 @@ const frontend = {
             rollup: {
               Logo: Rollup,
               priority: lp.Priority.silver,
-              color: '#FF3333',
               label: 'Rollup',
               description: 'The bundler that popularized tree-shaking',
               url: 'https://rollupjs.org/guide/en/',
@@ -632,7 +584,6 @@ const frontend = {
             parcel: {
               Logo: Parcel,
               priority: lp.Priority.silver,
-              color: '#F3BC83',
               label: 'Parcel',
               description: 'Blazing fast with zero configuration.',
               url: 'https://parceljs.org/getting_started.html',
@@ -646,7 +597,6 @@ const frontend = {
     frameworks: {
       Logo: Frameworks,
       priority: lp.Priority.platinum,
-      color: 'cyan',
       label: 'Frameworks',
       description: 'Say goodbye to JQuery.',
       url: 'https://en.wikipedia.org/wiki/JavaScript_framework',
@@ -656,7 +606,6 @@ const frontend = {
         angular: {
           Logo: Angular,
           priority: lp.Priority.gold,
-          color: '#DD0031',
           label: 'Angular',
           description: 'A framework in the real sense of the word.',
           url: 'https://angular.io/docs',
@@ -665,7 +614,6 @@ const frontend = {
             rxjs: {
               Logo: Rxjs,
               priority: lp.Priority.gold,
-              color: '#DF0090',
               label: 'RxJS',
               description: 'Reactive extensions for JS',
               url: 'https://www.learnrxjs.io/',
@@ -675,7 +623,6 @@ const frontend = {
             ngrx: {
               Logo: Ngrx,
               priority: lp.Priority.gold,
-              color: '#a829c3',
               label: 'NgRX',
               description:
                 'Manage state and collections easily, while isolating side effects.',
@@ -688,7 +635,6 @@ const frontend = {
         vue: {
           Logo: Vue,
           priority: lp.Priority.gold,
-          color: '#4fc08d',
           label: 'Vue',
           description: 'The best of both worlds.',
           url: 'https://vuejs.org/v2/guide/',
@@ -697,7 +643,6 @@ const frontend = {
             vueX: {
               Logo: VueX,
               priority: lp.Priority.gold,
-              color: '#62C19E',
               label: 'VueX',
               description: 'The power of Redux for Vue.',
               url: 'https://vuex.vuejs.org/',
@@ -711,7 +656,6 @@ const frontend = {
     cssInJs: {
       Logo: CssInJs,
       priority: lp.Priority.platinum,
-      color: 'limeGreen',
       label: 'CSS in JS',
       description: 'CSS and JS unite!',
       url: 'https://medium.com/dailyjs/what-is-actually-css-in-js-f2f529a2757',
@@ -726,7 +670,6 @@ const frontend = {
     webComponents: {
       Logo: WebComponents,
       priority: lp.Priority.gold,
-      color: 'darkOrange',
       label: 'Web Components',
       description: 'Custom components for everybody.',
       url: 'https://developer.mozilla.org/en-US/docs/Web/Web_Components',
@@ -735,7 +678,6 @@ const frontend = {
         htmlTemplates: {
           Logo: HtmlTemplates,
           priority: lp.Priority.gold,
-          color: 'coral',
           label: 'HTML Templates',
           description: 'Reusable HTML.',
           url: 'https://www.w3schools.com/tags/tag_template.asp',
@@ -745,7 +687,6 @@ const frontend = {
         customElements: {
           Logo: CustomElements,
           priority: lp.Priority.gold,
-          color: 'lightCoral',
           label: 'Custom Elements',
           description: 'Create your personal HTML tag.',
           url:
@@ -759,7 +700,6 @@ const frontend = {
     cssLibraries: {
       Logo: CssLibraries,
       priority: lp.Priority.gold,
-      color: 'rebeccaPurple',
       label: 'CSS Libraries',
       description: "Don't start from scratch.",
       url: 'https://github.com/troxler/awesome-css-frameworks',
@@ -768,7 +708,6 @@ const frontend = {
         bootstrap: {
           Logo: Bootstrap,
           priority: lp.Priority.gold,
-          color: '#7952b3',
           label: 'Bootstrap',
           description: 'A hugely popular front-end toolkit',
           url:
@@ -781,7 +720,6 @@ const frontend = {
     testing: {
       Logo: Testing,
       priority: lp.Priority.platinum,
-      color: 'green',
       label: 'Testing',
       description: 'The proof of your code.',
       url: 'https://testingjavascript.com/',
@@ -792,7 +730,6 @@ const frontend = {
         cypress: {
           Logo: Cypress,
           priority: lp.Priority.platinum,
-          color: '#192635',
           label: 'Cypress',
           description: 'The web has evolved, finally testing has too.',
           url: 'https://www.cypress.io/how-it-works',
@@ -802,7 +739,6 @@ const frontend = {
         cucumber: {
           Logo: Cucumber,
           priority: lp.Priority.gold,
-          color: '#00a818',
           label: 'Cucumber',
           description: 'BDD - Example mapping and TDD.',
           url: 'https://cucumber.io/docs/installation/javascript/',
@@ -812,7 +748,6 @@ const frontend = {
         mochaAndChai: {
           Logo: MochaAndChai,
           priority: lp.Priority.bronze,
-          color: '#8d6748',
           label: 'Mocha And Chai',
           description: 'The famous test runner and assertion lib duo.',
           url: 'https://mochajs.org/#getting-started',
@@ -824,7 +759,6 @@ const frontend = {
     typeCheckers: {
       Logo: TypeCheckers,
       priority: lp.Priority.platinum,
-      color: 'royalBlue',
       label: 'Type Checkers',
       description: 'Streamline your development and make refactoring a breeze.',
       url: 'https://advancedweb.dev/static-type-checkers',
@@ -833,7 +767,6 @@ const frontend = {
         typescript: {
           Logo: Typescript,
           priority: lp.Priority.platinum,
-          color: '#3178c6',
           label: 'TypeScript',
           description: 'Typed JavScript at scale.',
           url:
@@ -846,7 +779,6 @@ const frontend = {
     progressiveWebApps: {
       Logo: ProgressiveWebApps,
       priority: lp.Priority.platinum,
-      color: 'indigo',
       label: 'Progressive Web Apps',
       description: 'Websites that took all the right vitamins.',
       url: 'https://web.dev/progressive-web-apps/#introduction',
@@ -855,7 +787,6 @@ const frontend = {
         serviceWorkers: {
           Logo: ServiceWorkers,
           priority: lp.Priority.platinum,
-          color: 'mediumPurple',
           label: 'Service Workers',
           description: 'Offline support for your apps and more.',
           url:
@@ -866,7 +797,6 @@ const frontend = {
         manifest: {
           Logo: Manifest,
           priority: lp.Priority.platinum,
-          color: 'rosyBrown',
           label: 'Manifest',
           description: 'Have users install your web app like a native app.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/Manifest',
@@ -876,7 +806,6 @@ const frontend = {
         pushNotifications: {
           Logo: PushNotifications,
           priority: lp.Priority.gold,
-          color: 'paleVioletRed',
           label: 'Push Notifications',
           description: 'Keep your users engaged.',
           url:
@@ -887,7 +816,6 @@ const frontend = {
         deviceApis: {
           Logo: DeviceApis,
           priority: lp.Priority.gold,
-          color: 'blueViolet',
           label: "Device API's",
           description: 'Access to camera, bluetooth and more.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/API',
@@ -899,7 +827,6 @@ const frontend = {
     debugging: {
       Logo: Debugging,
       priority: lp.Priority.platinum,
-      color: 'maroon',
       label: 'Debugging',
       description: 'Complexity has nowhere to hide.',
       url: 'https://www.w3schools.com/js/js_debugging.asp',
@@ -908,7 +835,6 @@ const frontend = {
         chromeDevTools: {
           Logo: ChromeDevTools,
           priority: lp.Priority.platinum,
-          color: 'sandyBrown',
           label: 'Chrome DevTools',
           description: "See what's under the hood of a website.",
           url:
@@ -918,7 +844,6 @@ const frontend = {
             lighthouse: {
               Logo: Lighthouse,
               priority: lp.Priority.platinum,
-              color: 'salmon',
               label: 'LightHouse',
               description: 'Does your app measure up?',
               url: 'https://developers.google.com/web/tools/lighthouse',
@@ -932,7 +857,6 @@ const frontend = {
     performanceOptimization: {
       Logo: PerformanceOptimization,
       priority: lp.Priority.platinum,
-      color: 'hotPink',
       label: 'Performance Optimization',
       description: 'Performance can make or break a site.',
       url:
@@ -942,7 +866,6 @@ const frontend = {
         lazyLoading: {
           Logo: LazyLoading,
           priority: lp.Priority.gold,
-          color: 'Moccasin',
           label: 'Lazy Loading',
           description: "'Cuz users don't like to wait for websites to load.",
           url: 'https://en.wikipedia.org/wiki/Lazy_loading',
@@ -954,7 +877,6 @@ const frontend = {
     serverless: {
       Logo: Serverless,
       priority: lp.Priority.platinum,
-      color: 'whiteSmoke',
       label: 'Serverless',
       description:
         "Pay only for what you use, don't worry scalability and more.",
@@ -964,7 +886,6 @@ const frontend = {
         firebase: {
           Logo: Firebase,
           priority: lp.Priority.gold,
-          color: '#FFCA2A',
           label: 'Firebase',
           description: 'Authentication, database, file storage and much more.',
           url: 'https://firebase.google.com/docs/web/setup',
@@ -974,7 +895,6 @@ const frontend = {
         aws: {
           Logo: Aws,
           priority: lp.Priority.gold,
-          color: '#EC912D',
           label: 'Amazon Web Services',
           description: "World's most popular cloud infrastructure.",
           url: 'https://aws.amazon.com/what-is-aws/?nc2=h_ql_le_int',
@@ -984,7 +904,6 @@ const frontend = {
         netlify: {
           Logo: Netlify,
           priority: lp.Priority.silver,
-          color: '#00a396',
           label: 'Netlify',
           description:
             'All-in-one platform for automating modern web projects.',
@@ -997,7 +916,6 @@ const frontend = {
     websockets: {
       Logo: Websockets,
       priority: lp.Priority.gold,
-      color: 'black',
       label: 'Websockets',
       description: 'Real time updates on all of your users devices.',
       url: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
@@ -1006,7 +924,6 @@ const frontend = {
         socketIo: {
           Logo: SocketIo,
           priority: lp.Priority.gold,
-          color: '#555',
           label: 'Socket IO',
           description:
             'Featuring the fastest and most reliable real time engine.',
@@ -1019,7 +936,6 @@ const frontend = {
     analytics: {
       Logo: Analytics,
       priority: lp.Priority.platinum,
-      color: 'orchid',
       label: 'Analytics',
       description: 'Measure what matters.',
       url: 'https://www.usability.gov/what-and-why/web-analytics.html',
@@ -1028,7 +944,6 @@ const frontend = {
         googleAnalytics: {
           Logo: GoogleAnalytics,
           priority: lp.Priority.gold,
-          color: '#F9AB00',
           label: 'Google Analytics',
           description: 'The OG Analytics toolkit.',
           url: 'https://support.google.com/analytics/answer/1008015?hl=en',
@@ -1038,7 +953,6 @@ const frontend = {
         mixpanel: {
           Logo: Mixpanel,
           priority: lp.Priority.gold,
-          color: '#4284fb',
           label: 'Mix Panel',
           description: 'The new-gen of analytics.',
           url: 'https://mixpanel.com/',
@@ -1050,7 +964,6 @@ const frontend = {
     ssr: {
       Logo: Ssr,
       priority: lp.Priority.gold,
-      color: 'dimGrey',
       label: 'Server Side Rendering',
       description: 'Achieve great loading speeds, SEO and more.',
       url:
@@ -1061,7 +974,6 @@ const frontend = {
         angularUniversal: {
           Logo: AngularUniversal,
           priority: lp.Priority.gold,
-          color: '#C3002F',
           label: 'Angular Universal',
           description: 'Hybrid static & server rendering for Angular.',
           url: 'https://angular.io/guide/universal',
@@ -1075,7 +987,6 @@ const frontend = {
     graphql: {
       Logo: Graphql,
       priority: lp.Priority.gold,
-      color: 'deepPink',
       label: 'GraphQL',
       description: "Type safe and developer friendly API's.",
       url: 'https://graphql.org/learn/',
@@ -1084,7 +995,6 @@ const frontend = {
         apollo: {
           Logo: Apollo,
           priority: lp.Priority.gold,
-          color: '#7156d9',
           label: 'Apollo',
           description: 'GraphQL tooling.',
           url:
@@ -1095,7 +1005,6 @@ const frontend = {
         relay: {
           Logo: Relay,
           priority: lp.Priority.silver,
-          color: '#f26b00',
           label: 'Relay',
           description: 'GraphQL client for React',
           url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
@@ -1108,7 +1017,6 @@ const frontend = {
     staticSiteGenerators: {
       Logo: StaticSiteGenerators,
       priority: lp.Priority.gold,
-      color: 'purple',
       label: 'Static Site Generators',
       description: 'Perfect for blogs, documentation, landing pages and more.',
       url:
@@ -1121,7 +1029,6 @@ const frontend = {
         jekyll: {
           Logo: Jekyll,
           priority: lp.Priority.bronze,
-          color: '#D91111',
           label: 'Jekyll',
           description:
             'Transform your text or markdown into static websites or blogs.',
@@ -1132,7 +1039,6 @@ const frontend = {
         hugo: {
           Logo: Hugo,
           priority: lp.Priority.bronze,
-          color: '#FF4088',
           label: 'Hugo',
           description: 'Promises speed, flexibility and fun.',
           url: 'https://gohugo.io/getting-started/quick-start/',
@@ -1144,7 +1050,6 @@ const frontend = {
     documentation: {
       Logo: Documentation,
       priority: lp.Priority.gold,
-      color: 'sienna',
       label: 'Documentation',
       description:
         'Keep in mind that programmers spend much more time reading code than writing code.',
@@ -1155,7 +1060,6 @@ const frontend = {
         jsDoc: {
           Logo: JsDoc,
           priority: lp.Priority.gold,
-          color: '#006FBB',
           label: 'JSDOc',
           description:
             'Pro tip - VSCode has special interactions with your JSDoc annotations.',
@@ -1166,7 +1070,6 @@ const frontend = {
         typeDoc: {
           Logo: TypeDoc,
           priority: lp.Priority.gold,
-          color: '#9600FF',
           label: 'TypeDOc',
           description: 'Like JSDoc but specially adapted for TypeScript.',
           url: 'https://typedoc.org/',
@@ -1176,7 +1079,6 @@ const frontend = {
         docusaurus: {
           Logo: Docusaurus,
           priority: lp.Priority.bronze,
-          color: '#2e8555',
           label: 'Docosaurus',
           description:
             'Tool for easily maintaining documentation. Powered by markdown, built by React.',
@@ -1190,7 +1092,6 @@ const frontend = {
     codeEditors: {
       Logo: CodeEditors,
       priority: lp.Priority.platinum,
-      color: 'silver',
       label: 'Code Editors',
       description: 'Your trusted steed.',
       url: 'https://javascript.info/code-editors',
@@ -1199,7 +1100,6 @@ const frontend = {
         vsCode: {
           Logo: VsCode,
           priority: lp.Priority.platinum,
-          color: '#0066B8',
           label: 'Visual Studio Code',
           description: 'Code editing. Redefined.',
           url: 'https://code.visualstudio.com/',
@@ -1211,7 +1111,6 @@ const frontend = {
     mobileApps: {
       Logo: MobileApps,
       priority: lp.Priority.gold,
-      color: 'turquoise',
       label: 'Mobile Apps',
       description: 'Building native mobile apps with web technologies.',
       url:
@@ -1222,7 +1121,6 @@ const frontend = {
         flutter: {
           Logo: Flutter,
           priority: lp.Priority.silver,
-          color: '#075b9a',
           label: 'Flutter',
           description:
             'Beautiful, natively compiled applications for mobile and more.',
@@ -1233,7 +1131,6 @@ const frontend = {
         ionic: {
           Logo: Ionic,
           priority: lp.Priority.bronze,
-          color: '#3880ff',
           label: 'Ionic',
           description: 'Mobile UI toolkit for multiple frameworks.',
           url: 'https://ionicframework.com/getting-started',
@@ -1245,7 +1142,6 @@ const frontend = {
     electron: {
       Logo: Electron,
       priority: lp.Priority.silver,
-      color: 'cadetBlue',
       label: 'Electron',
       description: 'Cross-platform desktop apps with JS, HTML and CSS.',
       url: 'https://www.electronjs.org/docs',
@@ -1255,7 +1151,6 @@ const frontend = {
     webAssembly: {
       Logo: WebAssembly,
       priority: lp.Priority.gold,
-      color: 'darkSlateBlue',
       label: 'Web Assembly',
       description:
         'Portable compilation target for programming languages, enabling deployment on the web.',
@@ -1265,7 +1160,6 @@ const frontend = {
         rust: {
           Logo: Rust,
           priority: lp.Priority.gold,
-          color: 'sienna',
           label: 'Rust',
           description:
             'Rust is syntactically similar to C++ and provides memory safety without using garbage collection.',
@@ -1276,7 +1170,6 @@ const frontend = {
         cpp: {
           Logo: Cpp,
           priority: lp.Priority.silver,
-          color: '#6295CB',
           label: 'C++',
           description:
             'Year after year, one of the 5 programming languages - known for exceptional performance and reliability.',

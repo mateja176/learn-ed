@@ -34,7 +34,6 @@ import fetch from './fetch';
 const javascript: IVertex = {
   Logo: Javascript,
   priority: Priority.platinum,
-  color: '#EFD81D',
   label: '{ } JavaScript',
   description: 'The first language of the web.',
   url: 'https://www.w3schools.com/js/',
@@ -43,7 +42,6 @@ const javascript: IVertex = {
     dom: {
       Logo: Dom,
       priority: Priority.platinum,
-      color: '#4CAF50',
       label: 'DOM',
       description: 'The virtual representation of your web page.',
       url: 'https://www.w3schools.com/js/js_htmldom.asp',
@@ -52,7 +50,6 @@ const javascript: IVertex = {
         history: {
           Logo: History,
           priority: Priority.platinum,
-          color: 'limeGreen',
           label: 'History API',
           description: 'Basis for single page app routing.',
           url: 'https://developer.mozilla.org/en-US/docs/Web/API/History_API',
@@ -64,7 +61,6 @@ const javascript: IVertex = {
     dataFetching: {
       Logo: DataFetching,
       priority: Priority.platinum,
-      color: 'tomato',
       label: 'Data Fetching',
       description: "Can't get enough of data.",
       url:
@@ -74,7 +70,6 @@ const javascript: IVertex = {
         ajax: {
           Logo: Ajax,
           priority: Priority.gold,
-          color: 'orange',
           label: 'AJAX',
           description:
             "To get data from the server, you don't have to fetch a whole new page.",
@@ -88,7 +83,6 @@ const javascript: IVertex = {
     es6: {
       Logo: Es6,
       priority: Priority.platinum,
-      color: 'royalBlue',
       label: 'ES6',
       description: 'The modern JavaScript.',
       url: 'http://es6-features.org/',
@@ -97,7 +91,6 @@ const javascript: IVertex = {
         es6Modules: {
           Logo: Es6Modules,
           priority: Priority.gold,
-          color: 'steelBlue',
           label: 'ES6 Modules',
           description: "Don't pollute the global scope.",
           url:
@@ -108,7 +101,6 @@ const javascript: IVertex = {
         arrayMethods: {
           Logo: ArrayMethods,
           priority: Priority.gold,
-          color: 'mediumOrchid',
           label: 'Array methods',
           description: "You'll be using these all the time.",
           url: 'https://www.w3schools.com/jsref/jsref_obj_array.asp',
@@ -118,7 +110,6 @@ const javascript: IVertex = {
         variableDeclaration: {
           Logo: VariableDeclaration,
           priority: Priority.gold,
-          color: 'teal',
           label: 'Variable Declaration',
           description: 'Know your scope.',
           url:
@@ -129,7 +120,6 @@ const javascript: IVertex = {
         promises: {
           Logo: Promises,
           priority: Priority.gold,
-          color: 'plum',
           label: 'Promises',
           description: 'One of the most beloved JS features.',
           url:
@@ -140,7 +130,6 @@ const javascript: IVertex = {
         templateLiterals: {
           Logo: TemplateLiterals,
           priority: Priority.gold,
-          color: 'paleTurquoise',
           label: 'Template Literals',
           description: 'Before template string people used the "+" operator.',
           url:
@@ -151,7 +140,6 @@ const javascript: IVertex = {
         restAndSpread: {
           Logo: RestAndSpread,
           priority: Priority.gold,
-          color: 'midnightBlue',
           label: 'Rest and Spread',
           description: 'Mix and match.',
           url:
@@ -162,7 +150,6 @@ const javascript: IVertex = {
         destructuring: {
           Logo: Destructuring,
           priority: Priority.gold,
-          color: 'slateBlue',
           label: 'Destructuring',
           description: 'You better add this word to your dictionary.',
           url:
@@ -175,7 +162,6 @@ const javascript: IVertex = {
     utilityLibraries: {
       Logo: UtilityLibraries,
       priority: Priority.gold,
-      color: 'darkGoldenRod',
       label: 'Utility Libraries',
       description: 'The swiss army knife of JavaScript.',
       url:
@@ -185,7 +171,6 @@ const javascript: IVertex = {
         lodash: {
           Logo: Lodash,
           priority: Priority.gold,
-          color: '#3492ff',
           label: 'Lodash',
           description:
             'A modern JavaScript utility library delivering modularity, performance & extras.',
@@ -196,7 +181,6 @@ const javascript: IVertex = {
         underscore: {
           Logo: Underscore,
           priority: Priority.gold,
-          color: '#0071B5',
           label: 'Underscore',
           description: 'Useful functional programming helpers',
           url: 'https://underscorejs.org/',
@@ -206,7 +190,6 @@ const javascript: IVertex = {
         ramda: {
           Logo: Ramda,
           priority: Priority.gold,
-          color: '#884499',
           label: 'Ramda',
           description:
             'A practical functional library for JavaScript programmers.',
@@ -217,7 +200,6 @@ const javascript: IVertex = {
         moment: {
           Logo: Moment,
           priority: Priority.gold,
-          color: '#6782DA',
           label: 'Moment',
           description: 'Take a moment to look at how it is to work with dates.',
           url: 'https://momentjs.com/',
@@ -227,7 +209,6 @@ const javascript: IVertex = {
         faker: {
           Logo: Faker,
           priority: Priority.gold,
-          color: '#D90000',
           label: 'Faker',
           description: 'Generate as much testing data as you need.',
           url: 'https://github.com/Marak/faker.js',
@@ -237,7 +218,6 @@ const javascript: IVertex = {
         chart: {
           Logo: Chart,
           priority: Priority.gold,
-          color: '#FE767A',
           label: 'Chart JS',
           description: 'Simple yet flexible JavaScript charting.',
           url: 'https://github.com/chartjs/Chart.js',
@@ -247,7 +227,6 @@ const javascript: IVertex = {
         immutable: {
           Logo: Immutable,
           priority: Priority.gold,
-          color: '#2C3E50',
           label: 'Immutable JS',
           description:
             'Data which cannot be changed once created leads to much simpler application development.',
@@ -260,7 +239,6 @@ const javascript: IVertex = {
     regex: {
       Logo: Regex,
       priority: Priority.gold,
-      color: 'dodgerBlue',
       label: 'Regular Expression',
       description: 'Patterns used to match character combinations in strings.',
       url:
@@ -271,7 +249,6 @@ const javascript: IVertex = {
     beyondEs6: {
       Logo: BeyondEs6,
       priority: Priority.gold,
-      color: 'navy',
       label: 'Beyond ES6',
       description: 'The present and future of JavaScript.',
       url: 'https://github.com/tc39/proposals',
@@ -280,7 +257,6 @@ const javascript: IVertex = {
         asyncAwait: {
           Logo: AsyncAwait,
           priority: Priority.gold,
-          color: 'crimson',
           label: 'Async Await',
           description: 'A long awaited feature.',
           url:
@@ -291,7 +267,6 @@ const javascript: IVertex = {
         optionalChaining: {
           Logo: OptionalChaining,
           priority: Priority.gold,
-          color: 'yellow',
           label: 'Optional Chaining',
           description:
             "I didn't know how much I missed this feature until I started using it.",
@@ -303,7 +278,6 @@ const javascript: IVertex = {
         objectEntries: {
           Logo: ObjectEntries,
           priority: Priority.gold,
-          color: 'lavender',
           label: 'Object entries',
           description:
             'Also a  common use case is to assemble an object from key value pairs.',
@@ -318,7 +292,6 @@ const javascript: IVertex = {
     dataStructures: {
       Logo: DataStructures,
       priority: Priority.gold,
-      color: 'cornflowerBlue',
       label: 'Data Structures',
       description: 'This application is a tree.',
       url:
@@ -329,7 +302,6 @@ const javascript: IVertex = {
     algorithms: {
       Logo: Algorithms,
       priority: Priority.gold,
-      color: 'fireBrick',
       label: 'Algorithms',
       description:
         "The majority of which you don't have to know by heart, but it's helpful to know that they exist.",
@@ -341,7 +313,6 @@ const javascript: IVertex = {
     eventLoop: {
       Logo: EventLoop,
       priority: Priority.gold,
-      color: '#0099FF',
       label: 'Event Loop',
       description: 'If it where easy, everyone would do it.',
       url: 'https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop',
@@ -351,7 +322,6 @@ const javascript: IVertex = {
     theWeirdParts: {
       Logo: TheWeirdParts,
       priority: Priority.gold,
-      color: 'gray',
       label: 'The weird parts',
       description: 'If it where easy, everyone would do it.',
       url:

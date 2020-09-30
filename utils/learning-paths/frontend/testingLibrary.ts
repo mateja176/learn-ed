@@ -4,7 +4,6 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const testingLibrary: IVertex = {
   Logo: TestingLibrary,
   priority: Priority.platinum,
-  color: '#FE4646',
   label: 'Testing Library',
   description:
     'Simple and complete testing utilities that encourage good testing practices.',

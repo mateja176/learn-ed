@@ -4,7 +4,6 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const jss: IVertex = {
   Logo: Jss,
   priority: Priority.gold,
-  color: '#f7df1e',
   label: 'JSS',
   description: 'Styles - the conflict free, reusable way.',
   url: 'https://cssinjs.org/',
