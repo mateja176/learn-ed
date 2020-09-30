@@ -55,14 +55,18 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
 
   const origin = useOrigin();
 
+  const pathname = last(pathnames) as string;
+
+  const logoPath = urljoin('/', 'img', `${pathname}.svg`);
+
   return (
     <Box height={'100%'} direction={'column'}>
       <Head>
         <title>{learningPath.label}</title>
         <meta name="description" content={learningPath.description} />
-        {/* <link rel="apple-touch-icon" href="/logo192.png" />
-        <meta name="twitter:image" content="/logo192.png" />
-        <meta property="og:image" content="/logo192.png" /> */}
+        <link rel="apple-touch-icon" href={logoPath} />
+        <meta name="twitter:image" content={logoPath} />
+        <meta property="og:image" content={logoPath} />
         <meta property="og:url" content={asPath} />
         <meta property="og:title" content={learningPath.label} />
         <meta property="og:description" content={learningPath.description} />
@@ -84,7 +88,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         <Tree
           origin={origin}
           parentPathname={parentPathname}
-          pathname={last(pathnames) as string}
+          pathname={pathname}
           learningPath={learningPath}
         />
       </Box>
