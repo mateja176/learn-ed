@@ -44,13 +44,28 @@ const Layout: React.FC = ({ children }) => {
   return (
     <Box direction={'column'} height={'100%'}>
       <Head>
-        <title>Learn-ed</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#f2f2f2" />
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:type" content="app" />
+
+        <title>Learn-ed</title>
         <meta
           name="description"
           content="A collection of learning paths for frontend development, React and more."
         />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <meta name="twitter:image" content="/logo192.png" />
+        <meta property="og:image" content="/logo192.png" />
+        <meta property="og:url" content="/" />
+        <meta property="og:title" content="Learn-ed" />
+        <meta
+          property="og:description"
+          content="A collection of learning paths for frontend development, React and more."
+        />
+
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css?family=Roboto:300:400:500&display=swap"
