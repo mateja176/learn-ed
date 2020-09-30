@@ -12,6 +12,7 @@
     "project": "./tsconfig.dev.json"
   },
   "rules": {
+    "no-unused-vars": "off",
     "arrow-body-style": "off",
     "implicit-arrow-linebreak": "off",
     "operator-linebreak": "off",
