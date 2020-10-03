@@ -4,6 +4,7 @@
     "Jira's",
     "postdeploy",
     "postgenerate",
+    "svgexport",
     "svgr"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"

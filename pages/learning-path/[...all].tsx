@@ -57,7 +57,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
 
   const pathname = last(pathnames) as string;
 
-  const logoPath = urljoin('/', 'img', `${pathname}.svg`);
+  const logoPath = urljoin('/', 'img', `${pathname}.png`);
 
   return (
     <Box height={'100%'} direction={'column'}>
