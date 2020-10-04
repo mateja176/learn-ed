@@ -93,7 +93,6 @@ import StaticSiteGenerators from '../../../assets/staticSiteGenerators.svg';
 import Testing from '../../../assets/testing.svg';
 import TypeCheckers from '../../../assets/typeCheckers.svg';
 import TypeDoc from '../../../assets/typeDoc.svg';
-import Typescript from '../../../assets/typescript.svg';
 import VersionControl from '../../../assets/versionControl.svg';
 import VsCode from '../../../assets/vsCode.svg';
 import Vue from '../../../assets/vue.svg';
@@ -106,6 +105,7 @@ import WebSecurity from '../../../assets/webSecurity.svg';
 import Websockets from '../../../assets/websockets.svg';
 import Yarn from '../../../assets/yarn.svg';
 import * as lp from '../../../models/learning-path';
+import typescript from '../typescript';
 import componentLibraries from './componentLibraries';
 import cssModules from './cssModules';
 import emotion from './emotion';
@@ -764,16 +764,7 @@ const frontend = {
       url: 'https://advancedweb.dev/static-type-checkers',
       videoUrl: 'https://www.youtube.com/watch?v=YHvqbeh_n9U',
       children: {
-        typescript: {
-          Logo: Typescript,
-          priority: lp.Priority.platinum,
-          label: 'TypeScript',
-          description: 'Typed JavScript at scale.',
-          url:
-            'https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html',
-          videoUrl: 'https://www.youtube.com/watch?v=BwuLxPH8IDs',
-          children: {},
-        },
+        typescript,
       },
     },
     progressiveWebApps: {

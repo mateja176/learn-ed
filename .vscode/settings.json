@@ -4,6 +4,7 @@
     "Jira's",
     "postdeploy",
     "postgenerate",
+    "subtyping",
     "svgexport",
     "svgr"
   ],
