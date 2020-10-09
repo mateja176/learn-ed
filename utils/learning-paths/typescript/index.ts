@@ -1,4 +1,20 @@
+import AdvancedTypes from '../../../assets/advancedTopics.svg';
+import Types from '../../../assets/basics.svg';
+import CuttingEdge from '../../../assets/cuttingEdge.svg';
+import DeclarationFiles from '../../../assets/declarationFiles.svg';
+import DeclarationMerging from '../../../assets/declarationMerging.svg';
+import Enums from '../../../assets/enums.svg';
+import Functions from '../../../assets/functions.svg';
+import Generics from '../../../assets/generics.svg';
+import Interfaces from '../../../assets/interfaces.svg';
+import Literals from '../../../assets/literals.svg';
+import ProjectConfiguration from '../../../assets/projectConfiguration.svg';
+import TripleSlashDirective from '../../../assets/tripleSlashDirective.svg';
+import TypeCompatibility from '../../../assets/typeCompatibility.svg';
+import TypeInference from '../../../assets/typeInference.svg';
 import Typescript from '../../../assets/typescript.svg';
+import UnionAndIntersectionTypes from '../../../assets/unionAndIntersectionTypes.svg';
+import UtilityTypes from '../../../assets/utilityLibraries.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const typescript: IVertex = {
@@ -12,7 +28,7 @@ const typescript: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=BwuLxPH8IDs',
   children: {
     types: {
-      Logo: Typescript,
+      Logo: Types,
       priority: Priority.platinum,
       label: 'Basic Types',
       description:
@@ -22,7 +38,7 @@ const typescript: IVertex = {
       children: {},
     },
     interfaces: {
-      Logo: Typescript,
+      Logo: Interfaces,
       priority: Priority.platinum,
       label: 'Interfaces',
       description:
@@ -32,7 +48,7 @@ const typescript: IVertex = {
       children: {},
     },
     functions: {
-      Logo: Typescript,
+      Logo: Functions,
       priority: Priority.platinum,
       label: 'Typescript Functions',
       description:
@@ -42,7 +58,7 @@ const typescript: IVertex = {
       children: {},
     },
     literals: {
-      Logo: Typescript,
+      Logo: Literals,
       priority: Priority.platinum,
       label: 'Literal Types',
       description: '"a" can be a value, but it can also be a type.',
@@ -51,7 +67,7 @@ const typescript: IVertex = {
       children: {},
     },
     unionAndIntersectionTypes: {
-      Logo: Typescript,
+      Logo: UnionAndIntersectionTypes,
       priority: Priority.platinum,
       label: 'Union and Intersection Types',
       description:
@@ -62,7 +78,7 @@ const typescript: IVertex = {
       children: {},
     },
     enums: {
-      Logo: Typescript,
+      Logo: Enums,
       priority: Priority.gold,
       label: 'Enums',
       description:
@@ -72,7 +88,7 @@ const typescript: IVertex = {
       children: {},
     },
     generics: {
-      Logo: Typescript,
+      Logo: Generics,
       priority: Priority.platinum,
       label: 'Generics',
       description: 'One of the most powerful tools in the arsenal.',
@@ -81,7 +97,7 @@ const typescript: IVertex = {
       children: {},
     },
     advancedTypes: {
-      Logo: Typescript,
+      Logo: AdvancedTypes,
       priority: Priority.platinum,
       label: 'Advanced Types',
       description:
@@ -91,7 +107,7 @@ const typescript: IVertex = {
       children: {},
     },
     utilityTypes: {
-      Logo: Typescript,
+      Logo: UtilityTypes,
       priority: Priority.platinum,
       label: 'Utility Types',
       description: "Why do it the hard way, when there's the easy way.",
@@ -100,7 +116,7 @@ const typescript: IVertex = {
       children: {},
     },
     declarationMerging: {
-      Logo: Typescript,
+      Logo: DeclarationMerging,
       priority: Priority.gold,
       label: 'Declaration Merging',
       description:
@@ -110,7 +126,7 @@ const typescript: IVertex = {
       children: {},
     },
     tripleSlashDirective: {
-      Logo: Typescript,
+      Logo: TripleSlashDirective,
       priority: Priority.gold,
       label: 'Triple Slash Directives',
       description:
@@ -121,7 +137,7 @@ const typescript: IVertex = {
       children: {},
     },
     typeCompatibility: {
-      Logo: Typescript,
+      Logo: TypeCompatibility,
       priority: Priority.gold,
       label: 'Type Compatibility',
       description:
@@ -132,7 +148,7 @@ const typescript: IVertex = {
       children: {},
     },
     typeInference: {
-      Logo: Typescript,
+      Logo: TypeInference,
       priority: Priority.gold,
       label: 'Type Inference',
       description: 'This is an area where C# or Java lag behind.',
@@ -141,7 +157,7 @@ const typescript: IVertex = {
       children: {},
     },
     cuttingEdge: {
-      Logo: Typescript,
+      Logo: CuttingEdge,
       priority: Priority.gold,
       label: 'Cutting Edge Typescript',
       description: 'Typescript is literarily getting better by the month.',
@@ -151,7 +167,7 @@ const typescript: IVertex = {
       children: {},
     },
     declarationFiles: {
-      Logo: Typescript,
+      Logo: DeclarationFiles,
       priority: Priority.gold,
       label: 'Declaration Files',
       description:
@@ -162,7 +178,7 @@ const typescript: IVertex = {
       children: {},
     },
     projectConfiguration: {
-      Logo: Typescript,
+      Logo: ProjectConfiguration,
       priority: Priority.platinum,
       label: 'Typescript Project Configuration',
       description: 'Learn enough to be dangerous.',
