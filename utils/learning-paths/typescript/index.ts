@@ -5,7 +5,8 @@ const typescript: IVertex = {
   Logo: Typescript,
   priority: Priority.platinum,
   label: 'TypeScript',
-  description: 'Typed JavScript at scale.',
+  description:
+    'Typed JavScript at scale. Enabling amazing developer experience through delightful tooling.',
   url:
     'https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html',
   videoUrl: 'https://www.youtube.com/watch?v=BwuLxPH8IDs',
