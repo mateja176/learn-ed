@@ -19,7 +19,7 @@ const componentLibraries: IVertex = {
       label: 'Material UI',
       description: 'Material design for your website.',
       url: 'https://material-ui.com/getting-started/installation/',
-      videoUrl: 'https://www.youtube.com/watch?v=PWadEeOuv5o',
+      videoUrl: 'https://www.youtube.com/watch?v=vyJU9efvUtQ&t=5s',
       children: {},
     },
     ant: {
