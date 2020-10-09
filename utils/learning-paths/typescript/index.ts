@@ -98,6 +98,78 @@ const typescript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=TtDP6lpSjWc',
       children: {},
     },
+    declarationMerging: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Declaration Merging',
+      description:
+        "I don't always use declaration merging, but when you do, it matters.",
+      url: 'https://www.typescriptlang.org/docs/handbook/utility-types.html',
+      videoUrl: 'https://www.youtube.com/watch?v=bEwRm_U65Ek',
+      children: {},
+    },
+    tripleSlashDirective: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Triple Slash Directives',
+      description:
+        'Mostly used to resolve a clash between two third party type definitions.',
+      url:
+        'https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html',
+      videoUrl: 'https://www.youtube.com/watch?v=GVUPOvCRmSY', // TODO replace with more accurate video
+      children: {},
+    },
+    typeCompatibility: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Type Compatibility',
+      description:
+        "If you give a diamond to a monkey, it will play with it like it's a rock - don't play with Typescript like it's a rock.",
+      url:
+        'https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html',
+      videoUrl: 'https://www.youtube.com/watch?v=m1CFuWPNEDw', // TODO replace higher quality video
+      children: {},
+    },
+    typeInference: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Type Inference',
+      description: 'This is an area where C# or Java lag behind.',
+      url: 'https://www.typescriptlang.org/docs/handbook/type-inference.html',
+      videoUrl: 'https://www.youtube.com/watch?v=3ui_st7rtfA',
+      children: {},
+    },
+    cuttingEdge: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Cutting Edge Typescript',
+      description: 'Typescript is literarily getting better by the month.',
+      url:
+        'https://www.typescriptlang.org/docs/handbook/release-notes/overview.html',
+      videoUrl: 'https://www.youtube.com/watch?v=Au-rrY0afe4',
+      children: {},
+    },
+    declarationFiles: {
+      Logo: Typescript,
+      priority: Priority.gold,
+      label: 'Declaration Files',
+      description:
+        'Declaration files enable you to gain access to the entirety of the Javascript ecosystem.',
+      url:
+        'https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html',
+      videoUrl: 'https://www.youtube.com/watch?v=s_CZeWuEZ_s',
+      children: {},
+    },
+    projectSetup: {
+      Logo: Typescript,
+      priority: Priority.platinum,
+      label: 'Typescript Project Setup',
+      description: 'Learn enough to be dangerous.',
+      url:
+        'https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html',
+      videoUrl: 'https://www.youtube.com/watch?v=dPgAXFcFHCM',
+      children: {},
+    },
   },
 };
 
