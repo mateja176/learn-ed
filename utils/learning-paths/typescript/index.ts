@@ -160,13 +160,12 @@ const typescript: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=s_CZeWuEZ_s',
       children: {},
     },
-    projectSetup: {
+    projectConfiguration: {
       Logo: Typescript,
       priority: Priority.platinum,
-      label: 'Typescript Project Setup',
+      label: 'Typescript Project Configuration',
       description: 'Learn enough to be dangerous.',
-      url:
-        'https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html',
+      url: 'https://www.typescriptlang.org/docs/handbook/tsconfig-json.html',
       videoUrl: 'https://www.youtube.com/watch?v=dPgAXFcFHCM',
       children: {},
     },
