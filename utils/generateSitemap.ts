@@ -1,7 +1,6 @@
 import { kebabCase } from 'lodash';
 import urljoin from 'url-join';
-import { IVertex } from '../models/learning-path';
-import rootLeaningPath from '../utils/learning-paths';
+import { IVertex } from '../create-learning-path/example/learning-path';
 
 const generateSitemap = (sitemap: string) => (parentUrl: string) => (
   pathname: string,
@@ -14,10 +13,4 @@ const generateSitemap = (sitemap: string) => (parentUrl: string) => (
   }, sitemap.concat(url, '\n'));
 };
 
-if (!process.env.ORIGIN) {
-  throw new Error('No origin env variable.');
-}
-
-process.stdout.write(
-  generateSitemap('')(process.env.ORIGIN)('learning-path')(rootLeaningPath),
-);
+export default generateSitemap;
