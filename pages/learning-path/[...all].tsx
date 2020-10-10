@@ -1,6 +1,7 @@
 import { Box } from 'grommet/components/Box';
 import { camelCase } from 'lodash';
 import { NextPage, NextPageContext } from 'next';
+import getConfig from 'next/config';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { head, init, last } from 'ramda';
@@ -10,6 +11,7 @@ import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../../components/Tree/Tree';
 import { useOrigin } from '../../hooks/hooks';
 import { IVertex } from '../../models/learning-path';
+import generateSitemap from '../../utils/generateSitemap';
 import rootLearningPath from '../../utils/learning-paths';
 
 export interface LearningPathProps {
@@ -98,9 +100,31 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
 
 export default LearningPath;
 
+// * getServerSideProps only works for top level page components
 LearningPath.getInitialProps = async ({
   asPath,
 }: NextPageContext): Promise<LearningPathProps> => {
+  if (process.env.NODE_ENV === 'development' && !process.browser) {
+    const origin = process.env.origin; // eslint-disable-line prefer-destructuring
+
+    if (!origin) {
+      throw new Error('No origin env variable.');
+    }
+
+    const { serverRuntimeConfig } = getConfig();
+
+    const sitemapPath = `${serverRuntimeConfig.PROJECT_ROOT}/public/sitemap.txt`;
+    const sitemap = generateSitemap('')(origin)('learning-path')(
+      rootLearningPath,
+    );
+
+    import('fs-extra').then((fs) => {
+      fs.writeFile(sitemapPath, sitemap).then(() => {
+        console.info(`Written to ${sitemapPath}`);
+      });
+    });
+  }
+
   if (!asPath) {
     throw new Error('No "asPath"');
   }

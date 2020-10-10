@@ -1,4 +1,7 @@
 module.exports = {
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname,
+  },
   async redirects() {
     return [
       {
@@ -19,8 +22,16 @@ module.exports = {
     firebaseMeasurementId: 'G-6B32XEYKB',
     logRocketId: 'learn-ed/learn-ed',
     mixpanelToken: '59148aca96d44b8788b32c6475378df5',
+    origin: 'https://learn-ed.web.app',
   },
-  webpack(config) {
+  webpack(config, { isServer }) {
+    // Fixes npm packages that depend on `fs` module
+    if (!isServer) {
+      config.node = {
+        fs: 'empty',
+      };
+    }
+
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
