@@ -1,7 +1,6 @@
 import Analytics from '../../../assets/analytics.svg';
 import Angular from '../../../assets/angular.svg';
 import AngularUniversal from '../../../assets/angularUniversal.svg';
-import Apollo from '../../../assets/apollo.svg';
 import Aws from '../../../assets/aws.svg';
 import Bem from '../../../assets/bem.svg';
 import Bitbucket from '../../../assets/bitbucket.svg';
@@ -43,7 +42,6 @@ import Git from '../../../assets/git.svg';
 import Github from '../../../assets/github.svg';
 import GitLab from '../../../assets/gitLab.svg';
 import GoogleAnalytics from '../../../assets/googleAnalytics.svg';
-import Graphql from '../../../assets/graphql.svg';
 import Hosting from '../../../assets/hosting.svg';
 import Html from '../../../assets/html.svg';
 import HtmlTemplates from '../../../assets/htmlTemplates.svg';
@@ -75,7 +73,6 @@ import Positioning from '../../../assets/positioning.svg';
 import Prettier from '../../../assets/prettier.svg';
 import ProgressiveWebApps from '../../../assets/progressiveWebApps.svg';
 import PushNotifications from '../../../assets/pushNotifications.svg';
-import Relay from '../../../assets/relay.svg';
 import RemoteRepositories from '../../../assets/remoteRepositories.svg';
 import ResponsiveDesign from '../../../assets/responsiveDesign.svg';
 import Rest from '../../../assets/rest.svg';
@@ -105,6 +102,7 @@ import WebSecurity from '../../../assets/webSecurity.svg';
 import Websockets from '../../../assets/websockets.svg';
 import Yarn from '../../../assets/yarn.svg';
 import * as lp from '../../../models/learning-path';
+import graphql from '../graphql';
 import typescript from '../typescript';
 import componentLibraries from './componentLibraries';
 import cssModules from './cssModules';
@@ -975,36 +973,7 @@ const frontend = {
         nuxt,
       },
     },
-    graphql: {
-      Logo: Graphql,
-      priority: lp.Priority.gold,
-      label: 'GraphQL',
-      description: "Type safe and developer friendly API's.",
-      url: 'https://graphql.org/learn/',
-      videoUrl: 'https://www.youtube.com/watch?v=ed8SzALpx1Q',
-      children: {
-        apollo: {
-          Logo: Apollo,
-          priority: lp.Priority.gold,
-          label: 'Apollo',
-          description: 'GraphQL tooling.',
-          url:
-            'https://www.apollographql.com/docs/tutorial/introduction/?_ga=2.159108154.1681055173.1599939917-1685203629.1599939917',
-          videoUrl: 'https://www.youtube.com/watch?v=mSzUb7f47qk',
-          children: {},
-        },
-        relay: {
-          Logo: Relay,
-          priority: lp.Priority.silver,
-          label: 'Relay',
-          description: 'GraphQL client for React',
-          url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
-          videoUrl: 'https://www.youtube.com/watch?v=xnvzz7Z658I',
-          associations: ['frontend/frameworks/react'],
-          children: {},
-        },
-      },
-    },
+    graphql,
     staticSiteGenerators: {
       Logo: StaticSiteGenerators,
       priority: lp.Priority.gold,
