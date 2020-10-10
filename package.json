@@ -21,7 +21,6 @@
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "generate-sitemap": "ts-node --project tsconfig.dev.json scripts/generateSitemap",
     "ping-google": "ts-node --project tsconfig.dev.json scripts/pingGoogle"
   },
   "main": "./functions/lib/index.js",
@@ -46,6 +45,7 @@
     "react-toastify": "^6.0.8",
     "reactfire": "^2.0.3",
     "styled-components": "^5.2.0",
+    "url": "^0.11.0",
     "url-join": "^4.0.1",
     "uuid": "^8.3.0"
   },
