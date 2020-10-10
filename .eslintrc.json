@@ -19,7 +19,7 @@
     "no-else-return": "off",
     "no-confusing-arrow": "off",
     "object-curly-newline": "off",
-    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
     "spaced-comment": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
