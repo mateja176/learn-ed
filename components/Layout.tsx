@@ -44,8 +44,6 @@ const Layout: React.FC = ({ children }) => {
     }
   }, []);
 
-  const logoPath = React.useMemo(() => urljoin(origin, 'logo192.png'), []);
-
   return (
     <Box direction={'column'} height={'100%'}>
       <Head>
@@ -55,21 +53,6 @@ const Layout: React.FC = ({ children }) => {
         <meta name="theme-color" content="#f2f2f2" />
         <meta name="twitter:card" content="summary" />
         <meta property="og:type" content="app" />
-
-        <title>Learn-ed</title>
-        <meta
-          name="description"
-          content="A collection of learning paths for frontend development, React and more."
-        />
-        <link rel="apple-touch-icon" href={logoPath} />
-        <meta name="twitter:image" content={logoPath} />
-        <meta property="og:image" content={logoPath} />
-        <meta property="og:url" content={urljoin(origin, 'learning-path')} />
-        <meta property="og:title" content="Learn-ed" />
-        <meta
-          property="og:description"
-          content="A collection of learning paths for frontend development, React and more."
-        />
 
         <link
           rel="preload"
