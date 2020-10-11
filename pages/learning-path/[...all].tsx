@@ -72,6 +72,8 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         <link rel="apple-touch-icon" href={logoPath} />
         <meta name="twitter:image" content={logoPath} />
         <meta property="og:image" content={logoPath} />
+        <meta property="og:image:width" content="192" />
+        <meta property="og:image:height" content="192" />
         <meta property="og:url" content={urljoin(origin, asPath)} />
         <meta property="og:title" content={learningPath.label} />
         <meta property="og:description" content={learningPath.description} />
