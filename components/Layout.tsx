@@ -52,7 +52,7 @@ const Layout: React.FC = ({ children }) => {
         <link rel="manifest" href={urljoin(origin, 'manifest.json')} />
         <meta name="theme-color" content="#f2f2f2" />
         <meta name="twitter:card" content="summary" />
-        <meta property="og:type" content="app" />
+        <meta property="og:type" content="website" />
 
         <link
           rel="preload"
