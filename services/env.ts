@@ -9,6 +9,7 @@ export type Env = {
   firebaseMessagingSenderId: string;
   firebaseAppId: string;
   firebaseMeasurementId: string;
+  origin: string;
   logRocketId?: string;
   mixpanelToken?: string;
 };
@@ -22,6 +23,7 @@ const rawEnv: Partial<Env> = {
   firebaseMessagingSenderId: process.env.firebaseMessagingSenderId,
   firebaseAppId: process.env.firebaseAppId,
   firebaseMeasurementId: process.env.firebaseMeasurementId,
+  origin: process.env.origin,
 };
 
 assertTruthyValues(rawEnv);

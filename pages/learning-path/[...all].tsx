@@ -9,14 +9,16 @@ import React from 'react';
 import urljoin from 'url-join';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../../components/Tree/Tree';
-import { useOrigin } from '../../hooks/hooks';
 import { IVertex } from '../../models/learning-path';
+import env from '../../services/env';
 import generateSitemap from '../../utils/generateSitemap';
 import rootLearningPath from '../../utils/learning-paths';
 
 export interface LearningPathProps {
   asPath: string;
 }
+
+const { origin } = env;
 
 const getPathname = (serverPath: string) => (
   routerPath: string,
@@ -55,13 +57,12 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
     pathnames,
   ]);
 
-  const origin = useOrigin();
-
   const pathname = React.useMemo(() => last(pathnames) as string, [pathnames]);
 
-  const logoPath = React.useMemo(() => urljoin('/', 'img', `${pathname}.png`), [
-    pathname,
-  ]);
+  const logoPath = React.useMemo(
+    () => urljoin(origin, 'img', `${pathname}.png`),
+    [pathname],
+  );
 
   return (
     <Box height={'100%'} direction={'column'}>
@@ -71,7 +72,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         <link rel="apple-touch-icon" href={logoPath} />
         <meta name="twitter:image" content={logoPath} />
         <meta property="og:image" content={logoPath} />
-        <meta property="og:url" content={asPath} />
+        <meta property="og:url" content={urljoin(origin, asPath)} />
         <meta property="og:title" content={learningPath.label} />
         <meta property="og:description" content={learningPath.description} />
       </Head>
@@ -107,8 +108,6 @@ LearningPath.getInitialProps = async ({
   asPath,
 }: NextPageContext): Promise<LearningPathProps> => {
   if (process.env.NODE_ENV === 'development' && !process.browser) {
-    const origin = process.env.origin; // eslint-disable-line prefer-destructuring
-
     if (!origin) {
       throw new Error('No origin env variable.');
     }

@@ -8,6 +8,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { FirebaseAppProvider } from 'reactfire';
 import { createGlobalStyle } from 'styled-components';
+import urljoin from 'url-join';
 import env from '../services/env';
 import { firebaseApp } from '../services/firebase';
 import { theme } from '../utils/theme';
@@ -20,6 +21,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 `;
+
+const { origin } = env;
 
 const Layout: React.FC = ({ children }) => {
   React.useEffect(() => {
@@ -41,12 +44,16 @@ const Layout: React.FC = ({ children }) => {
     }
   }, []);
 
+  const logoPath = React.useMemo(() => urljoin(origin, 'logo192.png'), [
+    origin,
+  ]);
+
   return (
     <Box direction={'column'} height={'100%'}>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href={urljoin(origin, 'manifest.json')} />
         <meta name="theme-color" content="#f2f2f2" />
         <meta name="twitter:card" content="summary" />
         <meta property="og:type" content="app" />
@@ -56,10 +63,10 @@ const Layout: React.FC = ({ children }) => {
           name="description"
           content="A collection of learning paths for frontend development, React and more."
         />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <meta name="twitter:image" content="/logo192.png" />
-        <meta property="og:image" content="/logo192.png" />
-        <meta property="og:url" content="/" />
+        <link rel="apple-touch-icon" href={logoPath} />
+        <meta name="twitter:image" content={logoPath} />
+        <meta property="og:image" content={logoPath} />
+        <meta property="og:url" content={origin} />
         <meta property="og:title" content="Learn-ed" />
         <meta
           property="og:description"
