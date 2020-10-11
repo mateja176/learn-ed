@@ -211,6 +211,11 @@ https://learn-ed.web.app/learning-path/frontend/ssr/next
 https://learn-ed.web.app/learning-path/frontend/ssr/angular-universal
 https://learn-ed.web.app/learning-path/frontend/ssr/nuxt
 https://learn-ed.web.app/learning-path/frontend/graphql
+https://learn-ed.web.app/learning-path/frontend/graphql/basics
+https://learn-ed.web.app/learning-path/frontend/graphql/schemas-and-types
+https://learn-ed.web.app/learning-path/frontend/graphql/execution
+https://learn-ed.web.app/learning-path/frontend/graphql/best-practices
+https://learn-ed.web.app/learning-path/frontend/graphql/pagination
 https://learn-ed.web.app/learning-path/frontend/graphql/apollo
 https://learn-ed.web.app/learning-path/frontend/graphql/relay
 https://learn-ed.web.app/learning-path/frontend/static-site-generators
@@ -346,3 +351,11 @@ https://learn-ed.web.app/learning-path/typescript/type-inference
 https://learn-ed.web.app/learning-path/typescript/cutting-edge
 https://learn-ed.web.app/learning-path/typescript/declaration-files
 https://learn-ed.web.app/learning-path/typescript/project-configuration
+https://learn-ed.web.app/learning-path/graphql
+https://learn-ed.web.app/learning-path/graphql/basics
+https://learn-ed.web.app/learning-path/graphql/schemas-and-types
+https://learn-ed.web.app/learning-path/graphql/execution
+https://learn-ed.web.app/learning-path/graphql/best-practices
+https://learn-ed.web.app/learning-path/graphql/pagination
+https://learn-ed.web.app/learning-path/graphql/apollo
+https://learn-ed.web.app/learning-path/graphql/relay

@@ -1,6 +1,11 @@
 import Apollo from '../../../assets/apollo.svg';
+import Basics from '../../../assets/basics.svg';
+import BestPractices from '../../../assets/bestPractices.svg';
+import Execution from '../../../assets/execution.svg';
 import Graphql from '../../../assets/graphql.svg';
+import Pagination from '../../../assets/pagination.svg';
 import Relay from '../../../assets/relay.svg';
+import SchemasAndTypes from '../../../assets/schemasAndTypes.svg';
 import { IVertex, Priority } from '../../../models/learning-path';
 
 const graphql: IVertex = {
@@ -13,7 +18,7 @@ const graphql: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=ed8SzALpx1Q',
   children: {
     basics: {
-      Logo: Graphql,
+      Logo: Basics,
       priority: Priority.platinum,
       label: 'Basics',
       description: 'A query language for your API.',
@@ -22,7 +27,7 @@ const graphql: IVertex = {
       children: {},
     },
     schemasAndTypes: {
-      Logo: Graphql,
+      Logo: SchemasAndTypes,
       priority: Priority.platinum,
       label: 'Schemas and Types',
       description: "GraphQL's powerful type system.",
@@ -30,13 +35,34 @@ const graphql: IVertex = {
       videoUrl: 'https://www.youtube.com/watch?v=A8vtRvz-lK0',
       children: {},
     },
-    validation: {
-      Logo: Graphql,
-      priority: Priority.platinum,
-      label: 'Validation',
-      description: "GraphQL's powerful type system.",
-      url: 'https://graphql.org/learn/queries/',
-      videoUrl: 'https://www.youtube.com/watch?v=A8vtRvz-lK0',
+    execution: {
+      Logo: Execution,
+      priority: Priority.gold,
+      label: 'GraphQL Execution',
+      description:
+        'Imagine the API as huge JavaScript object which you can query.',
+      url: 'https://graphql.org/learn/execution/',
+      videoUrl: 'https://www.youtube.com/watch?v=T0zpPO7Ub_s',
+      children: {},
+    },
+    bestPractices: {
+      Logo: BestPractices,
+      priority: Priority.gold,
+      label: 'Best Design Practices',
+      description:
+        'Imagine the API as huge JavaScript object which you can query.',
+      url: 'https://graphql.org/learn/best-practices/',
+      videoUrl: 'https://www.youtube.com/watch?v=1Fg_QtzI7SU',
+      children: {},
+    },
+    pagination: {
+      Logo: Pagination,
+      priority: Priority.gold,
+      label: 'Pagination',
+      description:
+        'You can start with a simple offset or id based model or embrace the power cursors.',
+      url: 'https://graphql.org/learn/pagination/',
+      videoUrl: 'https://www.youtube.com/watch?v=e1cbhZ5vDGc',
       children: {},
     },
     apollo: {
