@@ -57,9 +57,11 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
 
   const origin = useOrigin();
 
-  const pathname = last(pathnames) as string;
+  const pathname = React.useMemo(() => last(pathnames) as string, [pathnames]);
 
-  const logoPath = urljoin('/', 'img', `${pathname}.png`);
+  const logoPath = React.useMemo(() => urljoin('/', 'img', `${pathname}.png`), [
+    pathname,
+  ]);
 
   return (
     <Box height={'100%'} direction={'column'}>
