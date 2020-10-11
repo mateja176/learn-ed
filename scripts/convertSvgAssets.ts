@@ -20,6 +20,7 @@ fs.readdir(assetsPath, { encoding: 'utf-8' }, (err, paths) => {
         )} 192:`,
       };
 
+      // * without the timeout a significant amount of images are skipped
       setTimeout(() => {
         svgexport.render(data);
       }, i * 100);
