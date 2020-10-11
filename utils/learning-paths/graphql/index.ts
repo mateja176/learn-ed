@@ -12,6 +12,33 @@ const graphql: IVertex = {
   url: 'https://graphql.org/learn/',
   videoUrl: 'https://www.youtube.com/watch?v=ed8SzALpx1Q',
   children: {
+    basics: {
+      Logo: Graphql,
+      priority: Priority.platinum,
+      label: 'Basics',
+      description: 'A query language for your API.',
+      url: 'https://graphql.org/learn/queries/',
+      videoUrl: 'https://www.youtube.com/watch?v=7wzR4Ig5pTI',
+      children: {},
+    },
+    schemasAndTypes: {
+      Logo: Graphql,
+      priority: Priority.platinum,
+      label: 'Schemas and Types',
+      description: "GraphQL's powerful type system.",
+      url: 'https://graphql.org/learn/queries/',
+      videoUrl: 'https://www.youtube.com/watch?v=A8vtRvz-lK0',
+      children: {},
+    },
+    validation: {
+      Logo: Graphql,
+      priority: Priority.platinum,
+      label: 'Validation',
+      description: "GraphQL's powerful type system.",
+      url: 'https://graphql.org/learn/queries/',
+      videoUrl: 'https://www.youtube.com/watch?v=A8vtRvz-lK0',
+      children: {},
+    },
     apollo: {
       Logo: Apollo,
       priority: Priority.platinum,
