@@ -1,8 +1,10 @@
 import Apollo from '../../../assets/apollo.svg';
 import Basics from '../../../assets/basics.svg';
 import BestPractices from '../../../assets/bestPractices.svg';
+import Codegen from '../../../assets/codegen.svg';
 import Execution from '../../../assets/execution.svg';
 import Graphql from '../../../assets/graphql.svg';
+import GraphqlMesh from '../../../assets/graphqlMesh.svg';
 import Pagination from '../../../assets/pagination.svg';
 import Relay from '../../../assets/relay.svg';
 import SchemasAndTypes from '../../../assets/schemasAndTypes.svg';
@@ -84,6 +86,27 @@ const graphql: IVertex = {
       url: 'https://relay.dev/docs/en/experimental/introduction-to-relay',
       videoUrl: 'https://www.youtube.com/watch?v=xnvzz7Z658I',
       associations: ['frontend/frameworks/react'],
+      children: {},
+    },
+    codegen: {
+      Logo: Codegen,
+      priority: Priority.platinum,
+      label: 'GraphQL Codegen',
+      description:
+        'Automatic React hooks generation complete with Typescript types and more!',
+      url:
+        'https://graphql-code-generator.com/docs/getting-started/installation',
+      videoUrl: 'https://www.youtube.com/watch?v=izriJQeqGUA',
+      associations: ['frontend/frameworks/react', 'graphql/apollo'],
+      children: {},
+    },
+    graphqlMesh: {
+      Logo: GraphqlMesh,
+      priority: Priority.platinum,
+      label: 'GraphQL Mesh',
+      description: 'Turn a REST or GRPC API into a GraphQL API instantly.',
+      url: 'https://graphql-mesh.com/docs/getting-started/introduction',
+      videoUrl: 'https://www.youtube.com/watch?v=BUzISj87ovc',
       children: {},
     },
   },

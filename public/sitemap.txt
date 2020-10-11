@@ -218,6 +218,8 @@ https://learn-ed.web.app/learning-path/frontend/graphql/best-practices
 https://learn-ed.web.app/learning-path/frontend/graphql/pagination
 https://learn-ed.web.app/learning-path/frontend/graphql/apollo
 https://learn-ed.web.app/learning-path/frontend/graphql/relay
+https://learn-ed.web.app/learning-path/frontend/graphql/codegen
+https://learn-ed.web.app/learning-path/frontend/graphql/graphql-mesh
 https://learn-ed.web.app/learning-path/frontend/static-site-generators
 https://learn-ed.web.app/learning-path/frontend/static-site-generators/next
 https://learn-ed.web.app/learning-path/frontend/static-site-generators/gatsby
@@ -359,3 +361,5 @@ https://learn-ed.web.app/learning-path/graphql/best-practices
 https://learn-ed.web.app/learning-path/graphql/pagination
 https://learn-ed.web.app/learning-path/graphql/apollo
 https://learn-ed.web.app/learning-path/graphql/relay
+https://learn-ed.web.app/learning-path/graphql/codegen
+https://learn-ed.web.app/learning-path/graphql/graphql-mesh

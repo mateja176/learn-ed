@@ -80,6 +80,7 @@ const Vertex: React.FC<{
                     hoverIndicator
                     secondary
                     label={getAssociationLabel(association)}
+                    margin={{ right: '5px' }}
                   />
                 </Link>
               ))}
