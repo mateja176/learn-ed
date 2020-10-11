@@ -131,7 +131,7 @@ const nuxt = {
 const frontend = {
   Logo: Frontend,
   priority: lp.Priority.platinum,
-  label: '🖥️ Front-end',
+  label: '📱 Front-end',
   description:
     'With the surge of Rich Web Applications followed by Progressive Web Application, building the user facing side of the Internet has never been more impactful.',
   url:

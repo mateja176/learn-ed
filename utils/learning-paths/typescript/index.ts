@@ -20,7 +20,7 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const typescript: IVertex = {
   Logo: Typescript,
   priority: Priority.platinum,
-  label: 'TypeScript',
+  label: '🔷 TypeScript',
   description:
     'Typed JavScript at scale. Enabling amazing developer experience through delightful tooling.',
   url:

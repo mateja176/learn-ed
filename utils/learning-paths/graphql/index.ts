@@ -13,7 +13,7 @@ import { IVertex, Priority } from '../../../models/learning-path';
 const graphql: IVertex = {
   Logo: Graphql,
   priority: Priority.platinum,
-  label: 'GraphQL',
+  label: '🔺 GraphQL',
   description:
     'GraphQL enables easy API integrations, such that it feels like using a library from the same codebase.',
   url: 'https://graphql.org/learn/',
