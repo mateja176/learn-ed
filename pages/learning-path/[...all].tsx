@@ -57,11 +57,11 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
     pathnames,
   ]);
 
-  const pathname = React.useMemo(() => last(pathnames) as string, [pathnames]);
+  const name = React.useMemo(() => last(pathnames) as string, [pathnames]);
 
   const logoPath = React.useMemo(
-    () => urljoin(origin, 'img', `${pathname}.png`),
-    [pathname],
+    () => urljoin(origin, 'img', `${camelCase(name)}.png`),
+    [name],
   );
 
   return (
@@ -95,7 +95,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
         <Tree
           origin={origin}
           parentPathname={parentPathname}
-          pathname={pathname}
+          pathname={name}
           learningPath={learningPath}
         />
       </Box>
