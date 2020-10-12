@@ -109,12 +109,16 @@ export default LearningPath;
 LearningPath.getInitialProps = async ({
   asPath,
 }: NextPageContext): Promise<LearningPathProps> => {
-  if (process.env.NODE_ENV === 'development' && !process.browser) {
+  const { serverRuntimeConfig } = getConfig();
+
+  if (
+    process.env.NODE_ENV === 'development' &&
+    !process.browser &&
+    serverRuntimeConfig.PROJECT_ROOT
+  ) {
     if (!origin) {
       throw new Error('No origin env variable.');
     }
-
-    const { serverRuntimeConfig } = getConfig();
 
     const sitemapPath = `${serverRuntimeConfig.PROJECT_ROOT}/public/sitemap.txt`;
     const sitemap = generateSitemap('')(origin)('learning-path')(
