@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import next from 'next';
 
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = false;
 const nextjsDistDir = '.next';
 
 const server = next({
