@@ -22,7 +22,7 @@ fs.readdir(assetsPath, { encoding: 'utf-8' }, (err, paths) => {
           'public',
           'img',
           path.replace(/svg$/, 'png'),
-        )} ${width && height ? (width > height ? '192:' : ':192') : '192:192'}`,
+        )} ${width && height ? (width > height ? '200:' : ':200') : '200:200'}`,
       };
 
       // * without the timeout a significant amount of images are skipped
