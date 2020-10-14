@@ -2,15 +2,6 @@ module.exports = {
   serverRuntimeConfig: {
     PROJECT_ROOT: __dirname,
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: 'learn',
-        permanent: true,
-      },
-    ];
-  },
   env: {
     firebaseApiKey: 'AIzaSyBJpWY3zxbrQw8omGdZ5ls_nT3gq1pvo4E',
     firebaseAuthDomain: 'learn-ed.firebaseapp.com',

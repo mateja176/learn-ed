@@ -7,15 +7,6 @@ import urljoin from 'url-join';
 import { IVertex, Priority } from '../models/learning-path';
 import { Color } from '../models/models';
 
-export const getRootKey = (pathname: string): never | string => {
-  const match = pathname.match(/\/learn\/(?<rootKey>[^/]+)/);
-  if (match?.groups?.rootKey) {
-    return match.groups.rootKey;
-  } else {
-    throw new Error(`Could not extract root key from pathname ${pathname}`);
-  }
-};
-
 export const getLearningPath = ({
   rootLearningPath,
   segments,
@@ -35,9 +26,6 @@ export const getLearningPath = ({
 export function hasChildren<A>(maybePath: IVertex | A): maybePath is IVertex {
   return 'children' in maybePath;
 }
-
-export const getPathnameSegments = (pathname: string): string[] =>
-  pathname.replace('/learn/', '').split('/');
 
 export const getTextColor = (background: Color): Color => {
   const backgroundColor = color(background.toLowerCase());

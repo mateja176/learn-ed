@@ -1,3 +1,4 @@
+import { Box } from 'grommet/components/Box';
 import { Text } from 'grommet/components/Text';
 import { startCase } from 'lodash';
 import Link from 'next/link';
@@ -11,12 +12,16 @@ export interface BreadcrumbsProps {
 const navStyle: React.CSSProperties = {
   display: 'flex',
   flexWrap: 'wrap',
+  alignItems: 'center',
 };
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = (props) => {
-  const segments = props.pathname.slice(1).split('/');
+  const segments = props.pathname.split('/').filter(Boolean);
   return (
     <nav style={navStyle}>
+      <Box margin={{ right: '10px' }}>
+        <Link href="/">💻</Link>
+      </Box>
       {segments.map((segment, i) => {
         const isLast = i === segments.length - 1;
         const formattedSegment = startCase(segment);
