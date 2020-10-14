@@ -9,7 +9,7 @@ import typescript from './typescript';
 const rootLearningPath: IVertex = {
   Logo: Programming,
   priority: Priority.platinum,
-  label: '💻 Programing',
+  label: '💻 Learn Programing',
   description: "It's not all ones and zeros.",
   url:
     'https://www.freecodecamp.org/news/a-gentler-introduction-to-programming-1f57383a1b2c/',
