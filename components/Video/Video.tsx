@@ -1,9 +1,11 @@
+import { Box } from 'grommet';
 import React from 'react';
+import { PacmanLoader } from 'react-spinners';
 import { usePlayer } from '../../hooks/youtube';
 import { IVertex } from '../../models/learning-path';
 
 export const Video: React.FC<Pick<IVertex, 'videoUrl'>> = (props) => {
-  const { playerRef, player } = usePlayer(props);
+  const { playerRef, player, loading } = usePlayer(props);
 
   React.useEffect(
     () => () => {
@@ -16,5 +18,14 @@ export const Video: React.FC<Pick<IVertex, 'videoUrl'>> = (props) => {
     [player],
   );
 
-  return <div ref={playerRef} />;
+  return (
+    <Box justify={'center'} style={{ position: 'relative' }}>
+      {loading && (
+        <Box alignSelf="center" style={{ position: 'absolute' }}>
+          <PacmanLoader color="crimson" />
+        </Box>
+      )}
+      <div ref={playerRef} />
+    </Box>
+  );
 };
