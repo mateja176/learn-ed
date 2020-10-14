@@ -15,3 +15,16 @@ export type IVertex = {
   children: Record<string, IVertex>;
   associations?: ReadonlyArray<string>;
 };
+
+export type VertexWithMaybeVideo = Omit<IVertex, 'videoUrl' | 'children'> &
+  Partial<Pick<IVertex, 'videoUrl'>> & {
+    children: Record<string, VertexWithoutVideo>;
+  };
+
+export type VertexWithoutVideo = Omit<IVertex, 'videoUrl' | 'children'> & {
+  children: Record<string, VertexWithoutVideo>;
+};
+
+export type RootVertex = Omit<IVertex, 'children'> & {
+  children: Record<string, VertexWithMaybeVideo>;
+};

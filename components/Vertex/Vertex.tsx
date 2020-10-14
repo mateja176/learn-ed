@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useAnalytics } from '../../hooks/analytics';
-import { IVertex } from '../../models/learning-path';
+import { VertexWithMaybeVideo } from '../../models/learning-path';
 import {
   getAssociationLabel,
   getPriorityColor,
@@ -29,20 +29,23 @@ const imageWrapperStyle: React.CSSProperties = {
 const Vertex: React.FC<{
   parentPathname: string;
   pathname: string;
-  learningPath: IVertex;
-  Footer: React.FC<{ openVideo: () => void }>;
+  learningPath: VertexWithMaybeVideo;
+  Footer: React.FC<{ openVideo: (() => void) | null }>;
 }> = ({ parentPathname, pathname, learningPath, Footer }) => {
   const analytics = useAnalytics();
 
   const router = useRouter();
 
-  const videoLayer = router.query.video === pathname;
+  const videoLayerOpen = React.useMemo(() => router.query.video === pathname, [
+    router,
+    pathname,
+  ]);
   const toggleVideoLayer = React.useCallback(() => {
     router.push({
       pathname: parentPathname,
-      query: videoLayer ? {} : { video: pathname },
+      query: videoLayerOpen ? {} : { video: pathname },
     });
-  }, [router, videoLayer, parentPathname, pathname]);
+  }, [router, videoLayerOpen, parentPathname, pathname]);
 
   const openVideo = React.useCallback(() => {
     analytics.event({ type: 'openVideo', payload: { learningPath: pathname } });
@@ -88,15 +91,17 @@ const Vertex: React.FC<{
           </Box>
         </CardBody>
         <CardFooter pad={{ horizontal: 'small' }} background="light-2">
-          <Footer openVideo={openVideo} />
+          <Footer openVideo={learningPath.videoUrl ? openVideo : null} />
         </CardFooter>
       </Card>
 
-      <VideoLayer
-        videoUrl={learningPath.videoUrl}
-        open={videoLayer}
-        onClose={toggleVideoLayer}
-      />
+      {learningPath.videoUrl && (
+        <VideoLayer
+          videoUrl={learningPath.videoUrl}
+          open={videoLayerOpen}
+          onClose={toggleVideoLayer}
+        />
+      )}
     </Box>
   );
 };

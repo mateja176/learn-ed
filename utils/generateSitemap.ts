@@ -1,10 +1,10 @@
 import { kebabCase } from 'lodash';
 import urljoin from 'url-join';
-import { IVertex } from '../models/learning-path';
+import { VertexWithMaybeVideo } from '../models/learning-path';
 
 const generateSitemap = (sitemap: string) => (parentUrl: string) => (
   pathname: string,
-) => (vertex: IVertex): string => {
+) => (vertex: VertexWithMaybeVideo): string => {
   // eslint-disable-next-line no-underscore-dangle
   const url = urljoin(parentUrl, kebabCase(pathname));
 

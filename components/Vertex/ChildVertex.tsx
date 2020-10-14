@@ -49,8 +49,9 @@ const ChildVertex: React.FC<
           </a>
           <Button
             icon={<Icons.Video color={'brand'} />}
-            onClick={openVideo}
+            onClick={openVideo ?? (() => {})}
             hoverIndicator
+            disabled={!openVideo}
           />
           <Share pathname={pathname} url={url} label={learningPath.label} />
           <Link href={fullPathname}>

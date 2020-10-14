@@ -1,8 +1,9 @@
 import Root from '../assets/root.svg';
-import { IVertex, Priority } from '../models/learning-path';
+import { Priority, RootVertex } from '../models/learning-path';
+import jobs from './jobs';
 import learn from './learn';
 
-const root: IVertex = {
+const root: RootVertex = {
   Logo: Root,
   priority: Priority.platinum,
   label: '💻 Learn-ed',
@@ -13,6 +14,7 @@ const root: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=yXIL5CjQJdQ',
   children: {
     learn,
+    jobs,
   },
 };
 

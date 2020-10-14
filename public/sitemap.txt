@@ -364,3 +364,11 @@ https://learn-ed.web.app/learn/graphql/apollo
 https://learn-ed.web.app/learn/graphql/relay
 https://learn-ed.web.app/learn/graphql/codegen
 https://learn-ed.web.app/learn/graphql/graphql-mesh
+https://learn-ed.web.app/jobs
+https://learn-ed.web.app/jobs/serbia
+https://learn-ed.web.app/jobs/serbia/hello-world
+https://learn-ed.web.app/jobs/serbia/infostud
+https://learn-ed.web.app/jobs/serbia/joberty
+https://learn-ed.web.app/jobs/serbia/linkedin
+https://learn-ed.web.app/jobs/serbia/facebook
+https://learn-ed.web.app/jobs/serbia/google

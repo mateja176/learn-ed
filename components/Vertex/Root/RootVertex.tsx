@@ -26,8 +26,9 @@ const RootVertex: React.FC<
           )}
           <Button
             icon={<Icons.Video color={'brand'} />}
-            onClick={openVideo}
+            onClick={openVideo ?? (() => {})}
             hoverIndicator
+            disabled={!openVideo}
           />
           <Share
             pathname={pathname}

@@ -9,7 +9,7 @@ import React from 'react';
 import urljoin from 'url-join';
 import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
 import Tree from '../components/Tree/Tree';
-import { IVertex } from '../models/learning-path';
+import { VertexWithMaybeVideo } from '../models/learning-path';
 import env from '../services/env';
 import root from '../utils';
 import generateSitemap from '../utils/generateSitemap';
@@ -45,9 +45,9 @@ const Root: NextPage<LearningPathProps> = (props) => {
   const pathnames = React.useMemo(() => asPath.split('/').filter(Boolean), [
     asPath,
   ]);
-  const vertex: IVertex = React.useMemo(
+  const vertex = React.useMemo(
     () =>
-      pathnames.reduce((paths, path) => {
+      pathnames.reduce<VertexWithMaybeVideo>((paths, path) => {
         const key = camelCase(path);
         if (key in paths.children) {
           return paths.children[key];
