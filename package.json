@@ -82,6 +82,7 @@
     "firebase-tools": "^8.10.0",
     "identity-obj-proxy": "^3.0.0",
     "image-size": "^0.9.1",
+    "imagemin-pngquant": "^9.0.1",
     "jest": "^26.4.2",
     "jimp": "^0.16.1",
     "node-fetch": "^2.6.1",
