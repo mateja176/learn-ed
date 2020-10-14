@@ -21,7 +21,8 @@
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "ping-google": "ts-node --project tsconfig.dev.json scripts/pingGoogle"
+    "ping-google": "ts-node --project tsconfig.dev.json scripts/pingGoogle",
+    "convert-assets": "ts-node --project tsconfig.dev.json scripts/convertSvgAssets"
   },
   "main": "./functions/lib/index.js",
   "dependencies": {
