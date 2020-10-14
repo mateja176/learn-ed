@@ -1,4 +1,4 @@
-import Programming from '../../assets/programming.svg';
+import Learn from '../../assets/learn.svg';
 import { IVertex, Priority } from '../../models/learning-path';
 import frontend from './frontend';
 import javascript from './frontend/javascript';
@@ -7,9 +7,9 @@ import graphql from './graphql';
 import typescript from './typescript';
 
 const learn: IVertex = {
-  Logo: Programming,
+  Logo: Learn,
   priority: Priority.platinum,
-  label: '💻 Learn Programing',
+  label: '📖 Learn Programing',
   description: "It's not all ones and zeros.",
   url:
     'https://www.freecodecamp.org/news/a-gentler-introduction-to-programming-1f57383a1b2c/',
