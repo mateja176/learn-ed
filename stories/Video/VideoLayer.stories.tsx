@@ -2,7 +2,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import VideoLayer from '../../components/Video/VideoLayer';
-import frontend from '../../utils/learning-paths/frontend';
+import frontend from '../../utils/learn/frontend';
 
 type VideoLayerProps = Story<React.ComponentProps<typeof VideoLayer>>;
 

@@ -12,7 +12,7 @@ import Tree from '../../components/Tree/Tree';
 import { IVertex } from '../../models/learning-path';
 import env from '../../services/env';
 import generateSitemap from '../../utils/generateSitemap';
-import rootLearningPath from '../../utils/learning-paths';
+import rootLearningPath from '../../utils/learn';
 
 export interface LearningPathProps {
   asPath: string;

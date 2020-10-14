@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import urljoin from 'url-join';
 import Tree from '../components/Tree/Tree';
-import frontend from '../utils/learning-paths/frontend';
+import frontend from '../utils/learn/frontend';
 
 export default {
   title: 'Tree',

@@ -2,7 +2,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import RootVertex from '../../components/Vertex/Root/RootVertex';
-import frontend from '../../utils/learning-paths/frontend';
+import frontend from '../../utils/learn/frontend';
 
 export default {
   title: 'Vertex/Root',
