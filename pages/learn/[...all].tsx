@@ -121,7 +121,7 @@ LearningPath.getInitialProps = async ({
     }
 
     const sitemapPath = `${serverRuntimeConfig.PROJECT_ROOT}/public/sitemap.txt`;
-    const sitemap = generateSitemap('')(origin)('learning-path')(learn);
+    const sitemap = generateSitemap('')(origin)('learn')(learn);
 
     import('fs-extra').then((fs) => {
       fs.writeFile(sitemapPath, sitemap).then(() => {
