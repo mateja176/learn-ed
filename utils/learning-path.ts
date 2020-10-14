@@ -8,7 +8,7 @@ import { IVertex, Priority } from '../models/learning-path';
 import { Color } from '../models/models';
 
 export const getRootKey = (pathname: string): never | string => {
-  const match = pathname.match(/\/learning-path\/(?<rootKey>[^/]+)/);
+  const match = pathname.match(/\/learn\/(?<rootKey>[^/]+)/);
   if (match?.groups?.rootKey) {
     return match.groups.rootKey;
   } else {
@@ -37,7 +37,7 @@ export function hasChildren<A>(maybePath: IVertex | A): maybePath is IVertex {
 }
 
 export const getPathnameSegments = (pathname: string): string[] =>
-  pathname.replace('/learning-path/', '').split('/');
+  pathname.replace('/learn/', '').split('/');
 
 export const getTextColor = (background: Color): Color => {
   const backgroundColor = color(background.toLowerCase());
