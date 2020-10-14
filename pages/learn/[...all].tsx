@@ -12,7 +12,7 @@ import Tree from '../../components/Tree/Tree';
 import { IVertex } from '../../models/learning-path';
 import env from '../../services/env';
 import generateSitemap from '../../utils/generateSitemap';
-import rootLearningPath from '../../utils/learn';
+import learn from '../../utils/learn';
 
 export interface LearningPathProps {
   asPath: string;
@@ -49,7 +49,7 @@ const LearningPath: NextPage<LearningPathProps> = (props) => {
           return paths.children[key];
         }
         return paths;
-      }, rootLearningPath),
+      }, learn),
     [segments],
   );
 
@@ -121,9 +121,7 @@ LearningPath.getInitialProps = async ({
     }
 
     const sitemapPath = `${serverRuntimeConfig.PROJECT_ROOT}/public/sitemap.txt`;
-    const sitemap = generateSitemap('')(origin)('learning-path')(
-      rootLearningPath,
-    );
+    const sitemap = generateSitemap('')(origin)('learning-path')(learn);
 
     import('fs-extra').then((fs) => {
       fs.writeFile(sitemapPath, sitemap).then(() => {

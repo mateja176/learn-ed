@@ -6,7 +6,7 @@ import react from './frontend/react';
 import graphql from './graphql';
 import typescript from './typescript';
 
-const rootLearningPath: IVertex = {
+const learn: IVertex = {
   Logo: Programming,
   priority: Priority.platinum,
   label: '💻 Learn Programing',
@@ -16,4 +16,4 @@ const rootLearningPath: IVertex = {
   videoUrl: 'https://www.youtube.com/watch?v=zOjov-2OZ0E',
   children: { frontend, javascript, react, typescript, graphql },
 };
-export default rootLearningPath;
+export default learn;
