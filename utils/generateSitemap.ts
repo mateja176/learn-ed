@@ -1,6 +1,6 @@
 import { kebabCase } from 'lodash';
 import urljoin from 'url-join';
-import { IVertex } from '../create-learning-path/example/learning-path';
+import { IVertex } from '../models/learning-path';
 
 const generateSitemap = (sitemap: string) => (parentUrl: string) => (
   pathname: string,
