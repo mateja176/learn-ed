@@ -25,7 +25,8 @@ const RootVertex: React.FC<
             <Button icon={<Icons.Previous />} disabled />
           )}
           <Button
-            icon={<Icons.Video color={'brand'} />}
+            icon={<Icons.CirclePlay color={'brand'} />}
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
             onClick={openVideo ?? (() => {})}
             hoverIndicator
             disabled={!openVideo}
@@ -41,7 +42,7 @@ const RootVertex: React.FC<
             rel="noopener noreferrer"
             title={`${learningPath.label} documentation`}
           >
-            <Button icon={<Icons.Book />} hoverIndicator />
+            <Button icon={<Icons.ShareRounded />} hoverIndicator />
           </a>
         </>
       )}

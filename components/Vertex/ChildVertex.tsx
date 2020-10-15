@@ -43,12 +43,13 @@ const ChildVertex: React.FC<
             href={learningPath.url}
             target="__blank"
             rel="noopener noreferrer"
-            title={`${learningPath.label} documentation`}
+            title="See more"
           >
-            <Button icon={<Icons.Book />} hoverIndicator />
+            <Button icon={<Icons.ShareRounded />} hoverIndicator />
           </a>
           <Button
-            icon={<Icons.Video color={'brand'} />}
+            icon={<Icons.CirclePlay color={'brand'} />}
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
             onClick={openVideo ?? (() => {})}
             hoverIndicator
             disabled={!openVideo}
@@ -58,7 +59,7 @@ const ChildVertex: React.FC<
             <Button
               disabled={!hasChildren}
               title={`${hasChildren ? 'Explore' : 'No subsections'}`}
-              icon={<Icons.Next />}
+              icon={<Icons.FormNext />}
               hoverIndicator
               onClick={handleExplore}
             />

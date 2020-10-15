@@ -63,7 +63,7 @@ const Share: React.FC<ShareProps> = (props) => {
 
   return (
     <Menu
-      icon={<Icons.Share color="status-critical" />}
+      icon={<Icons.ShareOption color="status-critical" />}
       items={Object.entries(shareConfig).map(([provider, config]) => ({
         label: (
           <config.Button
