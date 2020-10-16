@@ -5,6 +5,8 @@ export enum Priority {
   bronze = 'bronze',
 }
 
+export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
+
 export type IVertex = {
   priority: Priority;
   label: string;
@@ -14,6 +16,7 @@ export type IVertex = {
   Logo: React.FC<React.SVGProps<SVGSVGElement>>;
   children: Record<string, IVertex>;
   associations?: ReadonlyArray<string>;
+  difficulty?: Difficulty;
 };
 
 export type VertexWithMaybeVideo = Omit<IVertex, 'videoUrl' | 'children'> &

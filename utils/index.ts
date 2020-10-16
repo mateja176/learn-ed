@@ -2,6 +2,7 @@ import Root from '../assets/root.svg';
 import { Priority, RootVertex } from '../models/learning-path';
 import jobs from './jobs';
 import learn from './learn';
+import projects from './projects';
 
 const root: RootVertex = {
   Logo: Root,
@@ -15,6 +16,7 @@ const root: RootVertex = {
   children: {
     learn,
     jobs,
+    projects,
   },
 };
 

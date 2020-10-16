@@ -11,6 +11,7 @@ import { useAnalytics } from '../../hooks/analytics';
 import { VertexWithMaybeVideo } from '../../models/learning-path';
 import {
   getAssociationLabel,
+  getDifficultyColor,
   getPriorityColor,
   getPrioritySize,
 } from '../../utils/learning-path';
@@ -25,6 +26,8 @@ const imageWrapperStyle: React.CSSProperties = {
   borderRadius: 5,
   overflow: 'hidden',
 };
+
+const badgeSize = 15;
 
 const Vertex: React.FC<{
   parentPathname: string;
@@ -58,13 +61,34 @@ const Vertex: React.FC<{
       ...cardStyle,
       maxWidth: getPrioritySize(learningPath.priority),
       background: getPriorityColor(learningPath.priority),
+      position: 'relative',
     }),
     [learningPath],
+  );
+
+  const badgeStyle: React.CSSProperties = React.useMemo(
+    () => ({
+      position: 'absolute',
+      top: 10,
+      right: 10,
+      width: badgeSize,
+      height: badgeSize,
+      borderRadius: '50%',
+      border: '1px solid rgba(0, 0, 0, 0.2)',
+      background: getDifficultyColor(learningPath.difficulty),
+    }),
+    [learningPath.difficulty],
   );
 
   return (
     <Box align={'center'}>
       <Card style={childCardStyle}>
+        {learningPath.difficulty && (
+          <Box
+            style={badgeStyle}
+            title={`Difficulty level ${learningPath.difficulty}`}
+          />
+        )}
         <CardBody pad="medium" direction="row" align="center">
           <Box style={imageWrapperStyle}>
             <learningPath.Logo width={'100%'} height={'100%'} />

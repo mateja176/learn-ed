@@ -4,8 +4,21 @@ import color from 'color';
 import { camelCase, capitalize, fromPairs, isEmpty } from 'lodash';
 import { last } from 'ramda';
 import urljoin from 'url-join';
-import { IVertex, Priority } from '../models/learning-path';
+import { Difficulty, IVertex, Priority } from '../models/learning-path';
 import { Color } from '../models/models';
+
+export const getDifficultyColor = (difficulty?: Difficulty): string => {
+  switch (difficulty) {
+    case 'beginner':
+      return 'paleGreen';
+    case 'intermediate':
+      return 'yellow';
+    case 'advanced':
+      return 'indianRed';
+    default:
+      return 'gray';
+  }
+};
 
 export const getLearningPath = ({
   rootLearningPath,
