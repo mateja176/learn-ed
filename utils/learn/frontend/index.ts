@@ -1030,7 +1030,7 @@ const frontend = {
         typeDoc: {
           Logo: TypeDoc,
           priority: lp.Priority.gold,
-          label: 'TypeDOc',
+          label: 'TypeDoc',
           description: 'Like JSDoc but specially adapted for TypeScript.',
           url: 'https://typedoc.org/',
           videoUrl: 'https://www.youtube.com/watch?v=A2TZg_EDSGQ',
