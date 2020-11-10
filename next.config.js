@@ -13,7 +13,7 @@ module.exports = {
     firebaseMeasurementId: 'G-6B32XEYKB',
     logRocketId: 'learn-ed/learn-ed',
     mixpanelToken: '59148aca96d44b8788b32c6475378df5',
-    origin: 'https://learn-ed.web.app',
+    origin: 'https://d2kko0cf1h4tlx.cloudfront.net/',
   },
   webpack(config, { isServer }) {
     // Fixes npm packages that depend on `fs` module
