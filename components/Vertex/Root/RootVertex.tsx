@@ -19,10 +19,10 @@ const RootVertex: React.FC<
         <>
           {parentPathname ? (
             <Link href={parentPathname}>
-              <Button icon={<Icons.Previous />} hoverIndicator />
+              <Button icon={<Icons.FormPrevious />} hoverIndicator />
             </Link>
           ) : (
-            <Button icon={<Icons.Previous />} disabled />
+            <Button icon={<Icons.FormPrevious />} disabled />
           )}
           <Button
             icon={<Icons.CirclePlay color={'brand'} />}
